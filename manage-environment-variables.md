@@ -18,7 +18,7 @@ Below is an example command and the type of output you can expect to see:
 
 `catalyze -E Prod-app01 vars list`
 
-Output:
+Sample Output:
 
 ```
 CACHE01_URL=redis://cache01.internal:6379
@@ -33,10 +33,14 @@ Below is an example command and the type of output you can expect to see:
 
 `catalyze -E Prod-app01 vars set -v ENV_VAR1="MYVALUE1" -v ENV_VAR2="MYVALUE2"`
 
-Output:
+Sample Output:
 
 `Set. For these environment variables to take effect, you will need to redeploy your service with "catalyze redeploy"
 `
+
+For the new environment variable settings to take effect, you will need to redeploy your service.
+
+`catalyze -E Prod-app01 app01 redeploy`
 
 ## Unset Environment Variables via the CLI
 
@@ -44,6 +48,10 @@ Below is an example command and the type of output you can expect to see:
 
 `catalyze -E Prod-app01 vars unset ENV_VAR1`
 
-Output:
+Sample Output:
 
 `Unset.`
+
+For the new environment variable settings to take effect, you will need to redeploy your service.
+
+`catalyze -E Prod-app01 app01 redeploy`
