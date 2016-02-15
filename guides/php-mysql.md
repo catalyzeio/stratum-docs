@@ -2,10 +2,10 @@
 title: PHP + MySQL Guide
 ---
 
-# Deploying a PHP+MySQL Application on the Catalyze Platform
+# Deploying a PHP+MySQL Application on Stratum
 
 ## Introduction
-This guide will cover the basics of deploying a PHP app built using the [Laravel](http://laravel.com) framework that stores data in a MySQL database. We have already created an example application using these steps [here](https://github.com/catalyzeio/php-example-app). Feel free to follow this guide or fork and clone the example application to create your own working copy to deploy to Catalyze.
+This guide will cover the basics of deploying a PHP app built using the [Laravel](http://laravel.com) framework that stores data in a MySQL database. We have already created an example application using these steps [here](https://github.com/catalyzeio/php-example-app). Feel free to follow this guide or fork and clone the example application to create your own working copy to deploy to Stratum.
 
 
 ## Prerequisites
@@ -34,7 +34,7 @@ Lets get your php application setup for deployment. For this example we are usin
 To run the example application locally, you can use the Homestead vagrant image which is pretty easy to setup. You can find more information on [Homestead here](http://laravel.com/docs/5.0/homestead).
 
 ## Associate environment to application
-We need to associate your Catalyze environment to your Laravel application. To do this you need to use [git](http://git-scm.com/) and the [Catalyze CLI](https://github.com/catalyzeio/catalyze-paas-cli).
+We need to associate your Catalyze environment to your Laravel application. To do this you need to use [git](http://git-scm.com/) and the [Stratum CLI](https://github.com/catalyzeio/catalyze-paas-cli).
 
 Using a command line, navigate to a working copy of your application, or fork the [example php application](https://github.com/catalyzeio/php-example-app), and run the following commands:
 
@@ -46,7 +46,7 @@ Password:
 #
 ```
 
-The [Catalyze CLI](https://github.com/catalyzeio/catalyze-paas-cli) added a git remote to your local repo so you can now push code to your environment on Catalyze.
+The [Stratum CLI](https://github.com/catalyzeio/catalyze-paas-cli) added a git remote to your local repo so you can now push code to your environment on Catalyze.
 
 ```
 # git remote -v
@@ -60,16 +60,16 @@ origin  https://github.com/catalyzeio/php-example-app.git (push)
 Your remotes will be unique to your origin and enivornment on Catalyze.
 
 ## Deploying your code
-The first time  you push your code to Catalyze, we require that you notify [support@catalyze.io](mailto:support@catalyze.io) that you have pushed code and your application finished building successfully. 
+The first time you push your code to Stratum, we require that you notify [support@catalyze.io](mailto:support@catalyze.io) that you have pushed code and your application finished building successfully.
 
-Once the initial deployment has finished, we will notify you that it has completed. After the initial deployment, every subsequent time code is pushed to Catalyze using the command below, the application will be updated automatically.
+Once the initial deployment has finished, we will notify you that it has completed. After the initial deployment, every subsequent time code is pushed to Stratum using the command below, the application will be updated automatically.
 
 *Note: Your application needs a [Procfile](https://github.com/catalyzeio/php-example-app/blob/master/Procfile) for deployment. If you are using the example application you do not need to worry about this as it is already done for you. TO DO - Explain what a Procfile is and how to make it*
 
 ### Deployment
-So now that we have everything in order, lets deploy your application to Catalyze.
+So now that we have everything in order, lets deploy your application to Stratum.
 
-Run the command below from within your working copy. This will push  our code up to Catalyze and start the build process.
+Run the command below from within your working copy. This will push  our code up to Stratum and start the build process.
 
 ```
 # git push catalyze master
@@ -120,21 +120,21 @@ Then find the MySQL config options further down in database.php and edit the hos
 Now your database settings will be automatically picked up when deployed on Catalyze or read from the `.env` file when developing locally.
 
 ## Using environment variables
-Using environment varaibles in php and Laravel is pretty straight forward. Just use the `getenv()` function any where you need to access an environment varaible. You can find more documentaiton on the `getenv()` function [here](http://php.net/manual/en/function.getenv.php).
+Using environment variables in PHP and Laravel is pretty straight forward. Just use the `getenv()` function any where you need to access an environment variable. You can find more documentation on the `getenv()` function [here](http://php.net/manual/en/function.getenv.php).
 
 ### Example
 `$databaseUrl = getenv("DATABASE_URL");`
 
 ### Updating Environment Variables
-When updating your environment variables, there are a couple ways you can accomplish this. You can update them using the [Catalyze Dashboard](https://dashboard.catalyze.io), or using the [Catalyze CLI](https://github.com/catalyzeio/catalyze-paas-cli).
+Use the [Stratum CLI](https://github.com/catalyzeio/catalyze-paas-cli) to update your environment variables.
 
 ---
 
 #### Catalyze Dashboard
-Using the dashboard is the easiest of the two. Just sign into the [Dashboard](https://dashboard.catalyze.io/signin). Then procede to the [Environments](http://dashboard.catalyze.io/environments) section. The next few steps will be different depending on if your environment is provisioned. Once on the environments dashboard, just click on your environment in the left hand navigation.
+Using the dashboard is the easiest of the two. Just sign into the [Stratum Dashboard](https://stratum.catalyze.io). Then proceed to the [Environments](http://dashboard.catalyze.io/environments) section. The next few steps will be different depending on if your environment is provisioned. Once on the environments dashboard, just click on your environment in the left hand navigation.
 
 #### Pre Provision
-If your environemnt is not provisioned yet, you may edit all properties of it within the dashbaord. Just navigate to the "Services Config" tab and edit your environment variables as you see fit.
+If your environment is not provisioned yet, you may edit all properties of it within the dashboard. Just navigate to the "Services Config" tab and edit your environment variables as you see fit.
 
 #### Post Provision
 Once your environment has been provisioned the process is a little different. Once you navigate to your environment within the dashboard. You will see
