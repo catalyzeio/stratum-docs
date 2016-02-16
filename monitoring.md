@@ -16,9 +16,9 @@ Enter in the username and password for your Stratum user account that has access
 
 Successful authentication will take you to an interface that looks like this:
 
-![sensu_interface](images/sensu_interface.png)
+![sensu_interface](images/sensu_frontpage.png)
 
-The main page of the monitoring interface shows any monitoring checks that are in an error state. In the example picture, the `app01_worker-worker` service has two checks in an error state
+The main page of the monitoring interface shows any monitoring checks in an error state. In the example picture, the `app01_worker-worker` service has two checks in an error state
 
 The second tab down on the left side bar is the `clients` tab. This tab shows you the different services in your environment and their overall state.
 
