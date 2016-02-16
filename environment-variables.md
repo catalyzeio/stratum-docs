@@ -21,7 +21,13 @@ Each new Stratum environment comes with several pre-defined environment variable
 
 Before you make your first code deploy, make sure that your application is ready to consume these values!
 
-***[Small Screenshot of location in dashboard]***
+First, click on the "View Details" link for the code service.
+
+![view](images/dashboard_view_details.png)
+
+The service's environment variables are located here:
+
+![env_variables](images/dashboard_env_variables.png)
 
 ## Setting Your Own Variables
 

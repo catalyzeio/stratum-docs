@@ -36,6 +36,8 @@ Make sure that you're using the right environment association for the service th
 
 Using the Procfile declared above the command would be:
 
- `catalyze -E MyProdEnv-app02 worker worker`.
+`catalyze -E MyProdEnv-app02 worker worker`.
 
- If you had named the worker target more descriptively, say "notification-sender" the CLI command would be `catalyze -E MyProdEnv-app02 worker notification-sender`
+If you had named the worker target more descriptively, say "notification-sender" the CLI command would be:
+
+`catalyze -E MyProdEnv-app02 worker notification-sender`

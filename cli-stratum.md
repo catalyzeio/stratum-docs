@@ -2,6 +2,6 @@
 
 Catalyze provides a CLI to facilitate interaction with your Stratum environment.
 
-## Download
+## How do I get the CLI?
 
-## Reference
+## Where is the documentation for the CLI?
