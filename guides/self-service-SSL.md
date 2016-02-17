@@ -17,7 +17,7 @@ The [certs](https://resources.catalyze.io/paas/cli/sections/certs/) command grou
 
 To start, you'll need to create a cert. Make sure both the certificate and private key are **unencrypted** and in **PEM** format. Then run
 
-***Traditional SSL Cert***
+***CA-Signed SSL Cert***
 ```
 catalyze certs create mysite.com ./mysite.crt ./mysite.key
 ```

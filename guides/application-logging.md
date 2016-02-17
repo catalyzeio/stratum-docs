@@ -1,4 +1,4 @@
----
+w---
 title: Stratum Application Logging Guide
 ---
 

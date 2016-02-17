@@ -2,6 +2,8 @@
 
 ## Sales
 
+For product inquiries, please contact [Sales](mailto:sales@catalyze.io)!
+
 ## Support
 
 Contact Catalyze Support by using this [form](https://catalyzeio.zendesk.com/hc/en-us/requests/new).  For requests regarding PaaS, please include your environment id. You can find the environment id in the URL of the Dashboard for your environment.  You can also find the environment id when using the [paas-cli ](https://github.com/catalyzeio/cli) with the command `catalyze environments`

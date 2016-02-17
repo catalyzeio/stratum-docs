@@ -6,7 +6,7 @@ If you want to export logs from Catalyze's Elasticsearch to a local location or 
 
 Using curl and [jq](https://stedolan.github.io/jq/) you can retrieve and filter the syslog messages from Elasticsearch.  The messages are stored as structured data in JSON format. Most operating systems either have these installed by default or they are available via the package manager.
 
-## Authentication
+## ElasticSearch Authentication
 
 Elasticsearch can be queried directly by making a request to `https://podhostname/__es`
 
@@ -32,6 +32,8 @@ machine pod09999.catalyzeapps.com
 
 ## Searching the ElasticSearch Indexes
 
+### Dump an Entire Day of Logs
+
 The index and type of the documents are specified in the path of the URI.
 
 The index name is in the format `logstash-YYYY.MM.DD`.  For example, `logstash-2015.11.09`
@@ -47,6 +49,8 @@ The request will return a JSON document.  You can pipe the results through jq to
 The full command would be:
 
 `curl -n -s https://podhostname/__es/logstash-2015.11.09/syslog/_search | jq '.hits.hits[] | ._source| .syslog_message'`
+
+### Use Search Parameters to Narrow Results
 
 Search parameters can be added to a search by including a JSON document in the request:
 
@@ -67,6 +71,8 @@ Include the parameters in the request:
 `curl -n -s -d @es_params.json https://podhostname/__es/logstash-2015.11.09/syslog/_search | jq '.hits.hits[] | ._source| .syslog_message'`
 
 The results from the request are paginated and by default only 10 results are shown.
+
+### Increase the Page Size of the Search
 
 Add a `size` query parameter to the uri. Be aware that too many results will sigificantly increase the memory usage of Elasticsearch and negativley impact performance
 
