@@ -1,6 +1,6 @@
 # How do I get access to a Stratum organization or environment?
 
-## Create a Stratum Dashboard Account
+## Create a Catalyze Account via the Stratum Dashboard
 
 Before you can accept an invitation to an organization and gain access to any environments, you need to create a [Stratum Dashboard](https://stratum.catalyze.io) account!
 
