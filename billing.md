@@ -5,7 +5,7 @@ We accept credit card payments processed through Stripe. We collect payment info
 
 ## When does billing for an environment start?
 
-Catalyze will start billing you for an environment when it has been provisioned and deployed on Catalyze. At that time, you will be able to push your application to your environment. You will receive emails at time of billing. For trial accounts, billing begins the 30 days after your environment has been provisioned and deployed.
+Catalyze will start billing you for an environment when it has been provisioned  on Catalyze. At that time, you will be able to push your application to your environment. You will receive emails at time of billing. For trial accounts, billing begins the 30 days after your environment has been provisioned and deployed.
 
 ## Do you offer sandbox environments for things like development, staging, or QA?
 Yes, we do. The major differences between these sandbox environments and our fully compliant production environments are that sandbox environments do not include backup, disaster recovery, or a business associate agreement (BAA). Sandbox environments mirror our production environments in all other ways, including having dedicated logging.

@@ -2,7 +2,7 @@
 
 SSH keys can be used for authentication and pushing code to the Stratum platform. Any SSH keys added to your user account should not be shared but be treated as private SSH keys. Any SSH key uploaded to your user account will be able to be used with all code services and environments that you have access to.
 
-## How can I setup SSH keys on a new account?
+## How can I setup SSH keys on an account?
 
 To execute the commands below, you'll need to specify your Catalyze username and password, so be sure to have them available.
 

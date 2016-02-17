@@ -1,1 +1,1 @@
-# How can I access my S3 Bucket?
+# How can I access my Catalyze S3 Bucket?
