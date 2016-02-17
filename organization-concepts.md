@@ -19,14 +19,14 @@ Organizations have three levels of roles:
   - The first account in each organization is an owner account
 
 
-  |Permission|Member|Admin|Owner|
-  |---|---|---|---|
-  |  List Users of Org |x  |x  |x  |
-  | Invite Users to Org | | x  |x   |
-  | Add/Remove Admins  |   |   |x   |
-  | Access Authorized Environments |x   |   |   |
-  | Access All Environments  |   |  x|x   |
-  | Give Members Access to an Environment  |   | x  |  x |
+|Permission|Member|Admin|Owner|
+|---|---|---|---|
+|  List Users of Org |x  |x  |x  |
+| Invite Users to Org | | x  |x   |
+| Add/Remove Admins  |   |   |x   |
+| Access Authorized Environments |x |   |   |
+| Access All Environments  |   |  x|x   |
+| Give Members Access to an Environment  |   | x  |  x |
 
 ## Adding Users to an Organization
 
