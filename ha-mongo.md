@@ -1,1 +1,1 @@
-# How does Stratum setup HA Mongo?
+# How does Stratum manage HA Mongo?

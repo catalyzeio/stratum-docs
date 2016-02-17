@@ -2,7 +2,7 @@
 
 While Stratum can detect and apply a buildpack automatically, Catalyze recommends that Stratum users pin their buildpacks to a specific version.
 
-If the buildpack is not pinned, users run the risk that a buildpack version change breaks their code unexpectedly.
+If the buildpack is not pinned, users run the risk that a buildpack version change unexpectedly breaks their code.
 
 ## How do I pin the buildpack version?
 
