@@ -6,7 +6,7 @@ After completing the paperwork for your first environment, Catalyze will create 
 
 Organizations have three levels of roles:
 
-- ***Member***
+- ***Member*** (Role available early March 2016)
   - Belong to the organization but must be given access to specific environments
   - Cannot manage other users
 - ***Admin***
@@ -49,7 +49,7 @@ Their invitation will be listed as pending below the invite box until the user a
 Once the user accepts the invitation, they will show up in the organization user list and an admin or owner can authorize their environment access.
 
 
-## Environment access
+## Environment access (Available early March 2016)
 
 Currently, environment access is an all or nothing permission in the organization. If an admin or owner gives a member access to an environment, the member has permission to:
 
@@ -57,5 +57,3 @@ Currently, environment access is an all or nothing permission in the organizatio
 - View logging UI
 - Push Code to Environment Repositories
 - Use all CLI commands related to environments
-
-## Removing Users
