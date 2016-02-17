@@ -23,7 +23,7 @@ catalyze certs create mysite.com ./mysite.crt ./mysite.key
 ```
 ***Self-Signed SSL Cert***
 ```
-catalyze certs create -s mysite.com ./mysite_selfsigned.crt ./mysite_selfsigned.key
+catalyze certs create mysite.com ./mysite_selfsigned.crt ./mysite_selfsigned.key -s
 ```
 
 #### Cert Creation Behind-The-Scenes
