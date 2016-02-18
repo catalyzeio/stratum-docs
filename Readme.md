@@ -11,3 +11,5 @@
 - [SSH Key Setup](/ssh-keys.md/)
 - [Organization User Management](/organization-addremove-users.md/)
 - [SSL Cert Setup Guide](/guides/self-service-SSL.md/)
+- [Code Deployment](/code-deployment.md/)
+- [Worker Deployment](/worker-deploy.md/)
