@@ -19,10 +19,14 @@ Logging is an essential part of HIPAA compliance, and the following sections of 
 * Section 164.308(a)(1)(ii)(D) “Information System Activity Review” prescribes review of various records of IT activities such as logs, systems utilization reports,  incident reports and other indications of security relevant activities.
 
 ## Pre-requisites
-You have a Stratum account with Catalyze. If you don't, you can sign up for a 30-day trial [here](https://stratum-sandbox.catalyzeapps.com/register).
+You have a Stratum account with Catalyze. If you don't, you can sign up for an account and contacting Sales for a 30-day trial [here](https://stratum.catalyze.io/register).
 
 You have a provisioned environment with a deployed application, perhaps following one of these guides:
-[Node + MongoDB Guide](https://resources.catalyze.io/paas/paas-guides/node-mongo/), [PHP + MySQL Guide](https://resources.catalyze.io/paas/paas-guides/php-mysql/),  [Rails + Postgres Guide](https://resources.catalyze.io/paas/paas-guides/rails-postgres/) or [Python + Postgres Guide](https://resources.catalyze.io/paas/paas-guides/python-postgres/).
+
+- [Node + MongoDB Guide](https://resources.catalyze.io/paas/paas-guides/node-mongo/)
+- [PHP + MySQL Guide](https://resources.catalyze.io/paas/paas-guides/php-mysql/)
+- [Rails + Postgres Guide](https://resources.catalyze.io/paas/paas-guides/rails-postgres/)
+- [Python + Postgres Guide](https://resources.catalyze.io/paas/paas-guides/python-postgres/).
 
 ## Shipping your application logs
 
