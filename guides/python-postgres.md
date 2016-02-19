@@ -2,13 +2,13 @@
 title: Python + Postgres Guide
 ---
 
-# Getting started with Python, Django and PostgreSQL on Catalyze
+# Getting started with Python, Django and PostgreSQL on Stratum
 
 Welcome! We've written this guide to help you get started with Python on Catalyze. You can be up and running with a HIPAA-compliant instance running Django.
 
 ----------
 
-If you're used to other Platform as a Service offerings (Heroku, Google App Engine), you'll notice some similarities to Catalyze's Platform as a Service. Our intent in design was to speed up deployment along while abstracting away some of the difficulties of HIPAA-compliant setup. If you're more familiar with deploying your code directly onto a server, there will be some new concepts here to learn. It's worth noting this is *not* Heroku: we'll try to call out divergence in code when possible, but you'll want to follow the guide closely even if a lot of this is already old hat to you.
+If you're used to other Platform as a Service offerings (Heroku, Google App Engine), you'll notice some similarities to Catalyze's Stratum. Our intent in design was to speed up deployment while abstracting away some of the difficulties of HIPAA-compliant setup. If you're more familiar with deploying your code directly onto a server, there will be some new concepts here to learn. It's worth noting this is *not* Heroku: we'll try to call out divergence in code when possible, but you'll want to follow the guide closely even if a lot of this is already old hat to you.
 
 This guide is supplemental to the Django tutorials but will emphasize the key parts to get your app running on the Catalyze Platform. We have developed a sample application that you can also reference throughout the guide and as we walkthrough deploying an application. You can find the [Python Sample App on GitHub](https://github.com/catalyzeio/python-sample-app).
 
@@ -32,10 +32,6 @@ You may want to install Python with brew on OS X: `brew install python`
 
 If you don’t, pip/setuptools are installed with Python: http://docs.python-guide.org/en/latest/starting/install/osx/
 
-***Install the Catalyze Platform CLI***
-
-If you've already installed pip, installing the CLI is as easy as `pip install catalyze`
-
 ## Quick Rundown
 Once you have a Catalyze Environment and an application all it takes is a few steps.
 
@@ -45,7 +41,7 @@ $ git clone git@github.com:catalyzeio/python-sample-app.git
 $ cd python-sample-app
 
 # Associate the repo with your Catalyze Environment and push
-$ catalyze associate "Python Sample App"
+$ catalyze associate "Python Sample App" app01
 $ git push catalyze master
 
 # After the application has been deployed, run migrations
@@ -55,7 +51,7 @@ $ catalyze console app01 "python manage.py migrate"
 ```
 
 ## First Steps
-Alright, lets backup a little bit. If you don't already have an environment, you can get setup with one through the Catalyze Dashboard. Check out the Getting Started docs: https://resources.catalyze.io/paas/getting-started/. The following sections will highlight several important parts about setting up your Django project in order to have a successful deployment on the Platform. 
+Alright, lets backup a little bit. If you don't already have an environment, you can get setup with one through the Catalyze Dashboard. Check out the Getting Started docs: https://resources.catalyze.io/paas/getting-started/. The following sections will highlight several important parts about setting up your Django project in order to have a successful deployment on the Platform.
 
 ### Project Requirements
 The Catalyze Platform leverages buildpacks to bundle up your application and all of its dependencies. This bundle is built into a Docker container that will be shipped into production. The Python buildpack is employed when the build process detects the `requirements.txt` file in the root level of your project's repository. The requirements file declares the project dependencies your application requires in order to run. To make your life easier, definitely install the "django-toolbelt" first, it installs everything you need to get started with Django.
@@ -110,7 +106,7 @@ Ok, so now you have an application that you can run locally, project dependencie
 
 ```
 $ cd /path/to/your/repo
-$ catalyze associate "Your Environment's Name"
+$ catalyze associate "Your Environment's Name" app01
 # Notice the git remote "catalyze" has been created
 
 $ git push catalyze master
@@ -147,7 +143,7 @@ remote: Complete. Built Successfully!
 Alright, after your build is successful your application is ready to be deployed. Follow up with the Catalyze support team to get the app launched. The first time the application is launched is a manual step, after the initial deployment subsequent Git pushes will automatically redeploy the application. You will receive additional info during the onboarding process that is not covered here. For an overview of the onboarding process check out the docs [here](https://resources.catalyze.io/paas/getting-started/deploying-your-first-app/).
 
 > **A note on build failures:**
-Dealing with build failures in the buildpack system can be a little tricky, but it just requires a little patience and soon you'll quickly be able to spot and resolve issues as they arise. When an error occurs in the build process you will often encounter a lengthy stack trace. Glance through the stack trace and look for clues about what went wrong. Oftentimes a dependency fails to build because of an incompatibility with the runtime or the provider where the dependency is hosted is down. If your build process attempts to connect to the database your build may fail. During the build process your application will not have access to the network where the database is running. In rare cases you may need to dig inside the buildpack source to really understand what is happening behind the scenes. Here is a short list of the most common build issues:
+Dealing with build failures in the buildpack system can be a little tricky, but with a little patience you'll quickly be able to spot and resolve issues as they arise. When an error occurs in the build process you will often encounter a lengthy stack trace. Glance through the stack trace and look for clues about what went wrong. Oftentimes a dependency fails to build because of an incompatibility with the runtime or the provider where the dependency is hosted is down. If your build process attempts to connect to the database your build may fail. During the build process your application will not have access to the network where the database is running. In rare cases you may need to dig inside the buildpack source to really understand what is happening behind the scenes. Here is a short list of the most common build issues:
 >
 	1. Missing project dependencies in `requirements.txt`
 	2. Forgot to check into your repository a required file
@@ -233,7 +229,7 @@ git push catalyze feature-branch:master
 ```
 
 **Initiate rebuild**
-If, for any reason, you want to trigger a rebuild of your application a quick way to do so is push a new commit: 
+If, for any reason, you want to trigger a rebuild of your application a quick way to do so is push a new commit:
 ```
 git commit --allow-empty -m "trigger rebuild"; git push catalyze master
 ```

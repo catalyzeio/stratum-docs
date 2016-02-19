@@ -15,7 +15,7 @@ There are a few things you need before we can get started deploying your applica
 We assume you have base knowledge of the following tools, and installed. If not, you can find information on each of the tools by visiting their link and following the directions there for installing them.
 
 - [git](http://git-scm.com/)
-- [Catalyze CLI](https://github.com/catalyzeio/catalyze-paas-cli)
+- [Catalyze CLI](https://github.com/catalyzeio/cli)
 
 ### Contract with Catalyze
 You need a signed contract with [Catalyze](https://catalyze.io/), and already have an environment provisioned for use. If you need to sign up for Catalyze you can [start here](https://catalyze.io/signup/paas).
@@ -39,14 +39,14 @@ We need to associate your Catalyze environment to your Laravel application. To d
 Using a command line, navigate to a working copy of your application, or fork the [example php application](https://github.com/catalyzeio/php-example-app), and run the following commands:
 
 ```
-# catalyze associate MyHealthApp-Production
+# catalyze associate MyHealthApp-Production app01
 Username:
 Password:
 "catalyze" remote added.
 #
 ```
 
-The [Stratum CLI](https://github.com/catalyzeio/catalyze-paas-cli) added a git remote to your local repo so you can now push code to your environment on Catalyze.
+The [Stratum CLI](https://github.com/catalyzeio/cli) added a git remote to your local repo so you can now push code to your environment on Catalyze.
 
 ```
 # git remote -v
@@ -126,23 +126,9 @@ Using environment variables in PHP and Laravel is pretty straight forward. Just 
 `$databaseUrl = getenv("DATABASE_URL");`
 
 ### Updating Environment Variables
-Use the [Stratum CLI](https://github.com/catalyzeio/catalyze-paas-cli) to update your environment variables.
+Use the [Stratum CLI](https://github.com/catalyzeio/cli) to update your environment variables.
 
----
-
-#### Catalyze Dashboard
-Using the dashboard is the easiest of the two. Just sign into the [Stratum Dashboard](https://stratum.catalyze.io). Then proceed to the [Environments](http://dashboard.catalyze.io/environments) section. The next few steps will be different depending on if your environment is provisioned. Once on the environments dashboard, just click on your environment in the left hand navigation.
-
-#### Pre Provision
-If your environment is not provisioned yet, you may edit all properties of it within the dashboard. Just navigate to the "Services Config" tab and edit your environment variables as you see fit.
-
-#### Post Provision
-Once your environment has been provisioned the process is a little different. Once you navigate to your environment within the dashboard. You will see
-
----
-
-#### Catalyze CLI
-The [Catalyze CLI](https://github.com/catalyzeio/catalyze-paas-cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Catalyze CLI](https://github.com/catalyzeio/catalyze-paas-cli), head over to the [documentation](https://resources.catalyze.io/paas/paas-cli-reference/vars/).
+The [Catalyze CLI](https://github.com/catalyzeio/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Catalyze CLI](https://github.com/catalyzeio/cli), head over to the [documentation](https://resources.catalyze.io/paas/paas-cli-reference/vars/).
 
 #### List all Variables
 `catalyze vars list`
@@ -154,7 +140,7 @@ The [Catalyze CLI](https://github.com/catalyzeio/catalyze-paas-cli) makes it pre
 `catalyze vars unset A`
 
 ## Creating schema for database
-You can use the [Catalyze CLI](https://github.com/catalyzeio/catalyze-paas-cli) to run migrations on the MySQL database easily. Just run the following commands below to populate MySQL with the proper tables for the example application. If you are creating your own application, you can find more information [here](http://laravel.com/docs/5.0/migrations) on migrations with Laravel.
+You can use the [Catalyze CLI](https://github.com/catalyzeio/cli) to run migrations on the MySQL database easily. Just run the following commands below to populate MySQL with the proper tables for the example application. If you are creating your own application, you can find more information [here](http://laravel.com/docs/5.0/migrations) on migrations with Laravel.
 
 ### Example
 First we need to find the label for the application service. The following will return a list of all services associated to your environment:
@@ -245,4 +231,4 @@ If you would like more information on logging and laravel you can go [here](http
 Additionally, for using php standalone with no framework, you can use the `syslog()` function. More information on that can be found [here](http://php.net/manual/en/function.syslog.php).
 
 ### Viewing Logs
-Once your application is logging, you can view those logs using the dashboard. Just sign into the [Catalyze Dashboard](https://dashboard.catalyze.io), navigate to the environments dashboard, and click on "Monitoring" or "Logging" on any environment within your dashboard.
+Once your application is logging, you can view those logs using the dashboard. Just sign into the [Stratum Dashboard](https://stratum.catalyze.io), navigate to the environments dashboard, and click on "Monitoring" or "Logging" on any environment within your dashboard.

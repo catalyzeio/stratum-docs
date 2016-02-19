@@ -10,7 +10,7 @@ In this guide we will cover how to deploy a simple [Node.js](https://nodejs.org/
 
 Before getting started, make sure you created your Stratum account, have signed any [business associate agreements](https://catalyze.io/learn/business-associate-agreements) with Catalyze as necessary, and have successfully provisioned an environment with a code service and a MongoDB service. If you need help getting started, hop on over to the [PaaS Getting Started](https://resources.catalyze.io/paas/getting-started/) guide available on our [resources site](https://resources.catalyze.io/).
 
-You should also have Git, Node.js, NPM, Mongo, and the [Stratum CLI](https://resources.catalyze.io/paas/getting-started/the-paas-cli/) installed and available on your system path.
+You should also have Git, Node.js, NPM, Mongo, and the [Stratum CLI](https://github.com/catalyzeio/cli) installed and available on your system path.
 
 ## Local Node.js Application
 
@@ -95,12 +95,12 @@ To get started we will create a simple Node.js application using the [Express fr
 
 ## Building and Deploying the Application
 
-To deploy the application, a Git remote must be set up using the [Stratum CLI](https://github.com/catalyzeio/catalyze-paas-cli).
+To deploy the application, a Git remote must be set up using the [Stratum CLI](https://github.com/catalyzeio/cli).
 
 1. Associate the local project with your provisioned environment.
 
    ```
-   $ catalyze associate my-node-app
+   $ catalyze associate my-node-app app01
    ```
 
    This will add a new git remote named `catalyze` to that local repo. It will ask for credentials - these are the username and password that you use in the dashboard.
@@ -119,8 +119,6 @@ To deploy the application, a Git remote must be set up using the [Stratum CLI](h
     app01 (size = c1, build status = finished, deploy status = None)
     mongo01 (size = c1, image = mongodb, status = running)
    ```
-
-4. Ask Catalyze to deploy that build to your environment by filing a support ticket. After it's deployed, the `deploy status` will change to `running`.
 
 ## Mongo Integration
 

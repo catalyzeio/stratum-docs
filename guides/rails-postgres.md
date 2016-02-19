@@ -51,13 +51,13 @@ $ git add .
 $ git commit -m "Initial commit"
 ```
 
-## Using the Catalyze CLI to connect your app to the Catalyze platform
-Once Catalyze has provisioned your environment and you have made the appropriate changes to your application, you can associate your local git repository with your Catalyze environment, which will enable you to push your application to Catalyze. There is a [Catalyze PaaS CLI][8] available which makes interacting with your environment quite easy.
+## Using the Catalyze Stratum CLI to connect your app to Stratum
+Once Catalyze has provisioned your environment and you have made the appropriate changes to your application, you can associate your local git repository with your Catalyze environment, which will enable you to push your application to Catalyze. There is a [Catalyze Stratum CLI][8] available which makes interacting with your environment quite easy.
 
-Once you have the Catalyze CLI installed, run the following command from within your application's directory, replacing YOUR_ENVIRONMENT_NAME with the name of your environment as displayed in the Catalyze [Dashboard][9]. This adds a git remote to your local repository, which will allow you to push your code
+Once you have the Catalyze CLI installed, run the following command from within your application's directory, replacing YOUR_ENVIRONMENT_NAME with the name of your environment as displayed in the Stratum [Dashboard][9]. This adds a git remote to your local repository, which will allow you to push your code
 
 ```
-$ catalyze associate YOUR_ENVIRONMENT_NAME
+$ catalyze associate YOUR_ENVIRONMENT_NAME app01
 ```
 
 ## Pushing your application to the Catalyze platform
@@ -70,7 +70,7 @@ $ git push catalyze master
 ```
 
 ## Preparing PostgreSQL for your application
-While you are waiting for Catalyze to complete your initial deployment, you can set up your database and run appropriate migrations so that your application can connect to PostgreSQL. The [Catalyze PaaS CLI][8] can be used to connect to your database and run commands. Below is an example of how to run db:setup on PostgreSQL to create your database, tables, etc. Make sure you change the value of YOUR_DATABASE_NAME to the actual name of the database you want to connect to. Note: your database service may be named something other than "db01" if you changed it in the Catalyze Dashboard.
+While you are waiting for Catalyze to complete your initial deployment, you can set up your database and run appropriate migrations so that your application can connect to PostgreSQL. The [Catalyze Stratum CLI][8] can be used to connect to your database and run commands. Below is an example of how to run db:setup on PostgreSQL to create your database, tables, etc. Make sure you change the value of YOUR_DATABASE_NAME to the actual name of the database you want to connect to. Note: your database service may be named something other than "db01" if you changed it in the Catalyze Dashboard.
 
 ```
 $ catalyze rake db:setup
@@ -83,5 +83,5 @@ $ catalyze rake db:setup
 [5]: https://resources.catalyze.io/paas/guides/logging "Logging"
 [6]: http://ruby-doc.org/stdlib-1.9.3/libdoc/logger/rdoc/Logger.html "Ruby Logger"
 [7]: http://guides.rubyonrails.org/getting_started.html "Ruby on Rails Getting Started"
-[8]: https://github.com/catalyzeio/catalyze-paas-cli "Catalyze PaaS CLI"
-[9]: https://dashboard.catalyze.io "Catalyze Dashboard"
+[8]: https://github.com/catalyzeio/cli "Catalyze Stratum CLI"
+[9]: https://stratum.catalyze.io "Catalyze Dashboard"

@@ -29,4 +29,4 @@ The final step to use SSH key authentication is to point the CLI at the private 
 
 `catalyze keys set ~/.ssh/prod_rsa`
 
-You can now execute CLI commands without needed a username/password!
+You can now execute CLI commands without using a username/password!
