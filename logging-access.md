@@ -35,3 +35,7 @@ You can view various time ranges of your logs by highlighting a portion of your 
 ![Logging filtering](https://catalyze.box.com/shared/static/hfe832wrjasujv4ktm01cvevs393iy8u.png)
 
 More information on how to filter and search for logs can be found [here](https://www.elastic.co/guide/en/kibana/current/discover.html).
+
+## Direct ElasticSearch Queries
+
+Check out this [guide](/guides/logging-direct-elasticsearch.md)
