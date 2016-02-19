@@ -2,4 +2,4 @@
 
 Our HA Postgresql is setup as a master/slave pair with streaming replication enabled between the two database containers.
 
-Slave promotion to master is manually managed by Catalyze 
+Slave promotion to master is manually managed by Catalyze engineers.
