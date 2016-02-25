@@ -1,3 +1,7 @@
+---
+title: Creating a User Account
+---
+
 # How do I get access to a Stratum organization or environment?
 
 ## Create a Catalyze Account via the Stratum Dashboard

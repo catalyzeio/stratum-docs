@@ -1,3 +1,7 @@
+---
+title: HA Postgres
+---
+
 # How does Stratum manage HA Postgres?
 
 Our HA Postgresql is setup as a master/slave pair with streaming replication enabled between the two database containers.

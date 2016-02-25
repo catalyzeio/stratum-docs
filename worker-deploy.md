@@ -1,3 +1,7 @@
+---
+title: Worker Deploy
+---
+
 # How do I deploy a worker container?
 
 There are just two things you need to do in order to launch a worker process:

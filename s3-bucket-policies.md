@@ -1,3 +1,7 @@
+---
+title: S3 Bucket Policies
+---
+
 # How are Catalyze S3 Buckets managed?
 
 Catalyze sets a variety of default policies on S3 Buckets to achieve compliant behavior!

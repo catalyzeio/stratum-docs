@@ -1,3 +1,7 @@
+---
+title: Stratum Environment Logging
+---
+
 # Stratum Environment Logging
 
 Catalyze has implemented a complete ELK stack for Stratum to manage acquiring and storing log data.

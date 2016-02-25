@@ -1,3 +1,7 @@
+---
+title: Setting Up DNS
+---
+
 # How do I setup DNS to point to my Catalyze environment?
 
 Stratum environments are designed to have CNAMES or ALIAS records pointed at them. We create a public hostname for the environment that functions as the target of your DNS entries.

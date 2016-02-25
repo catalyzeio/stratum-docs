@@ -1,3 +1,7 @@
+---
+title: Stratum Environment Definition
+---
+
 # What does a Stratum environment look like?
 
 The outlines below provide a high-level overview of Stratum environments. The number of containers and resources available to each container are scalable.

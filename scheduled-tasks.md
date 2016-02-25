@@ -1,3 +1,7 @@
+---
+title: Scheduled Tasks in Stratum
+---
+
 # Scheduled Tasks in Stratum
 
 Periodic or triggered task scheduling is a common need for many applications. Historically, `cron` has been a system utility widely used for this task. However, if you rely on scheduled tasks getting executed on-time and successfully, we recommend moving this behavior within the control of your application.

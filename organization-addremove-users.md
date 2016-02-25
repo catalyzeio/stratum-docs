@@ -1,3 +1,7 @@
+---
+title: Managing Users
+---
+
 # How can I add or remove users with my organization?
 
 ## Adding Users to an Organization

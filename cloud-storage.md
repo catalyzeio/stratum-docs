@@ -1,3 +1,7 @@
+---
+title: Cloud Storage
+---
+
 # Stratum Cloud Storage
 
 ## Application Storage

@@ -1,3 +1,7 @@
+---
+title: Background Processing and Workers in Stratum
+---
+
 # Background Processing and Workers in Stratum
 
 Background processing includes any operations performed outside of the main application. These operations are typically long running tasks that can be more resource intensive. You don't want these operations to detract from the performance of your application and have your customers' experience damaged, so the logical choice is to separate them.

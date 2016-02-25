@@ -1,3 +1,7 @@
+---
+title: Stratum Supported Databases
+---
+
 # Stratum Supported Databases
 
 All databases supported by Stratum are available either in single node or highly available (HA) configurations.

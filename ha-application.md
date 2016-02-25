@@ -1,3 +1,7 @@
+---
+title: HA applications
+---
+
 # How does Stratum manage HA applications?
 
 A basic Stratum environment has a single service proxy container routing traffic to a single code service container.

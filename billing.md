@@ -1,3 +1,7 @@
+---
+title: Stratum Billing
+---
+
 # Stratum Billing
 
 ## What forms of payment do you accept?

@@ -1,3 +1,7 @@
+---
+title: Stratum Environment Metrics
+---
+
 # Stratum Environment Metrics
 The Stratum Dashboard includes comprehensive metrics for your environment's services.
 

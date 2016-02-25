@@ -1,3 +1,7 @@
+---
+title: Stratum Environment Monitoring
+---
+
 # Stratum Environment Monitoring
 
 Every environment includes its own monitoring server that watches the services in the environment. Catalyze's monitoring solution is built on top of Sensu ***[link]***, and can be customized to fit specific customer needs.

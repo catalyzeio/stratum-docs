@@ -1,3 +1,7 @@
+---
+title: HA Mongo
+---
+
 # How does Stratum manage HA Mongo?
 
 Highly Available MongoDB on Stratum uses Replica Sets to provide replication and automated failover in the event of a MongoDB node failure. We handle all the replica set configuration within your environment and expose a single connection URI in an environment variable called `DATABASE_URL`. You will need to use that connection string to connect your application's client to MongoDB and make use of the HA features. The `DATABASE_URL` environment variable follows the format defined by [MongoDB](http://docs.mongodb.org/manual/reference/connection-string/). Here is an example connection string:

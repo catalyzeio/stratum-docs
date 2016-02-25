@@ -1,3 +1,7 @@
+---
+title: Organizations
+---
+
 # What is a Stratum Organization?
 
 In Stratum, an organization is the basic organizing unit for a client. Organizations have two components:

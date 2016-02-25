@@ -1,3 +1,7 @@
+---
+title: Organization Concepts
+---
+
 # Stratum Organization Concepts
 
 After completing the paperwork for your first environment, Catalyze will create an organization for you in the [Stratum Dashboard](https://stratum.catalyze.io) and invite the contract holder to the organization. From there, you will be free to manage access to your organization and environments.

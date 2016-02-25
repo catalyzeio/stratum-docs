@@ -1,3 +1,7 @@
+---
+title: Customize Kibana
+---
+
 # How can I customize Kibana?
 
 ## Customizing your dashboard

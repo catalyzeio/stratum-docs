@@ -1,3 +1,7 @@
+---
+title: Custom Buildpacks
+---
+
 # How can I modify the Stratum buildpack process?
 
 Catalyze has created several ways that users can modify the standard buildpack process to help them meet their application needs.

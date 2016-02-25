@@ -1,3 +1,7 @@
+---
+title: Managing Environment Variables
+---
+
 # Managing Environment Variables
 
 Stratum allows you to define as many environment variables as you want for each different code service. You can manage environment variables through the Catalyze CLI.

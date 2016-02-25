@@ -1,3 +1,7 @@
+---
+title: Stratum Environment Variables
+---
+
 # Stratum Environment Variables
 
 ## How do Environment Variables Work?

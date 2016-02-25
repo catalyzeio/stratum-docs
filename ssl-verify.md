@@ -1,3 +1,7 @@
+---
+title: SSL Certificate Verification
+---
+
 # SSL Certificate Verification
 
 ## How can I create an SSL certificate chain?

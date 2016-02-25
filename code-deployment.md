@@ -1,3 +1,7 @@
+---
+title: Deploying Your to Catalyze
+---
+
 # How do I deploy to my Catalyze environment?
 
 ## Install the Stratum CLI
