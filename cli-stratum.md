@@ -16,4 +16,4 @@ The download links to the current versions are listed in the Readme!
 
 ## Where is the documentation for the CLI?
 
-(LINK TO CLI REFERENCE)
+https://resources.catalyze.io/paas/paas-cli-reference/

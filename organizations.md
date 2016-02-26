@@ -9,7 +9,7 @@ In Stratum, an organization is the basic organizing unit for a client. Organizat
 * Environments that belong to the organization
 * User accounts that are associated with the organization
 
-An organization is created for a client after signing a BAA and contract for an environment. The Stratum dashboard ***[link]*** is the management portal for an organization.
+An organization is created for a client after signing a BAA and contract for an environment. The [Stratum dashboard](https://stratum.catalyze.io) is the management portal for an organization.
 
 ## Environments
 
@@ -24,4 +24,6 @@ Catalyze user accounts represent specific individuals that can interact with the
 
 When Catalyze creates an organization for a client, we invite the user to the new organization as an owner. From there, the owner can invite new users to the organization, manage their organization level permissions, and control the environments within the organization that a user can access.
 
-***[Links to Managing Users]***
+[Add/Remove Users](https://resources.catalyze.io/stratum/getting-started/stratum/articles/organization-addremove-users)
+
+[Organization Access Controls](https://resources.catalyze.io/stratum/articles/organization-access-controls)
