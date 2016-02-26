@@ -1,3 +1,7 @@
+---
+title: Local Testing Guide
+---
+
 # Local Testing
 
 ## How can I test locally before pushing to Stratum?

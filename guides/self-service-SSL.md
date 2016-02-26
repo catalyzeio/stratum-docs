@@ -1,3 +1,7 @@
+---
+title: Self-Service SSL Guide
+---
+
 # Self-Service SSL Guide
 
 With our latest release of the Stratum CLI, we have implemented a whole slew of features and bug fixes. Perhaps the most intriguing pieces of functionality are two sets of commands: the [certs](https://resources.catalyze.io/paas/cli/sections/certs/) and [sites](https://resources.catalyze.io/paas/cli/sections/sites/) commands. These two sets of commands will allow self-service SSL management. The following sections will explain how to use these two sets of commands to their fullest extent and manage your SSL certificates with ease and on your own schedule.
