@@ -8,7 +8,7 @@ title: SSL Certificate Verification
 
 The Stratum CLI can resolve certificate chains for you given a CA-signed domain certificate.
 
-Check out this guide [here](/guides/self-service-SSL.md)
+Check out this guide [here](https://resources.catalyze.io/stratum/articles/guides/self-service-SSL)
 
 ## How can I verify my SSL certificates?
 
