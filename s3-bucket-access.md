@@ -11,7 +11,7 @@ When Catalyze creates S3 Buckets for Stratum environments, we place three enviro
 - `S3_ACCESS_KEY_ID`
 - `S3_SECRET_ACCESS_KEY`
 
-Catalyze sets a number of [bucket policies](/s3-bucket-policies.md/) that secure the bucket contents.
+Catalyze sets a number of [bucket policies](/stratum/articles/s3-bucket-policies) that secure the bucket contents.
 
 ## Using the AWS CLI
 

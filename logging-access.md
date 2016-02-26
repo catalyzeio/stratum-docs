@@ -42,4 +42,4 @@ More information on how to filter and search for logs can be found [here](https:
 
 ## Direct ElasticSearch Queries
 
-Check out this [guide](/guides/logging-direct-elasticsearch.md)
+Check out this [guide](/stratum/logging-custom-dashboard)
