@@ -10,9 +10,7 @@ Adding users to an organization is managed through an invitation process control
 
 ### Dashboard User Invites
 
-Log into the [Stratum Dashboard](https://stratum.catalyze.io) with an admin or owner account for the organization that you want to manage.
-
-At the top of the screen, mouse over the `Organizations` button and select the organization to manage.
+To invite a user to your organization via the dashboard you must first [log in](https://stratum.catalyze.io) with an admin or owner account. At the top of the screen, mouse over the `Organizations` dropdown and select the organization you wish to manage.
 
 ![org_dropdown](images/organization_dropdown.png)
 
@@ -34,9 +32,7 @@ Follow the CLI reference documentation [here](https://resources.catalyze.io/paas
 
 ### Dashboard User Removal
 
-Log into the [Stratum Dashboard](https://stratum.catalyze.io) with an admin or owner account for the organization that you want to manage.
-
-At the top of the screen, mouse over the `Organizations` button and select the organization to manage.
+Log into the [Stratum Dashboard](https://stratum.catalyze.io) with an admin or owner account for the organization that you want to manage. At the top of the screen, mouse over the `Organizations` button and select the organization to manage.
 
 ![org_dropdown](images/organization_dropdown.png)
 
@@ -46,4 +42,4 @@ In the list of organization users, click the red "X" next to the user you wish t
 
 ### CLI User Removal
 
-Follow the CLI reference documentation [here](https://resources.catalyze.io/paas/paas-cli-reference/invites)
+Follow the CLI reference documentation [here](/paas/paas-cli-reference/invites)
