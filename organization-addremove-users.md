@@ -26,7 +26,7 @@ Once the user accepts the invitation, they will show up in the organization user
 
 ### CLI User Invites
 
-Follow the CLI reference documentation [here](https://resources.catalyze.io/paas/paas-cli-reference/invites)
+Follow the CLI reference documentation [here](paas/paas-cli-reference/invites)
 
 ## Removing Users from an Organization
 
