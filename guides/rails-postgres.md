@@ -76,7 +76,7 @@ While you are waiting for Catalyze to complete your initial deployment, you can 
 $ catalyze rake db:setup
 ```
 
-[1]: /stratum/getting-started 	"Onboarding Guide"
+[1]: /stratum/getting-started 	"Getting Started Guide"
 [2]: /paas/paas-cli-reference 	"CLI Reference"
 [3]: https://github.com/catalyzeio/ruby-example-app 	"Ruby Example App"
 [4]: https://catalyze.io/signup 	"Free Trial"

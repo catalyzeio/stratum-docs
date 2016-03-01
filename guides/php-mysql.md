@@ -18,7 +18,7 @@ We assume you have base knowledge of the following tools, and installed. If not,
 - [Catalyze CLI](https://github.com/catalyzeio/cli)
 
 ### Contract with Catalyze
-You need a signed contract with [Catalyze](https://catalyze.io/), and already have an environment provisioned for use. If you need to sign up for Catalyze you can [start here](https://catalyze.io/signup/paas).
+You need a signed contract with [Catalyze](https://catalyze.io/), and already have an environment provisioned for use. If you need to sign up for Catalyze you can [start here](https://catalyze.io/stratum).
 
 ### Terms to know
 Some basic terms that you should know:
@@ -128,7 +128,7 @@ Using environment variables in PHP and Laravel is pretty straight forward. Just 
 ### Updating Environment Variables
 Use the [Stratum CLI](https://github.com/catalyzeio/cli) to update your environment variables.
 
-The [Catalyze CLI](https://github.com/catalyzeio/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Catalyze CLI](https://github.com/catalyzeio/cli), head over to the [documentation](https://resources.catalyze.io/paas/paas-cli-reference/vars/).
+The [Catalyze CLI](https://github.com/catalyzeio/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Catalyze CLI](https://github.com/catalyzeio/cli), head over to the [documentation](/paas/paas-cli-reference/vars/).
 
 #### List all Variables
 `catalyze vars list`
