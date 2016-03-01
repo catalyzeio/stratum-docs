@@ -8,7 +8,7 @@ In this guide we will cover how to deploy a simple [Node.js](https://nodejs.org/
 
 ## Pre-requisites
 
-Before getting started, make sure you created your Stratum account, have signed any [business associate agreements](https://catalyze.io/learn/business-associate-agreements) with Catalyze as necessary, and have successfully provisioned an environment with a code service and a MongoDB service. If you need help getting started, hop on over to the [PaaS Getting Started](https://resources.catalyze.io/paas/getting-started/) guide available on our [resources site](https://resources.catalyze.io/).
+Before getting started, make sure you created your Stratum account, have signed any [business associate agreements](https://catalyze.io/learn/business-associate-agreements) with Catalyze as necessary, and have successfully provisioned an environment with a code service and a MongoDB service. If you need help getting started, hop on over to the [PaaS Getting Started](/stratum/getting-started) guide available on our [resources site](https://resources.catalyze.io/).
 
 You should also have Git, Node.js, NPM, Mongo, and the [Stratum CLI](https://github.com/catalyzeio/cli) installed and available on your system path.
 
@@ -181,7 +181,7 @@ Next up we will configure the application to fetch and store data in a Mongo dat
    });
    ```
 
-   As with the `PORT` environment variable, you should pull your MongoDB connection information from the `DATABASE_URL` environment variable. If you have more than one database in your environment, use the [Stratum dashboard](https://dashboard.catalyze.io/) to determine which environment variable to use.
+   As with the `PORT` environment variable, you should pull your MongoDB connection information from the `DATABASE_URL` environment variable. If you have more than one database in your environment, use the [Stratum dashboard](https://stratum.catalyze.io/) to determine which environment variable to use.
 
 3. Run your updated code, then point your browser to [http://127.0.0.1:8088](http://127.0.0.1:8088) to see it working.
 

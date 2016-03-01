@@ -23,16 +23,16 @@ You have a Stratum account with Catalyze. If you don't, you can sign up for an a
 
 You have a provisioned environment with a deployed application, perhaps following one of these guides:
 
-- [Node + MongoDB Guide](https://resources.catalyze.io/paas/paas-guides/node-mongo/)
-- [PHP + MySQL Guide](https://resources.catalyze.io/paas/paas-guides/php-mysql/)
-- [Rails + Postgres Guide](https://resources.catalyze.io/paas/paas-guides/rails-postgres/)
-- [Python + Postgres Guide](https://resources.catalyze.io/paas/paas-guides/python-postgres/).
+- [Node + MongoDB Guide][1]
+- [PHP + MySQL Guide][2]
+- [Rails + Postgres Guide][3]
+- [Python + Postgres Guide][4].
 
 ## Shipping your application logs
 
 ### Python, PostgresSQL and Django
 
-See [Python + Postgres Guide](https://resources.catalyze.io/paas/paas-guides/python-postgres/).
+See [Python + Postgres Guide][4].
 
 #### Logging to Standard Out
 
@@ -85,7 +85,7 @@ LOGGING = {
 
 ### Node and MongoDB
 
-See [Node + MongoDB Guide](https://resources.catalyze.io/paas/paas-guides/node-mongo/).
+See [Node + MongoDB Guide][1].
 
 #### Logging to Standard Out
 
@@ -124,7 +124,7 @@ logger.info('Hello log with tags',{animal: 'fish', location: {country:'Canada',c
 
 ### PHP, MySQL and Laravel
 
-See [PHP + MySQL Guide](https://resources.catalyze.io/paas/paas-guides/php-mysql/).
+See [PHP + MySQL Guide][2].
 
 #### Logging to Standard Out
 
@@ -158,7 +158,7 @@ In Kibana, the contents of your logged message will be stored in the "message" f
 
 ### Ruby on Rails and PostgresSQL
 
-See [Rails + Postgres Guide](https://resources.catalyze.io/paas/paas-guides/rails-postgres/).
+See [Rails + Postgres Guide][3].
 
 #### Logging to Standard Out
 
@@ -196,3 +196,8 @@ logger.error '{"message": "error"}'
 
 logger.info 'test'
 ```
+
+[1]: /stratum/articles/guides/node-mongo    "Node + MongoDB Guide"
+[2]: /stratum/articles/guides/php-mysql     "PHP + MySQL Guide"
+[3]: /stratum/articles/guides/rails-postgres    "Rails + Postgres Guide"
+[4]: /stratum/articles/guides/python-postgres   "Python + Postgres Guide"

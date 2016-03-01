@@ -51,7 +51,7 @@ $ catalyze console app01 "python manage.py migrate"
 ```
 
 ## First Steps
-Alright, lets backup a little bit. If you don't already have an environment, you can get setup with one through the Catalyze Dashboard. Check out the Getting Started docs: https://resources.catalyze.io/paas/getting-started/. The following sections will highlight several important parts about setting up your Django project in order to have a successful deployment on the Platform.
+Alright, lets backup a little bit. If you don't already have an environment, you can get setup with one through the Catalyze Dashboard. Check out the [Getting Started docs](/stratum/getting-started). The following sections will highlight several important parts about setting up your Django project in order to have a successful deployment on the Platform.
 
 ### Project Requirements
 The Catalyze Platform leverages buildpacks to bundle up your application and all of its dependencies. This bundle is built into a Docker container that will be shipped into production. The Python buildpack is employed when the build process detects the `requirements.txt` file in the root level of your project's repository. The requirements file declares the project dependencies your application requires in order to run. To make your life easier, definitely install the "django-toolbelt" first, it installs everything you need to get started with Django.
@@ -140,7 +140,7 @@ remote: Finalizing Build (Note: This can take a few minutes to complete)........
 remote: Complete. Built Successfully!
 ```
 
-Alright, after your build is successful your application is ready to be deployed. Follow up with the Catalyze support team to get the app launched. The first time the application is launched is a manual step, after the initial deployment subsequent Git pushes will automatically redeploy the application. You will receive additional info during the onboarding process that is not covered here. For an overview of the onboarding process check out the docs [here](https://resources.catalyze.io/paas/getting-started/deploying-your-first-app/).
+Alright, after your build is successful your application is ready to be deployed. Follow up with the Catalyze support team to get the app launched. The first time the application is launched is a manual step, after the initial deployment subsequent Git pushes will automatically redeploy the application. You will receive additional info during the onboarding process that is not covered here. For an overview of the onboarding process check out the docs [here](/stratum/getting-started).
 
 > **A note on build failures:**
 Dealing with build failures in the buildpack system can be a little tricky, but with a little patience you'll quickly be able to spot and resolve issues as they arise. When an error occurs in the build process you will often encounter a lengthy stack trace. Glance through the stack trace and look for clues about what went wrong. Oftentimes a dependency fails to build because of an incompatibility with the runtime or the provider where the dependency is hosted is down. If your build process attempts to connect to the database your build may fail. During the build process your application will not have access to the network where the database is running. In rare cases you may need to dig inside the buildpack source to really understand what is happening behind the scenes. Here is a short list of the most common build issues:
