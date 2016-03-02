@@ -2,7 +2,7 @@
 title: Database General Information
 ---
 
-## What versions of the [supported databases]() does Catalyze use?
+## What versions of the [supported databases](/stratum/articles/supported-databases/) does Catalyze use?
 
 - Percona 5.6
 - PostgreSQL 9.4
