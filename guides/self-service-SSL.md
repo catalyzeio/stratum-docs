@@ -60,7 +60,9 @@ In the example shown, we are naming our site `app01.mysite.com` and we are assig
 catalyze redeploy service_proxy
 ```
 
-to see your changes go live. Some older Stratum environments and any environments with heavy customizations to their service_proxy will need to have Catalyze support redeploy their service_proxy.  The CLI will inform you if this is the case for your environment.  This is to prevent any unwanted downtime by deploying a service proxy with incorrect nginx configurations.  The CLI should be used in all cases as the only secure method of sending certificates to Stratum.  NEVER send certificates or private keys via email or Zendesk to Catalyze support.
+to see your changes go live. 
+
+Some older Stratum environments and any environments with heavy customizations to their service_proxy will need to have Catalyze support redeploy their service_proxy.  The CLI will inform you if this is the case for your environment.  This is to prevent any unwanted downtime by deploying a service proxy with incorrect nginx configurations.  The CLI should be used in all cases as the only secure method of sending certificates to Stratum.  NEVER send certificates or private keys via email or Zendesk to Catalyze support.
 
 There is one other difference between sites and certs that should be noted. Certs can be updated after creation while sites cannot. Once a site is created, no information about it can be changed. You must remove a site with the [sites rm](/paas/paas-cli-reference/sites-rm/) command and then recreate it.
 
