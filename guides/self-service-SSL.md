@@ -8,7 +8,7 @@ With our latest release of the Stratum CLI, we have implemented a whole slew of 
 
 ## Certs
 
-A cert represents a reusable component composed of an SSL certificate chain and a private key. These are securely uploaded and stored on the Catalyze platform and become available to your entire environment.
+A cert represents a reusable component composed of an SSL certificate chain and a private key. These are securely uploaded and stored on the Catalyze platform and become available to your entire environment.  The CLI should always be used to send certificates to Stratum.  NEVER send certificates or private keys via email or Zendesk to Catalyze support.
 
 The [certs](https://resources.catalyze.io/paas/cli/sections/certs/) command group in the CLI has four subcommands to manage your SSL certificates:
 
@@ -60,7 +60,9 @@ In the example shown, we are naming our site `app01.mysite.com` and we are assig
 catalyze redeploy service_proxy
 ```
 
-to see your changes go live.
+to see your changes go live. 
+
+Some older Stratum environments and any environments with heavy customizations to their service proxy will need to have Catalyze support redeploy their service proxy.  The CLI will inform you if this is the case for your environment.  This is to prevent any unwanted downtime by deploying a service proxy with incorrect nginx configurations.
 
 There is one other difference between sites and certs that should be noted. Certs can be updated after creation while sites cannot. Once a site is created, no information about it can be changed. You must remove a site with the [sites rm](/paas/paas-cli-reference/sites-rm/) command and then recreate it.
 
