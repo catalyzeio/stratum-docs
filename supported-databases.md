@@ -23,7 +23,7 @@ The currently supported databases are also available in HA mode which is describ
 ## Postgres HA
 Postgres HA is configured as follows:
 - A pair of Postgres containers deployed as master and slave respectively
-- Streaming replication is enabled between the master and slave using [WAL-E](https://github.com/wal-e/wal-e)
+- Streaming replication is enabled between the master and slave
 - Promotion of slave to master manually triggered by Catalyze engineer
 
 ## MySQL (Percona) HA
