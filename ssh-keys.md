@@ -34,3 +34,12 @@ The final step to use SSH key authentication is to point the CLI at the private 
 `catalyze keys set ~/.ssh/prod_rsa`
 
 You can now execute CLI commands without using a username/password!
+
+### SSH Keys and ssh-agent
+
+Git will use ssh-agent to present an identity to the git repository. The ssh-agent program will use the default ssh key file named id_rsa in the .ssh directory of the user's home directory (~/.ssh/id_rsa). Only the default id_rsa key file will be loaded by ssh-agent unless the key is manually added to the agent. The OS X Keychain Access application can be used to load additional ssh keys when the ssh-agent starts. To add a key to the OS X KeyChain Access application, use the command `ssh-add -K <path to ssh key file>` For example: `ssh-add -K ~/.ssh/catalyze-prod.key`. 
+
+Similar tools are available for Windows (Pageant) and Linux (keychain) workstations. On Linux, the ssh-agent program can be added to your bash profile to start when bash loads. 
+
+
+
