@@ -1,5 +1,5 @@
 ---
-title: Setting Up Codeship to deploy to Catalyze
+title: Setting Up Codeship to Deploy to Catalyze
 ---
 
 # How do I setup Codeship to deploy to Catalyze?
