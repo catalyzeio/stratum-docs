@@ -16,6 +16,18 @@ This policy affects API and command-line interactions with S3 buckets.
 
 You ***WILL*** receive `Access Denied` errors if you attempt a PUT/POST without a server-side-encryptoin flag or header.
 
+When using the AWS CLI, you'll need to add the `--sse` flag to your command, such as
+
+```
+aws s3 cp myfile.txt s3://your_bucket_name/ --sse
+```
+
+For some SDKs, you may have to set the `x-amz-server-side-encryption` header on the request instead. The value of this header should be set to `AES256`. For example, the header on the upload request should look like
+
+```
+x-amz-server-side-encryption: AES256
+```
+
 ## CORS Policies
 
 Catalyze enables the default CORS policy on S3 buckets. You can manipulate the CORS policies yourself with the AWS CLI `s3api` routes.
