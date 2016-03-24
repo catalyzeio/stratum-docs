@@ -25,6 +25,7 @@ To start, you'll need to create a cert. Make sure both the certificate and priva
 ```
 catalyze certs create mysite.com ./mysite.crt ./mysite.key
 ```
+
 ***Self-Signed SSL Cert***
 ```
 catalyze certs create mysite.com ./mysite_selfsigned.crt ./mysite_selfsigned.key -s
