@@ -23,13 +23,15 @@ To start, you'll need to create a cert. Make sure both the certificate and priva
 
 ***CA-Signed SSL Cert***
 ```
-catalyze certs create mysite.com ./mysite.crt ./mysite.key
+catalyze certs create wildcard_mysitecom ./mysite.crt ./mysite.key
 ```
 
 ***Self-Signed SSL Cert***
 ```
-catalyze certs create mysite.com ./mysite_selfsigned.crt ./mysite_selfsigned.key -s
+catalyze certs create mysitecom ./mysite_selfsigned.crt ./mysite_selfsigned.key -s
 ```
+
+Note that the cert hostname does not need to correspond to the actual domain that the SSL certificate is valid for. The cert hostname is used for organizational purposes only. A descriptive name indicating the domain name, TLD, and whether or not it is a wildcard is recommended.
 
 #### Cert Creation Behind-The-Scenes
 
@@ -50,18 +52,18 @@ Sites are an individual component that apply to a single code service and utiliz
 Before creating a site, you'll first need to have created a cert as outlined in the previous section. You will need the hostname used during the [certs create](/paas/paas-cli-reference/certs-create/) command. To create a site, run
 
 ```
-catalyze sites create app01.mysite.com app01 mysite.com
+catalyze sites create .mysite.com app01 wildcard_mysitecom
 ```
 
-Since a site is tied to a single service, you should give it a name that uniquely represents it and the purpose it will serve. The name of a server will be used as the `server_name` for the site's nginx configuration file. It is not required to match the hostname given in the [certs create](/paas/paas-cli-reference/certs-create/) command, however it will often be close due to wildcard certificates and subdomains as shown above.
+Site names need to match the domain that they will respond to and do not need to match the cert hostname used in the [certs create](/paas/paas-cli-reference/certs-create/) command. For example, a site that responds on a single domain should be named with `mysite.com` or some other single domain name. If the site uses a wildcard cert and should respond on the APEX domain as well as all subdomains should be named `.mysite.com` notice the leading `.`. The site name is directly injected into the nginx configuration file as the `server_name`.
 
-In the example shown, we are naming our site `app01.mysite.com` and we are assigning this site to our `app01` code service. We are also using the cert we created in the previous section called `mysite.com` which is a wildcard certificate for `*.mysite.com`. Now we have a proper site created and are ready to redeploy our services! The only thing remaining is to redeploy the service proxy to make the configurations go live. Simply run
+In the example shown, we are naming our site `.mysite.com` and we are assigning this site to our `app01` code service. We are also using the cert we created in the previous section called `wildcard_mysitecom` which is a wildcard certificate for `*.mysite.com`. Now we have a proper site created and are ready to redeploy our services! The only thing remaining is to redeploy the service proxy to make the configurations go live. Simply run
 
 ```
 catalyze redeploy service_proxy
 ```
 
-to see your changes go live. 
+to see your changes go live.
 
 Some older Stratum environments and any environments with heavy customizations to their service proxy will need to have Catalyze support redeploy their service proxy.  The CLI will inform you if this is the case for your environment.  This is to prevent any unwanted downtime by deploying a service proxy with incorrect nginx configurations.
 
@@ -75,10 +77,10 @@ Once a site is created, an nginx config file is created and stored on your servi
 catalyze files list
 ```
 
-Find the nginx configuration file, typically named similar to `/etc/nginx/sites-enabled/app01.mysite.com`, and download it with the following command
+Find the nginx configuration file, typically named similar to `/etc/nginx/sites-enabled/.mysite.com`, and download it with the following command
 
 ```
-catalyze files download /etc/nginx/sites-enabled/app01.mysite.com
+catalyze files download /etc/nginx/sites-enabled/.mysite.com
 ```
 
 This will allow you to view your current nginx configuration and test it out locally. You can make changes, test out new parameters, and see what will work best for you environment! Once you have a set of changes you would like applied, you can [submit a support ticket](https://catalyzeio.zendesk.com/) to request the changes be made.
