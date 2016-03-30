@@ -20,16 +20,11 @@ By default, the Stratum Dashboard shows the last hour of metrics for the selecte
 
 You can also refresh the existing time intervals by clicking the "Refresh" button.
 
-### Interval Focus
-With each graph, you can focus in greater detail on specific lengths of time. Underneath each main graph is a focus graph. On this smaller graph, you can highlight a length of time to focus the main graph on that interval. Below is an example of how the main graph shifts to display the selected interval.
-
-![focus graph](images/metrics_focus.png)
-
 ## Metrics Collected
 Below are brief explanations of the metrics collected.
 
 ### CPU Usage
-The metrics collected here do not correspond to a specific measurement of cycles consumed per second. This metric is best used to examine relative differences in CPU usage over time. Using the time based data to compare usage to log events would be one example of how to use the CPU usage data.
+CPU Usage is tracked as a percentage of the amount of CPU the service has been allotted.
 
 ![cpu](images/metrics_cpu.png)
 
