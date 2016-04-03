@@ -53,6 +53,7 @@ After gaining access to your organization you'll want to download the Catalyze C
  * [catalyze\_3.1.4\_windows\_386.zip](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_windows_386.zip)
  * [catalyze\_3.1.4\_windows\_amd64.zip](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_windows_amd64.zip)
 
+
  **Recap:** [Download](https://github.com/catalyzeio/cli) the latest version of the Catalyze CLI.
 
 ## Environment Association
