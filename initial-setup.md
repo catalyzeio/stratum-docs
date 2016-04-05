@@ -30,29 +30,9 @@ Now that you've successfully created an account and signed in you can now accept
 
 ## Catalyze CLI
 
-After gaining access to your organization, you will want to download the Catalyze CLI (command line interface). Below are the latest available builds:
+After gaining access to your organization, you will want to download the Catalyze CLI (command line interface).
 
 **Please note:** If you have an existing version of the Catalyze CLI you can run `catalyze update` to get the latest version.
-
-### Darwin (Apple Mac)
-
- * [catalyze\_3.1.4\_darwin\_386.zip](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_darwin_386.zip)
- * [catalyze\_3.1.4\_darwin\_amd64.zip](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_darwin_amd64.zip)
-
-### Linux
-
- * [catalyze\_3.1.4\_amd64.deb](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_amd64.deb)
- * [catalyze\_3.1.4\_armhf.deb](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_armhf.deb)
- * [catalyze\_3.1.4\_i386.deb](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_i386.deb)
- * [catalyze\_3.1.4\_linux\_386.tar.gz](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_linux_386.tar.gz)
- * [catalyze\_3.1.4\_linux\_amd64.tar.gz](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_linux_amd64.tar.gz)
- * [catalyze\_3.1.4\_linux\_arm.tar.gz](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_linux_arm.tar.gz)
-
-### MS Windows
-
- * [catalyze\_3.1.4\_windows\_386.zip](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_windows_386.zip)
- * [catalyze\_3.1.4\_windows\_amd64.zip](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_windows_amd64.zip)
-
 
  **Recap:** [Download](https://github.com/catalyzeio/cli) the latest version of the Catalyze CLI.
 
