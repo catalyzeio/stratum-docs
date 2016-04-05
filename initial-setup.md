@@ -86,7 +86,7 @@ If you have a self-signed certificate you can run the following command using yo
 
 ## Push Code
 
-The moment of truth. It's time to make our first code push, and it couldn't be easier. Navigate to application's code repository (the same place we were in the associate step) and run `git push catalyze master`.
+The moment of truth. It's time to make our first code push, and it couldn't be easier. Navigate to the application's code repository (the same place we were in the associate step) and run `git push catalyze master`.
 
 This pushes your master branch to the Catalyze master branch. If you want to push a branch that is not named master, see the following:
 
