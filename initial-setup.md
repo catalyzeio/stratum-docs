@@ -30,7 +30,7 @@ Now that you've successfully created an account and signed in you can now accept
 
 ## Catalyze CLI
 
-After gaining access to your organization, you will want to download the Catalyze CLI (command line interface).
+After gaining access to your organization you will want to download the Catalyze CLI (command line interface).
 
 **Please note:** If you have an existing version of the Catalyze CLI you can run `catalyze update` to get the latest version.
 
@@ -38,9 +38,9 @@ After gaining access to your organization, you will want to download the Catalyz
 
 ## Environment Association
 
-Once you have the latest build of the Catalyze CLI you'll want to create an association between your CLI install and the newly created Stratum environment.
+Once you have the latest build of the Catalyze CLI you need to create an association between your CLI install and the newly created Stratum environment.
 
-**Please note:** Before moving on, be advised that the Catalyze CLI is the primary tool for interacting with your environment. Our design philosophy is that the Stratum dashboard is the view layer into your environment and related services. While the CLI is a tool that can perform actions on those environments and related services.
+**Please note:** Before moving on, be advised that the Catalyze CLI is the primary tool for interacting with your environment. Our design philosophy is that the Stratum dashboard is the view layer into your environment and related services. The CLI is the tool that can perform actions on those environments and related services.
 
 To associate your application repository to your Catalyze remote repository navigate to the root directory of your application. This will always be where the `.git` folder resides.
 
@@ -74,9 +74,11 @@ To start, you’ll need to create a cert. Make sure both the certificate and pri
 
 `catalyze certs create wildcard_examplecom ./example.crt ./example.key`
 
-If you have a self-signed certifcate you can run the following command using your own correct file names/paths:
+If you have a self-signed certificate you can run the following command using your own correct file names/paths:
 
 `catalyze certs create examplecom ./example_selfsigned.crt ./example_selfsigned.key -s`
+
+**Self-Signed-Certs: You can follow our guide [here](https://resources.catalyze.io/stratum/articles/self-signed-ssl/) for creating a self-signed cert**
 
 **Please note:** If for any reason you find yourself stuck you can run any Catalyze CLI command without arguments to see a full manual on that specific command.
 
