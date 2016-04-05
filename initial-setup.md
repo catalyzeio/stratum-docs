@@ -6,7 +6,7 @@ title: Stratum Initial Setup
 
 The following article is intended to get new users up and running in short order. We do have verbose, in depth write ups on each step outlined below. If you'd like to read more please see our official [getting started guide](//resources.catalyze.io/stratum/getting-started/). However it is recommended that you complete this guide before moving on to anything else.
 
-What we'll complete in this guide:
+What we'll cover in this guide:
 
 - 1. Gaining access to an organization and related environment(s)
 - 2. Downloading the CLI
@@ -72,9 +72,9 @@ Once inside you can run the `catalyze associate` command. This command takes two
 
 ## SSH Keys
 
-The next thing you'll want todo is setup your SSH key so you can push code to your Catalyze remote repository. Any SSH key uploaded to your Catalyze user account will be available for use with all code services and environments that you have access to.
+The next thing you'll want to do is setup your SSH key so you can push code to your Catalyze remote repository. Any SSH key uploaded to your Catalyze user account will be available for use with all code services and environments that you have access to.
 
-First you'll want to create a brand new public key. This key should not be shared or used anywhere else. The following command should be run with the email you signed up with.
+First you'll want to create a brand new public key. This key should not be shared or used anywhere else. The following command should be run with the email you signed up with (**Please note:** After creating your new public key you'll need to add it to your ssh agent: `ssh-add KEY_PATH`).
 
 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 
@@ -106,7 +106,7 @@ If you have a self-signed certifcate you can run the following command using you
 
 The moment of truth. It's time to make our first code push, and it couldn't be easier. Simply navigate to application's code repository (the same place we were in the associate step) and run `git push catalyze master`.
 
-This, of course, your master branch to the Catalyze master branch. If you want to push a branch that is not named master, see the following:
+This pushes your master branch to the Catalyze master branch. If you want to push a branch that is not named master, see the following:
 
 `git push catalyze mybranch_name:master`
 
