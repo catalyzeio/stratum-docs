@@ -30,9 +30,9 @@ Now that you've successfully created an account and signed in you can now accept
 
 ## Catalyze CLI
 
-After gaining access to your organization you'll want to download the Catalyze CLI (command line interface). Below are the latest available builds:
+After gaining access to your organization, you will want to download the Catalyze CLI (command line interface). Below are the latest available builds:
 
-**Please note:** If you have an existing version of the Catalyze CLI you can simply run `catalyze update` to get the latest version.
+**Please note:** If you have an existing version of the Catalyze CLI you can run `catalyze update` to get the latest version.
 
 ### Darwin (Apple Mac)
 
@@ -104,7 +104,7 @@ If you have a self-signed certifcate you can run the following command using you
 
 ## Push Code
 
-The moment of truth. It's time to make our first code push, and it couldn't be easier. Simply navigate to application's code repository (the same place we were in the associate step) and run `git push catalyze master`.
+The moment of truth. It's time to make our first code push, and it couldn't be easier. Navigate to application's code repository (the same place we were in the associate step) and run `git push catalyze master`.
 
 This pushes your master branch to the Catalyze master branch. If you want to push a branch that is not named master, see the following:
 
@@ -120,11 +120,11 @@ Now that we've successfully added an SSL certificate and made our first code pus
 
 The public hostname for your environment is unique, and will be sent to you during the initial onboarding steps. Alternatively you can run the `catalyze sites list` command to see your hostname.
 
-The next step is to simply add the CNAME rules using your appropriate name and domain:
+The next step is to add the CNAME rules using your appropriate name and domain:
 
 **Full example:** `mysite.wxyz.com CNAME pod0123.catalyzeapps.com`
 
-You can also use an ALIAS:
+You can also use an ALIAS if you have a bare domain and your DNS provider supports ALIAS records:
 
 `wxyz.com ALIAS pod0123.catalyzeapps.com`
 
