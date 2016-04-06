@@ -26,7 +26,7 @@ Finally, generate the certificate and answer the questions.
 
 `openssl req -x509 -days 365 -key key.pem -in csr.pem -out certificate.pem`
 
-**Takeaway: The key.pem and certificate.pem files are now suitable for use in the CLI to setup certs and sites**
+**Takeaway: The key.pem and certificate.pem files are now suitable for use in the CLI to setup certs and sites. Follow the guide [here](https://resources.catalyze.io/stratum/articles/guides/self-service-SSL) and don't forget to use the `-s` flag while uploading the cert!**
 
 # Production SSL Certificates
 
