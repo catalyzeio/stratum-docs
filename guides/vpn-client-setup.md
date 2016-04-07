@@ -58,3 +58,7 @@ To create a connection, execute the following command in a terminal window:
 You will then be prompted for your Pre-Shared Key and User Password.
 
 Catalyze will provide the VPN Gateway IP, VPN Identity, Pre-Shared Key, and User Password.
+
+## Example Command
+
+`sudo charon-cmd --host 55.55.55.55 --identity bob@catalyze.io --profile ikev1-xauth-psk`
