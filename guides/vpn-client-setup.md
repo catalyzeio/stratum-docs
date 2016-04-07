@@ -45,6 +45,7 @@ On Linux, Catalyze recommends using strongSwan directly as opposed to using the 
 Most Linux distributions provide strongSwan in their package repositories. Execute the following commands to install strongSwan plus other dependencies.
 
 **Ubuntu**
+
 `sudo apt-get install strongswan strongswan-plugin-unity strongswan-plugin-xauth-generic`
 
 ## strongSwan Client Connection
@@ -57,7 +58,7 @@ To create a connection, execute the following command in a terminal window:
 
 You will then be prompted for your Pre-Shared Key and User Password.
 
-Catalyze will provide the VPN Gateway IP, VPN Identity, Pre-Shared Key, and User Password.
+Catalyze will provide each VPN user with the VPN Gateway IP, VPN Account Name, VPN Account Password, and VPN Pre-Shared Key.
 
 ## Example Command
 
