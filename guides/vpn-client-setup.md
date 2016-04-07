@@ -12,7 +12,7 @@ title: Stratum VPN Client Setup Guide
 
 # VPN Security
 
-Communications between the your client computer and the Stratum environment over the VPN are encrypted and secure. However, your VPN credentials provide access into this protected environment and should be safeguarded very securely. Please make sure that you are following
+Communications between the your client computer and the Stratum environment over the VPN are encrypted and secure. However, your VPN credentials provide access into this protected environment and should be safeguarded very securely. Please make sure that you are following all applicable information security policies, including what we provide at https://policy.catalyze.io and https://hipaa.catalyze.io.
 
 # OS X Native Client Setup
 
