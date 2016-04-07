@@ -12,6 +12,30 @@ title: Stratum VPN Client Setup Guide
 
 # OS X Native Client Setup
 
+On OS X, the VPN can be created via the Native OS X client. In **System Preferences**, open **Network Connections**.
+
+Click the "+" to create a new connection. You will see the screen below pop-up:
+
+![vpn_creation](images/vpn_name.png)
+
+Ensure that **Interface** is set to "VPN" and that **VPN Type** is "Cisco IPsec". You can name the VPN whatever you wish.
+
+Click ok after setting those values. You will see the following screen:
+
+![vpn_userpass](images/vpn_userpass.png)
+
+Fill in the **Server Address**, **Account Name**, and **Password** fields with the VPN Gateway IP, VPN Account Name, and VPN Account Password credentials provided by Catalyze.
+
+Finally, click on **Authentication Settings**. You will see the following window:
+
+![vpn_psk](vpn_psk.png)
+
+Choose the **Shared Secret** radio button. In that field, place the VPN Pre-Shared Key supplied to you by Catalyze. Click "Ok".
+
+Now, click the **"Apply"** button for the connection and connect by clicking the **"Connect"** button.
+
+![vpn_userpass](images/vpn_userpass_highlights.png)
+
 # Linux strongSwan Client Setup
 
 On Linux, Catalyze recommends using strongSwan directly as opposed to using the plugins for NetworkManager or other VPN clients. Those clients often do not properly configure the connection properly.
