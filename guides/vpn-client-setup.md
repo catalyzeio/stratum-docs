@@ -16,25 +16,25 @@ On OS X, the VPN can be created via the Native OS X client. In **System Preferen
 
 Click the "+" to create a new connection. You will see the screen below pop-up:
 
-![vpn_creation](images/vpn_name.png)
+![vpn_creation](../images/vpn_name.png)
 
 Ensure that **Interface** is set to "VPN" and that **VPN Type** is "Cisco IPsec". You can name the VPN whatever you wish.
 
 Click ok after setting those values. You will see the following screen:
 
-![vpn_userpass](images/vpn_userpass.png)
+![vpn_userpass](../images/vpn_userpass.png)
 
 Fill in the **Server Address**, **Account Name**, and **Password** fields with the VPN Gateway IP, VPN Account Name, and VPN Account Password credentials provided by Catalyze.
 
 Finally, click on **Authentication Settings**. You will see the following window:
 
-![vpn_psk](vpn_psk.png)
+![vpn_psk](../images/vpn_psk.png)
 
 Choose the **Shared Secret** radio button. In that field, place the VPN Pre-Shared Key supplied to you by Catalyze. Click "Ok".
 
 Now, click the **"Apply"** button for the connection and connect by clicking the **"Connect"** button.
 
-![vpn_userpass](images/vpn_userpass_highlights.png)
+![vpn_userpass](../images/vpn_userpass_highlights.png)
 
 # Linux strongSwan Client Setup
 
