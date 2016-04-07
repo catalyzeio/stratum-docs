@@ -21,7 +21,7 @@ Supported Clients:
   **OSX 10.10+**
     - Native VPN Client
   **Ubuntu/RedHat Linux**
-    - StrongSwan VPN Client
+    - strongSwan VPN Client
 
 # How do I setup my VPN client?
 
