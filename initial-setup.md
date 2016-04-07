@@ -30,37 +30,17 @@ Now that you've successfully created an account and signed in you can now accept
 
 ## Catalyze CLI
 
-After gaining access to your organization you'll want to download the Catalyze CLI (command line interface). Below are the latest available builds:
+After gaining access to your organization you will want to download the Catalyze CLI (command line interface).
 
-**Please note:** If you have an existing version of the Catalyze CLI you can simply run `catalyze update` to get the latest version.
-
-### Darwin (Apple Mac)
-
- * [catalyze\_3.1.4\_darwin\_386.zip](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_darwin_386.zip)
- * [catalyze\_3.1.4\_darwin\_amd64.zip](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_darwin_amd64.zip)
-
-### Linux
-
- * [catalyze\_3.1.4\_amd64.deb](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_amd64.deb)
- * [catalyze\_3.1.4\_armhf.deb](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_armhf.deb)
- * [catalyze\_3.1.4\_i386.deb](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_i386.deb)
- * [catalyze\_3.1.4\_linux\_386.tar.gz](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_linux_386.tar.gz)
- * [catalyze\_3.1.4\_linux\_amd64.tar.gz](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_linux_amd64.tar.gz)
- * [catalyze\_3.1.4\_linux\_arm.tar.gz](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_linux_arm.tar.gz)
-
-### MS Windows
-
- * [catalyze\_3.1.4\_windows\_386.zip](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_windows_386.zip)
- * [catalyze\_3.1.4\_windows\_amd64.zip](https://github.com/catalyzeio/cli/releases/download/3.1.4/catalyze_3.1.4_windows_amd64.zip)
-
+**Please note:** If you have an existing version of the Catalyze CLI you can run `catalyze update` to get the latest version.
 
  **Recap:** [Download](https://github.com/catalyzeio/cli) the latest version of the Catalyze CLI.
 
 ## Environment Association
 
-Once you have the latest build of the Catalyze CLI you'll want to create an association between your CLI install and the newly created Stratum environment.
+Once you have the latest build of the Catalyze CLI you need to create an association between your CLI install and the newly created Stratum environment.
 
-**Please note:** Before moving on, be advised that the Catalyze CLI is the primary tool for interacting with your environment. Our design philosophy is that the Stratum dashboard is the view layer into your environment and related services. While the CLI is a tool that can perform actions on those environments and related services.
+**Please note:** Before moving on, be advised that the Catalyze CLI is the primary tool for interacting with your environment. Our design philosophy is that the Stratum dashboard is the view layer into your environment and related services. The CLI is the tool that can perform actions on those environments and related services.
 
 To associate your application repository to your Catalyze remote repository navigate to the root directory of your application. This will always be where the `.git` folder resides.
 
@@ -94,9 +74,11 @@ To start, you’ll need to create a cert. Make sure both the certificate and pri
 
 `catalyze certs create wildcard_examplecom ./example.crt ./example.key`
 
-If you have a self-signed certifcate you can run the following command using your own correct file names/paths:
+If you have a self-signed certificate you can run the following command using your own correct file names/paths:
 
 `catalyze certs create examplecom ./example_selfsigned.crt ./example_selfsigned.key -s`
+
+**Self-Signed-Certs: You can follow our guide [here](https://resources.catalyze.io/stratum/articles/self-signed-ssl/) for creating a self-signed cert**
 
 **Please note:** If for any reason you find yourself stuck you can run any Catalyze CLI command without arguments to see a full manual on that specific command.
 
@@ -104,7 +86,7 @@ If you have a self-signed certifcate you can run the following command using you
 
 ## Push Code
 
-The moment of truth. It's time to make our first code push, and it couldn't be easier. Simply navigate to application's code repository (the same place we were in the associate step) and run `git push catalyze master`.
+The moment of truth. It's time to make our first code push, and it couldn't be easier. Navigate to the application's code repository (the same place we were in the associate step) and run `git push catalyze master`.
 
 This pushes your master branch to the Catalyze master branch. If you want to push a branch that is not named master, see the following:
 
@@ -120,11 +102,11 @@ Now that we've successfully added an SSL certificate and made our first code pus
 
 The public hostname for your environment is unique, and will be sent to you during the initial onboarding steps. Alternatively you can run the `catalyze sites list` command to see your hostname.
 
-The next step is to simply add the CNAME rules using your appropriate name and domain:
+The next step is to add the CNAME rules using your appropriate name and domain:
 
 **Full example:** `mysite.wxyz.com CNAME pod0123.catalyzeapps.com`
 
-You can also use an ALIAS:
+You can also use an ALIAS if you have a bare domain and your DNS provider supports ALIAS records:
 
 `wxyz.com ALIAS pod0123.catalyzeapps.com`
 
