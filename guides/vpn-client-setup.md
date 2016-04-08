@@ -42,7 +42,7 @@ Now, click the **"Apply"** button for the connection and connect by clicking the
 
 # Linux strongSwan Client Setup
 
-On Linux, Catalyze recommends using strongSwan directly as opposed to using the plugins for NetworkManager or other VPN clients. Those clients often do not properly configure the connection properly.
+On Linux, Catalyze recommends using strongSwan directly as opposed to using the plugins for NetworkManager or other VPN clients. Those clients often do not properly configure the connection properly. 
 
 ## strongSwan Installation
 
@@ -77,6 +77,8 @@ The VPN connection allows you to connect directly to many of the resources in yo
   - Postgresql on database-1: 10.255.0.1:5432
   - Postgresql on database-2: 10.255.0.1:5433
   - Redis on cache-1: 10.255.0.1:6379
+  - Application on code-1: 10.255.0.1:8080
+  - Application on code-2: 10.255.0.1:8081
 
 ## Example Postgres Service Connection
 
@@ -107,3 +109,13 @@ This drops me onto the database-2 Postgresql shell on the catalyzeDB database. O
 Redis does not have authentication credentials within the encrypted environment. You can use the `redis-cli` to connect to your Redis instances.
 
 `redis-cli -h 10.255.0.1 -p 6379`
+
+## Example Code Service Connection
+
+**Example Service Map:** Application on code-1 : 10.255.0.1:8080
+
+This exposes your application container without going through the environment's service proxy.
+
+Below is a simple example that will curl the port that the web server is on.
+
+`curl 10.255.0.1:8080`
