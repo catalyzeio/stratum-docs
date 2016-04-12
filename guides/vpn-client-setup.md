@@ -7,12 +7,12 @@ title: Stratum VPN Client Setup Guide
 **OSX 10.9+**
   * Native VPN Client
 
-**Ubuntu/RedHat Linux**
+**Ubuntu Linux**
   * StrongSwan VPN Client 5.1+
 
 # VPN Security
 
-Communications between the your client computer and the Stratum environment over the VPN are encrypted and secure. However, your VPN credentials provide access into this protected environment and should be safeguarded very securely. Please make sure that you are following all applicable information security policies, including what we provide at https://policy.catalyze.io and https://hipaa.catalyze.io.
+Communications between the your client computer and the Stratum environment over the VPN are encrypted and secure. However, your VPN credentials provide access into this protected environment and should be safeguarded very securely. Please make sure that you are following all applicable information security policies, including what we provide at [https://policy.catalyze.io](https://policy.catalyze.io) and [https://hipaa.catalyze.io](https://hipaa.catalyze.io).
 
 # OS X Native Client Setup
 
@@ -40,15 +40,13 @@ Now, click the **"Apply"** button for the connection and connect by clicking the
 
 ![vpn_userpass](../images/vpn_userpass_highlights.png)
 
-# Linux strongSwan Client Setup
+# Ubuntu strongSwan Client Setup
 
-On Linux, Catalyze recommends using strongSwan directly as opposed to using the plugins for NetworkManager or other VPN clients. Those clients often do not properly configure the connection properly. 
+On Linux, Catalyze recommends using strongSwan directly as opposed to using the plugins for NetworkManager or other VPN clients. Those clients often do not properly configure the connection properly. This connection setup was tested on Ubuntu 14.04.
 
 ## strongSwan Installation
 
 Most Linux distributions provide strongSwan in their package repositories. Execute the following commands to install strongSwan plus other dependencies.
-
-**Ubuntu**
 
 `sudo apt-get install strongswan strongswan-plugin-unity strongswan-plugin-xauth-generic`
 
