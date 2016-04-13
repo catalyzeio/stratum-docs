@@ -50,7 +50,7 @@ git clone https://github.com/progrium/buildstep.git
 
 #### Build your code into a container
 
-Call it `myapp` or whatever you choose. `myapp` will be the name of the docker image created by the buildstep process.
+Call it `myapp` or whatever you choose. `myapp` will be the name of the docker image created by the buildstep process.  This image name will be used in the `docker run` commands later.
 
 ```
 cd /path/to/src/directory/buildstep
