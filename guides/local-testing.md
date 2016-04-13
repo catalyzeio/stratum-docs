@@ -25,7 +25,7 @@ export BTD_IP=$(echo ${DOCKER_HOST} | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]
 
 #### Make a note of your working directory
 
-The next sections will ask you to clone your code repository and the buildstep reposotiry.  You will want the directory structure to look like this:
+The next sections will ask you to clone your code repository and the buildstep repository.  You will want the directory structure to look like this:
 ```
 /path/to/src/directory/your-code-repo
 /path/to/src/directory/buildstep
@@ -50,7 +50,7 @@ git clone https://github.com/progrium/buildstep.git
 
 #### Build your code into a container
 
-Call it `myapp` or whatever you choose.
+Call it `myapp` or whatever you choose. `myapp` will be the name of the docker image created by the buildstep process.
 
 ```
 cd /path/to/src/directory/buildstep
