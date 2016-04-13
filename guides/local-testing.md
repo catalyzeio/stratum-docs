@@ -20,7 +20,7 @@ $(boot2docker shellinit)
 
 #### Grab the BTD ip
 ```
-BTD_IP=$(echo ${DOCKER_HOST} | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}')
+export BTD_IP=$(echo ${DOCKER_HOST} | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}')
 ```
 #### Get your app
 
