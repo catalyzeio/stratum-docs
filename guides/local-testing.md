@@ -22,6 +22,17 @@ $(boot2docker shellinit)
 ```
 export BTD_IP=$(echo ${DOCKER_HOST} | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}')
 ```
+
+#### Make a note of your working directory
+
+The next sections will ask you to clone your code repository and the buildstep reposotiry.  You will want the directory structure to look like this:
+```
+/path/to/src/directory/your-code-repo
+/path/to/src/directory/buildstep
+```
+
+Make sure you are in `/path/to/src/directory/` before cloning or building your container.
+
 #### Get your app
 
 For demonstration purposes we just pull heroku's node-js sample. When you try it out, you should replace the github url below with a pointer to your code.
@@ -42,9 +53,10 @@ git clone https://github.com/progrium/buildstep.git
 Call it `myapp` or whatever you choose.
 
 ```
-cd /tmp/buildstep
-tar cC /tmp/node-js-sample . | ./buildstep myapp
+cd /path/to/src/directory/buildstep
+tar cC /path/to/src/directory/node-js-sample . | ./buildstep myapp
 ```
+
 
 #### Run it
 
@@ -52,7 +64,7 @@ tar cC /tmp/node-js-sample . | ./buildstep myapp
 docker run -p 8080:8080 -e PORT=8080 -e DATABASE_URL=mongodb://your.mongo.container.ip:12345 -d myapp /bin/bash -c "/start web"
 ```
 
-Replace the ``your.mongo.container.ip:12345`` with the URL that we provided you.
+Replace the ``mongodb://your.mongo.container.ip:12345`` with the URL for your local database eg.: `mongodb://localhost:12345`
 
 #### Test it
 
@@ -65,9 +77,9 @@ curl http://$BTD_IP:8080
 Set the environment variable `BUILDPACK_URL` and you will be good to go. We've used a sample customer buildpack in the example below. Please adjust it to whatever specific buildpack you would like to test. As a note of caution, please do not use any and all buildpacks out there. Please exercise some caution as some buildpacks can be malicious. In general, if you don't fully understand all the things in the buildpack, please do not use it.
 
 ```
-echo "export BUILDPACK_URL=https://github.com/mbuchetics/heroku-buildpack-nodejs-grunt.git" > /tmp/node-js-sample/.env
-cd /tmp/buildstep
-tar cC /tmp/node-js-sample . | ./buildstep myapp-custom
+echo "export BUILDPACK_URL=https://github.com/mbuchetics/heroku-buildpack-nodejs-grunt.git" > /path/to/src/directory/node-js-sample/.env
+cd /path/to/src/directory/buildstep
+tar cC /path/to/src/directory/node-js-sample . | ./buildstep myapp-custom
 ```
 
 #### Run it
