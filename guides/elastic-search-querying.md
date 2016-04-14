@@ -40,7 +40,9 @@ The index name is in the format `logstash-YYYY.MM.DD`.  For example, `logstash-2
 
 The type is "syslog"
 
-To return all the records in Elasticsearch from 2015-11-09, the uri would be `https://podhostname/__es/logstash-2015.11.09/syslog/_search`
+To return all the records in Elasticsearch from 2015-11-09, the uri would be:
+
+`https://podhostname/__es/logstash-2015.11.09/syslog/_search`
 
 The request will return a JSON document.  You can pipe the results through `jq` to filter the results and only show the syslog message:
 
