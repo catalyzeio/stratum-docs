@@ -64,7 +64,7 @@ tar cC /path/to/src/directory/node-js-sample . | ./buildstep myapp
 docker run -p 8080:8080 -e PORT=8080 -e DATABASE_URL=mongodb://your.mongo.container.ip:12345 -d myapp /bin/bash -c "/start web"
 ```
 
-Replace the ``mongodb://your.mongo.container.ip:12345`` with the URL for your local database eg.: `mongodb://localhost:12345`
+Replace the ``mongodb://your.mongo.container.ip:12345`` with the URL for your local database eg.: `mongodb://localhost:12345`.  Replace `myapp` with the docker image name you chose earlier.
 
 #### Test it
 
