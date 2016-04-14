@@ -14,7 +14,7 @@ Elasticsearch can be queried directly by making a request to `https://podhostnam
 
 The Logging dashboard requires authentication to access.  
 
-With curl, you can include the `-u USERNAME` option to specify a username. curl will present a password prompt when using the `-u USERNAME` option.  Or, to avoid re-entering the password repeatedly, use a `.netrc` file in the home directory that stores the user name and password and the `-n` option for curl:
+With curl, you can include the `-u USERNAME` option to specify a username. curl will present a password prompt when using the `-u USERNAME` option. To avoid re-entering the password repeatedly, you may use a `.netrc` file in the home directory that stores the user name and password and the `-n` option for curl:
 
 ~/.netrc:
 ```
