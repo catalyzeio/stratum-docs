@@ -10,7 +10,7 @@ While we do not provide a local development environment with the full capabiliti
 
 In order to run this you will need to install [Docker Toolbox](https://www.docker.com/products/docker-toolbox). Alternatively, you may just install the [docker-machine](https://docs.docker.com/machine/install-machine/) directly.
 
-#### Setup Docker Toolbox:
+#### Setup Docker Toolbox
 
 Before running any docker commands, you need to first create a docker host (if you do not already have one created). List your existing machines with
 
