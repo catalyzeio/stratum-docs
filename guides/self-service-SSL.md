@@ -41,6 +41,8 @@ If a chain from your certificate to a root CA cannot be found, the CLI will atte
 
 Once all the checks from above pass, the certificate and private key are uploaded to Stratum and your cert instance is created with the given hostname. It is important to note that simply creating a cert does not imply use. For a cert to be used, it must be applied to one or more sites as described in the next section. Allowing a single cert instance to apply to more than one site allows easier certificate management, especially when certificates expire. Using the [certs update](/paas/paas-cli-reference/certs-update/) command will upload new certificates and private keys. Upon next service proxy redeploy, your new certificates and private keys will be applied to all sites that use the updated cert.
 
+The redeploy process does take a couple of minutes to complete.  The redeploy launches a new docker container, a new AWS Elastic Load Balancer and DNS record to resolve the Public DNS name of the environment, pod02????.catalyzeapps.com to the DNS record of the ELB. The number of containers, ELBs and DNS records is equal to the scale limit of the service proxy service. The deployment of those resources is relatively quick, under one minute. The lag primarily lies in the DNS propagation, with the record type having a TTL of 60 seconds.
+
 ## Sites
 
 Sites are an individual component that apply to a single code service and utilize a single cert. The [sites](/paas/paas-cli-reference/sites/) command group in the CLI has four subcommands to manage your site configurations:
