@@ -1,5 +1,6 @@
 ---
 title: Background Processing and Workers in Stratum
+category: worker
 ---
 
 # Background Processing and Workers in Stratum

@@ -1,5 +1,6 @@
 ---
 title: VPN Access
+category: vpn
 ---
 
 # Can I access my Stratum environment via VPN?

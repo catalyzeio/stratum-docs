@@ -1,5 +1,6 @@
 ---
 title: Scaling With Stratum
+category: manage
 ---
 
 # How can I scale with Catalyze and Stratum?

@@ -1,5 +1,6 @@
 ---
 title: Database General Information
+category: database
 ---
 
 ## What versions of the [supported databases](/stratum/articles/supported-databases/) does Catalyze use?

@@ -1,5 +1,6 @@
 ---
 title: Custom Buildpacks
+category: buildpack
 ---
 
 # How can I modify the Stratum buildpack process?

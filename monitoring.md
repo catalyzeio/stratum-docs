@@ -1,5 +1,6 @@
 ---
 title: Stratum Environment Monitoring
+category: monitoring
 ---
 
 # Stratum Environment Monitoring

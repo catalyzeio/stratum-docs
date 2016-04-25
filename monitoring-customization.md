@@ -1,5 +1,6 @@
 ---
 title: Customize Monitoring
+category: monitoring
 ---
 
 # Can I customize Stratum monitoring?

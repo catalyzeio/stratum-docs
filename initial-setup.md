@@ -1,5 +1,6 @@
 ---
 title: Stratum Initial Setup
+category: getting-started
 ---
 
 ## Introduction

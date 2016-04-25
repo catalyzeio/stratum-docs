@@ -1,5 +1,6 @@
 ---
 title: Organizations
+category: organization
 ---
 
 # What is a Stratum Organization?

@@ -1,5 +1,6 @@
 ---
 title: S3 Bucket Policies
+category: storage
 ---
 
 # How are Catalyze S3 Buckets managed?

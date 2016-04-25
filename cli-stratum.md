@@ -1,5 +1,6 @@
 ---
 title: The Stratum CLI
+category: getting-started
 ---
 
 # The Stratum CLI

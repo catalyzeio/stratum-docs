@@ -1,5 +1,6 @@
 ---
 title: Deploying Your Application to Catalyze
+category: application
 ---
 
 # How do I deploy to my Catalyze environment?

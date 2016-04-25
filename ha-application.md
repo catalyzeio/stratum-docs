@@ -1,5 +1,6 @@
 ---
 title: HA applications
+category: application
 ---
 
 # How does Stratum manage HA applications?

@@ -1,5 +1,6 @@
 ---
 title: Scheduled Tasks in Stratum
+category: manage
 ---
 
 # Scheduled Tasks in Stratum

@@ -1,5 +1,6 @@
 ---
 title: PHP + MySQL Guide
+category: guide
 ---
 
 # Deploying a PHP+MySQL Application on Stratum

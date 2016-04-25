@@ -1,5 +1,6 @@
 ---
 title: HA Mongo
+category: database
 ---
 
 # How does Stratum manage HA Mongo?

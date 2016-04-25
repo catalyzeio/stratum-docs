@@ -1,5 +1,6 @@
 ---
 title: Stratum Environment Variables
+category: manage
 ---
 
 # Stratum Environment Variables

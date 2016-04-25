@@ -1,5 +1,6 @@
 ---
 title: Managing Users
+category: organization
 ---
 
 # How can I add or remove users with my organization?

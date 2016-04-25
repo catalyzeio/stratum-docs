@@ -1,5 +1,6 @@
 ---
 title: Organization Concepts
+category: organization
 ---
 
 # Stratum Organization Concepts
