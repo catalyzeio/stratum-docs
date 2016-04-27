@@ -1,5 +1,6 @@
 ---
 title: Stratum Supported Databases
+category: database
 ---
 
 # Stratum Supported Databases

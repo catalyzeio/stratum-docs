@@ -1,5 +1,6 @@
 ---
 title: Worker Deploy
+category: worker
 ---
 
 # How do I deploy a worker container?

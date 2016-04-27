@@ -1,5 +1,6 @@
 ---
 title: Stratum Environment Logging
+category: logging
 ---
 
 # Stratum Environment Logging

@@ -1,5 +1,6 @@
 ---
 title: Self-Service SSL Guide
+category: ssl
 ---
 
 # Self-Service SSL Guide

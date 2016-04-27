@@ -1,5 +1,6 @@
 ---
 title: Stratum VPN Client Setup Guide
+category: vpn
 ---
 
 # Supported Clients

@@ -1,5 +1,6 @@
 ---
 title: Managing Environment Variables
+category: manage
 ---
 
 # Managing Environment Variables

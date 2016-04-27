@@ -1,5 +1,6 @@
 ---
 title: Stratum Billing
+category: getting-started
 ---
 
 # Stratum Billing

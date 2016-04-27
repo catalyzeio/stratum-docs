@@ -1,5 +1,6 @@
 ---
 title: Cloud Storage
+category: storage
 ---
 
 # Stratum Cloud Storage

@@ -1,5 +1,6 @@
 ---
 title: S3 Bucket Access
+category: storage
 ---
 
 # How can I access my Catalyze S3 Bucket?

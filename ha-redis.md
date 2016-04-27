@@ -1,5 +1,6 @@
 ---
 title: HA Redis
+category: cache
 ---
 
 # How does Stratum manage HA Redis?

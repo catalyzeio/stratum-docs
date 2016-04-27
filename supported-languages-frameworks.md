@@ -1,5 +1,6 @@
 ---
 title: Stratum Supported Languages and Frameworks
+category: application
 ---
 
 # Stratum Supported Languages and Frameworks

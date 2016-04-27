@@ -1,5 +1,6 @@
 ---
 title: Stratum Elasticsearch Direct Queries
+category: logging
 ---
 
 # Extracting Messages from Elasticsearch

@@ -1,5 +1,6 @@
 ---
 title: Stratum Self-Signed SSL Certs
+category: ssl
 ---
 
 # Self-Signed vs CA-Signed SSL Certs

@@ -1,5 +1,6 @@
 ---
 title: Supported Utilities and Add-ons
+category: getting-started
 ---
 
 # Supported Utilities and Add-ons

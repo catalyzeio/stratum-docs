@@ -1,5 +1,6 @@
 ---
 title: Stratum Application Logging Guide
+category: logging
 ---
 
 # Stratum Application Logging Guide

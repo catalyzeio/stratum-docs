@@ -1,5 +1,6 @@
 ---
 title: Setting Up Codeship to Deploy to Catalyze
+category: manage
 ---
 
 # How do I setup Codeship to deploy to Catalyze?

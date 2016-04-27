@@ -1,5 +1,6 @@
 ---
 title: Using a Specific Buildpack Version
+category: buildpack
 ---
 
 # Using a Specific Buildpack Version

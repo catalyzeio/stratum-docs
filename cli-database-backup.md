@@ -1,5 +1,6 @@
 ---
 title: Database Backups
+category: database
 ---
 
 ## Backup

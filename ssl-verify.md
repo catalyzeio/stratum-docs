@@ -1,5 +1,6 @@
 ---
 title: SSL Certificate Verification
+category: ssl
 ---
 
 # SSL Certificate Verification

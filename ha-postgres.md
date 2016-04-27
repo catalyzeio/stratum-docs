@@ -1,5 +1,6 @@
 ---
 title: HA Postgres
+category: database
 ---
 
 # How does Stratum manage HA Postgres?

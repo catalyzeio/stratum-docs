@@ -1,5 +1,6 @@
 ---
 title: Stratum Environment Metrics
+category: manage
 ---
 
 # Stratum Environment Metrics
