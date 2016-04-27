@@ -64,7 +64,7 @@ HOST = os.environ['LOGGING_SERVER'].split(":")[0]
 PORT = os.environ['LOGGING_SERVER'].split(":")[1]
 
 LOGGING = {
-    'version': 1,andrewawagner@gmail.com
+    'version': 1,
         'file': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler'
