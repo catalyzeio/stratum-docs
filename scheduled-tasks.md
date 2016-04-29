@@ -43,6 +43,9 @@ done
 * Add a target to your Procfile to run `cron.sh`.  An example rails Procfile may look like:
 ```
 web: bundle exec rails server -p $PORT
-worker: ./cron.sh
+cron: ./cron.sh
 ```
 * Start your cron worker via the CLI and specify your `cron` Procfile target.
+```
+catalyze worker cron
+```
