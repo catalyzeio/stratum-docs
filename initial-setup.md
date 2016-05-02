@@ -109,7 +109,7 @@ mysite.wxyz.com canonical name = pod0123.catalyzeapps.com.`
 
 ## Sites Setup
 
-Once you have an SSL certificate added to an environment and the DNS name you want to resolve pointed at your POD URL, you'll need to create a site for the environment that uses the certificate and listens for that DNS name. Until you create a site, you will **not** route traffic to your application.
+Once you have an SSL certificate added to an environment and the DNS name you want to resolve pointed at your POD URL, you'll need to create a site for the environment that uses the certificate and listens for that DNS name. Until you create a site, you will **not** be able to route traffic to your application.
 
 This step occurs entirely within the CLI. To create a site, you'll use the certificate and DNS entries from the last two steps:
 
