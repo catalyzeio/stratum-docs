@@ -14,8 +14,10 @@ What we'll cover in this guide:
 - 3. Associating a local git repository with a Catalyze remote repository
 - 4. Adding an SSH Key
 - 5. Adding an SSL certificate
-- 6. Deploying code
-- 7. Setting up DNS
+- 6. Setting up DNS
+- 7. Setting up Sites
+- 8. Deploying code
+
 
 ## Prerequisite: Access
 
