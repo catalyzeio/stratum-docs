@@ -27,6 +27,7 @@ Follow these steps to enable `cron`:
 * Contact support and request that `cron` be enabled for your worker.
 * Create a `crontab` formatted file named `my-crontab` in your application directory that has your commands and schedules.
 * Create a `cron.sh` file in your application directory that looks like:
+
 ```
 #!/bin/sh -e
 LOGFILE=/var/log/cron.log
