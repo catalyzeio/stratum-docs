@@ -45,3 +45,14 @@ Below we've listed common problems and resolutions for the previous components.
     - **Solution:** Enter a unique password into both the password and confirm password inputs.
 
 ## Catalyze CLI
+
+### Git
+- **You do not have access to the requested repository fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.**
+    - **Potential Issue:** You are using a deploy key from a different environment.
+    - **Potential Solution:** Set up user keys as a replacement for deploy keys. User keys are associated with your user and will work on any environment. See [this guide](//resources.catalyze.io/stratum/articles/ssh-keys/#how-can-i-setup-user-keys-on-my-account?) for instructions on setting up user keys.
+
+### Miscellaneous
+
+- **404: Page Not Found NGINX error**
+    - **Potential Issue:** You have not configured an SSL Certificate or Sites object with that services in the environment.
+    - **Potential Solution:** Configure both a site an a cert with your environment. See this [guide on certs](//resources.catalyze.io/stratum/articles/guides/self-service-SSL/) and this [guide on sites](//resources.catalyze.io/stratum/articles/initial-setup/#sites-setup) for more details.
