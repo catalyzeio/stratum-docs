@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Cloud Storage
+title: Cloud Storage
 category: storage
 summary: Learn about using Cloud Storage with your Catalyze Stratum account.
 ---

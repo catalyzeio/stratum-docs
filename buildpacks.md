@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Buildpack General
+title: Buildpack General
 category: buildpack
 summary: Learn about buildpacks.
 ---

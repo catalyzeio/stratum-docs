@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Catalyze Contact Information
+title: Catalyze Contact Information
 summary: Need to contact Catalyze? We're always here to help!
 ---
 

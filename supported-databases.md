@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Stratum Supported Databases
+title: Stratum Supported Databases
 category: database
 summary: Learn about the supported databases you can use on Stratum.
 ---

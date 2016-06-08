@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Database General Information
+title: Database General Information
 category: database
 summary: Learn about databases on Stratum.
 ---

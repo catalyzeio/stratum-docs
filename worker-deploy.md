@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Worker Deploy
+title: Worker Deploy
 category: worker
 summary: How do I deploy a worker container?
 ---

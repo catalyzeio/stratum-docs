@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Custom Buildpacks
+title: Custom Buildpacks
 category: buildpack
 summary: How can I modify the Stratum buildpack process?
 ---

@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - The Stratum CLI
+title: The Stratum CLI
 category: getting-started
 summary: Download the Catalyze CLI.
 ---

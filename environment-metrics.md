@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Stratum Environment Metrics
+title: Stratum Environment Metrics
 category: manage
 summary: See what metrics are available in Stratum.
 ---

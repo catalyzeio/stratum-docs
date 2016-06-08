@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - SSL Certificate Verification
+title: SSL Certificate Verification
 category: ssl
 summary: Learn about SSL certificate verification on Stratum.
 ---

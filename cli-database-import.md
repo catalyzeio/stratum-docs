@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Database Import
+title: Database Import
 category: database
 summary: Learn how to import your data into Stratum.
 ---
