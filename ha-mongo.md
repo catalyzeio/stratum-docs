@@ -1,6 +1,7 @@
 ---
-title: HA Mongo
+title: Catalyze Resources - HA Mongo
 category: database
+summary: How does Stratum manage HA Mongo?
 ---
 
 # How does Stratum manage HA Mongo?

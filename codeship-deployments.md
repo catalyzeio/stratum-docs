@@ -1,6 +1,7 @@
 ---
-title: Setting Up Codeship to Deploy to Catalyze
+title: Catalyze Resources - Setting Up Codeship to Deploy to Catalyze
 category: manage
+summary: How do I setup Codeship to deploy to Catalyze?
 ---
 
 # How do I setup Codeship to deploy to Catalyze?

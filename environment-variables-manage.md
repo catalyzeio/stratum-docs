@@ -1,6 +1,7 @@
 ---
-title: Managing Environment Variables
+title: Catalyze Resources - Managing Environment Variables
 category: manage
+summary: Learn how to manage your environment variables on Stratum.
 ---
 
 # Managing Environment Variables

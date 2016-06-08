@@ -1,6 +1,7 @@
 ---
-title: Cloud Storage
+title: Catalyze Resources - Cloud Storage
 category: storage
+summary: Learn about using Cloud Storage with your Catalyze Stratum account.
 ---
 
 # Stratum Cloud Storage

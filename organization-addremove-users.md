@@ -1,6 +1,7 @@
 ---
-title: Managing Users
+title: Catalyze Resources - Managing Users
 category: organization
+Summary: How can I add or remove users with my organization?
 ---
 
 # How can I add or remove users with my organization?

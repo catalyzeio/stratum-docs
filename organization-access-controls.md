@@ -1,6 +1,7 @@
 ---
-title: Organization Concepts
+title: Catalyze Resources - Organization Concepts
 category: organization
+summary: Learn how to manage your organization on Catalyze.
 ---
 
 # Stratum Organization Concepts
@@ -11,7 +12,7 @@ After completing the paperwork for your first environment, Catalyze will create 
 
 Organizations have three levels of roles:
 
-- ***Member*** (Available early March 2016)
+- ***Member***
   - Belong to the organization but must be given access to specific environments
   - Cannot manage other users
 - ***Admin***

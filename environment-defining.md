@@ -1,6 +1,7 @@
 ---
-title: Stratum Environment Definition
+title: Catalyze Resources - Stratum Environment Definition
 category: getting-started
+summary: What does a Stratum environment look like?
 ---
 
 # What does a Stratum environment look like?

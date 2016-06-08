@@ -1,6 +1,7 @@
 ---
-title: Database General Information
+title: Catalyze Resources - Database General Information
 category: database
+summary: Learn about databses on Stratum.
 ---
 
 ## What versions of the [supported databases](/stratum/articles/supported-databases/) does Catalyze use?

@@ -1,6 +1,7 @@
 ---
-title: Stratum Supported Languages and Frameworks
+title: Catalyze Resources - Stratum Supported Languages and Frameworks
 category: application
+summary: Learn about the support programming languages and frameworks on Catalyze.
 ---
 
 # Stratum Supported Languages and Frameworks
