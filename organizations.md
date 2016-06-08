@@ -1,6 +1,7 @@
 ---
-title: Organizations
+title: Catalyze Resources - Organizations
 category: organization
+summary: What is a Stratum Organization?
 ---
 
 # What is a Stratum Organization?

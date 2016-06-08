@@ -1,6 +1,7 @@
 ---
-title: Stratum SSH Keys
+title: Catalyze Resources - Stratum SSH Keys
 category: manage
+summary: Learn how to manage your SSH keys in Stratum.
 ---
 
 # Stratum SSH Keys

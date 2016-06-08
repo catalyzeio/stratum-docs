@@ -1,6 +1,7 @@
 ---
-title: HA Redis
+title: Catalyze Resources - HA Redis
 category: cache
+summary: How does Stratum manage HA Redis?
 ---
 
 # How does Stratum manage HA Redis?

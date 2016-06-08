@@ -1,6 +1,7 @@
 ---
-title: Stratum Environment Logging
+title: Catalyze Resources - Stratum Environment Logging
 category: logging
+summary: Learn how logging works in Stratum.
 ---
 
 # Stratum Environment Logging

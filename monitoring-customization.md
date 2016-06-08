@@ -1,6 +1,7 @@
 ---
-title: Customize Monitoring
+title: Catalyze Resources - Customize Monitoring
 category: monitoring
+summary: Can I customize Stratum monitoring?
 ---
 
 # Can I customize Stratum monitoring?

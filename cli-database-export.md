@@ -1,6 +1,7 @@
 ---
-title: Database Export
+title: Catalyze Resources - Database Export
 category: database
+summary: Learn how to export database data from the Stratum CLI.
 ---
 
 ## Export

@@ -1,6 +1,7 @@
 ---
-title: Setting Up DNS
+title: Catalyze Resources - Setting Up DNS
 category: ssl
+summary: How do I setup DNS to point to my Catalyze environment?
 ---
 
 # How do I setup DNS to point to my Catalyze environment?

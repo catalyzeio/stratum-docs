@@ -1,8 +1,8 @@
 ---
-title: Database Import
+title: Catalyze Resources - Database Import
 category: database
+summary: Learn how to import your data into Stratum.
 ---
-
 
 ## Import
 All of the import functionality in the CLI starts with preparing a file to import. Here is a table outlining the file types appropriate for each supported database on the Catalyze platform.
