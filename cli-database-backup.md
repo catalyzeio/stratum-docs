@@ -1,10 +1,10 @@
 ---
 title: Catalyze Resources - Database Backups
 category: database
-summary: How do I preform a database backup?
+summary: How do I perform a database backup?
 ---
 
-# How do I preform a database backup?
+# How do I perform a database backup?
 
 ## Backup
 
