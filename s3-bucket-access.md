@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - S3 Bucket Access
+title: S3 Bucket Access
 category: storage
 summary: How can I access my Catalyze S3 Bucket?
 ---

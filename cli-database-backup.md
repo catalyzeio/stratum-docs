@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Database Backups
+title: Database Backups
 category: database
 summary: How do I perform a database backup?
 ---

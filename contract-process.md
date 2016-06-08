@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Catalyze Contracting
+title: Catalyze Contracting
 summary: How does the Catalyze contracting process work?
 ---
 

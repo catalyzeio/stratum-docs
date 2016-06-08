@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - HA applications
+title: HA applications
 category: application
 summary: How does Stratum manage HA applications?
 ---

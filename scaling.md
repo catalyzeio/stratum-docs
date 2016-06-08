@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Scaling With Stratum
+title: Scaling With Stratum
 category: manage
 summary: How can I scale with Catalyze and Stratum?
 ---

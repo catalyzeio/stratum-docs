@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Organization Concepts
+title: Organization Concepts
 category: organization
 summary: Learn how to manage your organization on Catalyze.
 ---

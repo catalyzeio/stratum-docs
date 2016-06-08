@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Scheduled Tasks in Stratum
+title: Scheduled Tasks in Stratum
 category: manage
 summary: Learn about scheduled tasks in Stratum.
 ---

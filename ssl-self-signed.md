@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Stratum Self-Signed SSL Certs
+title: Stratum Self-Signed SSL Certs
 category: ssl
 summary: Learn about self-signed SSL certificates on Stratum.
 ---

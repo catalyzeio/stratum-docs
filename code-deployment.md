@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Deploying Your Application to Catalyze
+title: Deploying Your Application to Catalyze
 category: application
 summary: How do I deploy to my Catalyze environment?
 ---

@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Customize Kibana
+title: Customize Kibana
 category: logging
 summary: How can I customize Kibana?
 ---

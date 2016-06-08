@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Stratum Environment Variables
+title: Stratum Environment Variables
 category: manage
 summary: Learn about environment variables in Stratum.
 ---

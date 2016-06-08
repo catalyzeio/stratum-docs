@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - HA Postgres
+title: HA Postgres
 category: database
 Summary: How does Stratum manage HA Postgres?
 ---

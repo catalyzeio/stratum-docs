@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Background Processing and Workers in Stratum
+title: Background Processing and Workers in Stratum
 category: worker
 summary: Learn about background processing and workers in Stratum.
 ---

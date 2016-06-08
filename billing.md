@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Stratum Billing
+title: Stratum Billing
 category: getting-started
 summary: What forms of payment do you accept?
 ---

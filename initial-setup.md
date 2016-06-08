@@ -1,5 +1,5 @@
 ---
-title: Catalyze Resources - Stratum Initial Setup
+title: Stratum Initial Setup
 category: getting-started
 Summary: Brand new to Stratum? Start here!
 ---
