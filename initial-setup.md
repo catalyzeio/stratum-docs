@@ -82,7 +82,7 @@ If you have a self-signed certificate you can run the following command using yo
 
 `catalyze certs create *.wxyz.com ./wxyz.com_selfsigned.crt ./wxyz.com_selfsigned.key -s`
 
-**Self-Signed-Certs: You can follow our guide [here](https://resources.catalyze.io/stratum/articles/self-signed-ssl/) for creating a self-signed cert**
+**Self-Signed-Certs: You can follow our guide [here](https://resources.catalyze.io/stratum/articles/ssl-self-signed/) for creating a self-signed cert**
 
 **Please note:** If for any reason you find yourself stuck you can run any Catalyze CLI command without arguments to see a full manual on that specific command.
 
