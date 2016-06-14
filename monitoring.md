@@ -1,5 +1,7 @@
 ---
 title: Stratum Environment Monitoring
+category: monitoring
+summary: Learn how to use Catalyze's monitoring service.
 ---
 
 # Stratum Environment Monitoring

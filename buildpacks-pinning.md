@@ -1,5 +1,7 @@
 ---
 title: Using a Specific Buildpack Version
+category: buildpack
+summary: While Stratum can detect and apply a buildpack automatically, Catalyze recommends that Stratum users pin their buildpacks to a specific version.
 ---
 
 # Using a Specific Buildpack Version

@@ -1,5 +1,7 @@
 ---
 title: Stratum Environment Variables
+category: manage
+summary: Learn about environment variables in Stratum.
 ---
 
 # Stratum Environment Variables
@@ -35,4 +37,4 @@ The service's environment variables are located here:
 
 ## Setting Your Own Variables
 
-[Link to Managing Environment Variables]
+To set your own environment variables checkout our environment variable management guide located [here](/stratum/articles/environment-variables-manage/).

@@ -1,8 +1,13 @@
 ---
 title: Database Backups
+category: database
+summary: How do I perform a database backup?
 ---
 
+# How do I perform a database backup?
+
 ## Backup
+
 The CLI backup command is there for you to create snapshots of your data, perhaps, in preparation for a software upgrade or data migration. A nightly backup of your database is also automated. All of these backups can be viewed with the CLI backup commands. Backups are encrypted and stored in cloud storage and retained for 7 days. The following examples will show you how to create and list database backups performed via the CLI.
 
 ### Create a Backup

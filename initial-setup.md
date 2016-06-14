@@ -1,5 +1,7 @@
 ---
 title: Stratum Initial Setup
+category: getting-started
+Summary: Brand new to Stratum? Start here!
 ---
 
 ## Introduction
@@ -13,8 +15,10 @@ What we'll cover in this guide:
 - 3. Associating a local git repository with a Catalyze remote repository
 - 4. Adding an SSH Key
 - 5. Adding an SSL certificate
-- 6. Deploying code
-- 7. Setting up DNS
+- 6. Setting up DNS
+- 7. Setting up Sites
+- 8. Deploying code
+
 
 ## Prerequisite: Access
 
@@ -72,29 +76,17 @@ Getting an SSL certificate installed is by far the most involved step in this se
 
 To start, you’ll need to create a cert. Make sure both the certificate and private key are unencrypted and in PEM format. If you have a Certificate Authority Signed certificate (CA-Signed) you can run the following command using your own correct file names/paths:
 
-`catalyze certs create wildcard_examplecom ./example.crt ./example.key`
+`catalyze certs create *.wxyz.com ./wxyz.com.crt ./wxyz.com.key`
 
 If you have a self-signed certificate you can run the following command using your own correct file names/paths:
 
-`catalyze certs create examplecom ./example_selfsigned.crt ./example_selfsigned.key -s`
+`catalyze certs create *.wxyz.com ./wxyz.com_selfsigned.crt ./wxyz.com_selfsigned.key -s`
 
-**Self-Signed-Certs: You can follow our guide [here](https://resources.catalyze.io/stratum/articles/self-signed-ssl/) for creating a self-signed cert**
+**Self-Signed-Certs: You can follow our guide [here](https://resources.catalyze.io/stratum/articles/ssl-self-signed/) for creating a self-signed cert**
 
 **Please note:** If for any reason you find yourself stuck you can run any Catalyze CLI command without arguments to see a full manual on that specific command.
 
 **Recap:** Use a variation of the `catalyze certs create` command to upload your SSL certificate.
-
-## Push Code
-
-The moment of truth. It's time to make our first code push, and it couldn't be easier. Navigate to the application's code repository (the same place we were in the associate step) and run `git push catalyze master`.
-
-This pushes your master branch to the Catalyze master branch. If you want to push a branch that is not named master, see the following:
-
-`git push catalyze mybranch_name:master`
-
-**Please note:** Even when you're not using your local master branch it is necessary to use the Catalyze remote master branch.
-
-**Recap:** Push your code using the `git push catalyze master` command!
 
 ## DNS Setup
 
@@ -109,6 +101,48 @@ The next step is to add the CNAME rules using your appropriate name and domain:
 You can also use an ALIAS if you have a bare domain and your DNS provider supports ALIAS records:
 
 `wxyz.com ALIAS pod0123.catalyzeapps.com`
+
+DNS name propagation can be verified via nslookup:
+
+`nslookup mysite.wxyz.com
+Non-authoritative answer:
+mysite.wxyz.com canonical name = pod0123.catalyzeapps.com.`
+
+**Recap:** Setup a DNS CNAME to point at your POD URL and verify that the DNS entry has propragated.
+
+## Sites Setup
+
+Once you have an SSL certificate added to an environment and the DNS name you want to resolve pointed at your POD URL, you'll need to create a site for the environment that uses the certificate and listens for that DNS name. Until you create a site, you will **not** be able to route traffic to your application.
+
+This step occurs entirely within the CLI. To create a site, you'll use the certificate and DNS entries from the last two steps:
+
+`catalyze sites create <your_dns_cname_pointing_at_catalyze> <the_application_to_route_traffic_to> <the_name_of_the_certificate>`
+
+**Full Example:** `catalyze sites create mysite.wxyz.com code-1 *.wxyz.com`
+
+Once the site is created, redeploy the service proxy in your environment to push out the new site configuration:
+
+`catalyze redeploy service_proxy`
+
+The redeploy takes about three minutes due to DNS propagation. If you navigate to the DNS CNAME you created earlier, `mysite.wxyz.com`, that address should pass through to your code service. Prior to pushing code, your site will display a 503 error code in the browser. However, you can verify that your certificate is correctly being used by checking the output of the following command:
+
+`openssl s_client -connect mysite.wxyz.com:443`
+
+**Recap:** Create a site in your environment using the certificate and DNS name you want to resolve to your Stratum application
+
+## Push Code
+
+The moment of truth. It's time to make our first code push, and it couldn't be easier. Navigate to the application's code repository (the same place we were in the associate step) and run `git push catalyze master`.
+
+This pushes your master branch to the Catalyze master branch. If you want to push a branch that is not named master, see the following:
+
+`git push catalyze mybranch_name:master`
+
+**Please note:** Even when you're not using your local master branch it is necessary to use the Catalyze remote master branch.
+
+Once you push code successfully, the application containers will take up to 1 minute to deploy.
+
+**Recap:** Push your code using the `git push catalyze master` command!
 
 ## Next Steps
 

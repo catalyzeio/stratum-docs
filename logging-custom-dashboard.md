@@ -1,5 +1,7 @@
 ---
 title: Customize Kibana
+category: logging
+summary: How can I customize Kibana?
 ---
 
 # How can I customize Kibana?

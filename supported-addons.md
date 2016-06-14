@@ -1,5 +1,7 @@
 ---
 title: Supported Utilities and Add-ons
+category: getting-started
+summary: Learn about supported utilities and add-ons for your Stratum environment.
 ---
 
 # Supported Utilities and Add-ons

@@ -1,5 +1,6 @@
 ---
 title: Node + MongoDB Guide
+category: guide
 ---
 
 # Deploying a Node+Mongo Application on Stratum

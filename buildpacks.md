@@ -1,10 +1,10 @@
 ---
 title: Buildpack General
+category: buildpack
+summary: Learn about buildpacks.
 ---
 
 # What is a buildpack?
-
-## What is a buildpack?
 
 A buildpack is a framework for constructing your application's software stack. It is extremely flexible and is intended to operate as an agent to your environment. The buildpack agent will attempt to understand your stack and install any dependencies required by it.
 

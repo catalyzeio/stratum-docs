@@ -1,5 +1,6 @@
 ---
 title: Catalyze Contact Information
+summary: Need to contact Catalyze? We're always here to help!
 ---
 
 # Catalyze Contact information

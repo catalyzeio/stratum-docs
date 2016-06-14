@@ -1,5 +1,7 @@
 ---
 title: Stratum Supported Databases
+category: database
+summary: Learn about the supported databases you can use on Stratum.
 ---
 
 # Stratum Supported Databases

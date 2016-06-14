@@ -1,5 +1,6 @@
 ---
 title: Python + Postgres Guide
+category: guide
 ---
 
 # Getting started with Python, Django and PostgreSQL on Stratum

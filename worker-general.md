@@ -1,5 +1,7 @@
 ---
 title: Background Processing and Workers in Stratum
+category: worker
+summary: Learn about background processing and workers in Stratum.
 ---
 
 # Background Processing and Workers in Stratum

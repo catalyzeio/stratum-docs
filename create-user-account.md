@@ -1,5 +1,7 @@
 ---
 title: Creating a User Account
+category: getting-started
+summary: How do I get access to a Stratum organization or environment?
 ---
 
 # How do I get access to a Stratum organization or environment?
