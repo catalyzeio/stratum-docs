@@ -1,9 +1,8 @@
 ---
 title: Enable Multi-Factor Authentication
 category: guide
+summary: How to secure your Catalyze account with multi-factor authentication.
 ---
-
-Security has always been a core principle at Catalyze. We've kept our user's best interests in mind when designing our products and how we can keep our users, and their data, safe. With the version 2.1 release of Stratum, multi-factor authentication (MFA) is readily available across all Catalyze products!
 
 # Enabling Multi-Factor Authentication
 
@@ -89,5 +88,4 @@ Then you can click on `Require` to start enforcing MFA for all members of that o
 
 # Troubleshooting
 
-authenticator lockout
-multiple types
+Having trouble getting MFA enabled? Check out our [troubleshooting guide](/stratum/articles/mfa-troubleshooting) for help!

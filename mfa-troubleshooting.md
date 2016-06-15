@@ -19,11 +19,11 @@ If you use the Google Authenticator app for multi-factor authentication, losing 
 7. Expand the `MFA` section.
 8. Click `Disable` next to the authenticator mode.
 
-You'll now have full access to your Catalyze account. If you want to enable the authenticator mode again, just follow [this guide](https://resources.catalyze.io/stratum/articles/guides/enable-multi-factor-auth) to repeat the setup process.
+You'll now have full access to your Catalyze account. If you want to enable the authenticator mode again, just follow [this guide](/stratum/articles/guides/enable-multi-factor-auth) to repeat the setup process.
 
 ## CLI Uses the Incorrect Mode
 
-If your CLI is using the incorrect mode for MFA, you'll need to update your [preferred mode](https://resources.catalyze.io/stratum/articles/guides/enable-multi-factor-auth#preferred-mode) in the dashboard. The CLI is capable of only using a single mode, specifically your preferred mode, while the [dashboard](https://product.catalyze.io/account) allows you to choose between all of your enabled modes. To set your preferred mode, please follow [this guide](https://resources.catalyze.io/stratum/articles/guides/enable-multi-factor-auth#preferred-mode).
+If your CLI is using the incorrect mode for MFA, you'll need to update your [preferred mode](/stratum/articles/guides/enable-multi-factor-auth#preferred-mode) in the dashboard. The CLI is capable of only using a single mode, specifically your preferred mode, while the [dashboard](https://product.catalyze.io/account) allows you to choose between all of your enabled modes. To set your preferred mode, please follow [this guide](/stratum/articles/guides/enable-multi-factor-auth#preferred-mode).
 
 ## My Authenticator no Longer Works
 
