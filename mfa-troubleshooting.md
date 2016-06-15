@@ -12,14 +12,14 @@ If you use the Google Authenticator app for multi-factor authentication, losing 
 
 1. Choose the email mode.
 2. Enter your credentials and `Submit`.
-3. Check your email for a one time use code.
+3. Check your email for a one time password (OTP).
 4. Enter your one time use code.
 5. Login to your account from the [dashboard](https://product.catalyze.io/account).
 6. Open your account settings by clicking your username in the top right. Or navigate to [https://product.catalyze.io/account/view](https://product.catalyze.io/account/view).
 7. Expand the `MFA` section.
 8. Click `Disable` next to the authenticator mode.
 
-You'll now have full access to your Catalyze account. If you want to enable the authenticator mode again, just follow [this guide](/stratum/articles/guides/enable-multi-factor-auth) to repeat the setup process.
+You'll now have full access to your Catalyze account. If you want to enable the authenticator mode again, just follow [this guide](/stratum/articles/guides/enable-multi-factor-auth#adding-additional-factors) to repeat the setup process.
 
 ## CLI Uses the Incorrect Mode
 
@@ -27,7 +27,7 @@ If your CLI is using the incorrect mode for MFA, you'll need to update your [pre
 
 ## My Authenticator no Longer Works
 
-When choosing the authenticator mode for MFA, your device and the Catalyze servers will need to be kept in sync with [NTP](http://www.ntp.org). Without an accurate system clock, the authenticator app will generate invalid codes. Mobile devices will often synchronize automatically as long as an active network connection is available. If you are using another type of device, be sure to check you have an active network connection available and check the documentation for your device on how to keep in sync with NTP.
+When choosing the authenticator mode for MFA, your device and the Catalyze servers will need to be kept in sync with [NTP](http://www.ntp.org). Without an accurate system clock, the authenticator app will generate invalid OTPs. Mobile devices will often synchronize automatically as long as an active network connection is available. If you are using another type of device, be sure to check you have an active network connection available and check the documentation for your device on how to keep in sync with NTP.
 
 # Still Having Issues?
 
