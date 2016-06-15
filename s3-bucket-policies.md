@@ -36,4 +36,4 @@ Catalyze enables the default CORS policy on S3 buckets. You can manipulate the C
 
 Read more about manipulating those [here](http://docs.aws.amazon.com/cli/latest/reference/s3api/put-bucket-cors.html)
 
-Alternatively you can contact [Support](/contact.md/) and we can assist.
+Alternatively you can contact [Support](/stratum/articles/contact/) and we can assist.
