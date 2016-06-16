@@ -23,13 +23,13 @@ In addition, please review the support sections of our Service Level Agreement [
 
 ### Emergency Support
 
-Catalyze provides emergency off-hours support. A Catalyze engineer is on call from 5:00PM CST to 9:00AM CST the following morning. To file an emergency support ticket, do one of the following:
+Catalyze provides emergency off-hours support for Severity 1 issues as outlined [here](https://legal.catalyze.io/#3-service-maintenance). A Catalyze engineer is on call from 5:00PM CST to 9:00AM CST the following morning. If your environment is experiencing a Severity 1 issue, file a support ticket via one of the following methods:
+
+***Submit a ticket for Zendesk [here](https://catalyzeio.zendesk.com/hc/en-us/requests/new) with priority "Urgent"***
 
 ***Call (888) 377-3184 and leave a message with contact information***
 
-***Create an account for Zendesk [here](https://catalyzeio.zendesk.com/hc/en-us) and create a ticket with priority "Urgent"***
-
-Either of those methods will page our on-call engineer, who will respond within 30 minutes to take action to resolve the issue. If necessary, the engineer will initiate a call with the customer to assist with the resolution of the problem.
+Either of these methods will page our on-call engineer, who will respond within 30 minutes to take action to resolve the issue. If necessary, the engineer will initiate a call with the customer to assist with the resolution of the problem.
 
 ## Billing
 
