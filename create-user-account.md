@@ -16,7 +16,7 @@ If you already have an account, continue on to the next step.
 
 ## Receive an Invitation from an Organization Admin or Owner
 
-An organization admin or owner must invite you to the organization. Instructions for them are [here](/organization-management.md/)
+An organization admin or owner must invite you to the organization. Instructions for them are [here](/stratum/articles/organization-management/)
 
 ## Accept Invitation
 

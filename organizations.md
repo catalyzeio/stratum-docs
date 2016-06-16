@@ -15,7 +15,7 @@ An organization is created for a client after signing a BAA and contract for an 
 
 ## Environments
 
-An environment is a self-contained ecosystem for one or more applications on the Stratum platform and belongs to a single organization. The environment contains the services required for the web application to run, including [code](/support-languages-frameworks.md), [database](/dtabase-general.md/), [logging](/logging-access.md/), [monitoring](/monitoring.md/), and [add-on services](/supported-addons.md/).
+An environment is a self-contained ecosystem for one or more applications on the Stratum platform and belongs to a single organization. The environment contains the services required for the web application to run, including [code](/stratum/articles/support-languages-frameworks/), [database](/stratum/articles/database-general/), [logging](/stratum/articles/logging-access/), [monitoring](/stratum/articles/monitoring/), and [add-on services](/stratum/articles/supported-addons/).
 
 Once you have signed a contract and BAA with our sales team, your environment will be visible in the [Stratum Dashboard](https://stratum.catalyze.io)
 ***[Link to Dashboard Main Display]***
