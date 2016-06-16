@@ -62,9 +62,8 @@ $ catalyze associate YOUR_ENVIRONMENT_NAME app01
 ```
 
 ## Pushing your application to the Catalyze platform
-The first time that you push your code to Catalyze, we require that you notify support@catalyze.io that you have pushed code and that your application finished building successfully. We will let you know when your application has finished the initial deployment. After the initial deployment, every time code is pushed to Catalyze using the command below, the application will be updated automatically.
 
-To push your code to Catalyze, simply run the command below from within your application's directory.
+To push your code to Catalyze, run the command below from within your application's directory.
 
 ```
 $ git push catalyze master

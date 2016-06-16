@@ -13,8 +13,6 @@ If you're used to other Platform as a Service offerings (Heroku, Google App Engi
 
 This guide is supplemental to the Django tutorials but will emphasize the key parts to get your app running on the Catalyze Platform. We have developed a sample application that you can also reference throughout the guide and as we walkthrough deploying an application. You can find the [Python Sample App on GitHub](https://github.com/catalyzeio/python-sample-app).
 
-> **Note:** This tutorial uses the Catalyze Console preview feature, currently available for staging environments. Contact support@catalyze.io to find out more about how you can get early access to upcoming features.
-
 ## Pre-requisites
 
 ***You have a Platform account with Catalyze***
@@ -213,7 +211,7 @@ $ catalyze console app01 "python manage.py shell"
 $ catalyze console db01
 ```
 
-There are more console features on their way. If a command is not supported send a note to support@catalyze.io and we can whitelist it.
+There are more console features on their way. If a command is not supported, open a ticket [here](https://product.catalyze.io/stratum) via the "Contact Support" button for your environment.
 
 ### Making updates to your application
 
