@@ -23,9 +23,9 @@ In addition, please review the support sections of our Service Level Agreement [
 
 ### Emergency Support
 
-Catalyze provides emergency off-hours support for Severity 1 issues as outlined [here](https://legal.catalyze.io/#3-service-maintenance). A Catalyze engineer is on call from 5:00PM CST to 9:00AM CST the following morning. If your environment is experiencing a Severity 1 issue, file a support ticket via one of the following methods:
+Catalyze provides emergency off-hours support for Severity 1 issues as outlined [here](https://legal.catalyze.io/#3-service-maintenance). A Catalyze engineer is on call from 5:00PM CST to 9:00AM CST the following morning. If an environment is experiencing a Severity 1 issue, file a support ticket via one of the following methods:
 
-***Submit a ticket for Zendesk [here](https://catalyzeio.zendesk.com/hc/en-us/requests/new) with priority "Urgent"***
+***Submit a ticket through the Stratum Dashboard with priority "Urgent" [here](https://product.catalyze.io/stratum/)
 
 ***Call (888) 377-3184 and leave a message with contact information***
 
