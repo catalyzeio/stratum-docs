@@ -67,6 +67,53 @@ Catalyze will provide each VPN user with the VPN Gateway IP, VPN Account Name, V
 
 `sudo charon-cmd --host 55.55.55.55 --identity bob@catalyze.io --profile ikev1-xauth-psk`
 
+# Windows 7 strongSwan Client Setup
+
+On Windows, the process for VPN connection is slightly different than for OSX or Linux. The connection is secured by X.509 certificate signatures and a username/password combination.  
+## Install the Catalyze CA Certificate as a Windows Trusted Root Certificate
+
+Save the Catalyze provided CA certificate to your computer.
+
+From the Start Menu, type "mmc" into the search bar to launch the Microsoft Managment Console.
+
+![mmc](../images/launch_mmc.png)
+
+From the launched window, go to File -> Add/Remove Snap-in.
+
+![file_snapin](../images/add_remove_snapin.png)
+
+From the pop-up window, choose "Certificates" and click "Add". Then click "Ok"
+
+![certificates_snapin](../images/add_remove_snapin2.png)
+
+Choose "Computer Account" when asked for the type of account.
+
+![computer_account](../images/computer_account.png)
+
+Click "Next" and then "Finish".
+
+Finally, click "Ok" and you will be back to the main MMC window.
+
+![certificates_added](../images/certificates_added.png)
+
+Expand the "Certificates" tab and then expand the "Trusted Root Certification Authorities" tab.
+
+![trusted_root](../images/trusted_root1.png)
+
+Right click on the "Certificate" tab under "Trusted Root Certification Authorities" and go to "Actions" and left-click on "Import"
+
+![trusted_root2](../images/trusted_root2.png)
+
+You will now see the Wizard screen.
+
+![cert_wizard](../images/certificate_wizard.png)
+
+Click "Next". In the next window, click "Browse" and select the CA file you saved initially. Click "Next" and then "Finish". The CA certificate is now imported. 
+
+## Create the VPN Connection
+
+## Connect to the VPN
+
 # Using the VPN Connection
 
 The VPN connection allows you to connect directly to many of the resources in your environment. Catalyze will provide you with a service map to use for your environment. If you are attempting to connect a database server, you will need to retrieve the connection credentials from your environment variables.
