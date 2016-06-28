@@ -7,7 +7,7 @@ This guide covers the migration of an application that was developed for Heroku 
 
 ## Prerequisites
 
-This guide assumes that you already have an application set up and working - for examples, this will use the application dscribed in the [Node+Mongo guide](/stratum/articles/node-mongo).
+This guide assumes that you already have an application set up and working - for examples, this will use the application dscribed in the [Node+Mongo guide](/stratum/articles/guides/node-mongo).
 
 The other prerequisite is that you're already talked with our Sales team and worked with Catalyze to get an environment provisioned and ready for you, including all of the databases and caches that your application needs. To get that process started, send us a message at [sales@catalyze.io](mailto:sales@catalyze.io).
 
@@ -47,7 +47,7 @@ The second will be an invitation to join your newly-created organization. Follow
 
 After you've joined your organization, navigate to the [Stratum dashboard](https://product.catalyze.io/stratum). You should see your environment listed there.
 
-![environment summary](images/migrate_envsummary.png)
+![environment summary](../images/migrate_envsummary.png)
 
 Take note of its name - that's "My Shiny New Environment" in this case. Also take note of the name of your code service - that's "code-1" above.
 
@@ -159,7 +159,7 @@ $ catalyze sites list
 
 The public hostname is the `*.catalyzeapps.com` URL - `pod0012345.catalyzeapps.com` in this case.
 
-For more information on setting your DNS correctly, take a look at our [Setting Up DNS Guide](/stratum/articles/setting-up-dns/).
+For more information on setting your DNS correctly, take a look at our [Setting Up DNS Guide](/stratum/articles/setting-up-dns).
 
 ### Restart Your Environment's Service Proxy
 
