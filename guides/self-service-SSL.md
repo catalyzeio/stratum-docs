@@ -5,13 +5,13 @@ category: ssl
 
 # Self-Service SSL Guide
 
-With our latest release of the Stratum CLI, we have implemented a whole slew of features and bug fixes. Perhaps the most intriguing pieces of functionality are two sets of commands: the [certs](https://resources.catalyze.io/paas/cli/sections/certs/) and [sites](https://resources.catalyze.io/paas/cli/sections/sites/) commands. These two sets of commands will allow self-service SSL management. The following sections will explain how to use these two sets of commands to their fullest extent and manage your SSL certificates with ease and on your own schedule.
+With our latest release of the Stratum CLI, we have implemented a whole slew of features and bug fixes. Perhaps the most intriguing pieces of functionality are two sets of commands: the [certs](/paas/paas-cli-reference/certs/) and [sites](/paas/paas-cli-reference/sites/) commands. These two sets of commands will allow self-service SSL management. The following sections will explain how to use these two sets of commands to their fullest extent and manage your SSL certificates with ease and on your own schedule.
 
 ## Certs
 
 A cert represents a reusable component composed of an SSL certificate chain and a private key. These are securely uploaded and stored on the Catalyze platform and become available to your entire environment.  The CLI should always be used to send certificates to Stratum.  NEVER send certificates or private keys via email or Zendesk to Catalyze support.
 
-The [certs](https://resources.catalyze.io/paas/cli/sections/certs/) command group in the CLI has four subcommands to manage your SSL certificates:
+The [certs](/paas/paas-cli-reference/certs/) command group in the CLI has four subcommands to manage your SSL certificates:
 
 - [certs create](/paas/paas-cli-reference/certs-create/)
 - [certs list](/paas/paas-cli-reference/certs-list/)
