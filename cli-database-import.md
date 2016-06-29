@@ -77,4 +77,4 @@ dump/catalyze/user_roles.bson
 $ catalyze db import db01 mymongodump.tar.gz --mongo-database catalyze
 ```
 
-While you are using the CLI check out the "console" command to log into the mongo database shell; read [here](https://resources.catalyze.io/paas/paas-cli-reference/console/) for more information about the secure console command.
+While you are using the CLI check out the "console" command to log into the mongo database shell; read [here](/paas/paas-cli-reference#console) for more information about the secure console command.

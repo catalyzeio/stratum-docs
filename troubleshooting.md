@@ -17,7 +17,7 @@ In order to help you resolve your issue, we first need to outline the components
 
 The Stratum dashboard is where users can check the status of their environment and related services, manage users, and navigate to logging and monitoring.
 
-The Catalyze CLI contains the bulk of platform functionality. For a comprehensive reference check out [this guide](//resources.catalyze.io/paas/paas-cli-reference/).
+The Catalyze CLI contains the bulk of platform functionality. For a comprehensive reference check out [this guide](/paas/paas-cli-reference/).
 
 The Account Manager is where users can manage their authentication information, view and edit organization information, and find related Catalyze products.
 
@@ -49,10 +49,10 @@ Below we've listed common problems and resolutions for the previous components.
 ### Git
 - **You do not have access to the requested repository fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.**
     - **Potential Issue:** You are using a deploy key from a different environment.
-    - **Potential Solution:** Set up user keys as a replacement for deploy keys. User keys are associated with your user and will work on any environment. See [this guide](//resources.catalyze.io/stratum/articles/ssh-keys/#how-can-i-setup-user-keys-on-my-account?) for instructions on setting up user keys.
+    - **Potential Solution:** Set up user keys as a replacement for deploy keys. User keys are associated with your user and will work on any environment. See [this guide](/stratum/articles/ssh-keys/#how-can-i-setup-user-keys-on-my-account?) for instructions on setting up user keys.
 
 ### Miscellaneous
 
 - **404: Page Not Found NGINX error**
     - **Potential Issue:** You have not configured an SSL Certificate or Sites object with that services in the environment.
-    - **Potential Solution:** Configure both a site an a cert with your environment. See this [guide on certs](//resources.catalyze.io/stratum/articles/guides/self-service-SSL/) and this [guide on sites](//resources.catalyze.io/stratum/articles/initial-setup/#sites-setup) for more details.
+    - **Potential Solution:** Configure both a site an a cert with your environment. See this [guide on certs](/stratum/articles/guides/self-service-SSL/) and this [guide on sites](/stratum/articles/initial-setup/#sites-setup) for more details.
