@@ -6,7 +6,7 @@ Summary: Brand new to Stratum? Start here!
 
 ## Introduction
 
-The following article is intended to get new users up and running in short order. We do have verbose, in depth write ups on each step outlined below. If you'd like to read more please see our official [getting started guide](//resources.catalyze.io/stratum/getting-started/). However it is recommended that you complete this guide before moving on to anything else.
+The following article is intended to get new users up and running in short order. We do have verbose, in depth write ups on each step outlined below. If you'd like to read more please see our official [getting started guide](/stratum/getting-started/). However it is recommended that you complete this guide before moving on to anything else.
 
 What we'll cover in this guide:
 
@@ -26,7 +26,7 @@ Once you've been notified that your Stratum environment has been provisioned you
 
 It's important that you first create a Catalyze user account before clicking the invite link. You can register for an account [here](https://product.catalyze.io/account/register). If you've already created an account it may be helpful to [sign in](https://product.catalyze.io/account/signin) before accepting the invite.
 
-Now that you've successfully created an account and signed in you can now accept the invite as the owner of the newly created organization. From here you can begin building your team by inviting members and admins to join. The video below demonstrates how one would sign in, navigate to an organization, and manage inviting a user. To learn more about the types of roles in an organization and what they mean, visit [here](https://resources.catalyze.io/stratum/articles/organization-access-controls).
+Now that you've successfully created an account and signed in you can now accept the invite as the owner of the newly created organization. From here you can begin building your team by inviting members and admins to join. The video below demonstrates how one would sign in, navigate to an organization, and manage inviting a user. To learn more about the types of roles in an organization and what they mean, visit [here](/stratum/articles/organization-access-controls).
 
 <div style="width: 100%; height: 0px; position: relative; padding-bottom: 65.653%;"><iframe src="https://streamable.com/e/ukd0" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen scrolling="no" style="width: 100%; height: 100%; position: absolute;"></iframe></div>
 
@@ -72,7 +72,7 @@ Once you have your new key you can add it to your Catalyze user account with the
 
 ## SSL Certificates
 
-Getting an SSL certificate installed is by far the most involved step in this setup guide. If you'd like to read more information than what is outlined below please refer to [this separate guide](https://resources.catalyze.io/stratum/articles/guides/self-service-SSL/).
+Getting an SSL certificate installed is by far the most involved step in this setup guide. If you'd like to read more information than what is outlined below please refer to [this separate guide](/stratum/articles/guides/self-service-SSL/).
 
 To start, you’ll need to create a cert. Make sure both the certificate and private key are unencrypted and in PEM format. If you have a Certificate Authority Signed certificate (CA-Signed) you can run the following command using your own correct file names/paths:
 
@@ -82,7 +82,7 @@ If you have a self-signed certificate you can run the following command using yo
 
 `catalyze certs create *.wxyz.com ./wxyz.com_selfsigned.crt ./wxyz.com_selfsigned.key -s`
 
-**Self-Signed-Certs: You can follow our guide [here](https://resources.catalyze.io/stratum/articles/ssl-self-signed/) for creating a self-signed cert**
+**Self-Signed-Certs: You can follow our guide [here](/stratum/articles/ssl-self-signed/) for creating a self-signed cert**
 
 **Please note:** If for any reason you find yourself stuck you can run any Catalyze CLI command without arguments to see a full manual on that specific command.
 
@@ -146,4 +146,4 @@ Once you push code successfully, the application containers will take up to 1 mi
 
 ## Next Steps
 
-To read more about everything covered in this guide please see the official getting started guide [here](https://resources.catalyze.io/stratum/getting-started/).
+To read more about everything covered in this guide please see the official getting started guide [here](/stratum/getting-started/).

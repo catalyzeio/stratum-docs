@@ -18,4 +18,4 @@ The download links to the current versions are listed in the Readme!
 
 ## Where is the documentation for the CLI?
 
-[Stratum CLI](https://resources.catalyze.io/paas/paas-cli-reference/)
+[Stratum CLI](/paas/paas-cli-reference/)
