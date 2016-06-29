@@ -7,9 +7,9 @@ This guide covers the migration of an application that was developed for Heroku 
 
 ## Prerequisites
 
-This guide assumes that you already have an application set up and working - for examples, this will use the application dscribed in the [Node+Mongo guide](/stratum/articles/guides/node-mongo).
+This guide assumes that you already have an application set up and working - for examples, this will use the application described in the [Node+Mongo guide](/stratum/articles/guides/node-mongo).
 
-The other prerequisite is that you're already talked with our Sales team and worked with Catalyze to get an environment provisioned and ready for you, including all of the databases and caches that your application needs. To get that process started, send us a message at [sales@catalyze.io](mailto:sales@catalyze.io).
+The other prerequisite is that you've already talked with our Sales team and worked with Catalyze to get an environment provisioned and ready for you, including all of the databases and caches that your application needs. To get that process started, send us a message at [sales@catalyze.io](mailto:sales@catalyze.io).
 
 ## Terminology, Similarities, and Differences
 
@@ -21,7 +21,7 @@ Many concepts translate between Stratum and Heroku. Some are a little different,
 
 * Heroku **Application** = Stratum **Environment**
 
-  On Heroku, you have one repository with one or more Procfile targets. On Stratum, you have one or more **Code Services**, each instance of which is equivalent to a **Dyno** on Heroku. What this means is that working with multiple codebases that use different buildpacks is easier, and only one Code Service needs to be update at a time.
+  On Heroku, you have one repository with one or more Procfile targets. On Stratum, you have one or more **Code Services**, each instance of which is equivalent to a **Dyno** on Heroku. What this means is that working with multiple codebases that use different buildpacks is easier, and only one Code Service needs to be updated at a time.
 
 * **Workers**
 
@@ -29,7 +29,7 @@ Many concepts translate between Stratum and Heroku. Some are a little different,
 
 * Heroku **Addon** = Stratum **Service**
 
-  On Stratum, your databases and caches are dedicated instances (called **database services** and **cache services**, running in their own containers within your environment, in the configuration of your choice (either highly-available or single-instance).
+  On Stratum, your databases and caches are dedicated instances called **database services** and **cache services**, running in their own containers within your environment, in the configuration of your choice (either highly-available or single-instance).
 
 * Heroku **Config Variables** = Stratum **Environment Variables**
 
@@ -41,7 +41,7 @@ Many concepts translate between Stratum and Heroku. Some are a little different,
 
 ## 1. Gain Access to your Environment
 
-When your first environment is provisioned, you'll receive two emails from us. The first will be from a member of our support team, letting you know that your environment is ready, and will include some basic information about it, and link you to our [Getting Started](/stratum/getting-started) guides.
+When your first environment is provisioned, you'll receive two emails from us. The first will be from a member of our support team letting you know that your environment is ready, along with some basic information about your new environment and a link to our [Getting Started](/stratum/getting-started) guides.
 
 The second will be an invitation to join your newly-created organization. Follow the instructions in that email, and register a new account if you don't already have one.
 
@@ -75,7 +75,7 @@ The username and password here are the same credentials that you used to sign in
 
 This command does two things:
 
-1. Add the git remote `catalyze`
+1. Adds the git remote `catalyze`
 2. Tells the Catalyze CLI which code service you'd like to interact with by default.
 
 ## 4. Set Variables
@@ -123,7 +123,7 @@ For more details on SSH key usage and debugging, take a look at our [SSH Keys Gu
 
 So that Stratum knows what hostnames to accept traffic on and what services to route that traffic to, we need to set up a Site.
 
-If you're migrating, you'd probably like to see your code working before cutting over fully to Stratum. You can use a different domain or subdomain for now (`staging.mycompany.com`, for example) - another site can always be added later.
+If you're migrating, you'd probably like to see your code working before cutting over fully to Stratum. You can use a different domain or subdomain for now (`staging.example.com`, for example) - another site can always be added later.
 
 ### Adding an SSL Cert
 
@@ -142,8 +142,8 @@ For more help on adding and debugging certs, take a look at our [Self-Service SS
 Use the `sites create` command in the CLI:
 
 ```
-$ catalyze sites create staging.mycompany.com code-1 my-ssl-cert
-Created 'staging.mycompany.com'
+$ catalyze sites create staging.example.com code-1 my-ssl-cert
+Created 'staging.example.com'
 ```
 
 ### Update Your Domain's DNS
@@ -154,7 +154,7 @@ You will need to add a CNAME record from the hostname you used above to the Cata
 $ catalyze sites list
   NAME                          CERT                          UPSTREAM SERVICE
   pod0012345.catalyzeapps.com   pod0012345.catalyzeapps.com
-  staging.mycompany.com         my-ssl-cert                   code-1
+  staging.example.com         my-ssl-cert                   code-1
 ```
 
 The public hostname is the `*.catalyzeapps.com` URL - `pod0012345.catalyzeapps.com` in this case.
@@ -197,11 +197,11 @@ To ssh://git@git.pod00.catalyzeapps.com:2222/pod0012345-code-123456789.git
 
 ## 8. Check out your running app
 
-Navigate to the hostname you configured above, with https (https://staging.mycompany.com/ for this guide).
+Navigate to the hostname you configured above, with https (https://staging.example.com/ for this guide).
 
 Note that it may take a few minutes for your application to show up - several factors can cause delay in this (DNS propagation, AWS load balancers taking effect, or slow-starting applications are the most common causes).
 
-If you think you've waited too long and your application still hasn't started, check your logs. Your logs can be accessed via the `logs` command in your CLI, or at `https://your-env's-public-hostname/logging/` - this is also linked to from the Stratum dashboard.
+If you think you've waited too long and your application still hasn't started, check your logs. Your logs can be accessed via the `logs` command in your CLI, or at `https://your-env's-public-hostname/logging/` - there is also a link to view logs in the Stratum dashboard.
 
 ## Further Help
 
