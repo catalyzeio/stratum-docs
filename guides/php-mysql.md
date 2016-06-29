@@ -61,14 +61,10 @@ origin  https://github.com/catalyzeio/php-example-app.git (push)
 Your remotes will be unique to your origin and enivornment on Catalyze.
 
 ## Deploying your code
-The first time you push your code to Stratum, we require that you notify [support@catalyze.io](mailto:support@catalyze.io) that you have pushed code and your application finished building successfully.
 
-Once the initial deployment has finished, we will notify you that it has completed. After the initial deployment, every subsequent time code is pushed to Stratum using the command below, the application will be updated automatically.
+So now that we have everything in order, lets deploy your application to Stratum.
 
 *Note: Your application needs a [Procfile](https://github.com/catalyzeio/php-example-app/blob/master/Procfile) for deployment. If you are using the example application you do not need to worry about this as it is already done for you. TO DO - Explain what a Procfile is and how to make it*
-
-### Deployment
-So now that we have everything in order, lets deploy your application to Stratum.
 
 Run the command below from within your working copy. This will push  our code up to Stratum and start the build process.
 

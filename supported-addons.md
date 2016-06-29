@@ -22,4 +22,4 @@ Memcached can be added to any environment.
 
 RabbitMQ instances can be added to any environment.
 
-If you'd like to see additional services supported, please drop us a [note](mailto:support@catalyze.io?subject=Add-on, Utility container support). If you've already played around with Dockerizing it, please drop us a link to your GitHub repo as well.
+If you'd like to see additional services supported, please open a ticket [here](https://product.catalyze.io/stratum) via the "Contact Support" button for your environment or via this [form](https://catalyzeio.zendesk.com/hc/en-us/requests/new). If you've already played around with Dockerizing it, please drop us a link to your GitHub repo as well.
