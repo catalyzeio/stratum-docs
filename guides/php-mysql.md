@@ -129,7 +129,7 @@ Using environment variables in PHP and Laravel is pretty straight forward. Just 
 ### Updating Environment Variables
 Use the [Stratum CLI](https://github.com/catalyzeio/cli) to update your environment variables.
 
-The [Catalyze CLI](https://github.com/catalyzeio/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Catalyze CLI](https://github.com/catalyzeio/cli), head over to the [documentation](/paas/paas-cli-reference/vars/#vars).
+The [Catalyze CLI](https://github.com/catalyzeio/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Catalyze CLI](https://github.com/catalyzeio/cli), head over to the [documentation](/paas/paas-cli-reference#vars).
 
 #### List all Variables
 `catalyze vars list`
