@@ -23,6 +23,7 @@
 │   ├── application-logging.md
 │   ├── elastic-search-querying.md
 │   ├── local-testing.md
+│   ├── migrating-from-heroku.md
 │   ├── node-mongo.md
 │   ├── php-mysql.md
 │   ├── python-postgres.md
