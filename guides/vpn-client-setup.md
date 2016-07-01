@@ -11,6 +11,8 @@ category: vpn
 **Ubuntu Linux**
   * StrongSwan VPN Client 5.1+
 
+** Windows 7 and Windows 8 VPN Client+**
+
 # VPN Security
 
 Communications between your client computer and the Stratum environment over the VPN are encrypted and secure. However, your VPN credentials provide access into this protected environment and should be safeguarded very securely. Please make sure that you are following all applicable information security policies, including what we provide at [https://policy.catalyze.io](https://policy.catalyze.io) and [https://hipaa.catalyze.io](https://hipaa.catalyze.io).
@@ -66,6 +68,113 @@ Catalyze will provide each VPN user with the VPN Gateway IP, VPN Account Name, V
 ## Example Connection Command
 
 `sudo charon-cmd --host 55.55.55.55 --identity bob@catalyze.io --profile ikev1-xauth-psk`
+
+
+# Windows VPN Client
+
+On Windows, the VPN can be made with the native Windows VPN Client. 
+
+The Windows VPN Client requires a SSL Certificate to verify the identity of the VPN server.
+
+Please contact a Catalyze Support person to deliver to you the SSL Certificate for the VPN server for your Stratum environment.
+
+## Import the VPN Service SSL certificate
+
+Copy the certificate file to directory on your workstation that is readable by your user account
+
+Open Windows Powershell
+
+The format for the power shell command to import the SSL certificate is 
+
+Command Format:
+
+```
+$file = ( Get-ChildItem -Path <path to certificate file> )
+$file | Import-Certificate -CertStoreLocation cert:\LocalMachine\Root
+```
+
+Example:
+
+```
+$file = ( Get-ChildItem -Path C:\Users\Bob\Desktop\cert.pem )
+$file | Import-Certificate -CertStoreLocation cert:\LocalMachine\Root
+```
+
+## Configure the new VPN Connection
+
+
+Configure a new VPN Connection:
+
+Control Panel -> Network and Sharing Center -> Set up a new connection or network
+Select   “Connect to a workplace”
+
+Click Next
+
+Select “Use my Internet connection (VPN)”
+
+![win_vpn-name](../images/win_vpn-name.png)
+
+Enter the IP address of the VPN server into the Internet address field.  Example: 203.0.113.10
+
+Enter a name for the VPN in the Destination Name field.  Example: Catalyze VPN
+
+Select “Don’t connect just now; just set it up so I can connect late”
+
+Click Next
+
+![win_vpn-username-setup](../images/win_vpn-username-setup.png)
+
+Enter your VPN username. Example “that1guy@catalyze.io”
+
+Enter your VPN password
+
+Leave the Domain field empty
+
+Click Create
+
+![win_vpn-connection-ready](../images/win_vpn-connection-ready.png)
+
+Click Close
+
+Open the Network and Sharing Center
+
+Select Change adapter settings
+
+Highlight the new Catalyze VPN connection, right click and select Properties
+
+![win_vpn-security-settings](../images/win_vpn-security-settings.png)
+
+Click the Security tab
+
+Set Type of VPN to IKEv2
+
+Set Authentication to “Use Extensible Authentication Protocol (EAP)
+
+Select Microsoft: Secured password (EAP-MSCHAP v2)
+
+Click the Networking tab
+
+Highlight Internet Protocol Version 4 (TCP/IPv4)
+
+Click Advanced
+
+![win_vpn-tcpip4-settings](../images/win_vpn-tcpip4-settings.png)
+
+Uncheck Use default gateway on remote network
+
+![win_vpn-adv-tcpip.png](../images/win_vpn-adv-tcpip.png)
+
+Click Ok
+
+Click the Network Icon in the lower right hand of the Windows desktop
+
+![win_vpn-network-taskbar](../images/win_vpn-network-taskbar.png)
+
+![win_vpn-connect](../images/win_vpn-connect.png)
+
+Select the Catalyze VPN
+
+Click Connect
 
 # Using the VPN Connection
 
