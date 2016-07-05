@@ -71,7 +71,7 @@ Catalyze will provide each VPN user with the VPN Gateway IP, VPN Account Name, V
 
 # Windows 7 strongSwan Client Setup
 
-On Windows, the process for VPN connection is slightly different than for OSX or Linux. The connection is secured by X.509 certificate signatures and a username/password combination.  
+On Windows, the process for VPN connection is slightly different than for OSX or Linux. The connection is secured by X.509 certificate signatures and a username/password combination.
 
 ## Install the Catalyze CA Certificate as a Windows Trusted Root Certificate
 
@@ -108,10 +108,11 @@ Right click on the "Certificate" tab under "Trusted Root Certification Authoriti
 ![trusted_root2](../images/trusted_root2.png)
 
 You will now see the Wizard screen.
+ll
 
 ![cert_wizard](../images/certificate_wizard.png)
 
-Click "Next". In the next window, click "Browse" and select the CA file you saved initially. Click "Next" and then "Finish". The CA certificate is now imported. 
+Click "Next". In the next window, click "Browse" and select the CA file you saved initially. Click "Next" and then "Finish". The CA certificate is now imported.
 
 ## Install the Catalyze CA Certificate as a Windows Trusted Root Certificate with Powershell
 
@@ -119,7 +120,7 @@ Copy the certificate file to directory on your workstation that is readable by y
 
 Open Windows Powershell
 
-The format for the power shell command to import the SSL certificate is 
+The format for the power shell command to import the SSL certificate is
 
 Command Format:
 
@@ -136,7 +137,6 @@ $file | Import-Certificate -CertStoreLocation cert:\LocalMachine\Root
 ```
 
 ## Configure the new VPN Connection
-
 
 Configure a new VPN Connection:
 
@@ -195,7 +195,7 @@ Click Advanced
 
 ![win_vpn-tcpip4-settings](../images/win_vpn-tcpip4-settings.png)
 
-Uncheck Use default gateway on remote network
+Uncheck "Use default gateway on remote network"
 
 ![win_vpn-adv-tcpip.png](../images/win_vpn-adv-tcpip.png)
 
