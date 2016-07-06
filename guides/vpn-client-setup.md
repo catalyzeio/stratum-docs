@@ -11,6 +11,8 @@ category: vpn
 **Ubuntu Linux**
   * StrongSwan VPN Client 5.1+
 
+** Windows 7 and Windows 8 VPN Client+**
+
 # VPN Security
 
 Communications between your client computer and the Stratum environment over the VPN are encrypted and secure. However, your VPN credentials provide access into this protected environment and should be safeguarded very securely. Please make sure that you are following all applicable information security policies, including what we provide at [https://policy.catalyze.io](https://policy.catalyze.io) and [https://hipaa.catalyze.io](https://hipaa.catalyze.io).
@@ -66,6 +68,148 @@ Catalyze will provide each VPN user with the VPN Gateway IP, VPN Account Name, V
 ## Example Connection Command
 
 `sudo charon-cmd --host 55.55.55.55 --identity bob@catalyze.io --profile ikev1-xauth-psk`
+
+# Windows 7 strongSwan Client Setup
+
+On Windows, the process for VPN connection is slightly different than for OSX or Linux. The connection is secured by X.509 certificate signatures and a username/password combination.
+
+## Install the Catalyze CA Certificate as a Windows Trusted Root Certificate
+
+Save the Catalyze provided CA certificate to your computer.
+
+From the Start Menu, type "mmc" into the search bar to launch the Microsoft Managment Console.
+
+![mmc](../images/launch_mmc.png)
+
+From the launched window, go to File -> Add/Remove Snap-in.
+
+![file_snapin](../images/add_remove_snapin.png)
+
+From the pop-up window, choose "Certificates" and click "Add". Then click "Ok"
+
+![certificates_snapin](../images/add_remove_snapin2.png)
+
+Choose "Computer Account" when asked for the type of account.
+
+![computer_account](../images/computer_account.png)
+
+Click "Next" and then "Finish".
+
+Finally, click "Ok" and you will be back to the main MMC window.
+
+![certificates_added](../images/certificates_added.png)
+
+Expand the "Certificates" tab and then expand the "Trusted Root Certification Authorities" tab.
+
+![trusted_root](../images/trusted_root1.png)
+
+Right click on the "Certificate" tab under "Trusted Root Certification Authorities" and go to "Actions" and left-click on "Import"
+
+![trusted_root2](../images/trusted_root2.png)
+
+You will now see the Wizard screen.
+
+
+![cert_wizard](../images/certificate_wizard.png)
+
+Click "Next". In the next window, click "Browse" and select the CA file you saved initially. Click "Next" and then "Finish". The CA certificate is now imported.
+
+## Install the Catalyze CA Certificate as a Windows Trusted Root Certificate with Powershell
+
+Copy the certificate file to directory on your workstation that is readable by your user account
+
+Open Windows Powershell
+
+The format for the power shell command to import the SSL certificate is
+
+Command Format:
+
+```
+$file = ( Get-ChildItem -Path <path to certificate file> )
+$file | Import-Certificate -CertStoreLocation cert:\LocalMachine\Root
+```
+
+Example:
+
+```
+$file = ( Get-ChildItem -Path C:\Users\Bob\Desktop\cert.pem )
+$file | Import-Certificate -CertStoreLocation cert:\LocalMachine\Root
+```
+
+## Configure the new VPN Connection
+
+Configure a new VPN Connection:
+
+Control Panel -> Network and Sharing Center -> Set up a new connection or network
+Select   “Connect to a workplace”
+
+Click Next
+
+Select “Use my Internet connection (VPN)”
+
+![win_vpn-name](../images/win_vpn-name.png)
+
+Enter the IP address of the VPN server into the Internet address field.  Example: 203.0.113.10
+
+Enter a name for the VPN in the Destination Name field.  Example: Catalyze VPN
+
+Select “Don’t connect just now; just set it up so I can connect later”
+
+Click Next
+
+![win_vpn-username-setup](../images/win_vpn-username-setup.png)
+
+Enter your VPN username. Example “that1guy@catalyze.io”
+
+Enter your VPN password
+
+Leave the Domain field empty
+
+Click Create
+
+![win_vpn-connection-ready](../images/win_vpn-connection-ready.png)
+
+Click Close
+
+Open the Network and Sharing Center
+
+Select Change adapter settings
+
+Highlight the new Catalyze VPN connection, right click and select Properties
+
+![win_vpn-security-settings](../images/win_vpn-security-settings.png)
+
+Click the Security tab
+
+Set Type of VPN to IKEv2
+
+Set Authentication to “Use Extensible Authentication Protocol (EAP)
+
+Select Microsoft: Secured password (EAP-MSCHAP v2)
+
+Click the Networking tab
+
+Highlight Internet Protocol Version 4 (TCP/IPv4)
+
+Click Advanced
+
+![win_vpn-tcpip4-settings](../images/win_vpn-tcpip4-settings.png)
+
+Uncheck "Use default gateway on remote network"
+
+![win_vpn-adv-tcpip.png](../images/win_vpn-adv-tcpip.png)
+
+Click Ok
+
+Click the Network Icon in the lower right hand of the Windows desktop
+
+![win_vpn-network-taskbar](../images/win_vpn-network-taskbar.png)
+
+![win_vpn-connect](../images/win_vpn-connect.png)
+
+Select the Catalyze VPN
+
+Click Connect
 
 # Using the VPN Connection
 
