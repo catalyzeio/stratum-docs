@@ -108,7 +108,7 @@ Right click on the "Certificate" tab under "Trusted Root Certification Authoriti
 ![trusted_root2](../images/trusted_root2.png)
 
 You will now see the Wizard screen.
-ll
+
 
 ![cert_wizard](../images/certificate_wizard.png)
 
@@ -153,7 +153,7 @@ Enter the IP address of the VPN server into the Internet address field.  Example
 
 Enter a name for the VPN in the Destination Name field.  Example: Catalyze VPN
 
-Select “Don’t connect just now; just set it up so I can connect late”
+Select “Don’t connect just now; just set it up so I can connect later”
 
 Click Next
 
