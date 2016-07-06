@@ -22,12 +22,7 @@ Logging is an essential part of HIPAA compliance, and the following sections of 
 ## Pre-requisites
 You have a Stratum account with Catalyze. If you don't, you can sign up for an account and contacting Sales for a 30-day trial [here](https://stratum.catalyze.io/register).
 
-You have a provisioned environment with a deployed application, perhaps following one of these guides:
-
-- [Node + MongoDB Guide][1]
-- [PHP + MySQL Guide][2]
-- [Rails + Postgres Guide][3]
-- [Python + Postgres Guide][4].
+You have a provisioned environment with a deployed application.
 
 ## Shipping your application logs
 
@@ -72,7 +67,7 @@ LOGGING = {
         },
         'logstash': {
           'level': 'DEBUG',
-          'class': 'logstash.LogstashHandler',
+          'class': 'logstash.TCPLogstashHandler',
           'host': HOST,
           'port': PORT,
           'version': 1, # Version of logstash event schema. Default value: 0 (for backward compatibility of the library)
