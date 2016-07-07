@@ -1,5 +1,5 @@
 ---
-title: Buildpack General
+title: Buildpacks on Stratum
 category: buildpack
 summary: Learn about buildpacks.
 ---
@@ -14,4 +14,9 @@ Stratum detects your code type automatically and assigns the proper buildpack ac
 
 ## Why should you use buildpacks for an application?
 
-Buildpack's provide a standardized way to describe and manage your application's software stack. The entire stack can be maintained within a single version-controlled repository, making it easy to make changes and view changes to the application.
+Buildpacks provide a standardized way to describe and manage your application's software stack. The entire stack can be maintained within a single version-controlled repository, making it easy to make changes and view changes to the application.
+
+### See also:
+
+* [Custom Buildpacks](/stratum/articles/buildpacks-custom)
+* [Using a Specific Buildpack Version](/stratum/articles/buildpacks-pinning)

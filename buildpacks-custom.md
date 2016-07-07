@@ -10,7 +10,7 @@ Catalyze has created several ways that users can modify the standard buildpack p
 
 ## Dependencies Outside The Buildpack
 
-Sometimes an application will have dependencies outside of the buildpack that cannot be retrieved by other means such as Ruby gems. Catalyze provides the means to install software from the apt repositories for Ubuntu 14.04 on Pod02 and Ubuntu 12.04 on Pod01.
+Sometimes an application will have dependencies outside of the buildpack that cannot be retrieved by other means, such as Ruby gems. Catalyze provides the means to install software from the [apt repositories](https://en.wikipedia.org/wiki/Advanced_Packaging_Tool) for Ubuntu 14.04 on Pod02 and Ubuntu 12.04 on Pod01.
 
 In your application repository, create a file at the following path:
 
@@ -43,3 +43,7 @@ Keep in mind that the pre-build script runs before the buildpack, so most utilit
 The pre-build script should be located at `/your_git_repository_root/.catalyze/post-build`. The file ***must be executable*** to run during the build process.
 
 This is a common location to place database migration commands so that the running database is prepared prior to the new code base deployment.
+
+### See also
+
+* [Using a Specific Buildpack Version](/stratum/articles/buildpacks-pinning)

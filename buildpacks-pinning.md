@@ -8,17 +8,17 @@ summary: While Stratum can detect and apply a buildpack automatically, Catalyze 
 
 While Stratum can detect and apply a buildpack automatically, Catalyze recommends that Stratum users pin their buildpacks to a specific version.
 
-If the buildpack is not pinned, users run the risk that a buildpack version change unexpectedly breaks their code.
+If the buildpack is not pinned, users run the risk that a buildpack update unexpectedly breaks their code.
 
 ## How do I pin the buildpack version?
 
 The below procedure outlines how to pin the buildpack version for your application.
 
-### Set the BUILPACK_URL environment variable
+### 1. Set the BUILDPACK_URL environment variable
 
 The Stratum build procedure constructs the application based on automatically detecting the code type or reading in the `BUILDPACK_URL` environment variable.
 
-Every buildpack release is tagged with a version number. You can view the releases on the Github page for the buildpacks. Below is the Python buildpack for example:
+Every buildpack release is tagged with a version number. You can view the releases on the Github page for each buildpacks. Below is the Python buildpack for example:
 
 Navigate to the [Python Buildpack](https://github.com/heroku/heroku-buildpack-python) in a web browser. You'll see the Github page. Click on the `Releases` link as highlighted below:
 
@@ -38,6 +38,10 @@ Then set the URL. In this example, I've associated my app03 to the alias `MyProd
 
 `catalyze -E MyProdEnv-app03 vars set -v BUILDPACK_URL="https://github.com/heroku/heroku-buildpack-python#v68"`
 
-### Rebuild Application
+### 2. Rebuild Application
 
-This change will only take effect on a rebuild of the application. Rebuilds are triggered by commits to the code service.
+This change will only take effect on the next build of the application. Builds are triggered by commits to the code service.
+
+### See also
+
+* [Custom Buildpacks](/stratum/articles/buildpacks-custom)
