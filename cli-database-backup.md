@@ -8,37 +8,47 @@ summary: How do I perform a database backup?
 
 ## Backup
 
-All databases are backed up automatically nightly. If you need to create a manual backup, however, the CLI backup command is there for you. All of these backups can be viewed with the [CLI backup commands](/paas/paas-cli-reference/db-backup). Backups are encrypted and stored in cloud storage and retained for 7 days. The following examples will show you how to create and list database backups performed via the CLI.
+All databases are backed up automatically nightly. If you need to create a manual backup, however, the `db` command is there for you. All of these backups can be viewed with the [CLI backup commands](/paas/paas-cli-reference/db-backup). Backups are encrypted and stored in cloud storage and retained for 7 days. The following examples will show you how to create and list database backups performed via the CLI.
 
 ### Create a Backup
 
 Execute the following command to create a backup.
 
 ```
-$ catalyze db backup db01
+$ catalyze db list <service name>
 ```
 
 List the backups for a database service. Take note that each of the backups has a corresponding ID that should be used in the case of restoring that specific backup. Also of note, if your database service is part of an HA configuration only the database identified as a primary (or master) node will be backed up nightly. Therefore when you display the backups for a secondary database node you will not see nightly backup entries but will on the primary node.
 
-For CLI version 2.1.0 and above, run
-
-```
-$ catalyze db list db01
-```
-
 ### Download a Backup
-> ***Important Note:*** When downloading a database backup be aware that you maybe downloading PHI onto the local hard drive. Proceed with caution and insure that the appropriate disk-level encryption and access controls have been established prior to initiating a database export.
 
-If you would like to download yesterday's database backup to inspect it or maybe assist tracking down a bug you can do so with the backup download command. This command is quite similar to the database export command but in the command you'll specify the ID of the backup to download and the file path of where to download the file. The file downloaded will be of the same file format as expected for a database import (Postgres and MySQL backups will be SQL files and MongoDB backups will be downloaded as gzipped tarballs). Please note that since a downloaded backup and an export are identical, as with exports you **should not** import a downloaded backup.
+> ***Note:*** When downloading a database backup, be aware that you may be downloading PHI. Proceed with caution and insure that the appropriate disk-level encryption and access controls have been established prior to downloading a backup.
 
-Run the following command to list the backups.
+If you would like to download a backup, you can do so with the [`db download`](/paas/paas-cli-reference#db-download) command. This command is quite similar to the [`db export`](/stratum/articles/cli-database-export) command, but downloads a specific backup instead of the database's current state. For Postgres and MySQL databases, the download will be an SQL file, and for MongoDB, the download will be a gzipped tarball (.tar.gz).
 
-```
-$ catalyze db list db01
-```
+> ***Note:*** Database backups are a **full** backup of your database, meaning that they contain users and permissions as well as schema and data. This means that you should **not** use the `db import` command to pull in a downloaded backup into your database.
 
-Now choose the one you want to download and copy its ID and download it.
+Use the `db list` command to list the backups:
 
 ```
-$ catalyze db download db01 {backupID} ./mydbdownload.sql
+$ catalyze db list <service name>
 ```
+
+Copy the ID of the backup you'd like to download, and run the download command:
+
+```
+$ catalyze db download <service name> <backup ID> <local file path>
+```
+
+Example:
+
+```
+$ catalyze db download db01 abcd1234-4321-4321-4321-123412341234 ./mydbdownload.sql
+```
+
+To facilitate this download, the CLI creates a key pair as part of the request, and the export is encrypted server-side with that public key. The encrypted export is moved to cloud storage for a short window. The CLI downloads it, then decrypts it.
+
+### See also
+
+* [The Stratum CLI](/stratum/articles/cli-stratum)
+* [Database Export](/stratum/articles/cli-database-backup)

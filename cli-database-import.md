@@ -4,45 +4,52 @@ category: database
 summary: Learn how to import your data into Stratum.
 ---
 
-## Import
-All of the import functionality in the CLI starts with preparing a file to import. Here is a table outlining the file types appropriate for each supported database on the Catalyze platform.
+## Basics
+
+Importing into a database is the process through which data is transferred from a local file into your Stratum database. This is a very powerful operation, and can potentially cause problems - read on in the sections for your database type below.
+
+The general form of the [command](/paas/paas-cli-reference#import):
 
 ```
-Supported Import Filetype: (Database) - (File Extension)
-PostgreSQL - .sql
-MySQL(Percona)      - .sql
-MongoDB    - .tar.gz
+catalyze db import <service name> <local file path>
 ```
 
-In general, the import command is to be used **only** when importing data to your database rather than migrating databases from another database service. Importing a dump into Catalyze from a different database is not recommended and poses the risk of data loss. If you need to import another database, we recommend uploading this locally and then performing a data only dump to be importing into Catalyze. You also **should not** import a file retrieved from the "export" command. The export downloads a full backup of your database including users, permissions, and data. The import command should only be used to import data.
+The [CLI](/paas/paas-cli-reference) will stream back to you any output from executing the import - any errors should be contained therein.
 
-### SQL Imports
-Make sure you have associated an environment and are currently in the directory of the associated git repo. Let’s create a short script to create a table and insert a few rows.
+> ***Note:*** For all database types, no data will be deleted and no tables/database/schemas/collections will be dropped automatically.
+
+
+
+### MySQL and PostgreSQL
+
+Both MySQL and PostgreSQL databases' imports are expected to be in `sql` file format. An example file:
 
 ```
-$ cat myimport.sql
+$ cat /path/to/my/data.sql
 
 CREATE TABLE user_roles (
-    id text primary key,
+    id  text primary key,
     val text
 );
 INSERT INTO user_roles (id, val) VALUES ('1', 'admin');
 INSERT INTO user_roles (id, val) VALUES ('2', 'user');
 ```
 
-Now let’s import the script!
+To run the import command, make sure you have [associated to an environment](/paas/paas-cli-reference#associate) and are in the directory of the associated git repo. Example command:
 
 ```
-$ catalyze db import db01 myimport.sql
+$ catalyze db import db01 /path/to/my/data.sql
 ```
 
-After it successfully finishes importing your script, the CLI will dump the output of the command back to your terminal.
+For these databases, this script can contain any SQL you'd like - tables, databases, and users can be created, and data can be inserted. This goes both ways - databases and tables can be dropped, data can be truncated, and users can be removed. Be careful!
 
-Note - nothing will be dropped/deleted unless the script you import explicitly does so. This goes both ways - if you have a `DROP DATABASE catalyze;` statement in your script, it **will** be executed. Be careful!
+> ***Note:*** The [CLI's `console`](/paas/paas-cli-reference#console) command depends on the `catalyze` user and database to exist for both MySQL and PostgreSQL databases. If your import removes either of these or changes the `catalyze` user's password, the `console` will cease to function and you will need to [contact Catalyze support](/stratum/articles/contact) to resolve the issue.
 
 ### MongoDB Imports
 
-In this example we will start with an empty database and add some data which will be uploaded to our Catalyze database. First sign into your mongo database, we'll switch to a new database ("catalyze") and create a new collection and insert a few rows.
+MongoDB imports are expected to be gzipped+tar-compressed (.tar.gz) mongodumps. To create one of these from a local database, you'll need to use the `mongodump` and `tar` commands.
+
+Creating an example database and collection with data:
 
 ```
 > use catalyze
@@ -57,7 +64,7 @@ WriteResult({ "nInserted" : 1 })
 bye
 ```
 
-Now create a dump of the collection:
+Creating a dump of that example database and collection:
 
 ```
 $ mongodump --db=catalyze --collection=user_roles
@@ -66,7 +73,7 @@ $ mongodump --db=catalyze --collection=user_roles
 2015-08-11T11:45:05.132+0000    done dumping catalyze.user_roles (2 documents)
 ```
 
-This will output a directory structure in `dump/`from the same directory as where the mongodump command was run. Now all you need to do is tar the `dump/` folder and perform a similar import command. Just specify the mongo database to import data into!
+This will output a directory structure in `dump/`from the same directory as where the mongodump command was run. Using `tar` to compress that:
 
 ```
 $ tar -cvzf mymongodump.tar.gz dump/
@@ -74,7 +81,16 @@ dump/
 dump/catalyze/
 dump/catalyze/user_roles.metadata.json
 dump/catalyze/user_roles.bson
+```
+
+Mongo dumps only contain collections, so the CLI needs to be told what database the dumped collections should be imported into. To import, specifying the database:
+
+```
 $ catalyze db import db01 mymongodump.tar.gz --mongo-database catalyze
 ```
 
-While you are using the CLI check out the "console" command to log into the mongo database shell; read [here](/paas/paas-cli-reference#console) for more information about the secure console command.
+MongoDB imports can only **add** data, not remove or alter it. If you need to delete collections or otherwise edit your data, use the [console command](/paas/paas-cli-reference#console).
+
+### See also
+
+* [Console](/paas/paas-cli-reference#console)
