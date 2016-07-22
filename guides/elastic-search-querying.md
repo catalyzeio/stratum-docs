@@ -17,7 +17,8 @@ The Logging dashboard requires authentication to access.
 
 After the release of Stratum 2.1 on July 21, the only way to get access to your logging dashboard is via a session token from the Catalyze authentication server. Below is a sample script that will automatically generate a session token and then allow you to supply an Elasticsearch URL as a query:
 
-`#!/bin/bash
+```
+#!/bin/bash
 
 corl () {
 	nonce="X-Request-Nonce: `python -c \"import base64, os; print base64.b64encode(os.urandom(32))\"`"
@@ -27,13 +28,14 @@ corl () {
 
         URL=$1
         ARG1=$2
-	      ARG2=$3
+        ARG2=$3
         ARG3=$4
 
         export RESPONSE=$(corl https://auth.catalyze.io/auth/signin -XPOST -d '{"identifier": "bob@catalyze.io", "password": "test123456"}')
 	      ENCODEDTOKEN=$(python -c "import urllib; import os; import json; print urllib.quote(json.loads(os.environ['RESPONSE'])['sessionToken'])")
 
-        corl -H "Cookie: sessionToken=${ENCODEDTOKEN}" ${URL} ${ARG1} ${ARG2} ${ARG3}`
+        corl -H "Cookie: sessionToken=${ENCODEDTOKEN}" ${URL} ${ARG1} ${ARG2} ${ARG3}
+```
 
 Be sure to make this script executable with `chmod +x <script_name>`. All the examples below will have this script saved as *esquery*.
 
