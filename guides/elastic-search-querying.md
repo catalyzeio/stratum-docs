@@ -15,23 +15,27 @@ Elasticsearch can be queried directly by making a request to `https://podhostnam
 
 The Logging dashboard requires authentication to access.  
 
-With curl, you can include the `-u USERNAME` option to specify a username. curl will present a password prompt when using the `-u USERNAME` option. To avoid re-entering the password repeatedly, you may use a `.netrc` file in the home directory that stores the user name and password and the `-n` option for curl:
+After the release of Stratum 2.1 on July 21, the only way to get access to your logging dashboard is via a session token from the Catalyze authentication server. Below is a sample script that will automatically generate a session token and then allow you to supply an Elasticsearch URL as a query:
 
-~/.netrc:
-```
-machine podhostname
-  login myusername
-  password mypassword
-```
+`#!/bin/bash
 
-Example:
+corl () {
+	nonce="X-Request-Nonce: `python -c \"import base64, os; print base64.b64encode(os.urandom(32))\"`"
+        ts="X-Request-Timestamp: `python -c \"import time; print int(time.time())\"`"
+        curl "$@" -H "${nonce}" -H "${ts}" -H 'Content-Type: application/json' -H 'Accept: application/json'
+        }
 
-~/.netrc:
-```
-machine pod09999.catalyzeapps.com
-  login jamesbrown
-  password ifeelgood
-```
+        URL=$1
+        ARG1=$2
+	      ARG2=$3
+        ARG3=$4
+
+        export RESPONSE=$(corl https://auth.catalyze.io/auth/signin -XPOST -d '{"identifier": "bob@catalyze.io", "password": "test123456"}')
+	      ENCODEDTOKEN=$(python -c "import urllib; import os; import json; print urllib.quote(json.loads(os.environ['RESPONSE'])['sessionToken'])")
+
+        corl -H "Cookie: sessionToken=${ENCODEDTOKEN}" ${URL} ${ARG1} ${ARG2} ${ARG3}`
+
+Be sure to make this script executable with `chmod +x <script_name>`. All the examples below will have this script saved as *esquery*.
 
 ## Structuring Your Query
 
@@ -41,9 +45,9 @@ The index name is in the format `logstash-YYYY.MM.DD`.  For example, `logstash-2
 
 The type is "syslog"
 
-To return all the records in Elasticsearch from 2015-11-09, the uri would be:
+To return all the records in Elasticsearch from 2015-11-09, the command would be:
 
-`https://podhostname/__es/logstash-2015.11.09/syslog/_search`
+`./esquery https://podhostname/__es/logstash-2015.11.09/syslog/_search`
 
 The request will return a JSON document.  You can pipe the results through `jq` to filter the results and only show the syslog message:
 
@@ -51,7 +55,7 @@ The request will return a JSON document.  You can pipe the results through `jq` 
 
 The full command would be:
 
-`curl -n -s https://podhostname/__es/logstash-2015.11.09/syslog/_search | jq '.hits.hits[] | ._source| .syslog_message'`
+`./esquery https://podhostname/__es/logstash-2015.11.09/syslog/_search | jq '.hits.hits[] | ._source| .syslog_message'`
 
 Search parameters can be added to a search by including a json document in the request:
 
@@ -69,10 +73,10 @@ es_params.json:
 ```
 Include the parameters in the request:
 
-`curl -n -s -d @es_params.json https://podhostname/__es/logstash-2015.11.09/syslog/_search | jq '.hits.hits[] | ._source| .syslog_message'`
+`./esquery https://podhostname/__es/logstash-2015.11.09/syslog/_search -d @es_params.json | jq '.hits.hits[] | ._source| .syslog_message'`
 
 The results from the request are paginated and by default only 10 results are shown.
 
-Add a `size` query parameter to the uri. Be aware that too many results will sigificantly increase the memory usage of Elasticsearch and negativley impact performance
+Add a `size` query parameter to the URI. Be aware that too many results will significantly increase the memory usage of Elasticsearch and negatively impact performance
 
-`curl -n -s -d @es_params.json https://podhostname/__es/logstash-2015.11.09/syslog/_search?size=20 | jq '.hits.hits[] | ._source| .syslog_message'`
+`./esquery https://podhostname/__es/logstash-2015.11.09/syslog/_search?size=2 -d @es_params.json | jq '.hits.hits[] | ._source| .syslog_message'`
