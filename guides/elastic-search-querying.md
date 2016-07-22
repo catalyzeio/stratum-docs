@@ -30,7 +30,7 @@ corl () {
 	      ARG2=$3
         ARG3=$4
 
-        export RESPONSE=$(corl https://auth.catalyze.io/auth/signin -XPOST -d '{"identifier": "andrew@catalyze.io", "password": "zUVHjL#bjnSFoDQsWZP9"}')
+        export RESPONSE=$(corl https://auth.catalyze.io/auth/signin -XPOST -d '{"identifier": "bob@catalyze.io", "password": "test123456"}')
 	      ENCODEDTOKEN=$(python -c "import urllib; import os; import json; print urllib.quote(json.loads(os.environ['RESPONSE'])['sessionToken'])")
 
         corl -H "Cookie: sessionToken=${ENCODEDTOKEN}" ${URL} ${ARG1} ${ARG2} ${ARG3}`
