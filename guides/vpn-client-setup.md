@@ -59,7 +59,7 @@ There are two pieces of configuration necessary for strongSwan on Ubuntu to func
 
 To create a connection, execute the following command in a terminal window:
 
-`sudo charon-cmd --host ${VPN_GATEWAY_IP} --identity ${YOUR_VPN_IDENTITY} --profile ikev1-xauth-psk`
+`sudo charon-cmd --ike-proposal aes256-sha1-modp1536 --esp-proposal aes256-sha1 --profile ikev1-xauth-psk --host ${VPN_GATEWAY_IP} --identity ${YOUR_VPN_IDENTITY}`
 
 You will then be prompted for your Pre-Shared Key and User Password.
 
@@ -67,7 +67,7 @@ Catalyze will provide each VPN user with the VPN Gateway IP, VPN Account Name, V
 
 ## Example Connection Command
 
-`sudo charon-cmd --host 55.55.55.55 --identity bob@catalyze.io --profile ikev1-xauth-psk`
+`sudo charon-cmd --ike-proposal aes256-sha1-modp1536 --esp-proposal aes256-sha1 --profile ikev1-xauth-psk --host 55.55.55.55 --identity bob@catalyze.io`
 
 # Windows 7 strongSwan Client Setup
 
