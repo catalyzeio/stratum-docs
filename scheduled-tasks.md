@@ -30,7 +30,7 @@ If adding a scheduling framework isn't an option, then `cron` may work to period
 
 ```
 #!/bin/sh -e
-LOGFILE=/var/log/cron.log
+LOGFILE=/app/cron.log
 
 crontab my-crontab
 
