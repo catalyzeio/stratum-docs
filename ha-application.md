@@ -1,9 +1,10 @@
 ---
-title: HA applications
+title: Highly-Available Services
 category: application
-summary: How does Stratum manage HA applications?
+summary: How can Stratum Ensure High Application Ability?
 ---
 
+**High-Availabili
 # How does Stratum manage HA applications?
 
 A basic Stratum environment has a single service proxy container routing traffic to a single code service container.
