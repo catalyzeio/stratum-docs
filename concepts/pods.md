@@ -10,4 +10,4 @@ Typically, users will not need to worry about which pod their environment is on,
 
 <span style="color: blue">pod01A1B2C3</span>.catalyzeapps.com
 
-The blue portion, "pod01A1B2C3" is the environment's **namespace** - the first portion of that, "pod01", indicates that the environment is located in the pod named **pod01**.
+The blue portion, "pod01A1B2C3", is the environment's **namespace** - the first portion of that, "pod01", indicates that the environment is located in the pod named **pod01**.
