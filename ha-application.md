@@ -4,13 +4,27 @@ category: application
 summary: How can Stratum Ensure High Application Ability?
 ---
 
-**High-Availabili
-# How does Stratum manage HA applications?
+**Highly-Available** (HA) [services](/stratum/articles/concepts/services) are services deployed in configurations that allow them to better deal with unexpected stability issues. A service can go down for a number of reasons - application fault, memory issues, deadlocks, or host failures (Stratum does [pretty well](http://status.catalyze.io/), but no hardware is immune to failure).
 
-A basic Stratum environment has a single service proxy container routing traffic to a single code service container.
+At a high level, making a service HA means to scale it up - that is, to set the number of [deploy jobs](/stratum/articles/concepts/jobs#deploy-jobs). For specific service types, it gets more complex.
 
-The code service can be made highly available by adding one or more containers to the code service. If your environment contains a code service with multiple containers, Catalyze will add a second service proxy container to make the flow of data fully HA.
+## HA Code Services
 
-AWS will round-robin traffic between the service proxies and re-route traffic if one of the proxies goes down. More importantly, the service proxy containers themselves will route traffic only to available code service containers.
+An HA [code service](/stratum/articles/concepts/services#code-services) simply is configured to have two or more deploy jobs running simultaneously. During the provisioning of an HA code service, Catalyze will also increase the scale of the [service proxy](/stratum/articles/service-proxy). Traffic will be routed via round-robin from the environment's load balancer between service proxies, which will in turn only route to running deploy jobs containers for that service.
 
-Catalyze can easily scale these Stratum resources to accommodate increased application load as well as achieve high availability.
+## HA Database Services
+
+HA [database services](/stratum/articles/concepts/services#database-services) vary in setup depending on the type of database.
+
+* [HA PostgreSQL](/stratum/articles/ha-postgres)
+* [HA MongoDB](/stratum/articles/ha-mongo)
+
+For details on how a database type not listed above could be made HA, [contact us](/stratum/articles/contact).
+
+## HA Cache Services
+
+HA [cache services](/stratum/articles/concepts/services#cache-services) vary in setup depending on the type of database.
+
+* [HA Redis](/stratum/articles/ha-redis)
+
+For details on how a cache type not listed above could be made HA, [contact us](/stratum/articles/contact).
