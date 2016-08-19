@@ -71,7 +71,7 @@ Click the "+" to create a new connection. You will see the screen below pop-up:
 
 ![vpn_osx_ikev2_vpncreate](../images/vpn_osx_ikev2_vpncreate.png)
 
-After creating the VPN, you need to set the server address and username/password authentication. Add in the server address as shown below. Also click the checkbox to "Show VPN status in menu bar".
+After creating the VPN, you need to set the server address and username/password authentication. Add in the Server and Remote ID as shown below. Also click the checkbox to "Show VPN status in menu bar".
 
 ![vpn_osx_ikev2_vpnsettings](../images/vpn_osx_ikev2_vpnsettings.png)
 
