@@ -11,7 +11,7 @@ category: vpn
 **Ubuntu Linux**
   * StrongSwan VPN Client 5.1+
 
-** Windows 7 and Windows 8 VPN Client+**
+**Windows 7 and Windows 8 VPN Client+**
 
 # VPN Security
 
