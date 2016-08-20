@@ -5,17 +5,64 @@ category: vpn
 
 # Supported Clients
 
-**OSX 10.9+**
-  * Native VPN Client
+**Apple OSX**
+  * Strongswan OSX Client for OSX 10.7+
+  * Native VPN Client for OSX 10.9+
 
 **Ubuntu Linux**
   * StrongSwan VPN Client 5.1+
 
-**Windows 7 and Windows 8 VPN Client+**
+**Windows**
+ * Windows 7 Native VPN Client
+ * Windows 8+ Native VPN Client
 
 # VPN Security
 
 Communications between your client computer and the Stratum environment over the VPN are encrypted and secure. However, your VPN credentials provide access into this protected environment and should be safeguarded very securely. Please make sure that you are following all applicable information security policies, including what we provide at [https://policy.catalyze.io](https://policy.catalyze.io) and [https://hipaa.catalyze.io](https://hipaa.catalyze.io).
+
+# OS X 10.7+ IKEv2 Strongswan Client Setup
+
+This connection method has had the most success on OSX.
+
+## Install the Catalyze CA Certificate
+
+Catalyze will provide a CA cert alongside VPN credentials. Save that file to your Desktop:
+
+![vpn_osx_cacert_desktop](../images/vpn_osx_cacert_desktop.png)
+
+Before you create the VPN connection, the CA certificate needs to be imported into the OSX keychain. Use "command + space" key combination to open search and type in "Keychain" to open the OSX keychain. You will see the below screen.
+
+![vpn_osx_keychain_certs](../images/vpn_osx_keychain_certs.png)
+
+Make sure that you are on the "System" and "Certs" tabs in the window. Unlock the Keychain by clicking the lock icon in the upper left corner.
+
+Once unlocked, drag the CA certificate file into the window. You will be asked for your password again. When done, the certificate will be imported and look like this:
+
+![vpn_osx_cacert_drag](../images/vpn_osx_cacert_drag.png)
+
+Double click on the certificate and expand the "Trust" tab. Change the top setting to "Always Trust" as show below:
+
+![vpn_osx_cacert_addtrust](../images/vpn_osx_cacert_addtrust.png)
+
+That should remove the red "X" from the certificate.
+
+## Download the Strongswan OSX Application
+
+The Strongswan VPN Client is available for OSX here: https://download.strongswan.org/osx/strongswan-5.3.2-1.app.zip
+
+Unzip the file and double-click the app. Authorize the application to install the helper service. After the helper service is installed, the Strongswan client adds an icon to the top toolbar on the screen.
+
+![vpn_osx_strongswan_icon](../images/vpn_osx_strongswan_icon.png)
+
+Click on the icon and choose "Add" to add the Catalyze VPN connection.
+
+Fill in a name for the connection, as well as the Server Address and Username for the connection. Then hit ok.
+
+![vpn_osx_strongswan_connection](../images/vpn_osx_strongswan_connection.png)
+
+Open the connection by clicking on the Strongswan icon and hovering over the connection name. Click "Connect" from the menu and enter your VPN password when prompted.
+
+![vpn_osx_strongswan_menu](../images/vpn_osx_strongswan_menu.png)
 
 # OS X 10.10 and below IKEv1 Native Client Setup
 
@@ -42,44 +89,6 @@ Choose the **Shared Secret** radio button. In that field, place the VPN Pre-Shar
 Now, click the **"Apply"** button for the connection and connect by clicking the **"Connect"** button.
 
 ![vpn_userpass](../images/vpn_userpass_highlights.png)
-
-# OS X 10.11+ IKEv2 Native Client Setup
-
-Catalyze will provide a CA cert alongside VPN credentials. Save that file to your Desktop:
-
-![vpn_osx_cacert_desktop](../images/vpn_osx_cacert_desktop.png)
-
-Before you create the VPN connection, the CA certificate needs to be imported into the OSX keychain. Use "command + space" key combination to open search and type in "Keychain" to open the OSX keychain. You will see the below screen.
-
-![vpn_osx_keychain_certs](../images/vpn_osx_keychain_certs.png)
-
-Make sure that you are on the "System" and "Certs" tabs in the window. Unlock the Keychain by clicking the lock icon in the upper left corner.
-
-Once unlocked, drag the CA certificate file into the window. You will be asked for your password again. When done, the certificate will be imported and look like this:
-
-![vpn_osx_cacert_drag](../images/vpn_osx_cacert_drag.png)
-
-Double click on the certificate and expand the "Trust" tab. Change the top setting to "Always Trust" as show below:
-
-![vpn_osx_cacert_addtrust](../images/vpn_osx_cacert_addtrust.png)
-
-That should remove the red "X" from the certificate.
-
-Now move on to making the VPN. In **System Preferences**, open **Network**.
-
-Click the "+" to create a new connection. You will see the screen below pop-up:
-
-![vpn_osx_ikev2_vpncreate](../images/vpn_osx_ikev2_vpncreate.png)
-
-After creating the VPN, you need to set the server address and username/password authentication. Add in the Server Address and Remote ID as shown below. Also click the checkbox to "Show VPN status in menu bar".
-
-![vpn_osx_ikev2_vpnsettings](../images/vpn_osx_ikev2_vpnsettings.png)
-
-Now that you have the server IP entered, click "Authentication Settings". Enter in the username and password you were provided for the VPN appliance.
-
-![vpn_osx_ikev2_authsettings](../images/vpn_osx_ikev2_authsettings.png)
-
-Now, test the VPN by clicking "Connect"! Once connected, the VPN should display a timer in the top menu bar in OSX while connected.
 
 # Ubuntu strongSwan Client Setup
 
