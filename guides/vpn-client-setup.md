@@ -10,7 +10,7 @@ category: vpn
   * Native VPN Client for OSX 10.9+
 
 **Ubuntu Linux**
-  * StrongSwan VPN Client 5.1+
+  * StrongSwan VPN Client 5.1+ssl
 
 **Windows**
  * Windows 7 Native VPN Client
@@ -26,7 +26,11 @@ This connection method has had the most success on OSX.
 
 ## Install the Catalyze CA Certificate
 
-Catalyze will provide a CA cert alongside VPN credentials. Save that file to your Desktop:
+Download the appropriate Catalyze VPN CA Certificate:
+
+[Pod02xxx Environments](../certs/pod02_ca.pem)
+
+Save that file to your Desktop:
 
 ![vpn_osx_cacert_desktop](../images/vpn_osx_cacert_desktop.png)
 
