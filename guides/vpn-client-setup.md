@@ -64,7 +64,7 @@ Fill in a name for the connection, as well as the Server Address and Username fo
 
 ![vpn_osx_strongswan_connection](../images/vpn_osx_strongswan_connection.png)
 
-Open the connection by clicking on the Strongswan icon and hovering over the connection name. Click "Connect" from the menu and enter your VPN password when prompted.
+Open the connection by clicking on the Strongswan icon and hovering over the connection name. Click "Connect" from the menu and enter your VPN password when prompted. Note that copy/paste functionality only works with right-click via the mouse for the password box.
 
 ![vpn_osx_strongswan_menu](../images/vpn_osx_strongswan_menu.png)
 
