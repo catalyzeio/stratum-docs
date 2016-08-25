@@ -4,146 +4,163 @@ category: getting-started
 Summary: Brand new to Stratum? Start here!
 ---
 
-## Introduction
+This article is intended to get you up and running on your new [Stratum](https://catalyze.io/stratum) [environment](/stratum/articles/concepts/environments). If you'd like to read more, please look through the rest of the [Getting Started guides](/stratum/getting-started/).
 
-The following article is intended to get new users up and running in short order. We do have verbose, in depth write ups on each step outlined below. If you'd like to read more please see our official [getting started guide](/stratum/getting-started/). However it is recommended that you complete this guide before moving on to anything else.
+If you don't yet have an environment, or you have questions on Stratum's capabilities and offerings, [please get in touch](/stratum/articles/contact).
 
-What we'll cover in this guide:
+## 1. Access
 
-- 1. Gaining access to an organization and related environment(s)
-- 2. Downloading the CLI
-- 3. Associating a local git repository with a Catalyze remote repository
-- 4. Adding an SSH Key
-- 5. Adding an SSL certificate
-- 6. Setting up DNS
-- 7. Setting up Sites
-- 8. Deploying code
+Once your new environment has been provisioned and is ready to use, you will receive two emails. The first is simply a notification that it's ready, which you will receive for every environment. This contains your environment's **public hostname** - take note of this for later. The second is an invitation to join the new **organization** that has been created for you - this will only be sent for the very first environment that we provision for you. The invitation email contains a link to the [Stratum dashboard](https://product.catalyze.io/stratum) - click it!
 
+The Stratum dashboard will prompt you to sign in with your Catalyze account - if you don't have one already, you can also create one at this point - just follow the instructions on the page. After signing in (or creating a new account, verifying your email address, then signing in), click the "Stratum" link from the product list. You should see your organization in the upper-right corner:
 
-## Prerequisite: Access
+<center>![org corner](/stratum/articles/images/org_corner.png)</center>
 
-Once you've been notified that your Stratum environment has been provisioned you will receive an email containing an invite link to an organization that Catalyze has created on your behalf.
+For more on managing organizations, including how to add additional members and grant them access to your environment, see the [Managing Organizations](/stratum/articles/organizations) article.
 
-It's important that you first create a Catalyze user account before clicking the invite link. You can register for an account [here](https://product.catalyze.io/account/register). If you've already created an account it may be helpful to [sign in](https://product.catalyze.io/account/signin) before accepting the invite.
+> ***Note:*** Occasionally, if interrupted while creating an account, you might find that your invite did not get accepted, and you are not a member of your organization yet. If this happens, just click the link in your email again.
 
-Now that you've successfully created an account and signed in you can now accept the invite as the owner of the newly created organization. From here you can begin building your team by inviting members and admins to join. The video below demonstrates how one would sign in, navigate to an organization, and manage inviting a user. To learn more about the types of roles in an organization and what they mean, visit [here](/stratum/articles/organization-access-controls).
+Once you've confirmed that you're a member of your organization, you should also see your environment's summary listed in the Stratum dashboard, looking something like this:
 
-<div style="width: 100%; height: 0px; position: relative; padding-bottom: 65.653%;"><iframe src="https://streamable.com/e/ukd0" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen scrolling="no" style="width: 100%; height: 100%; position: absolute;"></iframe></div>
+<center>![org summary](/stratum/articles/images/env_summary.png)</center>
 
-**Recap:** [Sign up](https://product.catalyze.io/account/register) for a Catalyze account before accepting the org owner invite. Accept the invite, and use the [dashboard](//product.catalyze.io/stratum) to invite new users to your organization.
+From the summary, note your environment's name and your code service's name - in the above image, those are "MyEnvironment-production" and "app01", respectively.
 
-## Catalyze CLI
+## 2. Install the Catalyze CLI
 
-After gaining access to your organization you will want to download the Catalyze CLI (command line interface).
+Catalyze provides a CLI (command-line interface) tool to facilitate interaction with your Stratum environment, supporting Windows, OSX, and Linux.
 
-**Please note:** If you have an existing version of the Catalyze CLI you can run `catalyze update` to get the latest version.
+To install the CLI, follow the instructions in its [Github repository](https://github.com/catalyzeio/cli).
 
- **Recap:** [Download](https://github.com/catalyzeio/cli) the latest version of the Catalyze CLI.
+## 3. Add Your Public Key
 
-## Environment Association
+In order to push code, Catalyze needs to have a public key attached to your account. If you don't have one yet, you can create one via the following on OSX/Linux:
 
-Once you have the latest build of the Catalyze CLI you need to create an association between your CLI install and the newly created Stratum environment.
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
 
-**Please note:** Before moving on, be advised that the Catalyze CLI is the primary tool for interacting with your environment. Our design philosophy is that the Stratum dashboard is the view layer into your environment and related services. The CLI is the tool that can perform actions on those environments and related services.
+To add your key to your account, use the `keys add` command, which has the form `catalyze keys add <key name> <path to key>`. For example, if you want to call your key "my-catalyze-key" and the path to it is `~/.ssh/id_rsa.pub`, the command you would run would be:
 
-To associate your application repository to your Catalyze remote repository navigate to the root directory of your application. This will always be where the `.git` folder resides.
+```
+catalyze keys add my-catalyze-key ~/.ssh/id_rsa.pub
+```
 
-Once inside you can run the `catalyze associate` command. This command takes two arguments: `ENV_NAME` and `SERVICE_NAME`. The `ENV_NAME` is the name of the provisioned environment that you want associated with the application you're located inside of. The `ENV_NAME` is located on your contract as well as inside the Stratum dashboard. The `SERVICE_NAME` is the name of the related code service. We automatically name this for you so in most cases you'll be looking for `app01`.
+This will prompt you to sign in with your Catalyze account. You can then validate that the key was added using `catalyze keys list`.
 
-**Full example:** `catalyze associate DemoProd app01`
+## 4. Associate to Your Environment
 
-**Recap:** Run the `catalyze associate ENV_NAME SERVICE_NAME [-a] [-r] [-d]` command to associate your application repository with your Catalyze remote repository.
+> ***Note:*** If your environment has more than one code service, this step and all steps after will need to be repeated for each one.
 
-## SSH Keys
+In order for the CLI to know which environment it should be interacting with (and, coincidentally, who you are), you first need to **associate** your local code repo to your new environment. "Associating" does the following:
 
-The next thing you'll want to do is setup your SSH key so you can push code to your Catalyze remote repository. Any SSH key uploaded to your Catalyze user account will be available for use with all code services and environments that you have access to.
+1. Find the internal identifiers for your environment and code service, and cache those locally.
+2. Set the `catalyze` [Git remote](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes).
 
-First you'll want to create a brand new public key. This key should not be shared or used anywhere else. The following command should be run with the email you signed up with (**Please note:** After creating your new public key you'll need to add it to your ssh agent: `ssh-add KEY_PATH`).
+The form of this command in the CLI is: `catalyze associate <environment name> <code service name>`. For the example from Step 1, that would be `catalyze associate MyEnvironment-production app01`.
 
-`ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+For options for the `associate` command, see the [CLI reference](/paas/paas-cli-reference#associate).
 
-Once you have your new key you can add it to your Catalyze user account with the following command:
+## 5. Upload Your SSL Certificate
 
-`catalyze keys add NAME PUBLIC_KEY_PATH`
+Acquiring SSL certs is a very complex topic - if you'd like to read more information than what is outlined below, please see the [SSL Certificates](/stratum/articles/guides/self-service-SSL/) article. The certificate and private key must be unencrypted and in PEM format.
 
-**Full example:** `catalyze keys add my_prod_key ~/.ssh/prod_rsa.pub`
+> ***Note:*** This can be a wildcard cert. Wildcard certs can be reused.
 
-**Recap:** Generate a new public SSH key and upload it to your Catalyze user account using the `catalyze keys add NAME PUBLIC_KEY_PATH` command.
+The CLI command to upload a cert is `certs create`, taking the form `catalyze certs create <cert name> <path to crt file> <path to key file>`. For example:
 
-## SSL Certificates
+```
+catalyze certs create example.com example.com.crt example.com.key
+```
 
-Getting an SSL certificate installed is by far the most involved step in this setup guide. If you'd like to read more information than what is outlined below please refer to [this separate guide](/stratum/articles/guides/self-service-SSL/).
+If that cert is self-signed, pass the `-s` option:
 
-To start, you’ll need to create a cert. Make sure both the certificate and private key are unencrypted and in PEM format. If you have a Certificate Authority Signed certificate (CA-Signed) you can run the following command using your own correct file names/paths:
+```
+catalyze certs create example.com example.com.crt example.com.key -s
+```
 
-`catalyze certs create *.wxyz.com ./wxyz.com.crt ./wxyz.com.key`
+> ***Note:*** Using a self-signed cert can be very useful for development or staging environments.
 
-If you have a self-signed certificate you can run the following command using your own correct file names/paths:
+For wildcard certs, the typical nomenclature is `*.domain.tld`:
 
-`catalyze certs create *.wxyz.com ./wxyz.com_selfsigned.crt ./wxyz.com_selfsigned.key -s`
+```
+catalyze certs create *.example.com wildcard-example.com.crt wildcard-example.com.key
+```
 
-**Self-Signed-Certs: You can follow our guide [here](/stratum/articles/ssl-self-signed/) for creating a self-signed cert**
+## 6. Set Your DNS
 
-**Please note:** If for any reason you find yourself stuck you can run any Catalyze CLI command without arguments to see a full manual on that specific command.
+Because an environment can have any number of code services, the public hostname for the environment does not point to any of them. What this means is that, in order to access each code service in your application, you will need to set up DNS that will forward to it. This step is executed entirely outside of Stratum - Catalyze cannot do any step of this for you. Catalyze is not a DNS provider.
 
-**Recap:** Use a variation of the `catalyze certs create` command to upload your SSL certificate.
+First, choose the hostname you would like to use for the code service - this can be either an apex domain (such as `example.com`) or a subdomain (such as `api.example.com`).
 
-## DNS Setup
+Then, in your DNS provider's control panel, set up a `CNAME` from that hostname to your environment's public hostname (`ALIAS` can be used if `CNAME` is not supported by your provider). We recommend setting a TTL of 300s.
 
-Now that we've successfully added an SSL certificate and made our first code push we'll want to point the correct domain name to the appropriate Catalyze public hostname.
+To verify that your DNS change has propagated (which typically takes a few minutes), use `nslookup`:
 
-The public hostname for your environment is unique, and will be sent to you during the initial onboarding steps. Alternatively you can run the `catalyze sites list` command to see your hostname.
-
-The next step is to add the CNAME rules using your appropriate name and domain:
-
-**Full example:** `mysite.wxyz.com CNAME pod0123.catalyzeapps.com`
-
-You can also use an ALIAS if you have a bare domain and your DNS provider supports ALIAS records:
-
-`wxyz.com ALIAS pod0123.catalyzeapps.com`
-
-DNS name propagation can be verified via nslookup:
-
-`nslookup mysite.wxyz.com
+```
+$ nslookup api.example.com
 Non-authoritative answer:
-mysite.wxyz.com canonical name = pod0123.catalyzeapps.com.`
+api.example.com canonical name = pod0A1B2C3.catalyzeapps.com.
+```
 
-**Recap:** Setup a DNS CNAME to point at your POD URL and verify that the DNS entry has propragated.
+> ***Note:*** Some DNS providers may not allow `CNAME` _or_ `ALIAS` records for apex domains. If you discover that your host has this limitation and using a subdomain is not an option, we recommend transferring your domain over to [Cloudflare](https://www.cloudflare.com/).
 
-## Sites Setup
+## 7. Set Up a Site
+
+Stratum uses what we call **[Sites](/stratum/articles/concepts/sites)** to map code services to hostnames, using the cert that was uploaded in step 5.
+
+The CLI command to create a cert is `sites create`, taking the form `catalyze sites create <hostname> <code service name> <cert name>`. For example, using the hostname from step 6, the wildcard cert name from step 5, and the code service name noted in step 1:
+
+```
+catalyze sites create api.example.com app01 *.example.com
+```
+
+This will generate a new nginx configuration file for the new site.
+
+## 8. Redeploy the Service Proxy
+
+In order to pick up on the new site file, your environment's [Service Proxy](/stratum/articles/service-proxy) needs be redeployed. This is done via the `redeploy` command:
+
+```
+catalyze redeploy service_proxy
+```
+
+After a short period of downtime (usually 20-40 seconds), your service proxy will be responding again. If your site, certs, and DNS are set up correctly, navigating to the hostname in the site you just configured (`api.example.com` in the example above) should result in a 503 error.
 
 Once you have an SSL certificate added to an environment and the DNS name you want to resolve pointed at your POD URL, you'll need to create a site for the environment that uses the certificate and listens for that DNS name. Until you create a site, you will **not** be able to route traffic to your application.
 
-This step occurs entirely within the CLI. To create a site, you'll use the certificate and DNS entries from the last two steps:
+You can verify that your certificate is correctly being used with `openssl`:
 
-`catalyze sites create <your_dns_cname_pointing_at_catalyze> <the_application_to_route_traffic_to> <the_name_of_the_certificate>`
+`openssl s_client -connect api.example.com:443`
 
-**Full Example:** `catalyze sites create mysite.wxyz.com code-1 *.wxyz.com`
+## 9. Push Code
 
-Once the site is created, redeploy the service proxy in your environment to push out the new site configuration:
+In order to build an image for your code service's [container](/stratum/articles/concepts/containers) to run, you do a `git push` to the `catalyze` remote, pushing the `master` branch:
 
-`catalyze redeploy service_proxy`
+```
+git push catalyze master
+```
 
-The redeploy takes about three minutes due to DNS propagation. If you navigate to the DNS CNAME you created earlier, `mysite.wxyz.com`, that address should pass through to your code service. Prior to pushing code, your site will display a 503 error code in the browser. However, you can verify that your certificate is correctly being used by checking the output of the following command:
+> ***Note:*** The pushed branch **must** be `master`. If the branch you want to push is not `master`, use the following:
+>
+> ```
+git push catalyze mybranchname:master
+```
 
-`openssl s_client -connect mysite.wxyz.com:443`
+After your push, you will see build output stream to your terminal window. Any build error output will be there. For detailed information, read the [How Stratum Builds Work](/stratum/articles/builds) article.
 
-**Recap:** Create a site in your environment using the certificate and DNS name you want to resolve to your Stratum application
+After your build succeeds, a [deploy job](/stratum/articles/concepts/jobs#deploy-jobs) will be started for it. Shortly after (20-40 seconds, plus however long it takes your application to start up and respond). After that, your application should be available at the hostname you configured in the site. Congratulations!
 
-## Push Code
+> ***Note:*** If your application builds successfully but is not behaving as expected, read through the [Writing Your Application to Work With Stratum](/stratum/articles/writing-your-application) article.
 
-The moment of truth. It's time to make our first code push, and it couldn't be easier. Navigate to the application's code repository (the same place we were in the associate step) and run `git push catalyze master`.
+If your application includes [workers](/stratum/articles/concepts/workers), use the `worker` command to start them (you only need to do this the first time):
 
-This pushes your master branch to the Catalyze master branch. If you want to push a branch that is not named master, see the following:
+```
+catalyze worker <target>
+```
 
-`git push catalyze mybranch_name:master`
+Where `target` is the name of the Procfile target to be run (typically "worker").
 
-**Please note:** Even when you're not using your local master branch it is necessary to use the Catalyze remote master branch.
+### See also
 
-Once you push code successfully, the application containers will take up to 1 minute to deploy.
-
-**Recap:** Push your code using the `git push catalyze master` command!
-
-## Next Steps
-
-To read more about everything covered in this guide please see the official getting started guide [here](/stratum/getting-started/).
+* [Getting Started Guides](/stratum/getting-started/)

@@ -1,6 +1,7 @@
 ---
 title: Self-Service SSL Guide
 category: ssl
+alias: "stratum/articles/guides/self-service-SSL/"
 ---
 
 # Self-Service SSL Guide

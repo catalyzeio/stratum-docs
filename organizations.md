@@ -2,6 +2,7 @@
 title: Organizations
 category: organization
 summary: What is a Stratum Organization?
+alias: ["stratum/articles/organization-access-controls/", "stratum/articles/organization-addremove-users/"]
 ---
 
 # What is a Stratum Organization?

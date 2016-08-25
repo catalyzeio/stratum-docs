@@ -2,6 +2,7 @@
 title: Environments
 category: concepts
 summary: Learn what Environments are on Stratum.
+alias: "stratum/articles/environment-defining/"
 ---
 
 **Environments** are the highest-level object that a user can interact with on [Stratum](https://catalyze.io/stratum). An Environment represents your entire hosted application or product - runtimes, databases, caches, queues, tools, and all. If you have both production and staging hosted through
@@ -10,7 +11,7 @@ An Environment consists primarily of a set of [Services](/stratum/articles/conce
 
 * 1 [Code Service](/stratum/articles/concepts/services#code-services)
 * 1 [Database Service](/stratum/articles/concepts/services#database-services)
-* 1 [Service Proxy](/stratum/articles/concepts/service-proxy)
+* 1 [Service Proxy](/stratum/articles/service-proxy)
 * 1 [Logging Service](/stratum/articles/logging-access)
 * 1 [Monitoring Service](/stratum/articles/monitoring)
 

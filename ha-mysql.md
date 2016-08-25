@@ -10,4 +10,4 @@ Currently, there is no automated failover. Promotion to primary is manually mana
 
 ### See also
 
-* [PHP + MySQL Example Application](/stratum/articles/guides/php-mysql
+* [PHP + MySQL Example Application](/stratum/articles/guides/php-mysql)

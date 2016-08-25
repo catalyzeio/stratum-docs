@@ -17,6 +17,7 @@ An HA [code service](/stratum/articles/concepts/services#code-services) simply i
 HA [database services](/stratum/articles/concepts/services#database-services) vary in setup depending on the type of database.
 
 * [HA PostgreSQL](/stratum/articles/ha-postgres)
+* [HA MySQL](/stratum/articles/ha-mysql)
 * [HA MongoDB](/stratum/articles/ha-mongo)
 
 For details on how a database type not listed above could be made HA, [contact us](/stratum/articles/contact).
