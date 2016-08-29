@@ -11,7 +11,7 @@ An Environment consists primarily of a set of [Services](/stratum/articles/conce
 
 * 1 [Code Service](/stratum/articles/concepts/services#code-services)
 * 1 [Database Service](/stratum/articles/concepts/services#database-services)
-* 1 [Service Proxy](/stratum/articles/service-proxy)
+* 1 [Service Proxy](/stratum/articles/concepts/service-proxy)
 * 1 [Logging Service](/stratum/articles/logging-access)
 * 1 [Monitoring Service](/stratum/articles/monitoring)
 

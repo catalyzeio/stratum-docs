@@ -10,7 +10,7 @@ At a high level, making a service HA means to scale it up - that is, to set the 
 
 ## HA Code Services
 
-An HA [code service](/stratum/articles/concepts/services#code-services) simply is configured to have two or more deploy jobs running simultaneously. During the provisioning of an HA code service, Catalyze will also increase the scale of the [service proxy](/stratum/articles/service-proxy). Traffic will be routed via round-robin from the environment's load balancer between service proxies, which will in turn only route to running deploy jobs containers for that service.
+An HA [code service](/stratum/articles/concepts/services#code-services) simply is configured to have two or more deploy jobs running simultaneously. During the provisioning of an HA code service, Catalyze will also increase the scale of the [service proxy](/stratum/articles/concepts/service-proxy). Traffic will be routed via round-robin from the environment's load balancer between service proxies, which will in turn only route to running deploy jobs containers for that service.
 
 ## HA Database Services
 

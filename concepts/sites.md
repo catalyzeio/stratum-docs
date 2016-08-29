@@ -1,10 +1,10 @@
 ---
 title: Sites
-category: ssl
+category: concepts
 summary: Mapping hostnames to certificates and services on Stratum.
 ---
 
-The [Stratum](https://catalyze.io/stratum) concept of a **Site** represents the mapping of a hostname to a [code service](/stratum/articles/concepts/services#code-services). An [environment](/stratum/articles/concepts/environments) can have more than one code service, so its [service proxy](/stratum/articles/service-proxy) needs to know how to route requests.
+The [Stratum](https://catalyze.io/stratum) concept of a **Site** represents the mapping of a hostname to a [code service](/stratum/articles/concepts/services#code-services). An [environment](/stratum/articles/concepts/environments) can have more than one code service, so its [service proxy](/stratum/articles/concepts/service-proxy) needs to know how to route requests.
 
 ## Creating a New Site
 

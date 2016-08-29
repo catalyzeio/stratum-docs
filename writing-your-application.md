@@ -35,7 +35,7 @@ myworker: python worker.py
 
 ## Binding to PORT
 
-In order to expose your application to the [Service Proxy](/stratum/articles/service-proxy), and thus accessible the outside world, it needs to bind to a very specific port, stored in the environment variable named `PORT`. If this port is not bound to, your application will continue to run, but it will not be accessible.
+In order to expose your application to the [Service Proxy](/stratum/articles/concepts/service-proxy), and thus accessible the outside world, it needs to bind to a very specific port, stored in the environment variable named `PORT`. If this port is not bound to, your application will continue to run, but it will not be accessible.
 
 > ***Note:*** Do not change the value for `PORT`, or hard code that value in your application. While rare, it is subject to change.
 

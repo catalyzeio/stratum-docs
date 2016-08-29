@@ -68,7 +68,7 @@ To update a certificate (if it's expiring soon, or just needs to be replaced), t
 catalyze certs update *.example.com new-wildcard-example.com.crt new-wildcard-example.com.key
 ```
 
-> ***Note:*** Cert updates will not take effect until the [Service Proxy](/stratum/articles/service-proxy) is [redeployed](/stratum/articles/concepts/services#redeploying).
+> ***Note:*** Cert updates will not take effect until the [Service Proxy](/stratum/articles/concepts/service-proxy) is [redeployed](/stratum/articles/concepts/services#redeploying).
 
 ## Listing your Uploaded Certs
 

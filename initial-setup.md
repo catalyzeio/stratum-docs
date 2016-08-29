@@ -119,7 +119,7 @@ This will generate a new nginx configuration file for the new site.
 
 ## 8. Redeploy the Service Proxy
 
-In order to pick up on the new site file, your environment's [Service Proxy](/stratum/articles/service-proxy) needs be redeployed. This is done via the `redeploy` command:
+In order to pick up on the new site file, your environment's [Service Proxy](/stratum/articles/concepts/service-proxy) needs be redeployed. This is done via the `redeploy` command:
 
 ```
 catalyze redeploy service_proxy
