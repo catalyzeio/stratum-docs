@@ -16,11 +16,11 @@ What this means is that every time a new job for a service is started, it's a fr
 
 # Multiple Hosts
 
-Each Stratum [Pod](/stratum/articles/concepts/pods) has its own set of Docker Hosts, each of which is capable of running a number of containers. When a job is deployed, its container is started on the host best-suited for it - typically the one with the lightest load. Catalyze watches all hosts constantly, adding more to the pod as needed. What this means, however, is that it's very likely that a given environment's containers are spread out among a number of hosts. Every environment has its own network, allowing those containers to find each other - and no one else. That is to say, with the exception of [Service Proxies](/stratum/articles/service-proxies.md) (which have ports 80 and 443 exposed to the outside world), your containers are not accessible except to each other.
+Each Stratum [Pod](/stratum/articles/concepts/pods) has its own set of Docker Hosts, each of which is capable of running a number of containers. When a job is deployed, its container is started on the host best-suited for it - typically the one with the lightest load. Catalyze watches all hosts constantly, adding more to the pod as needed. What this means, however, is that it's very likely that a given environment's containers are spread out among a number of hosts. Every environment has its own network, allowing those containers to find each other - and no one else. That is to say, with the exception of [Service Proxies](/stratum/articles/concepts/service-proxy) (which have ports 80 and 443 exposed to the outside world), your containers are not accessible except to each other.
 
 # Lifecycle
 
-Once a container is started, it will not be stopped unless it is killed - which will typically only happen when it the service that owns its job is [redeployed](stratum/articles/concepts/services#redeploying).
+Once a container is started, it will not be stopped unless it is killed - which will typically only happen when it the service that owns its job is [redeployed](/stratum/articles/concepts/services#redeploying).
 
 ### See also
 

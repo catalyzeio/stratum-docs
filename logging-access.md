@@ -43,4 +43,4 @@ More information on how to filter and search for logs can be found [here](https:
 
 ## Direct ElasticSearch Queries
 
-For information on Direct ElasticSearch Queries please view this [guide](/stratum/guides/elastic-search-querying/).
+For information on Direct ElasticSearch Queries please view this [guide](/stratum/articles/guides/elastic-search-querying/).

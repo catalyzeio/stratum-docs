@@ -5,7 +5,7 @@ category: guide
 
 # Deploying a Node+Mongo Application on Stratum
 
-In this guide we will cover how to deploy a simple [Node.js](https://nodejs.org/) application that stores data in a [MongoDB database](https://www.mongodb.org/).
+In this guide we will cover how to deploy a simple [Node.js](https://nodejs.org/) application that stores data in a [MongoDB database](https://www.mongodb.com/).
 
 ## Pre-requisites
 
@@ -182,7 +182,7 @@ Next up we will configure the application to fetch and store data in a Mongo dat
    });
    ```
 
-   As with the `PORT` environment variable, you should pull your MongoDB connection information from the `DATABASE_URL` environment variable. If you have more than one database in your environment, use the [Stratum dashboard](https://stratum.catalyze.io/) to determine which environment variable to use.
+   As with the `PORT` environment variable, you should pull your MongoDB connection information from the `DATABASE_URL` environment variable. If you have more than one database in your environment, use the [Stratum dashboard](https://product.catalyze.io/stratum/) to determine which environment variable to use.
 
 3. Run your updated code, then point your browser to [http://127.0.0.1:8088](http://127.0.0.1:8088) to see it working.
 
@@ -213,7 +213,7 @@ In the Catalyze dashboard, when you select your environment from the left sideba
 
 ![dashboard screenshot](http://cdn2.dropmark.com/45280/65a396d67787a5b0c9fcab9ae61b2687fb3d0d93/logging-button.png)
 
-Docs and guides for ElasticSearch and Kibana can be found [here](http://www.elastic.co/guide/).
+Docs and guides for ElasticSearch and Kibana can be found [here](https://www.elastic.co/guide/index.html).
 
 ## Adding Logging with your Application
 

@@ -4,7 +4,7 @@ category: concepts
 summary: What is a Service Proxy on Stratum?
 ---
 
-The **Service Proxy** is a special [service](/stratum/article/concepts/services) in each [environment](/stratum/article/concepts/environments) that is responsible for routing traffic from the outside world into your environment's network, to specific code services. This is configured using [sites](/stratum/articles/concepts/sites). The service proxy is the _only_ service exposed outside of your environment's network - all external (non-[console](/stratum/articles/console), non-[VPN](/stratum/articles/vpn-stratum)) traffic goes through it and is proxied to other services.
+The **Service Proxy** is a special [service](/stratum/articles/concepts/services) in each [environment](/stratum/articles/concepts/environments) that is responsible for routing traffic from the outside world into your environment's network, to specific code services. This is configured using [sites](/stratum/articles/concepts/sites). The service proxy is the _only_ service exposed outside of your environment's network - all external (non-[console](/stratum/articles/console), non-[VPN](/stratum/articles/vpn-stratum)) traffic goes through it and is proxied to other services.
 
 ## Client IP Forwarding
 

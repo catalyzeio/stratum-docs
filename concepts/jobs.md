@@ -18,7 +18,7 @@ summary: Learn what Jobs are on Stratum.
 
 ## Worker Jobs
 
-**Worker** jobs are a special job type that are unique to code services. Worker jobs are functionally similar to [deploy jobs](#deploy-jobs), but execute a different [procfile](/stratum/articles/applicatio/procfile) target. Read more in the [Workers](/stratum/articles/concepts/workers) article.
+**Worker** jobs are a special job type that are unique to code services. Worker jobs are functionally similar to [deploy jobs](#deploy-jobs), but execute a different [procfile](/stratum/articles/writing-your-application#choosing-how-your-application-is-run) target. Read more in the [Workers](/stratum/articles/concepts/workers) article.
 
 ## Backup and Restore Jobs
 

@@ -8,7 +8,7 @@ summary: How does Stratum manage HA Mongo?
 
 > ***Note:*** The variable may not always be named `DATABASE_URL` if the environment also contains more than one database service. There will always also be another variable named after the service, such as `MONGO01_URL` or `DB01_URL`.
 
-The environment variable's value follows the format defined by [MongoDB](http://docs.mongodb.org/manual/reference/connection-string/). Here is an example connection string:
+The environment variable's value follows the format defined by [MongoDB](https://docs.mongodb.com/manual/reference/connection-string/). An example connection string:
 
 ```
 mongodb://127.0.1.1:27017,127.0.1.2:27017/myDB?replicaSet=myReplSet
@@ -18,7 +18,7 @@ In the above example, the primary MongoDb node is at `127.0.1.1:27017` and the s
 
 You will need to write your application using a client that supports replica sets - official driver list [here](https://docs.mongodb.com/ecosystem/drivers/).
 
-To test your application locally using a replica set, we recommend that you follow the instructions in [this blog post](http://blog.ajduke.in/2013/05/31/setup-mongodb-replica-set-in-4-steps/). This will give you a local testing environment that is configured very similarly to your HA MongoDB on Stratum.
+To test your application locally using a replica set, we recommend that you follow the instructions in [this blog post](https://blog.ajduke.in/2013/05/31/setup-mongodb-replica-set-in-4-steps/). This will give you a local testing environment that is configured very similarly to your HA MongoDB on Stratum.
 
 ### See also
 

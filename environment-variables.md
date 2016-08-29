@@ -19,7 +19,7 @@ Environment variables in Stratum allow an application to consume information tha
 
 ## Pre-Defined Environment Variables
 
-Each new Stratum environment comes with several pre-defined environment variables that contain important information for your application to function and vary depending on the services in your environment. You can view these in the [Stratum Dashboard][https://stratum.catalyze.io] on your code service as soon as your environment is created by Catalyze. Examples include:
+Each new Stratum environment comes with several pre-defined environment variables that contain important information for your application to function and vary depending on the services in your environment. You can view these in the [Stratum Dashboard][https://product.catalyze.io/stratum] on your code service as soon as your environment is created by Catalyze. Examples include:
 
 * DATABASE_URL
 * S3_BUCKET

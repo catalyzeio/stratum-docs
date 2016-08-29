@@ -20,7 +20,7 @@ Logging is an essential part of HIPAA compliance, and the following sections of 
 * Section 164.308(a)(1)(ii)(D) “Information System Activity Review” prescribes review of various records of IT activities such as logs, systems utilization reports,  incident reports and other indications of security relevant activities.
 
 ## Pre-requisites
-You have a Stratum account with Catalyze. If you don't, you can sign up for an account and contacting Sales for a 30-day trial [here](https://stratum.catalyze.io/register).
+You have a Stratum account with Catalyze. If you don't, you can sign up for an account and contacting Sales for a 30-day trial [here](https://product.catalyze.io/stratum/register).
 
 You have a provisioned environment with a deployed application.
 
@@ -148,7 +148,7 @@ Log::info('This is some useful information.');
 Log::warning('Something could be going wrong.');
 Log::error('Something is really going wrong.');
 ```
-More information on logging using Laravel can be found [here](http://laravel.com/docs/5.0/errors).
+More information on logging using Laravel can be found [here](https://laravel.com/docs/5.0/errors).
 
 In Kibana, the contents of your logged message will be stored in the "message" field of the stored logs. JSON tags will not have any effect.
 

@@ -30,27 +30,27 @@ Cache service types include but are not limited to **Redis** and **memcached**.
 
 ## Service Proxies
 
-**Service Proxies** are a special service that route traffic from the internet into your environment's services, according on how your environment's [sites](/articles/stratum/concepts/sites) are configured. For more information on service proxies, read [the Service Proxy article](/articles/stratum/service-proxies).
+**Service Proxies** are a special service that route traffic from the internet into your environment's services, according on how your environment's [sites](/stratum/articles/concepts/sites) are configured. For more information on service proxies, read [the Service Proxy article](/stratum/articles/concepts/service-proxy).
 
 ## Logging Services
 
-A **Logging Service** is included in every environment. Every other container in the environment forwards its logs to this service's container, and this container is responsible for serving the logging dashboard. For more information on how logging works, read [the Logging article](/articles/stratum/logging-access).
+A **Logging Service** is included in every environment. Every other container in the environment forwards its logs to this service's container, and this container is responsible for serving the logging dashboard. For more information on how logging works, read [the Logging article](/stratum/articles/logging-access).
 
 Logging services cannot be redeployed via the CLI.
 
 ## Monitoring Services
 
-A **Monitoring Service** is included in every non-sandbox environment. This container runs a set of checks periodically against the other services in your environment. For more information on monitoring, read [the Monitoring article](/articles/stratum/monitoring).
+A **Monitoring Service** is included in every non-sandbox environment. This container runs a set of checks periodically against the other services in your environment. For more information on monitoring, read [the Monitoring article](/stratum/articles/monitoring).
 
 Monitoring Services cannot be redeployed via the CLI.
 
 # Deploying
 
-When a service is **deployed**, a number of [deploy jobs](/articles/stratum/concepts/jobs#deploy-jobs) are started for it. The number of jobs is set by the `scale` attribute of the service. Database, cache, and automatically-included services (logging, monitoring, and service proxy) are all deployed by default, but code services are not deployed until the first [code push](/stratum/articles/code-deployment). For code services, [worker jobs](/articles/stratum/concepts/jobs#worker-jobs) aren't deployed until the [worker command](http://localhost:4567/paas/paas-cli-reference#worker) is run.
+When a service is **deployed**, a number of [deploy jobs](/stratum/articles/concepts/jobs#deploy-jobs) are started for it. The number of jobs is set by the `scale` attribute of the service. Database, cache, and automatically-included services (logging, monitoring, and service proxy) are all deployed by default, but code services are not deployed until the first [code push](/stratum/articles/code-deployment). For code services, [worker jobs](/stratum/articles/concepts/jobs#worker-jobs) aren't deployed until the [worker command](http://localhost:4567/paas/paas-cli-reference#worker) is run.
 
 # Redeploying
 
-**Redeploying** a service means to stop all existing deploy and worker jobs for it, and start new jobs based on its current spec. This is how updates to images,  [variables](/stratum/articles/concepts/environment-variables), [sites](/articles/stratum/concepts/sites), and other configurations take effect. A redeploy can happen in one of three ways:
+**Redeploying** a service means to stop all existing deploy and worker jobs for it, and start new jobs based on its current spec. This is how updates to images,  [variables](/stratum/articles/concepts/environment-variables), [sites](/stratum/articles/concepts/sites), and other configurations take effect. A redeploy can happen in one of three ways:
 
 1. Manually, via the [redeploy command](/paas/paas-cli-reference#redeploy).
 2. Automatically, when new code is pushed to a code service.
