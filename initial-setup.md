@@ -147,7 +147,7 @@ git push catalyze master
 git push catalyze mybranchname:master
 ```
 
-After your push, you will see build output stream to your terminal window. Any build error output will be there. For detailed information, read the [How Stratum Builds Work](/stratum/articles/builds) article.
+After your push, you will see build output stream to your terminal window. Any build error output will be there. For related information, read the [Writing Your Application](/stratum/articles/writing-your-application) article.
 
 After your build succeeds, a [deploy job](/stratum/articles/concepts/jobs#deploy-jobs) will be started for it. Shortly after (20-40 seconds, plus however long it takes your application to start up and respond). After that, your application should be available at the hostname you configured in the site. Congratulations!
 

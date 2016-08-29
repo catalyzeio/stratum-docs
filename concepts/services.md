@@ -14,7 +14,7 @@ summary: Learn what Services are on Stratum.
 
 ## Code Services
 
-**Code** services start jobs using the images built when you push code. Code services are, essentially, your actual application. For more information on how code services are handled, read into [the build process](/stratum/articles/builds).
+**Code** services start jobs using the images built when you push code. Code services are, essentially, your actual application. For related information, read the [Writing Your Application](/stratum/articles/writing-your-application) article.
 
 ## Database Services
 

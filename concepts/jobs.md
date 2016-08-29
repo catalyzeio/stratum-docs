@@ -14,7 +14,7 @@ summary: Learn what Jobs are on Stratum.
 
 ## Build Jobs
 
-**Build** jobs are the jobs that build the code you push, creating a new image and [redeploying the service](/stratum/articles/concepts/services#redeploying) if the build is successful. For more information on the behavior of these jobs, read the article on [how Stratum builds work](/stratum/articles/builds).
+**Build** jobs are the jobs that build the code you push, creating a new image and [redeploying the service](/stratum/articles/concepts/services#redeploying) if the build is successful.
 
 ## Worker Jobs
 

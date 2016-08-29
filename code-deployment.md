@@ -34,6 +34,5 @@ The build output will stream from Catalyze's servers to your terminal. If the bu
 
 ### See also
 
-* [How Stratum Builds Work](/stratum/articles/builds)
-* [Multiple Associations](/stratum/articles/associate-multiple)
+* [Writing Your Application](/stratum/articles/writing-your-application)
 * [CLI Associate](/paas/paas-cli-reference#associate)
