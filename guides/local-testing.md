@@ -1,6 +1,6 @@
 ---
 title: Local Testing Guide
-category: manage
+category: application
 ---
 
 # Local Testing

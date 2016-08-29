@@ -1,6 +1,6 @@
 ---
 title: Writing Your Application
-category: getting-started
+category: application
 summary: Writing your application to work with Stratum.
 ---
 

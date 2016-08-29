@@ -1,6 +1,6 @@
 ---
 title: Enable Multi-Factor Authentication
-category: guide
+category: manage
 summary: How to secure your Catalyze account with multi-factor authentication.
 ---
 

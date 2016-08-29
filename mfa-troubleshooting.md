@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Multi-Factor Authentication
-category: mfa
+category: troubleshooting
 summary: Identify and resolve issues with MFA.
 ---
 

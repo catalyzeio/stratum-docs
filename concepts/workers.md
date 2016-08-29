@@ -2,6 +2,7 @@
 title: Workers
 category: concepts
 summary: Learn what Workers are on Stratum.
+alias: ['stratum/articles/worker-deploy/', 'stratum/articles/worker-general/']
 ---
 
 **Workers** on [Stratum](https://catalyze.io/stratum) are applications that are run in their own [container](/stratum/articles/concepts/containers), but do not bind to a port. Workers are typically used for asynchronous background processing.
