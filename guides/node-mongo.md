@@ -66,7 +66,7 @@ To get started we will create a simple Node.js application using the [Express fr
 
    When your application runs on the PaaS platform, your application should bind to the port specified in the `PORT` environment variable. For local development you can leave this unset and provide a default value as in the example above.
 
-4. Run it, then point your browser to [http://127.0.0.1:8088](http://127.0.0.1:8088) to see it working.
+4. Run it, then point your browser to `http://127.0.0.1:8088` to see it working.
 
    ```
    $ npm start
@@ -184,7 +184,7 @@ Next up we will configure the application to fetch and store data in a Mongo dat
 
    As with the `PORT` environment variable, you should pull your MongoDB connection information from the `DATABASE_URL` environment variable. If you have more than one database in your environment, use the [Stratum dashboard](https://product.catalyze.io/stratum/) to determine which environment variable to use.
 
-3. Run your updated code, then point your browser to [http://127.0.0.1:8088](http://127.0.0.1:8088) to see it working.
+3. Run your updated code, then point your browser to `http://127.0.0.1:8088` to see it working.
 
    ```
    $ npm start
