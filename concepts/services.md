@@ -7,7 +7,7 @@ summary: Learn what Services are on Stratum.
 **Services** on Stratum are the pieces of an [Environment](/stratum/articles/concepts/environments) that define the work to be done. Specifically, a service defines how [Jobs](/stratum/articles/concepts/jobs) should be started out of them. This includes:
 
 * The image and size of the [containers](/stratum/articles/concepts/containers) that `deploy` and `worker` jobs run.
-* [Variables](/stratum/articles/concepts/environment-variables), both automatic and user-set.
+* [Variables](/stratum/articles/environment-variables), both automatic and user-set.
 * The number of jobs that should be started when the service is redeployed (see the [High Availability](/stratum/articles/ha-application) article).
 
 # Types of Services
@@ -50,7 +50,7 @@ When a service is **deployed**, a number of [deploy jobs](/stratum/articles/conc
 
 # Redeploying
 
-**Redeploying** a service means to stop all existing deploy and worker jobs for it, and start new jobs based on its current spec. This is how updates to images,  [variables](/stratum/articles/concepts/environment-variables), [sites](/stratum/articles/concepts/sites), and other configurations take effect. A redeploy can happen in one of three ways:
+**Redeploying** a service means to stop all existing deploy and worker jobs for it, and start new jobs based on its current spec. This is how updates to images,  [variables](/stratum/articles/environment-variables), [sites](/stratum/articles/concepts/sites), and other configurations take effect. A redeploy can happen in one of three ways:
 
 1. Manually, via the [redeploy command](/paas/paas-cli-reference#redeploy).
 2. Automatically, when new code is pushed to a code service.
