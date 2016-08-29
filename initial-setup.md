@@ -16,7 +16,7 @@ The Stratum dashboard will prompt you to sign in with your Catalyze account - if
 
 <center>![org corner](/stratum/articles/images/org_corner.png)</center>
 
-For more on managing organizations, including how to add additional members and grant them access to your environment, see the [Managing Organizations](/stratum/articles/organizations) article.
+For more on managing organizations, including how to add additional members and grant them access to your environment, see the [Managing Organizations](/stratum/articles/concepts/organizations) article.
 
 > ***Note:*** Occasionally, if interrupted while creating an account, you might find that your invite did not get accepted, and you are not a member of your organization yet. If this happens, just click the link in your email again.
 

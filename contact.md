@@ -10,7 +10,7 @@ Ask our sales team: [sales@catalyze.io](mailto:sales@catalyze.io)
 
 ## Stratum Support
 
-Existing customers should contact Catalyze Support by logging into the [Stratum portal](https://product.catalyze.io/stratum) and clicking on "Contact Support" for the environment with which they need support.
+Existing customers should contact Catalyze Support by logging into the [Stratum dashboard](https://product.catalyze.io/stratum) and clicking on "Contact Support" for the environment with which they need support.
 
 ![register](/stratum/articles/images/contact_support.png)
 

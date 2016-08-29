@@ -38,4 +38,4 @@ Copy and paste the CLI command from the e-mail into your terminal window:
 
 ### See also:
 
-* [Organizations](/stratum/articles/organizations)
+* [Organizations](/stratum/articles/concepts/organizations)
