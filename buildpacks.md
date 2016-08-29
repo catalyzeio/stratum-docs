@@ -4,17 +4,11 @@ category: buildpack
 summary: Learn about buildpacks.
 ---
 
-# What is a buildpack?
+A buildpack is a preconfigured set of available binaries, libraries, and commands used to build and run your application. Buildpacks are extremely flexible and intended to operate as an agent to your environment. The buildpack agent will attempt to understand your stack and install any required dependencies.
 
-A buildpack is a framework for constructing your application's software stack. It is extremely flexible and is intended to operate as an agent to your environment. The buildpack agent will attempt to understand your stack and install any dependencies required by it.
+In most cases, [Stratum](https://catalyze.io/stratum) detects your needed buildpack automatically, and uses it to build the image that will be used for your [code service](/stratum/articles/concepts/services#code-services)'s [containers](/stratum/articles/concepts/containers).
 
-## How does a buildpack work?
-
-Stratum detects your code type automatically and assigns the proper buildpack accordingly. When you push your code to Stratum the appropriate buildpack creates an executable slug that includes the dependencies for your environment.
-
-## Why should you use buildpacks for an application?
-
-Buildpacks provide a standardized way to describe and manage your application's software stack. The entire stack can be maintained within a single version-controlled repository, making it easy to make changes and view changes to the application.
+For a list of readily-available buildpacks, [see here](https://github.com/gliderlabs/herokuish/tree/master/buildpacks). Note that Stratum may not match this list exactly.
 
 ### See also:
 
