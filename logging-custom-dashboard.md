@@ -16,7 +16,7 @@ Configure your new panel by filling in the appropriate fields.  For this example
 ![Logging pie chart configuration](https://catalyze.box.com/shared/static/8ox33rd50xf7p6d0nsqo6cy4qbi2zipk.png)
 
 
-More information on updating and customizing your Kibana dashboard can be found [here](http://www.elastic.co/guide/en/elasticsearch/reference/current/analysis.html).
+More information on updating and customizing your Kibana dashboard can be found [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis.html).
 
 ### Saving  your dashboard
 To save your custom dashboard click the save icon in the upper right hand corner, give your dashboard a name and hit enter.

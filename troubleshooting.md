@@ -11,9 +11,9 @@ Welcome to the Stratum troubleshooting guide. In this guide we will give you an 
 
 In order to help you resolve your issue, we first need to outline the components of Stratum. At a high level Stratum is comprised of:
 
-- [Stratum Dashboard](//product.catalyze.io/stratum)
-- [Catalyze CLI](//github.com/catalyzeio/cli)
-- [Account Manager](//product.catalyze.io)
+- [Stratum Dashboard](https://product.catalyze.io/stratum)
+- [Catalyze CLI](https://github.com/catalyzeio/cli)
+- [Account Manager](https://product.catalyze.io/account)
 
 The Stratum dashboard is where users can check the status of their environment and related services, manage users, and navigate to logging and monitoring.
 

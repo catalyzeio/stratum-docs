@@ -6,7 +6,7 @@ summary: How do I setup Codeship to deploy to Catalyze?
 
 # How do I setup Codeship to deploy to Catalyze?
 
-When thinking about the best tools for continuous integration Codeship is always near the top of the list. In fact we even use it here at Catalyze for many of our web properties. If you're a Stratum user we've made it very simple to use Codeship with your environments. The first thing you'll want todo is to make sure you have the latest version of our CLI [here](https://github.com/catalyzeio/cli). Once that's installed and you've associated to your environment, you can follow these three steps:
+When thinking about the best tools for continuous integration Codeship is always near the top of the list. In fact we even use it here at Catalyze for many of our web properties. If you're a Stratum user we've made it very simple to use Codeship with your environments. The first thing you'll want to do is to make sure you have the latest version of our CLI [here](https://github.com/catalyzeio/cli). Once that's installed and you've associated to your environment, you can follow these three steps:
 
 - 1. Head over to your project settings in Codeship and find the SSH public key that was setup for your Codeship project. This is under project settings -> general.
 - 2. Save that SSH public key to a file and add it as a `deploy key` with the `catalyze deploy-keys add` command in the CLI. Deploy keys are intended to be used for CI purposes and shared among teams. These are very much like a Github deploy key. Deploy keys have access to one code service only.

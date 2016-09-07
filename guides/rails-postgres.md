@@ -84,4 +84,4 @@ $ catalyze rake db:setup
 [6]: http://ruby-doc.org/stdlib-1.9.3/libdoc/logger/rdoc/Logger.html "Ruby Logger"
 [7]: http://guides.rubyonrails.org/getting_started.html "Ruby on Rails Getting Started"
 [8]: https://github.com/catalyzeio/cli "Catalyze Stratum CLI"
-[9]: https://stratum.catalyze.io "Catalyze Dashboard"
+[9]: https://product.catalyze.io/stratum "Catalyze Dashboard"

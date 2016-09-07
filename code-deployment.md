@@ -6,30 +6,33 @@ summary: How do I deploy to my Catalyze environment?
 
 # How do I deploy to my Catalyze environment?
 
-## Install the Stratum CLI
+## First-Time Setup
 
-The first thing you'll want to do is download the Stratum CLI [here](https://github.com/catalyzeio/cli).
+1. If you haven't already, install the [Stratum CLI](https://github.com/catalyzeio/cli).
+2. Navigate to the root directory of your local repository (this is the directory that contains the `.git` directory).
+3. Run the `associate` command, replacing `MyEnvName` and `my-code-service` with your environment's name and your code service's name (both found in the [Stratum UI])[https://product.catalyze.io/stratum/):
 
-## Associate Your Environment and Service
+   ```
+   catalyze associate MyEnvName my-code-service
+   ```
 
-Next you'll want to use the CLI to set the Catalyze remote repository for your repo. To do this navigate to the root folder for your application repository. This is the folder where the `.git` folder is present.
+## Deploying Code
 
-Run the `associate` command:
+Push your local `master` branch to the `catalyze` remote (created when you ran `associate`):
 
-Example for `MyProdEnv` with code service named `app03`
+```
+git push catalyze master
+```
 
-`catalyze associate MyProdEnv app03`
+If the branch you want to push is not master, run this instead:
 
-Replace the environment name and code service name with the values for your environment that you see in the Stratum Dashboard. This will create the Catalyze remote entry in the Git repo.
+```
+git push catalyze my-branch-name:master
+```
 
-## Push Your Code to Catalyze
+The build output will stream from Catalyze's servers to your terminal. If the build is successful, your service will be redeployed.
 
-Now you can push your code to Catalyze:
+### See also
 
-`git push catalyze master`
-
-The above example pushes your master branch to the Catalyze master branch. If you want to push a branch that is not named master, follow this example:
-
-`git push catalyze mybranch_name:master`
-
-The Catalyze repository requires that you push to the master branch and will error if you do not do so. Every time you do a git push you will see the build output scroll past on your terminal. If you see errors, please fix those and re-deploy.
+* [Writing Your Application](/stratum/articles/writing-your-application)
+* [CLI Associate](/paas/paas-cli-reference#associate)

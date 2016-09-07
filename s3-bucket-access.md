@@ -12,7 +12,7 @@ When Catalyze creates S3 Buckets for Stratum environments, we place three enviro
 - `S3_ACCESS_KEY_ID`
 - `S3_SECRET_ACCESS_KEY`
 
-Catalyze also sets a number of [bucket policies](//resources.catalyze.io/stratum/articles/s3-bucket-policies) that secure the bucket contents.
+Catalyze also sets a number of [bucket policies](/stratum/articles/s3-bucket-policies) that secure the bucket contents.
 
 ## Using the AWS CLI
 
@@ -37,7 +37,7 @@ Example Commands:
 - Copy Folder to Bucket
   - `aws s3 cp local_folder s3://your_bucket_name/ --recursive --sse`
 
-Note that copying data to the bucket ***requires*** the [server side encryption flag (--sse)](//resources.catalyze.io/stratum/articles/s3-bucket-policies#require-server-side-encryption) due to bucket policies.
+Note that copying data to the bucket ***requires*** the [server side encryption flag (--sse)](/stratum/articles/s3-bucket-policies#require-server-side-encryption) due to bucket policies.
 
 See [here](http://docs.aws.amazon.com/cli/latest/reference/s3/index.html) for more details.
 

@@ -6,7 +6,7 @@ category: guide
 # Deploying a PHP+MySQL Application on Stratum
 
 ## Introduction
-This guide will cover the basics of deploying a PHP app built using the [Laravel](http://laravel.com) framework that stores data in a MySQL database. We have already created an example application using these steps [here](https://github.com/catalyzeio/php-example-app). Feel free to follow this guide or fork and clone the example application to create your own working copy to deploy to Stratum.
+This guide will cover the basics of deploying a PHP app built using the [Laravel](https://laravel.com) framework that stores data in a MySQL database. We have already created an example application using these steps [here](https://github.com/catalyzeio/php-example-app). Feel free to follow this guide or fork and clone the example application to create your own working copy to deploy to Stratum.
 
 
 ## Prerequisites
@@ -15,7 +15,7 @@ There are a few things you need before we can get started deploying your applica
 ### Tools Needed
 We assume you have base knowledge of the following tools, and installed. If not, you can find information on each of the tools by visiting their link and following the directions there for installing them.
 
-- [git](http://git-scm.com/)
+- [git](https://git-scm.com/)
 - [Catalyze CLI](https://github.com/catalyzeio/cli)
 
 ### Contract with Catalyze
@@ -29,13 +29,13 @@ Some basic terms that you should know:
 
 
 ## Setting up your local php application using Laravel
-Lets get your php application setup for deployment. For this example we are using the [Laravel](http://laravel.com) framework. To setup a new Laravel project, follow the directions on their documentation [here](http://laravel.com/docs/5.0). Otherwise the example application should be good to go right out of the box.
+Lets get your php application setup for deployment. For this example we are using the [Laravel](https://laravel.com) framework. To setup a new Laravel project, follow the directions on their documentation [here](https://laravel.com/docs/5.0). Otherwise the example application should be good to go right out of the box.
 
 ### Developing locally
-To run the example application locally, you can use the Homestead vagrant image which is pretty easy to setup. You can find more information on [Homestead here](http://laravel.com/docs/5.0/homestead).
+To run the example application locally, you can use the Homestead vagrant image which is pretty easy to setup. You can find more information on [Homestead here](https://laravel.com/docs/5.0/homestead).
 
 ## Associate environment to application
-We need to associate your Catalyze environment to your Laravel application. To do this you need to use [git](http://git-scm.com/) and the [Stratum CLI](https://github.com/catalyzeio/catalyze-paas-cli).
+We need to associate your Catalyze environment to your Laravel application. To do this you need to use [git](https://git-scm.com/) and the [Stratum CLI](https://github.com/catalyzeio/catalyze-paas-cli).
 
 Using a command line, navigate to a working copy of your application, or fork the [example php application](https://github.com/catalyzeio/php-example-app), and run the following commands:
 
@@ -64,7 +64,7 @@ Your remotes will be unique to your origin and enivornment on Catalyze.
 
 So now that we have everything in order, lets deploy your application to Stratum.
 
-*Note: Your application needs a [Procfile](https://github.com/catalyzeio/php-example-app/blob/master/Procfile) for deployment. If you are using the example application you do not need to worry about this as it is already done for you. TO DO - Explain what a Procfile is and how to make it*
+*Note: Your application needs a [Procfile](https://github.com/catalyzeio/php-example-app/blob/master/Procfile) for deployment. If you are using the example application you do not need to worry about this as it is already done for you.*
 
 Run the command below from within your working copy. This will push  our code up to Stratum and start the build process.
 
@@ -137,7 +137,7 @@ The [Catalyze CLI](https://github.com/catalyzeio/cli) makes it pretty straight f
 `catalyze vars unset A`
 
 ## Creating schema for database
-You can use the [Catalyze CLI](https://github.com/catalyzeio/cli) to run migrations on the MySQL database easily. Just run the following commands below to populate MySQL with the proper tables for the example application. If you are creating your own application, you can find more information [here](http://laravel.com/docs/5.0/migrations) on migrations with Laravel.
+You can use the [Catalyze CLI](https://github.com/catalyzeio/cli) to run migrations on the MySQL database easily. Just run the following commands below to populate MySQL with the proper tables for the example application. If you are creating your own application, you can find more information [here](https://laravel.com/docs/5.0/migrations) on migrations with Laravel.
 
 ### Example
 First we need to find the label for the application service. The following will return a list of all services associated to your environment:
@@ -223,9 +223,9 @@ Log::warning('Something could be going wrong.');
 Log::error('Something is really going wrong.');
 ```
 
-If you would like more information on logging and laravel you can go [here](http://laravel.com/docs/5.0/errors).
+If you would like more information on logging and laravel you can go [here](https://laravel.com/docs/5.0/errors).
 
 Additionally, for using php standalone with no framework, you can use the `syslog()` function. More information on that can be found [here](http://php.net/manual/en/function.syslog.php).
 
 ### Viewing Logs
-Once your application is logging, you can view those logs using the dashboard. Just sign into the [Stratum Dashboard](https://stratum.catalyze.io), navigate to the environments dashboard, and click on "Monitoring" or "Logging" on any environment within your dashboard.
+Once your application is logging, you can view those logs using the dashboard. Just sign into the [Stratum Dashboard](https://product.catalyze.io/stratum), navigate to the environments dashboard, and click on "Monitoring" or "Logging" on any environment within your dashboard.

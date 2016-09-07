@@ -4,18 +4,12 @@ category: getting-started
 summary: Download the Catalyze CLI.
 ---
 
-# The Stratum CLI
+Catalyze provides a CLI (command-line interface) tool to facilitate interaction with your Stratum environment, supporting Windows, OSX, and Linux.
 
-Catalyze provides a CLI to facilitate interaction with your Stratum environment.
+## Installation
 
-## How do I get the CLI?
+The CLI is available for download from its [Github repository](https://github.com/catalyzeio/cli). Instructions and download links are in the repo's readme.
 
-The CLI is available for download from its Github repository:
+### See also
 
-[Stratum CLI](https://github.com/catalyzeio/cli)
-
-The download links to the current versions are listed in the Readme!
-
-## Where is the documentation for the CLI?
-
-[Stratum CLI](/paas/paas-cli-reference/)
+* [Stratum CLI Reference](/paas/paas-cli-reference/)
