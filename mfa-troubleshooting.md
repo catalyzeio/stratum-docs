@@ -31,4 +31,4 @@ When choosing the authenticator mode for MFA, your device and the Catalyze serve
 
 # Still Having Issues?
 
-If you're unable to login to your Catalyze account and you have reviewed the steps above, please contact Catalyze Support at [support@catalyze.io](mailto:support@catalyze.io).
+If you're unable to login to your Catalyze account and you have reviewed the steps above, please contact Catalyze Support via [Zendesk](https://catalyzeio.zendesk.com/hc/en-us/requests/new)
