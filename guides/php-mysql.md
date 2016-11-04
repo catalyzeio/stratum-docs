@@ -128,13 +128,13 @@ Use the [Stratum CLI](https://github.com/catalyzeio/cli) to update your environm
 The [Catalyze CLI](https://github.com/catalyzeio/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Catalyze CLI](https://github.com/catalyzeio/cli), head over to the [documentation](/paas/paas-cli-reference#vars).
 
 #### List all Variables
-`catalyze vars list`
+`catalyze -E "<your_env_alias>" vars list`
 
 #### Adding
-`catalyze vars set A=B`
+`catalyze -E "<your_env_alias>" vars set A=B`
 
 #### Removing
-`catalyze vars unset A`
+`catalyze -E "<your_env_alias>" vars unset A`
 
 ## Creating schema for database
 You can use the [Catalyze CLI](https://github.com/catalyzeio/cli) to run migrations on the MySQL database easily. Just run the following commands below to populate MySQL with the proper tables for the example application. If you are creating your own application, you can find more information [here](https://laravel.com/docs/5.0/migrations) on migrations with Laravel.
@@ -142,7 +142,7 @@ You can use the [Catalyze CLI](https://github.com/catalyzeio/cli) to run migrati
 ### Example
 First we need to find the label for the application service. The following will return a list of all services associated to your environment:
 
-`catalyze status`
+`catalyze -E "<your_env_alias>" status`
 
 You should see some output like:
 
@@ -156,7 +156,7 @@ environment state: running
 
 The first item in the list is the application service `app01`. We will target `app01` and send a command to it so we can run the migration in the example app.
 
-`catalyze console app01 'php artisan migrate --force'`
+`catalyze -E "<your_env_alias>" console app01 'php artisan migrate --force'`
 
 That should give you a similar output as:
 

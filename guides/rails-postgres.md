@@ -73,7 +73,7 @@ $ git push catalyze master
 While you are waiting for Catalyze to complete your initial deployment, you can set up your database and run appropriate migrations so that your application can connect to PostgreSQL. The [Catalyze Stratum CLI][8] can be used to connect to your database and run commands. Below is an example of how to run db:setup on PostgreSQL to create your database, tables, etc. Make sure you change the value of YOUR_DATABASE_NAME to the actual name of the database you want to connect to. Note: your database service may be named something other than "db01" if you changed it in the Catalyze Dashboard.
 
 ```
-$ catalyze rake db:setup
+$ catalyze -E "<your_env_alias>" rake db:setup
 ```
 
 [1]: /stratum/getting-started 	"Getting Started Guide"
