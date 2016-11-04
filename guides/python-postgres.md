@@ -180,7 +180,7 @@ You can access your application through the Catalyze URL configured for your env
 After the initial deployment we can checkout the app and notice if there are errors. We need to run database migrations before the application will run correctly. To do this we'll fire up the Catalyze Console:
 
 ```
-$ catalyze console app01 "python manage.py migrate"
+$ catalyze -E "<your_env_alias>" console app01 "python manage.py migrate"
 Opening console to service 'a2cb4141-0fb2-4ed5-8e7a-bb59b918dbfc'
 Waiting for the console to be ready... This might take a bit.
 ...................................................
@@ -205,10 +205,10 @@ After the database migrations have completed, we can check back on the applicati
 
 ```
 # Log into the Django shell
-$ catalyze console app01 "python manage.py shell"
+$ catalyze -E "<your_env_alias>" console app01 "python manage.py shell"
 
 # Log into the Postgres shell
-$ catalyze console db01
+$ catalyze -E "<your_env_alias>" console db01
 ```
 
 There are more console features on their way. If a command is not supported, open a ticket [here](https://product.catalyze.io/stratum) via the "Contact Support" button for your environment.

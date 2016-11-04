@@ -10,19 +10,15 @@ Stratum allows you to define as many variables as you want for each different co
 
 ## Setup the Catalyze CLI for Managing Variables
 
-If you have not already done this, onstall***[Link]*** the Catalyze CLI and associate***[link]*** to the environment and service that you wish to manage.
+If you have not already done this, [install](https://github.com/catalyzeio/cli) the Catalyze CLI and [associate](https://resources.catalyze.io/paas/paas-cli-reference/#associate) to the environment and service that you wish to manage.
 
-`catalzye associate MyProdEnvironmentName app01 -a Prod-app01`
-
-`catalyze associate MyProdEnvironmentName app02 -a Prod-app02`
-
-Keep in mind that ***separate*** associations must be made to the same environment for the different code services.
+`catalyze associate MyProdEnvironmentName app01 -a Prod-app01`
 
 ## List variables via the CLI
 
 Below is an example command and the type of output you can expect to see:
 
-`catalyze -E Prod-app01 vars list`
+`catalyze -E Prod-app01 vars list app01`
 
 Sample Output:
 
@@ -37,17 +33,17 @@ REDIS_URL=redis://cache01.internal:6379
 
 Below is an example command:
 
-`catalyze -E Prod-app01 vars set -v ENV_VAR1="MYVALUE1" -v ENV_VAR2="MYVALUE2"`
+`catalyze -E Prod-app01 vars set app01 -v ENV_VAR1="MYVALUE1" -v ENV_VAR2="MYVALUE2"`
 
 For the new variable settings to take effect, you will need to redeploy your service.
 
-`catalyze -E Prod-app01 app01 redeploy`
+`catalyze -E Prod-app01 redeploy app01`
 
 ## Unset variables via the CLI
 
 Below is an example command and the type of output you can expect to see:
 
-`catalyze -E Prod-app01 vars unset ENV_VAR1`
+`catalyze -E Prod-app01 vars unset app01 -v ENV_VAR1`
 
 Sample Output:
 
@@ -55,4 +51,4 @@ Sample Output:
 
 For the new variable settings to take effect, you will need to redeploy your service.
 
-`catalyze -E Prod-app01 app01 redeploy`
+`catalyze -E Prod-app01 redeploy app01`

@@ -37,13 +37,13 @@ Do not use shared public keys for access to your Catalyze account. Your SSH keys
 Below, I add a new SSH key that I made for a Catalyze environment
 
 ```
-catalyze keys add my_prod_key ~/.ssh/prod_rsa.pub
+catalyze -E "<your_env_alias>" keys add my_prod_key ~/.ssh/prod_rsa.pub
 ```
 
 Once that is done, you can list your public keys and see the key you just added
 
 ```
-catalyze keys list
+catalyze -E "<your_env_alias>" keys list
 ```
 
 # How can I use an SSH key for authentication in the CLI?
@@ -51,7 +51,7 @@ catalyze keys list
 To use an SSH key for authentication in the CLI, it must be added as a user key. After adding a user key as outlined in the previous section, set that key as the authentication key with the CLI. Be sure to specify the private key path when using the `keys set` command.
 
 ```
-catalyze keys set ~/.ssh/prod_rsa
+catalyze -E "<your_env_alias>" keys set ~/.ssh/prod_rsa
 ```
 
 You can now execute CLI commands without using a username/password!
