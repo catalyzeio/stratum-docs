@@ -128,13 +128,13 @@ Use the [Stratum CLI](https://github.com/catalyzeio/cli) to update your environm
 The [Catalyze CLI](https://github.com/catalyzeio/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Catalyze CLI](https://github.com/catalyzeio/cli), head over to the [documentation](/paas/paas-cli-reference#vars).
 
 #### List all Variables
-`catalyze -E "<your_env_alias>" vars list`
+`catalyze -E "<your_env_alias>" vars list <service_name>`
 
 #### Adding
-`catalyze -E "<your_env_alias>" vars set A=B`
+`catalyze -E "<your_env_alias>" vars set <service_name> A=B`
 
 #### Removing
-`catalyze -E "<your_env_alias>" vars unset A`
+`catalyze -E "<your_env_alias>" vars unset <service_name> A`
 
 ## Creating schema for database
 You can use the [Catalyze CLI](https://github.com/catalyzeio/cli) to run migrations on the MySQL database easily. Just run the following commands below to populate MySQL with the proper tables for the example application. If you are creating your own application, you can find more information [here](https://laravel.com/docs/5.0/migrations) on migrations with Laravel.

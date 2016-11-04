@@ -91,7 +91,7 @@ MONGODB_URI:  mongodb://username123:password456@ds012345.mlab.com:23624/username
 Checking variables on Stratum:
 
 ```
-$ catalyze -E "<your_env_alias>" vars list
+$ catalyze -E "<your_env_alias>" vars list <service_name>
 DATABASE_URL=mongodb://mongodb-12345.internal:27017/catalyze
 MONGO01_URL=mongodb://mongodb-12345.internal:27017/catalyze
 ```
@@ -99,9 +99,9 @@ MONGO01_URL=mongodb://mongodb-12345.internal:27017/catalyze
 As you can see, the connection string for the database is provided in a similar way, but the variable names don't match. You have two choices, here - either change your code to use a different name, or add a new variable to your code service to match its name from Heroku. To do the latter:
 
 ```
-$ catalyze -E "<your_env_alias>" vars set -v MONGODB_URI=mongodb://mongodb-12345.internal:27017/catalyze
+$ catalyze -E "<your_env_alias>" vars set <service_name> -v MONGODB_URI=mongodb://mongodb-12345.internal:27017/catalyze
 Set. For these environment variables to take effect, you will need to redeploy your service with "catalyze redeploy"
-$ catalyze -E "<your_env_alias>" vars list
+$ catalyze -E "<your_env_alias>" vars list <service_name>
 DATABASE_URL=mongodb://mongodb-12345.internal:27017/catalyze
 MONGO01_URL=mongodb://mongodb-12345.internal:27017/catalyze
 MONGODB_URI=mongodb://mongodb-12345.internal:27017/catalyze
