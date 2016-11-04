@@ -28,5 +28,9 @@ Below we've listed common troubleshooting topics.
 - [Account Management Troubleshooting](TODO: add link)
 - [Application Troubleshooting](TODO: add link)
 - [SSL Certificate Troubleshooting](TODO: add link)
+- [Worker Troubleshooting](TODO: add link)
+- [Logging Troubleshooting](TODO: add link)
+- [Monitoring Troubleshooting](TODO: add link)
+
 
 

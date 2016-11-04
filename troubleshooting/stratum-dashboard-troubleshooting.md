@@ -7,8 +7,8 @@ category: troubleshooting
 
 ## Sign in
 - *400: Account not found for given credentials.*
-     - **Issue:** You have entered an invalid email or password.
-     - **Solution:** Reset your password or use the correct email/password combination.
+    - **Issue:** You have entered an invalid email or password.
+    - **Solution:** Reset your password or use the correct email/password combination.
 
 ## Register
 - *Validation: Email is required*
