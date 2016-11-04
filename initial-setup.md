@@ -156,7 +156,7 @@ After your build succeeds, a [deploy job](/stratum/articles/concepts/jobs#deploy
 If your application includes [workers](/stratum/articles/concepts/workers), use the `worker` command to start them (you only need to do this the first time):
 
 ```
-catalyze -E "<your_env_alias>" worker <service_name> <target>
+catalyze -E "<your_env_alias>" worker deploy <service_name> <target>
 ```
 
 Where `target` is the name of the Procfile target to be run (typically "worker").

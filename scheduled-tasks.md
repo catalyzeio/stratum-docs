@@ -53,5 +53,5 @@ cron: ./cron.sh
 - Start your cron worker via the CLI and specify your `cron` Procfile target.
 
 ```
-catalyze -E "<your_env_alias>" worker <service_name> cron
+catalyze -E "<your_env_alias>" worker deploy <service_name> cron
 ```

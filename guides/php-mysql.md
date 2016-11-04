@@ -131,7 +131,7 @@ The [Catalyze CLI](https://github.com/catalyzeio/cli) makes it pretty straight f
 `catalyze -E "<your_env_alias>" vars list <service_name>`
 
 #### Adding
-`catalyze -E "<your_env_alias>" vars set <service_name> A=B`
+`catalyze -E "<your_env_alias>" vars set <service_name> -v A=B`
 
 #### Removing
 `catalyze -E "<your_env_alias>" vars unset <service_name> A`

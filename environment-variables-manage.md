@@ -12,9 +12,7 @@ Stratum allows you to define as many variables as you want for each different co
 
 If you have not already done this, [install](https://github.com/catalyzeio/cli) the Catalyze CLI and [associate](https://resources.catalyze.io/paas/paas-cli-reference/#associate) to the environment and service that you wish to manage.
 
-`catalzye associate MyProdEnvironmentName app01 -a Prod-app01`
-
-Keep in mind that ***separate*** associations must be made to the same environment for the different code services on their respective code repositories to set the appropriate git remote.
+`catalyze associate MyProdEnvironmentName app01 -a Prod-app01`
 
 ## List variables via the CLI
 
