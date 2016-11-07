@@ -11,13 +11,13 @@ summary: Learn how to export database data from the Stratum CLI.
 The [`db export`](/paas/paas-cli-reference#db-export) command allows you to export and download the current users, ACLs, schema, and data from your running database. To use the `db export` command:
 
 ```
-$ catalyze db export <service name> <local file path>
+$ catalyze -E "<your_env_alias>"  db export <service name> <local file path>
 ```
 
 The filename should be a path to a file (which will be created if it does not exist), not a directory. Example:
 
 ```
-$ catalyze db export db01 ./mydbdownload.sql
+$ catalyze -E "<your_env_alias>"  db export db01 ./mydbdownload.sql
 ```
 
 For Postgres and MySQL databases, the download will be an SQL file, and for MongoDB, the download will be a gzipped tarball (.tar.gz).

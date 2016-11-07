@@ -72,6 +72,7 @@
 ├── s3-bucket-policies.md
 ├── scaling.md
 ├── scheduled-tasks.md
+├── service-communication.md
 ├── setting-up-dns.md
 ├── ssh-keys.md
 ├── ssl-self-signed.md

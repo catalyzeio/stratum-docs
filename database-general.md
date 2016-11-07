@@ -16,7 +16,7 @@ We perform automated backups each night. Access to the backups is provided via t
 
 ## How do I connect to my database?
 
-The endpoint connection information for the resources your application will consume is available in the environment variables for your environment.  You can view your environment variables in the Catalyze Dashboard or with the catalyze cli client program with the command:  `catalyze vars list`
+The endpoint connection information for the resources your application will consume is available in the environment variables for your environment.  You can view your environment variables in the Catalyze Dashboard or with the catalyze cli client program with the command:  `catalyze -E "<your_env_alias>" vars list <service_name>`
 
 You can download the CLI here - https://github.com/catalyzeio/cli. All  install instructions are also available in the readme.
 

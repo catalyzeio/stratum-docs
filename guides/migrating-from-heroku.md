@@ -91,7 +91,7 @@ MONGODB_URI:  mongodb://username123:password456@ds012345.mlab.com:23624/username
 Checking variables on Stratum:
 
 ```
-$ catalyze vars list
+$ catalyze -E "<your_env_alias>" vars list <service_name>
 DATABASE_URL=mongodb://mongodb-12345.internal:27017/catalyze
 MONGO01_URL=mongodb://mongodb-12345.internal:27017/catalyze
 ```
@@ -99,9 +99,9 @@ MONGO01_URL=mongodb://mongodb-12345.internal:27017/catalyze
 As you can see, the connection string for the database is provided in a similar way, but the variable names don't match. You have two choices, here - either change your code to use a different name, or add a new variable to your code service to match its name from Heroku. To do the latter:
 
 ```
-$ catalyze vars set -v MONGODB_URI=mongodb://mongodb-12345.internal:27017/catalyze
+$ catalyze -E "<your_env_alias>" vars set <service_name> -v MONGODB_URI=mongodb://mongodb-12345.internal:27017/catalyze
 Set. For these environment variables to take effect, you will need to redeploy your service with "catalyze redeploy"
-$ catalyze vars list
+$ catalyze -E "<your_env_alias>" vars list <service_name>
 DATABASE_URL=mongodb://mongodb-12345.internal:27017/catalyze
 MONGO01_URL=mongodb://mongodb-12345.internal:27017/catalyze
 MONGODB_URI=mongodb://mongodb-12345.internal:27017/catalyze
@@ -130,7 +130,7 @@ If you're migrating, you'd probably like to see your code working before cutting
 To add an SSL Cert you already have on hand, use the `certs create` command in the CLI:
 
 ```
-$ catalyze certs create my-ssl-cert ./my-cert.crt ./my-cert.key
+$ catalyze -E "<your_env_alias>" certs create my-ssl-cert ./my-cert.crt ./my-cert.key
 ```
 
 If you don't have a signed cert for the subdomain you intend to use, you can use a self-signed cert for testing.
@@ -142,7 +142,7 @@ For more help on adding and debugging certs, take a look at our [Self-Service SS
 Use the `sites create` command in the CLI:
 
 ```
-$ catalyze sites create staging.example.com code-1 my-ssl-cert
+$ catalyze -E "<your_env_alias>" sites create staging.example.com code-1 my-ssl-cert
 Created 'staging.example.com'
 ```
 
@@ -151,7 +151,7 @@ Created 'staging.example.com'
 You will need to add a CNAME record from the hostname you used above to the Catalyze public hostname for your environment. To find that hostname, use the `sites list` command:
 
 ```
-$ catalyze sites list
+$ catalyze -E "<your_env_alias>" sites list
   NAME                          CERT                          UPSTREAM SERVICE
   pod0012345.catalyzeapps.com   pod0012345.catalyzeapps.com
   staging.example.com         my-ssl-cert                   code-1
@@ -166,7 +166,7 @@ For more information on setting your DNS correctly, take a look at our [Setting 
 Each environment has a special service called the Service Proxy. The Service Proxy is responsible for routing traffic from the outside world into your environment. In order for it to pick up the new site you just added, the service proxy needs to be reloaded, and redeploying it is the way to do that.
 
 ```
-$ catalyze redeploy service_proxy
+$ catalyze -E "<your_env_alias>" redeploy service_proxy
 ```
 
 ## 7. Push Code

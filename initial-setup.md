@@ -70,13 +70,13 @@ Acquiring SSL certs is a very complex topic - if you'd like to read more informa
 The CLI command to upload a cert is `certs create`, taking the form `catalyze certs create <cert name> <path to crt file> <path to key file>`. For example:
 
 ```
-catalyze certs create example.com example.com.crt example.com.key
+catalyze -E "<your_env_alias>" certs create example.com example.com.crt example.com.key
 ```
 
 If that cert is self-signed, pass the `-s` option:
 
 ```
-catalyze certs create example.com example.com.crt example.com.key -s
+catalyze -E "<your_env_alias>" certs create example.com example.com.crt example.com.key -s
 ```
 
 > ***Note:*** Using a self-signed cert can be very useful for development or staging environments.
@@ -84,7 +84,7 @@ catalyze certs create example.com example.com.crt example.com.key -s
 For wildcard certs, the typical nomenclature is `*.domain.tld`:
 
 ```
-catalyze certs create *.example.com wildcard-example.com.crt wildcard-example.com.key
+catalyze -E "<your_env_alias>" certs create *.example.com wildcard-example.com.crt wildcard-example.com.key
 ```
 
 ## 6. Set Your DNS
@@ -112,7 +112,7 @@ Stratum uses what we call **[Sites](/stratum/articles/concepts/sites)** to map c
 The CLI command to create a cert is `sites create`, taking the form `catalyze sites create <hostname> <code service name> <cert name>`. For example, using the hostname from step 6, the wildcard cert name from step 5, and the code service name noted in step 1:
 
 ```
-catalyze sites create api.example.com app01 *.example.com
+catalyze -E "<your_env_alias>" sites create api.example.com app01 *.example.com
 ```
 
 This will generate a new nginx configuration file for the new site.
@@ -122,7 +122,7 @@ This will generate a new nginx configuration file for the new site.
 In order to pick up on the new site file, your environment's [Service Proxy](/stratum/articles/concepts/service-proxy) needs be redeployed. This is done via the `redeploy` command:
 
 ```
-catalyze redeploy service_proxy
+catalyze -E "<your_env_alias>" redeploy service_proxy
 ```
 
 After a short period of downtime (usually 20-40 seconds), your service proxy will be responding again. If your site, certs, and DNS are set up correctly, navigating to the hostname in the site you just configured (`api.example.com` in the example above) should result in a 503 error.
@@ -156,7 +156,7 @@ After your build succeeds, a [deploy job](/stratum/articles/concepts/jobs#deploy
 If your application includes [workers](/stratum/articles/concepts/workers), use the `worker` command to start them (you only need to do this the first time):
 
 ```
-catalyze worker <target>
+catalyze -E "<your_env_alias>" worker deploy <service_name> <target>
 ```
 
 Where `target` is the name of the Procfile target to be run (typically "worker").

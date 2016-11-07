@@ -36,7 +36,7 @@ Ensure you have the correct environment and service association for the applicat
 
 Then set the URL. In this example, I've associated my app03 to the alias `MyProdEnv-app03`:
 
-`catalyze -E MyProdEnv-app03 vars set -v BUILDPACK_URL="https://github.com/heroku/heroku-buildpack-python#v68"`
+`catalyze -E MyProdEnv-app03 vars set <service_name> -v BUILDPACK_URL="https://github.com/heroku/heroku-buildpack-python#v68"`
 
 ### 2. Rebuild Application
 

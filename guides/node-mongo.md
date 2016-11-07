@@ -115,7 +115,7 @@ To deploy the application, a Git remote must be set up using the [Stratum CLI](h
 3. You should see build output after you push. After pushing, you can check the environment status - the build status should now be finished.
 
    ```
-   $ catalyze status
+   $ catalyze -E "<your_env_alias>" status
    environment state: deployed
     app01 (size = c1, build status = finished, deploy status = None)
     mongo01 (size = c1, image = mongodb, status = running)
