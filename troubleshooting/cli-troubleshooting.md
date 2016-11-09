@@ -8,11 +8,12 @@ category: troubleshooting
 ## Installation
 - ** -bash: catalyze: command not found**
 	- **Potential Issue:** You have not added the catalyze CLI binary to your PATH environment variable.
-	- **Potential Solution:** You can add the Catalyze CLI to your `PATH` environment variable by running `export PATH=$PATH:/path/to/your/catalyze/cli/binary` or adding that line to your bash profile. (TODO: add link for this)
+	- **Potential Solution:** You can add the Catalyze CLI to your `PATH` environment variable by running `export PATH=$PATH:/path/to/your/catalyze/cli/binary` or adding that line to your bash profile.
 
 ## Update
-	(TODO: add content)
-
+- **[fatal] A required update has been applied. Please re-run this command.**
+	- **Potential Issue:** Your user cannot write to the file or directory the Catalyze CLI binary is stored in.
+	- **Potential Solution:** `sudo chown -R $(whoami) /path/to/your/cli/binary` If this doesn't work you can uninstall and [reinstall the CLI](https://github.com/catalyzeio/cli).
 
 ## Pod ID Not Found
 - ** fatal (0) Pod ID Not Found: Invalid Pod ID specified in X-Pod-ID header**

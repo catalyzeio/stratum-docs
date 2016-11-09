@@ -5,7 +5,7 @@ category: troubleshooting
 
 # Monitoring Troubleshooting
 
-## Monitoring Down
+## Monitoring is Down
 - **I am getting a 503 when I try to view my monitoring page pod0XXX.catalyzeapps.com/monitoring**
 	- **Potential Issue:** Your monitoring service may be down or may not have been deployed
 	- **Potential Solution:** For some sandbox environments, monitoring services may not have been created. Contact [Catalyze support](https://resources.catalyze.io/stratum/articles/contact/) to create and deploy these services.  Otherwise you can trigger a [redeploy](https://resources.catalyze.io/paas/paas-cli-reference/redeploy/#redeploy) of your monitoring service by using the Catalyze CLI command `catalyze redeploy monitoring`.
@@ -17,5 +17,5 @@ category: troubleshooting
 
 ## Alerting
 - **One of my services is down and I did not receive a notification**
-	- **Potential Issue:** Your monitoring service may not be configured to contact you.
-	- **Potential Solution:** Contact [Catalyze support](https://resources.catalyze.io/stratum/articles/contact/) to add a variety of means to contact personnel when an appropriate events occurs.  You can be contacted via Slack, Email, text and a variety of other means. (Wordy, fix this)
+	- **Potential Issue:** Your monitoring service may not be configured to notify you.
+	- **Potential Solution:** Monitoring services can be configured to use a variety of means to contact personnel when an appropriate events occurs. You can be contacted via Slack, Email, text and others. Contact [Catalyze support](https://resources.catalyze.io/stratum/articles/contact/) to set up monitoring notifications.
