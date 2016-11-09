@@ -13,4 +13,4 @@ category: troubleshooting
 ## Missing logs
 - **I am not seeing any logs for a service in my logging dashboard**
 	- **Potential Issue:** If you have recently added a code service to your environment, your service proxyn may not be updated to reflect this change resulting in logs from your new code service not being forwarded to your code service.
-	- **Potential Solution:**  Redeploy your service proxy. To [redeploy](/paas/paas-cli-reference#redeploy) your service proxy via the CLI use the command `catalyze redeploy service_proxy`.
+	- **Potential Solution:**  Redeploy your service proxy. To [redeploy](/paas/paas-cli-reference#redeploy) your service proxy via the CLI use the command `catalyze redeploy service_proxy`.  If you still do not see any logs from your new service, contact [Catalyze support](https://resources.catalyze.io/stratum/articles/contact/) 
