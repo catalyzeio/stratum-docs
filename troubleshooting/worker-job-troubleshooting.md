@@ -5,8 +5,8 @@ category: troubleshooting
 
 # Worker Job Troubleshooting
 
-## My worker is not running 
-- **I have run the `catalyze worker worker` command, but my worker is not running**
+## Worker is not running 
+- **I ran the `catalyze worker worker` command, but my worker is not running**
 	- **Potential Issue:** The worker target may not be defined properly in your Procfile.
 	- **Potential Solution:** Define a worker target in your application. Check out the [writing your application](https://resources.catalyze.io/stratum/articles/writing-your-application/) guide for more details.
 

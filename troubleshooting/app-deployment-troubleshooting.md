@@ -22,7 +22,7 @@ category: troubleshooting
 ## Zero Downtime Deployments
 - **I want to deploy my app with no downtime**
 	- **Potential Issue:** You may not have deploy overlaps configured for your environment.  
-	- **Potential Solution:** Deploy overlaps set a duration of time for old jobs to persist while new build and deploy jobs start running.  To configure deploy overlaps contact Catalyze customer support.  If you still experience downtime after configuring deploy overlaps, there may be additional configuration options that can reduce or eliminate downtime.
+	- **Potential Solution:** Deploy overlaps set a duration of time for old jobs to persist while new build and deploy jobs start running.  To configure deploy overlaps contact [Catalyze customer support](https://resources.catalyze.io/stratum/articles/contact/).  If you still experience downtime after configuring deploy overlaps, there may be additional configuration options that can reduce or eliminate downtime during deployments.
 
 ## New code service, same domain name
 - **I have deployed a build to a new code service but I can not see my application**

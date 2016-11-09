@@ -11,7 +11,7 @@ category: troubleshooting
 	- 2. [Update your certificates](https://resources.catalyze.io/stratum/articles/guides/self-service-SSL/) using the Catalyze CLI by using the [certs update](https://resources.catalyze.io/paas/paas-cli-reference/certs/#certs-update) command.
 	- 3. Redeploy your service proxy for your certificate update to take effect. To [redeploy](/paas/paas-cli-reference#redeploy) your service proxy via the CLI use the command `catalyze redeploy service_proxy`.
 
-## Site and SSL cert change
+## Site and SSL Cert Change
 - **I have a new domain and SSL certificate for my application**
 	- 1. [Create a new site](https://resources.catalyze.io/paas/paas-cli-reference/#sites-create) for your applicaton using the CLI. 
 	- 2. [Create a new cert](https://resources.catalyze.io/paas/paas-cli-reference/#certs-create) for your application. 

@@ -7,8 +7,8 @@ category: troubleshooting
 
 ## Environment Access
 - **I can see my new environment but I can't view details in the Stratum dashboard**
-    - **Potential Issue** You may not have been granted permission by the admin or owner to have access to the environment. 
-    - **Potential Solution** The admin or owner of your organization must grant pri.
+    - **Potential Issue** You may not have permission to access the environment. 
+    - **Potential Solution** The admin or owner of your [organization](https://resources.catalyze.io/stratum/articles/concepts/organizations/) must grant you permission to access the environment.
 
 ## Organization Access
 - **I can't see my organization**
@@ -17,8 +17,8 @@ category: troubleshooting
 
 ## Locked out of your Account
 - **I have been locked out of my Catalyze account**
-	- **Potential Issue** You may have exceeded the number of incorrect password attempts or suspicious behavior has been detected for your account.
-	- **Potential Solution** Contact [customer support](https://resources.catalyze.io/stratum/articles/contact/) to re-activate your account.
+	- **Potential Issue** You may have exceeded the number of allowed incorrect password attempts or suspicious behavior has been detected for your account.
+	- **Potential Solution** Contact [customer support](https://resources.catalyze.io/stratum/articles/contact/) to unlock your account.
 
 
 
