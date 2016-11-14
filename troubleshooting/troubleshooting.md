@@ -23,14 +23,14 @@ The Account Manager is where users can manage their authentication information, 
 
 Below we've listed common troubleshooting topics.
 
-- [Catalyze CLI Troubleshooting](TODO: add link)
-- [Stratum Dashboard Troubleshooting](TODO: add link)
-- [Account Management Troubleshooting](TODO: add link)
-- [Application Troubleshooting](TODO: add link)
-- [SSL Certificate Troubleshooting](TODO: add link)
-- [Worker Troubleshooting](TODO: add link)
-- [Logging Troubleshooting](TODO: add link)
-- [Monitoring Troubleshooting](TODO: add link)
+- [Catalyze CLI Troubleshooting](https://resources.catalyze.io/troubleshooting/cli-troubleshooting)
+- [Stratum Dashboard Troubleshooting](https://resources.catalyze.io/troubleshooting/stratum-dashboard-troubleshooting)
+- [Account Management Troubleshooting](https://resources.catalyze.io/troubleshooting/account-troubleshooting)
+- [Application Troubleshooting](https://resources.catalyze.io/troubleshooting/app-deployment-troubleshooting)
+- [SSL Certificate Troubleshooting](https://resources.catalyze.io/troubleshooting/ssl-cert-install-troubleshooting)
+- [Worker Troubleshooting](https://resources.catalyze.io/troubleshooting/app-deployment-troubleshooting)
+- [Logging Troubleshooting](https://resources.catalyze.io/troubleshooting/logging-troubleshooting)
+- [Monitoring Troubleshooting](https://resources.catalyze.io/troubleshooting/monitoring-troubleshooting)
 
 
 

@@ -5,10 +5,10 @@ category: troubleshooting
 
 # SSL Cert Install Troubleshooting
 
-## SSL Certificate Renwal
+## SSL Certificate Renewal
 - **My SSL certificate has or is going to expire and needs to be updated**
 	- 1.  Obtain your updated SSL certificates from your SSL certificate provider
-	- 2. [Update your certificates](https://resources.catalyze.io/stratum/articles/guides/self-service-SSL/) using the Catalyze CLI by using the [certs update](https://resources.catalyze.io/paas/paas-cli-reference/certs/#certs-update) command.
+	- 2. [Update your certificates](https://resources.catalyze.io/stratum/articles/guides/self-service-SSL/) using the [certs update](https://resources.catalyze.io/paas/paas-cli-reference/certs/#certs-update) command in the Catalyze CLI.
 	- 3. Redeploy your service proxy for your certificate update to take effect. To [redeploy](/paas/paas-cli-reference#redeploy) your service proxy via the CLI use the command `catalyze redeploy service_proxy`.
 
 ## Site and SSL Cert Change
@@ -16,7 +16,7 @@ category: troubleshooting
 	- 1. [Create a new site](https://resources.catalyze.io/paas/paas-cli-reference/#sites-create) for your applicaton using the CLI. 
 	- 2. [Create a new cert](https://resources.catalyze.io/paas/paas-cli-reference/#certs-create) for your application. 
 	- 3. Once you have created a new site and uploaded a new cert you must redeploy your service proxy. To [redeploy](/paas/paas-cli-reference#redeploy) your service proxy via the CLI use the command `catalyze redeploy service_proxy`.  
-	- 4. Once you have verified that your new site and cert have been updated, you can remove the old cert and site using the [catalyze certs rm](https://resources.catalyze.io/paas/paas-cli-reference/#certs-rm) and [catalyze sites rm](https://resources.catalyze.io/paas/paas-cli-reference/#sites-rm) CLI commands.
+	- 4. Once you have verified that your new site and cert have been updated, you can remove the old site and cert using the [catalyze sites rm](https://resources.catalyze.io/paas/paas-cli-reference/#sites-rm) and [catalyze certs rm](https://resources.catalyze.io/paas/paas-cli-reference/#certs-rm) CLI commands.
 
 - **Note:** Depending on what kind of environment you have, the ability to redeploy your service proxy may not be enabled. Contact us at [support@catalyze.io](mailto:support@catalyze.io). Or open a Zendesk ticket and Catalyze support will redeploy your service proxy and re-enable service proxy redeploys for your environment.
 
@@ -26,10 +26,4 @@ category: troubleshooting
 - **Answer** No, you can generate the CSR. Instructions on how to do this can be found [here](https://www.namecheap.com/support/knowledgebase/article.aspx/9446/0/apache-opensslmodsslnginx).
 
 - **Question** Why does my certificate not work for all of my applications?
-- **Answer** Depending on the type of certificate you have, you may only be able to register one domain.  If you have a wildcard certificate it will allow you to enable ssl on all of you applications with different subdomains.
-
-
-
-
-
-
+- **Answer** Depending on the type of certificate you have, you may only be able to register one domain.  If you have a wildcard certificate it will allow you to enable SSL on all of you applications with different subdomains.

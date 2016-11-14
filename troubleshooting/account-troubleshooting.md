@@ -18,18 +18,4 @@ category: troubleshooting
 ## Locked out of your Account
 - **I have been locked out of my Catalyze account**
 	- **Potential Issue** You may have exceeded the number of allowed incorrect password attempts or suspicious behavior has been detected for your account.
-	- **Potential Solution** Contact [customer support](https://resources.catalyze.io/stratum/articles/contact/) to unlock your account.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	- **Potential Solution** Contact [Catalyze support](https://resources.catalyze.io/stratum/articles/contact/) to unlock your account.
