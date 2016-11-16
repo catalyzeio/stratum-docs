@@ -16,5 +16,5 @@ category: troubleshooting
 
 ## Missing Logs
 - **I am not seeing any logs for a service in my logging dashboard**
-	- **Potential Issue:** Logs may not be printing properly to `stdout`. If you are using custom logging your application may not be configured properly.
+	- **Potential Issue:** Logs may not be printing properly to `stdout`. If you are using custom logging, your application may not be configured properly.
 	- **Potential Solution:** Ensure you are printing log messages to `stdout`.  If you want to use custom logging, ensure it has been set up and configured properly according to [this guide](https://resources.catalyze.io/stratum/articles/guides/application-logging/).

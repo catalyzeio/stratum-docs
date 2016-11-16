@@ -18,4 +18,4 @@ category: troubleshooting
 ## Alerting
 - **One of my services is down and I did not receive a notification**
 	- **Potential Issue:** Your monitoring service may not be configured to notify you.
-	- **Potential Solution:** Monitoring service can be configured to use a variety of means to contact personnel when an appropriate events occurs. You can be contacted via Slack, email, text and others. Contact [Catalyze support](https://resources.catalyze.io/stratum/articles/contact/) to set up monitoring notifications.
+	- **Potential Solution:** Monitoring service can be configured to use a variety of means to contact personnel when an appropriate events occurs. You can be contacted via Slack, email or text. Contact [Catalyze support](https://resources.catalyze.io/stratum/articles/contact/) to set up monitoring notifications.

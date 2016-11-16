@@ -18,7 +18,7 @@ category: troubleshooting
 ## Pod ID Not Found
 - **fatal (0) Pod ID Not Found: Invalid Pod ID specified in X-Pod-ID header**
 	- **Potential Issue:** The Catalyze CLI references a configuration file `~/.catalyze` to cache configuration data.  This configuration file may contain old configuration information that may need to be updated.
-	- **Potential Solution:** To erase all or some configuration data you can use the [catalyze clear](https://resources.catalyze.io/paas/paas-cli-reference/#clear) command.
+	- **Potential Solution:** To erase all or some cached configuration data you can use the [catalyze clear](https://resources.catalyze.io/paas/paas-cli-reference/#clear) command.
 
 ## Console
 - **fatal (92005) Console Setup Error: {"code":500,"error":"Internal Error"}**
@@ -26,7 +26,7 @@ category: troubleshooting
 	- **Potential Solution:** Ensure that the service you are trying to run a console command for has jobs that are running. You can [check the status of your services](https://resources.catalyze.io/paas/paas-cli-reference/status/#status) by using the Catalyze CLI command `catalyze status`.  If you have ensured that your service is running and you are still receiving this error, contact [Catalyze support](https://resources.catalyze.io/stratum/articles/contact/).
 - **(0) Command Not Authorized: The command supplied is not a whitelisted command**
 	- **Issue:** The [console](https://resources.catalyze.io/stratum/articles/console/) command you are trying to run is not in the whitelist.  
-	-**Solution** Catalyze whitelists commands that you are able to run for security purposes. Contact customer support to request a command be added to the whitelist.
+	-**Solution** Catalyze whitelists commands that you are able to run for security purposes. Contact [Catalyze support](https://resources.catalyze.io/stratum/articles/contact/) to request a command be added to the whitelist.
 
 ## Git
 - **You do not have access to the requested repository fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.**
