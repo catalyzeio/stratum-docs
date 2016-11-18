@@ -23,14 +23,14 @@ The Account Manager is where users can manage their authentication information, 
 
 Below we've listed common troubleshooting topics.
 
-- [Catalyze CLI Troubleshooting](https://resources.catalyze.io/troubleshooting/cli-troubleshooting)
-- [Stratum Dashboard Troubleshooting](https://resources.catalyze.io/troubleshooting/stratum-dashboard-troubleshooting)
-- [Account Management Troubleshooting](https://resources.catalyze.io/troubleshooting/account-troubleshooting)
-- [Application Troubleshooting](https://resources.catalyze.io/troubleshooting/app-deployment-troubleshooting)
-- [SSL Certificate Troubleshooting](https://resources.catalyze.io/troubleshooting/ssl-cert-install-troubleshooting)
-- [Worker Troubleshooting](https://resources.catalyze.io/troubleshooting/app-deployment-troubleshooting)
-- [Logging Troubleshooting](https://resources.catalyze.io/troubleshooting/logging-troubleshooting)
-- [Monitoring Troubleshooting](https://resources.catalyze.io/troubleshooting/monitoring-troubleshooting)
+- [Catalyze CLI Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/cli-troubleshooting)
+- [Stratum Dashboard Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/stratum-dashboard-troubleshooting)
+- [Account Management Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/account-troubleshooting)
+- [Application Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/app-deployment-troubleshooting)
+- [SSL Certificate Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/ssl-cert-install-troubleshooting)
+- [Worker Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/app-deployment-troubleshooting)
+- [Logging Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/logging-troubleshooting)
+- [Monitoring Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/monitoring-troubleshooting)
 
 
 
