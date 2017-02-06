@@ -24,7 +24,7 @@ List the backups for a database service. Take note that each of the backups has 
 
 > ***Note:*** When downloading a database backup, be aware that you may be downloading PHI. Proceed with caution and insure that the appropriate disk-level encryption and access controls have been established prior to downloading a backup.
 
-If you would like to download a backup, you can do so with the [`db download`](/paas/paas-cli-reference#db-download) command. This command is quite similar to the [`db export`](/stratum/articles/cli-database-export) command, but downloads a specific backup instead of the database's current state. For Postgres and MySQL databases, the download will be an SQL file, and for MongoDB, the download will be a gzipped tarball (.tar.gz).
+If you would like to download a backup, you can do so with the [`db download`](/paas/paas-cli-reference#db-download) command. This command is quite similar to the [`db export`](/compliant-cloud/articles/cli-database-export) command, but downloads a specific backup instead of the database's current state. For Postgres and MySQL databases, the download will be an SQL file, and for MongoDB, the download will be a gzipped tarball (.tar.gz).
 
 > ***Note:*** Database backups are a **full** backup of your database, meaning that they contain users and permissions as well as schema and data. This means that you should **not** use the `db import` command to pull in a downloaded backup into your database.
 
@@ -50,5 +50,5 @@ To facilitate this download, the CLI creates a key pair as part of the request, 
 
 ### See also
 
-* [The Stratum CLI](/stratum/articles/cli-stratum)
-* [Database Export](/stratum/articles/cli-database-backup)
+* [The Compliant Cloud CLI](/compliant-cloud/articles/cli-stratum)
+* [Database Export](/compliant-cloud/articles/cli-database-backup)

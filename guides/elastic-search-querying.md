@@ -1,5 +1,5 @@
 ---
-title: Stratum Elasticsearch Direct Queries
+title: Compliant Cloud Elasticsearch Direct Queries
 category: logging
 ---
 
@@ -15,7 +15,7 @@ Elasticsearch can be queried directly by making a request to `https://podhostnam
 
 The Logging dashboard requires authentication to access.  
 
-After the release of Stratum 2.1 on July 21, the only way to get access to your logging dashboard is via a session token from the Catalyze authentication server. Below is a sample script that will automatically generate a session token and then allow you to supply an Elasticsearch URL as a query:
+After the release of Compliant Cloud 2.1 on July 21, the only way to get access to your logging dashboard is via a session token from the Datica authentication server. Below is a sample script that will automatically generate a session token and then allow you to supply an Elasticsearch URL as a query:
 
 ```
 #!/bin/bash
@@ -31,7 +31,7 @@ corl () {
         ARG2=$3
         ARG3=$4
 
-        export RESPONSE=$(corl https://auth.catalyze.io/auth/signin -XPOST -d '{"identifier": "bob@catalyze.io", "password": "test123456"}')
+        export RESPONSE=$(corl https://auth.datica.com/auth/signin -XPOST -d '{"identifier": "bob@datica.com", "password": "test123456"}')
 	      ENCODEDTOKEN=$(python -c "import urllib; import os; import json; print urllib.quote(json.loads(os.environ['RESPONSE'])['sessionToken'])")
 
         corl -H "Cookie: sessionToken=${ENCODEDTOKEN}" ${URL} ${ARG1} ${ARG2} ${ARG3}

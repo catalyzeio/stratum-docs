@@ -1,5 +1,5 @@
 ---
-title: Stratum VPN Client Setup Guide
+title: Compliant Cloud VPN Client Setup Guide
 category: vpn
 ---
 
@@ -15,7 +15,7 @@ category: vpn
 
 # VPN Security
 
-Communications between your client computer and the Stratum environment over the VPN are encrypted and secure. However, your VPN credentials provide access into this protected environment and should be safeguarded very securely. Please make sure that you are following all applicable information security policies, including what we provide at [https://policy.catalyze.io](https://policy.catalyze.io) and [https://hipaa.catalyze.io](https://hipaa.catalyze.io).
+Communications between your client computer and the Compliant Cloud environment over the VPN are encrypted and secure. However, your VPN credentials provide access into this protected environment and should be safeguarded very securely. Please make sure that you are following all applicable information security policies, including what we provide at [https://policy.datica.com](https://policy.datica.com) and [https://hipaa.datica.com](https://hipaa.datica.com).
 
 # OS X 10.10 and below IKEv1 Native Client Setup
 
@@ -31,13 +31,13 @@ Click ok after setting those values. You will see the following screen:
 
 ![vpn_userpass](../images/vpn_userpass.png)
 
-Fill in the **Server Address**, **Account Name**, and **Password** fields with the VPN Gateway IP, VPN Account Name, and VPN Account Password credentials provided by Catalyze.
+Fill in the **Server Address**, **Account Name**, and **Password** fields with the VPN Gateway IP, VPN Account Name, and VPN Account Password credentials provided by Datica.
 
 Finally, click on **Authentication Settings**. You will see the following window:
 
 ![vpn_psk](../images/vpn_psk.png)
 
-Choose the **Shared Secret** radio button. In that field, place the VPN Pre-Shared Key supplied to you by Catalyze. Click "Ok".
+Choose the **Shared Secret** radio button. In that field, place the VPN Pre-Shared Key supplied to you by Datica. Click "Ok".
 
 Now, click the **"Apply"** button for the connection and connect by clicking the **"Connect"** button.
 
@@ -45,7 +45,7 @@ Now, click the **"Apply"** button for the connection and connect by clicking the
 
 # OS X 10.11+ IKEv2 Native Client Setup
 
-Catalyze will provide a CA cert alongside VPN credentials. Save that file to your Desktop:
+Datica will provide a CA cert alongside VPN credentials. Save that file to your Desktop:
 
 ![vpn_osx_cacert_desktop](../images/vpn_osx_cacert_desktop.png)
 
@@ -83,7 +83,7 @@ Now, test the VPN by clicking "Connect"! Once connected, the VPN should display 
 
 # Ubuntu strongSwan Client Setup
 
-On Linux, Catalyze recommends using strongSwan directly as opposed to using the plugins for NetworkManager or other VPN clients. Those clients often do not properly configure the connection properly. This connection setup was tested on Ubuntu 14.04.
+On Linux, Datica recommends using strongSwan directly as opposed to using the plugins for NetworkManager or other VPN clients. Those clients often do not properly configure the connection properly. This connection setup was tested on Ubuntu 14.04.
 
 ## strongSwan Installation
 
@@ -101,19 +101,19 @@ To create a connection, execute the following command in a terminal window:
 
 You will then be prompted for your Pre-Shared Key and User Password.
 
-Catalyze will provide each VPN user with the VPN Gateway IP, VPN Account Name, VPN Account Password, and VPN Pre-Shared Key.
+Datica will provide each VPN user with the VPN Gateway IP, VPN Account Name, VPN Account Password, and VPN Pre-Shared Key.
 
 ## Example Connection Command
 
-`sudo charon-cmd --ike-proposal aes256-sha1-modp1536 --esp-proposal aes256-sha1 --profile ikev1-xauth-psk --host 55.55.55.55 --identity bob@catalyze.io`
+`sudo charon-cmd --ike-proposal aes256-sha1-modp1536 --esp-proposal aes256-sha1 --profile ikev1-xauth-psk --host 55.55.55.55 --identity bob@datica.com`
 
 # Windows 7 strongSwan Client Setup
 
 On Windows, the process for VPN connection is slightly different than for OSX or Linux. The connection is secured by X.509 certificate signatures and a username/password combination.
 
-## Install the Catalyze CA Certificate as a Windows Trusted Root Certificate
+## Install the Datica CA Certificate as a Windows Trusted Root Certificate
 
-Save the Catalyze provided CA certificate to your computer.
+Save the Datica provided CA certificate to your computer.
 
 From the Start Menu, type "mmc" into the search bar to launch the Microsoft Managment Console.
 
@@ -152,7 +152,7 @@ You will now see the Wizard screen.
 
 Click "Next". In the next window, click "Browse" and select the CA file you saved initially. Click "Next" and then "Finish". The CA certificate is now imported.
 
-## Install the Catalyze CA Certificate as a Windows Trusted Root Certificate with Powershell
+## Install the Datica CA Certificate as a Windows Trusted Root Certificate with Powershell
 
 Copy the certificate file to directory on your workstation that is readable by your user account
 
@@ -189,7 +189,7 @@ Select “Use my Internet connection (VPN)”
 
 Enter the IP address of the VPN server into the Internet address field.  Example: 203.0.113.10
 
-Enter a name for the VPN in the Destination Name field.  Example: Catalyze VPN
+Enter a name for the VPN in the Destination Name field.  Example: Datica VPN
 
 Select “Don’t connect just now; just set it up so I can connect later”
 
@@ -197,7 +197,7 @@ Click Next
 
 ![win_vpn-username-setup](../images/win_vpn-username-setup.png)
 
-Enter your VPN username. Example “that1guy@catalyze.io”
+Enter your VPN username. Example “that1guy@datica.com”
 
 Enter your VPN password
 
@@ -213,7 +213,7 @@ Open the Network and Sharing Center
 
 Select Change adapter settings
 
-Highlight the new Catalyze VPN connection, right click and select Properties
+Highlight the new Datica VPN connection, right click and select Properties
 
 ![win_vpn-security-settings](../images/win_vpn-security-settings.png)
 
@@ -245,13 +245,13 @@ Click the Network Icon in the lower right hand of the Windows desktop
 
 ![win_vpn-connect](../images/win_vpn-connect.png)
 
-Select the Catalyze VPN
+Select the Datica VPN
 
 Click Connect
 
 # Using the VPN Connection
 
-The VPN connection allows you to connect directly to many of the resources in your environment. Catalyze will provide you with a service map to use for your environment. If you are attempting to connect a database server, you will need to retrieve the connection credentials from your environment variables.
+The VPN connection allows you to connect directly to many of the resources in your environment. Datica will provide you with a service map to use for your environment. If you are attempting to connect a database server, you will need to retrieve the connection credentials from your environment variables.
 
 ## Example Service Map
 
@@ -275,7 +275,7 @@ Next, I look for the database service that I want the credentials for:
 
 `DATABASE_2_URL=postgres://catalyze:abcdefghijklmnopqrstuvwxyz@postgresql-1234567890.internal:5432/catalyzeDB`
 
-The above environment variable provides the user(`catalyze`), the password(`abcdefghijklmnopqrstuvwxyz`), and the db name(`catalyzeDB`). Note that the port is **not** the same - use the port mapping provided by Catalyze.
+The above environment variable provides the user(`catalyze`), the password(`abcdefghijklmnopqrstuvwxyz`), and the db name(`catalyzeDB`). Note that the port is **not** the same - use the port mapping provided by Datica.
 
 `psql -h 10.255.0.1 -p 5433 -U catalyze catalyzeDB`
 

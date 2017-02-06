@@ -1,12 +1,12 @@
 ---
 title: Creating a User Account
 category: getting-started
-summary: How do I get access to a Stratum organization or environment?
+summary: How do I get access to a Compliant Cloud organization or environment?
 ---
 
-# Create a Catalyze Account via the Stratum Dashboard
+# Create a Datica Account via the Compliant Cloud Dashboard
 
-Before you can accept an invitation to an organization and gain access to any environments, you need to create a [Stratum Dashboard](https://product.catalyze.io/stratum) account!
+Before you can accept an invitation to an organization and gain access to any environments, you need to create a [Compliant Cloud Dashboard](https://product.datica.com/compliant-cloud) account!
 
 ![register](images/account_register.png)
 
@@ -14,7 +14,7 @@ If you already have an account, continue on to the next step.
 
 # Receive an Invitation from an Organization Admin or Owner
 
-An organization admin or owner must invite you to the organization. Instructions for sending invites are in the [Organizations article](/stratum/articles/concepts/organizations)
+An organization admin or owner must invite you to the organization. Instructions for sending invites are in the [Organizations article](/compliant-cloud/articles/concepts/organizations)
 
 # Accept Invitation
 
@@ -26,7 +26,7 @@ The email contains two options for accepting the invitation:
 
 ## Option 1: Sign In to Dashboard and Click Link
 
-Navigate to the [Stratum Dashboard](https://product.catalyze.io/stratum) and sign in.
+Navigate to the [Compliant Cloud Dashboard](https://product.datica.com/compliant-cloud) and sign in.
 
 Then, click the link in the email to accept the invitation.
 
@@ -38,4 +38,4 @@ Copy and paste the CLI command from the e-mail into your terminal window:
 
 ### See also:
 
-* [Organizations](/stratum/articles/concepts/organizations)
+* [Organizations](/compliant-cloud/articles/concepts/organizations)

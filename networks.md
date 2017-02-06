@@ -1,12 +1,12 @@
 ---
-title: Catalyze Network Addresses
+title: Datica Network Addresses
 category: security
-summary: List of Catalyze Networks
+summary: List of Datica Networks
 ---
 
-## Catalyze Stratum Platform IP Addresses
+## Datica Compliant Cloud Platform IP Addresses
 
-Below is a list of network gateway addresses used by the Catalyze Stratum Platform for outgoing communications. If you need to have traffic whitelisted by a partner or customer for you to send traffic to them, these are the appropriate IPs to give.
+Below is a list of network gateway addresses used by the Datica Compliant Cloud Platform for outgoing communications. If you need to have traffic whitelisted by a partner or customer for you to send traffic to them, these are the appropriate IPs to give.
 
 | Pod Name | IP Addresses |
 |-------|--------|
@@ -16,7 +16,7 @@ Below is a list of network gateway addresses used by the Catalyze Stratum Platfo
 
 ### How do I choose which IP addresses to whitelist?
 
-Choose the above IP addresses to whitelist based on the Pod URL provided for your Catalyze environment.
+Choose the above IP addresses to whitelist based on the Pod URL provided for your Datica environment.
 
 ***Example:***
 
@@ -28,4 +28,4 @@ csb01123.catalyzeapps.com is part of CSB01 and should use that set of IP address
 
 ### Does all of my traffic flow over these IP addresses?
 
-No. Users will interact with your environment via an Elastic Load Balancer. That IP is not controlled by Catalyze. Traffic that originates from inside your environment, such as from a scheduled job pushing data to a health system, will exit the environment through the IP addresses listed above.
+No. Users will interact with your environment via an Elastic Load Balancer. That IP is not controlled by Datica. Traffic that originates from inside your environment, such as from a scheduled job pushing data to a health system, will exit the environment through the IP addresses listed above.

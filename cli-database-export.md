@@ -1,7 +1,7 @@
 ---
 title: Database Export
 category: database
-summary: Learn how to export database data from the Stratum CLI.
+summary: Learn how to export database data from the Compliant Cloud CLI.
 ---
 
 ## Export
@@ -24,9 +24,9 @@ For Postgres and MySQL databases, the download will be an SQL file, and for Mong
 
 > ***Note:*** Database exports are a **full** backup of your database, meaning that they contain users and permissions as well as schema and data. This means that you should **not** use the `db import` command to pull in a downloaded export into your database.
 
-Exporting a database is like making and downloading an immediate [backup](/stratum/articles/cli-database-backup), and follows the same process listed there.
+Exporting a database is like making and downloading an immediate [backup](/compliant-cloud/articles/cli-database-backup), and follows the same process listed there.
 
 ### See also
 
-* [The Stratum CLI](/stratum/articles/cli-stratum)
-* [Database Export](/stratum/articles/cli-database-backup)
+* [The Compliant Cloud CLI](/compliant-cloud/articles/cli-stratum)
+* [Database Export](/compliant-cloud/articles/cli-database-backup)

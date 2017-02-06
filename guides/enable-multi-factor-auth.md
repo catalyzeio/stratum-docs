@@ -1,14 +1,14 @@
 ---
 title: Enable Multi-Factor Authentication
 category: manage
-summary: How to secure your Catalyze account with multi-factor authentication.
+summary: How to secure your Datica account with multi-factor authentication.
 ---
 
 # Enabling Multi-Factor Authentication
 
-Enabling multi-factor authentication (MFA) is a straightforward process that adds another layer of security to your Catalyze account. To start, head to [https://product.catalyze.io/account/mfa/activate](https://product.catalyze.io/account/mfa/activate).
+Enabling multi-factor authentication (MFA) is a straightforward process that adds another layer of security to your Datica account. To start, head to [https://product.datica.com/account/mfa/activate](https://product.datica.com/account/mfa/activate).
 
-Here you'll be prompted for your username and password as well as which type of MFA you would like to enable. Catalyze currently supports two modes for generating One-Time Passwords (OTP): email and authenticator apps such as Google Authenticator. Type in your credentials and choose `Email`.
+Here you'll be prompted for your username and password as well as which type of MFA you would like to enable. Datica currently supports two modes for generating One-Time Passwords (OTP): email and authenticator apps such as Google Authenticator. Type in your credentials and choose `Email`.
 
 ![email_mfa](../images/email_mfa.png)
 
@@ -24,7 +24,7 @@ You can now login with MFA!
 
 # Entering a One-Time Password (OTP)
 
-After successfully enabling MFA, you will be prompted to enter an OTP on subsequent logins. Head to the [dashboard](https://product.catalyze.io/account) to login. Enter your credentials and `Submit`.
+After successfully enabling MFA, you will be prompted to enter an OTP on subsequent logins. Head to the [dashboard](https://product.datica.com/account) to login. Enter your credentials and `Submit`.
 
 You will be shown an area to enter your OTP along with the method of delivery so that you know exactly where to look.
 
@@ -38,7 +38,7 @@ Since version 3.6.0, the [CLI](https://github.com/catalyzeio/cli) fully supports
 
 ```
 $ catalyze environments
-Username or Email: example@catalyze.io
+Username or Email: example@datica.com
 Password:
 This account has two-factor authentication enabled.
 Your one-time password (sent to your email):
@@ -46,7 +46,7 @@ Your one-time password (sent to your email):
 
 # Adding Additional Factors
 
-Adding one factor is all that is required to enable MFA for your Catalyze account. However, we recommend enabling multiple factors in the event that access to a mobile device or email address is lost. This can be done by logging into the [dashboard](https://product.catalyze.io/account) and navigating to [your account settings](https://product.catalyze.io/account/view). From there, you can enable another factor, disable any number of factors, or change your [preferred mode](#preferred-mode) by expanding the MFA section.
+Adding one factor is all that is required to enable MFA for your Datica account. However, we recommend enabling multiple factors in the event that access to a mobile device or email address is lost. This can be done by logging into the [dashboard](https://product.datica.com/account) and navigating to [your account settings](https://product.datica.com/account/view). From there, you can enable another factor, disable any number of factors, or change your [preferred mode](#preferred-mode) by expanding the MFA section.
 
 To enable the authenticator mode, click `Enable` and confirm the prompt.
 
@@ -64,21 +64,21 @@ Submitting this form will successfully enable your second form of MFA.
 
 # Preferred Mode
 
-When multiple factors are enabled for your Catalyze account, only one of them is set as the preferred mode. When logging into a Catalyze product with MFA enabled, your preferred mode will be used to send an OTP (if applicable). When you login to the [dashboard](https://product.catalyze.io/account), you will be given the option to change the method that is being used only for that login attempt.
+When multiple factors are enabled for your Datica account, only one of them is set as the preferred mode. When logging into a Datica product with MFA enabled, your preferred mode will be used to send an OTP (if applicable). When you login to the [dashboard](https://product.datica.com/account), you will be given the option to change the method that is being used only for that login attempt.
 
 ![multiple_mfa_modes](../images/multiple_mfa_modes.png)
 
-However, the CLI does not support switching the mode used for a given login attempt and will always use your preferred mode. You can change your preferred mode by navigating to [your account settings](https://product.catalyze.io/account/view) and clicking the `Make Preferred` button next to the mode you wish to be preferred.
+However, the CLI does not support switching the mode used for a given login attempt and will always use your preferred mode. You can change your preferred mode by navigating to [your account settings](https://product.datica.com/account/view) and clicking the `Make Preferred` button next to the mode you wish to be preferred.
 
 ![mfa_settings](../images/mfa_settings.png)
 
 # MFA is Optional
 
-Although MFA is optional, it is recommended to enhance the security of your Catalyze account.
+Although MFA is optional, it is recommended to enhance the security of your Datica account.
 
 # Organization Enforcement
 
-Although MFA is optional, organization owners are given the ability to require all members of their organization to have MFA enabled. To turn on this feature, as an organization owner login to the [dashboard](https://product.catalyze.io/account). After logging in, hover over `Organizations` and click on the organization for which you want to enforce MFA.
+Although MFA is optional, organization owners are given the ability to require all members of their organization to have MFA enabled. To turn on this feature, as an organization owner login to the [dashboard](https://product.datica.com/account). After logging in, hover over `Organizations` and click on the organization for which you want to enforce MFA.
 
 ![org_dropdown](../images/org_dropdown.png)
 
@@ -88,4 +88,4 @@ Then you can click on `Require` to start enforcing MFA for all members of that o
 
 # Troubleshooting
 
-Having trouble getting MFA enabled? Check out our [troubleshooting guide](/stratum/articles/mfa-troubleshooting) for help!
+Having trouble getting MFA enabled? Check out our [troubleshooting guide](/compliant-cloud/articles/mfa-troubleshooting) for help!

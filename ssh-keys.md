@@ -1,20 +1,20 @@
 ---
-title: Stratum SSH Keys
+title: Compliant Cloud SSH Keys
 category: manage
-summary: Learn how to manage your SSH keys in Stratum.
+summary: Learn how to manage your SSH keys in Compliant Cloud.
 ---
 
-# Stratum SSH Keys
+# Compliant Cloud SSH Keys
 
-There are two types of SSH keys that you can setup in Stratum: user keys and deploy keys. These two types, the differences between the two, and in what situations you would choose deploy over user are described below.
+There are two types of SSH keys that you can setup in Compliant Cloud: user keys and deploy keys. These two types, the differences between the two, and in what situations you would choose deploy over user are described below.
 
-It is important to note that before Stratum was launched, Catalyze only allowed one type of SSH key. Those keys were generically named `keys`. With the launch of Stratum, these keys were automatically converted to a deploy key. If you're looking to switch to user keys, check out the [Make the Switch](#make-the-switch) section on how to do that and troubleshoot any issues you may run into.
+It is important to note that before Compliant Cloud was launched, Datica only allowed one type of SSH key. Those keys were generically named `keys`. With the launch of Compliant Cloud, these keys were automatically converted to a deploy key. If you're looking to switch to user keys, check out the [Make the Switch](#make-the-switch) section on how to do that and troubleshoot any issues you may run into.
 
 # User Keys
 
-User keys are the preferred type of keys for the majority of Catalyze users. User keys allow you to access any Catalyze git repo that belongs to a service within an environment that you have access to. For example, let's say Alice is a Catalyze user with two environments: `production` and `development` and each environment has two services named `app01` and `app02`. A user key will grant Alice access to all services in both environments. Alice can access `app01` in production and development as well as `app02` in production and development with nothing more than a single user key.
+User keys are the preferred type of keys for the majority of Datica users. User keys allow you to access any Datica git repo that belongs to a service within an environment that you have access to. For example, let's say Alice is a Datica user with two environments: `production` and `development` and each environment has two services named `app01` and `app02`. A user key will grant Alice access to all services in both environments. Alice can access `app01` in production and development as well as `app02` in production and development with nothing more than a single user key.
 
-User keys are intended to be private and not shared with anyone. These keys are tied to your Catalyze user account and can be used for authentication with the Catalyze APIs or as a method of pushing code to the Stratum platform.
+User keys are intended to be private and not shared with anyone. These keys are tied to your Datica user account and can be used for authentication with the Datica APIs or as a method of pushing code to the Compliant Cloud platform.
 
 # Deploy Keys
 
@@ -24,17 +24,17 @@ There are few situations in which deploy keys are better suited than user keys. 
 
 # How can I setup user keys on my account?
 
-To execute the commands below, you'll need to specify your Catalyze username and password, so be sure to have them available.
+To execute the commands below, you'll need to specify your Datica username and password, so be sure to have them available.
 
-## Download the Stratum CLI
+## Download the Compliant Cloud CLI
 
-All SSH key management will be carried out through the Stratum CLI. Get it [here](https://github.com/catalyzeio/cli).
+All SSH key management will be carried out through the Compliant Cloud CLI. Get it [here](https://github.com/catalyzeio/cli).
 
 ## Add a Non-Shared Public Key to Your account
 
-Do not use shared public keys for access to your Catalyze account. Your SSH keys should be private.
+Do not use shared public keys for access to your Datica account. Your SSH keys should be private.
 
-Below, I add a new SSH key that I made for a Catalyze environment
+Below, I add a new SSH key that I made for a Datica environment
 
 ```
 catalyze -E "<your_env_alias>" keys add my_prod_key ~/.ssh/prod_rsa.pub
@@ -64,7 +64,7 @@ Before adding a deploy key, please make sure to read the sections above on the s
 catalyze deploy-keys add codeship_key ~/.ssh/codeship_rsa.pub app01
 ```
 
-You can now use the codeship_rsa key pair with your CI/CD server to push code to Catalyze!
+You can now use the codeship_rsa key pair with your CI/CD server to push code to Datica!
 
 # SSH Keys and ssh-agent
 
@@ -74,7 +74,7 @@ Similar tools are available for Windows (Pageant) and Linux (keychain) workstati
 
 # Make the switch
 
-After the launch of Stratum or when migrating to a newer environment, you'll need to switch from using deploy keys to user keys. There's a few steps required in order to use an existing deploy key as a user key. First, be sure to **remove** all existing deploy keys
+After the launch of Compliant Cloud or when migrating to a newer environment, you'll need to switch from using deploy keys to user keys. There's a few steps required in order to use an existing deploy key as a user key. First, be sure to **remove** all existing deploy keys
 
 ```
 catalyze -E oldEnvironment deploy-keys list
@@ -105,7 +105,7 @@ You can now use your default rsa key (~/.ssh/id_rsa) to push code to app01 in bo
 
 # Help! I'm getting `You do not have access to the requested repository. fatal: Could not read from remote repository.`
 
-The most common error encountered when pushing code to Catalyze is the `You do not have access to the requested repository. fatal: Could not read from remote repository.` error. This can occurs for a couple of different reasons.
+The most common error encountered when pushing code to Datica is the `You do not have access to the requested repository. fatal: Could not read from remote repository.` error. This can occurs for a couple of different reasons.
 
 To start, you'll want to make sure your SSH agent is aware of the key you want to use for your git push command. Run `ssh-add -l` to list all keys that your SSH agent is managing. If your key is not listed, you'll need to add it by running `ssh-add ~/.ssh/my_key` giving it the path to your SSH private key.
 

@@ -1,9 +1,9 @@
 ---
-title: Stratum Dashboard Troubleshooting
+title: Compliant Cloud Dashboard Troubleshooting
 category: troubleshooting
 ---
 
-# Stratum Dashboard Troubleshooting
+# Compliant Cloud Dashboard Troubleshooting
 
 ## Sign in
 **400: Account not found for given credentials.**

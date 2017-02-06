@@ -1,13 +1,13 @@
 ---
 title: Organizations
 category: organization
-summary: What is a Catalyze Organization?
-alias: ["stratum/articles/organization-access-controls/", "stratum/articles/organization-addremove-users/"]
+summary: What is a Datica Organization?
+alias: ["compliant-cloud/articles/organization-access-controls/", "compliant-cloud/articles/organization-addremove-users/"]
 ---
 
-An **Organization** is a group of user accounts, usable across all Catalyze products. Typically, an organization maps to (and is named after) your company. Organizations are created for you during the provisioning process. It is possible to be a member of multiple organizations.
+An **Organization** is a group of user accounts, usable across all Datica products. Typically, an organization maps to (and is named after) your company. Organizations are created for you during the provisioning process. It is possible to be a member of multiple organizations.
 
-In [Stratum](https://catalyze.io/stratum), each [environment](/stratum/articles/concepts/environments) belongs to a single organization.
+In [Compliant Cloud](https://datica.com/compliant-cloud), each [environment](/compliant-cloud/articles/concepts/environments) belongs to a single organization.
 
 ## Roles
 
@@ -21,33 +21,33 @@ Typically, an organization only has one **Owner**. When a new organization is cr
 
 ## Managing Your Organization
 
-Organization management tools are located in the [Stratum Dashboard](https://product.catalyze.io/stratum) - click on your organization's name in the dropdown.
+Organization management tools are located in the [Compliant Cloud Dashboard](https://product.datica.com/compliant-cloud) - click on your organization's name in the dropdown.
 
-![org_dropdown](/stratum/articles/images/organization_dropdown.png)
+![org_dropdown](/compliant-cloud/articles/images/organization_dropdown.png)
 
 ## Adding Members to Your Organization
 
 New members are added to your organization by sending them an invite, from the management tools.
 
-![org_invite](/stratum/articles/images/organization_invite.png)
+![org_invite](/compliant-cloud/articles/images/organization_invite.png)
 
 Filling out this form will send an email to the specified address, including instructions on how to join the organization. After the invite is sent, it can be revoked at any time until it is accepted.
 
-![org_invite_pending](/stratum/articles/images/organization_invite_pending.png)
+![org_invite_pending](/compliant-cloud/articles/images/organization_invite_pending.png)
 
 After it is accepted, it will disappear from this table.
 
-> ***Note:*** The [CLI](/stratum/articles/cli-stratum) [invites send](/paas/paas-cli-reference/#invites-send) command can also be used to send an invite.
+> ***Note:*** The [CLI](/compliant-cloud/articles/cli-stratum) [invites send](/paas/paas-cli-reference/#invites-send) command can also be used to send an invite.
 
 ## Removing Members, Changing Roles, and Granting Environment Access
 
 In the management tools, there is a list of all members of the organization.
 
-![org_members](/stratum/articles/images/organization_members.png)
+![org_members](/compliant-cloud/articles/images/organization_members.png)
 
 Click on the Edit button to enter the details view for a member.
 
-![org_member_details](/stratum/articles/images/organization_member_details.png)
+![org_member_details](/compliant-cloud/articles/images/organization_member_details.png)
 
 To change that member's role, select the new role from the dropdown and click Save.
 

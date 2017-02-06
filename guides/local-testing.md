@@ -5,9 +5,9 @@ category: application
 
 # Local Testing
 
-## How can I test locally before pushing to Stratum?
+## How can I test locally before pushing to Compliant Cloud?
 
-While we do not provide a local development environment with the full capabilities of the Stratum platform, you can use the following to test that your application builds and will run.
+While we do not provide a local development environment with the full capabilities of the Compliant Cloud platform, you can use the following to test that your application builds and will run.
 
 In order to run this you will need to install [Docker Toolbox](https://www.docker.com/products/docker-toolbox). Alternatively, you may just install the [docker-machine](https://docs.docker.com/machine/install-machine/) directly.
 
@@ -78,7 +78,7 @@ $ git clone https://github.com/heroku/node-js-sample
 
 #### Get buildstep
 
-Buildstep is how the application will be built in a similar manner to the way Catalyze builds your application. Clone buildstep
+Buildstep is how the application will be built in a similar manner to the way Datica builds your application. Clone buildstep
 
 ```
 $ git clone https://github.com/progrium/buildstep.git
