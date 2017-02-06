@@ -1,12 +1,12 @@
 ---
-title: Stratum Environment Logging
+title: Compliant Cloud Environment Logging
 category: logging
-summary: Learn how logging works in Stratum.
+summary: Learn how logging works in Compliant Cloud.
 ---
 
-# Stratum Environment Logging
+# Compliant Cloud Environment Logging
 
-Catalyze has implemented a complete ELK stack for Stratum to manage acquiring and storing log data.
+Datica has implemented a complete ELK stack for Compliant Cloud to manage acquiring and storing log data.
 
 ELK stands for:
 
@@ -16,9 +16,9 @@ ELK stands for:
 
 ## Accessing the logging dashboard
 
-Go to the logging URL provided for you. `https://{catalyze provided domain}/logging/`. For example: `https://pod01163.catalyze.io/logging/`
+Go to the logging URL provided for you. `https://{catalyze provided domain}/logging/`. For example: `https://pod01163.catalyzeapps.com/logging/`
 
-Or you can log into the Catalyze dashboard and click the logging link under your deployed environment. Log in using your Catalyze credentials.
+Or you can log into the Datica dashboard and click the logging link under your deployed environment. Log in using your Datica credentials.
 
 ![Logging login prompt](https://catalyze.box.com/shared/static/21gxyjjf8n3v4bo59vbctv17b0ze0nkn.png)
 
@@ -43,4 +43,4 @@ More information on how to filter and search for logs can be found [here](https:
 
 ## Direct ElasticSearch Queries
 
-For information on Direct ElasticSearch Queries please view this [guide](/stratum/articles/guides/elastic-search-querying/).
+For information on Direct ElasticSearch Queries please view this [guide](/compliant-cloud/articles/guides/elastic-search-querying/).

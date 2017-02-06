@@ -1,10 +1,10 @@
 ---
-title: Scheduled Tasks in Stratum
+title: Scheduled Tasks in Compliant Cloud
 category: manage
-summary: Learn about scheduled tasks in Stratum.
+summary: Learn about scheduled tasks in Compliant Cloud.
 ---
 
-# Scheduled Tasks in Stratum
+# Scheduled Tasks in Compliant Cloud
 
 Periodic or triggered task scheduling is a common need for many applications. Historically, `cron` has been a system utility widely used for this task.  For an alternative to `cron`, newer applications can take advantage of scheduling frameworks that can provide additional scalability and reliability.
 
@@ -16,7 +16,7 @@ Most widely used languages have some kind of scheduling framework available to e
 
 Some of our recommended task scheduling frameworks include Sidekiq for Ruby and Celery for Python. These scheduling frameworks are generally backed by a message broker such as Redis or an AMQP-based alternative like Rabbitmq which helps guarantee message delivery. If your scheduling framework requires a message broker, we have both Redis and Rabbitmq available as environment add-ons.
 
-Take a look at our article on [Stratum Background Workers](/stratum/articles/worker-general/) for more information on using workers with scheduled tasks in Stratum.
+Take a look at our article on [Compliant Cloud Background Workers](/compliant-cloud/articles/worker-general/) for more information on using workers with scheduled tasks in Compliant Cloud.
 
 
 ## Cron Containers

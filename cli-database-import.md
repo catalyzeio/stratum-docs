@@ -1,12 +1,12 @@
 ---
 title: Database Import
 category: database
-summary: Learn how to import your data into Stratum.
+summary: Learn how to import your data into Compliant Cloud.
 ---
 
 ## Basics
 
-Importing into a database is the process through which data is transferred from a local file into your Stratum database. This is a very powerful operation, and can potentially cause problems - read on in the sections for your database type below.
+Importing into a database is the process through which data is transferred from a local file into your Compliant Cloud database. This is a very powerful operation, and can potentially cause problems - read on in the sections for your database type below.
 
 The general form of the [command](/paas/paas-cli-reference#import):
 
@@ -43,7 +43,7 @@ $ catalyze -E "<your_env_alias>" db import db01 /path/to/my/data.sql
 
 For these databases, this script can contain any SQL you'd like - tables, databases, and users can be created, and data can be inserted. This goes both ways - databases and tables can be dropped, data can be truncated, and users can be removed. Be careful!
 
-> ***Note:*** The [CLI's `console`](/paas/paas-cli-reference#console) command depends on the `catalyze` user and database to exist for both MySQL and PostgreSQL databases. If your import removes either of these or changes the `catalyze` user's password, the `console` will cease to function and you will need to [contact Catalyze support](/stratum/articles/contact) to resolve the issue.
+> ***Note:*** The [CLI's `console`](/paas/paas-cli-reference#console) command depends on the `catalyze` user and database to exist for both MySQL and PostgreSQL databases. If your import removes either of these or changes the `catalyze` user's password, the `console` will cease to function and you will need to [contact Datica support](/compliant-cloud/articles/contact) to resolve the issue.
 
 ### MongoDB Imports
 

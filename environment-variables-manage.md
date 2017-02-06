@@ -1,16 +1,16 @@
 ---
 title: Managing variables
 category: manage
-summary: Learn how to manage your variables on Stratum.
+summary: Learn how to manage your variables on Compliant Cloud.
 ---
 
 # Managing Variables
 
-Stratum allows you to define as many variables as you want for each different code service. You can manage variables through the Catalyze CLI.
+Compliant Cloud allows you to define as many variables as you want for each different code service. You can manage variables through the Datica CLI.
 
-## Setup the Catalyze CLI for Managing Variables
+## Setup the Datica CLI for Managing Variables
 
-If you have not already done this, [install](https://github.com/catalyzeio/cli) the Catalyze CLI and [associate](https://resources.catalyze.io/paas/paas-cli-reference/#associate) to the environment and service that you wish to manage.
+If you have not already done this, [install](https://github.com/catalyzeio/cli) the Datica CLI and [associate](https://resources.datica.com/paas/paas-cli-reference/#associate) to the environment and service that you wish to manage.
 
 `catalyze associate MyProdEnvironmentName app01 -a Prod-app01`
 

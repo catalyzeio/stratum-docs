@@ -1,16 +1,16 @@
 ---
-title: Stratum Application Logging Guide
+title: Compliant Cloud Application Logging Guide
 category: logging
 ---
 
-# Stratum Application Logging Guide
+# Compliant Cloud Application Logging Guide
 
 ## Synopsis
 
-The Stratum platform's logging flexibility makes it easy for you to log data from any software framework that can write to standard out or send JSON messages to a socket.
+The Compliant Cloud platform's logging flexibility makes it easy for you to log data from any software framework that can write to standard out or send JSON messages to a socket.
 This guide contains examples for Python + PostgresSQL, Node + MongoDB, PHP + MySQL, and  Ruby + PostgresSQL frameworks.
 
-It is important not only to store logs but to understand how to effectively filter and extract metrics from your logs.  Catalyze uses ELK (Elasticsearch, Logstash and Kibana) to capture and visualize both application and database logs. More information can be found [here](https://www.elastic.co/).
+It is important not only to store logs but to understand how to effectively filter and extract metrics from your logs.  Datica uses ELK (Elasticsearch, Logstash and Kibana) to capture and visualize both application and database logs. More information can be found [here](https://www.elastic.co/).
 
 ## HIPAA Implications
 Logging is an essential part of HIPAA compliance, and the following sections of HIPAA apply directly to logging.  
@@ -20,7 +20,7 @@ Logging is an essential part of HIPAA compliance, and the following sections of 
 * Section 164.308(a)(1)(ii)(D) “Information System Activity Review” prescribes review of various records of IT activities such as logs, systems utilization reports,  incident reports and other indications of security relevant activities.
 
 ## Pre-requisites
-You have a Stratum account with Catalyze. If you don't, you can sign up for an account and contacting Sales for a 30-day trial [here](https://product.catalyze.io/stratum/register).
+You have a Compliant Cloud account with Datica. If you don't, you can sign up for an account and contacting Sales for a 30-day trial [here](https://product.datica.com/compliant-cloud/register).
 
 You have a provisioned environment with a deployed application.
 
@@ -124,7 +124,7 @@ See [PHP + MySQL Guide][2].
 
 #### Logging to Standard Out
 
-Logging works easily right out of the box with Laravel. To Enable logging that works with Catalyze, you just need to edit the /config/app.php config file.
+Logging works easily right out of the box with Laravel. To Enable logging that works with Datica, you just need to edit the /config/app.php config file.
 
 ```
 /*
@@ -184,7 +184,7 @@ Here is an example of how you can implement this with Ruby on Rails via the ![lo
 ```
 require 'logstash-logger'
 
-## Create logger using environment variables supplied by Catalyze
+## Create logger using environment variables supplied by Datica
 logger = LogStashLogger.new(type: :tcp, uri: ENV['LOGGING_SERVER'])
 
 ## Send messages
@@ -193,7 +193,7 @@ logger.error '{"message": "error"}'
 logger.info 'test'
 ```
 
-[1]: /stratum/articles/guides/node-mongo    "Node + MongoDB Guide"
-[2]: /stratum/articles/guides/php-mysql     "PHP + MySQL Guide"
-[3]: /stratum/articles/guides/rails-postgres    "Rails + Postgres Guide"
-[4]: /stratum/articles/guides/python-postgres   "Python + Postgres Guide"
+[1]: /compliant-cloud/articles/guides/node-mongo    "Node + MongoDB Guide"
+[2]: /compliant-cloud/articles/guides/php-mysql     "PHP + MySQL Guide"
+[3]: /compliant-cloud/articles/guides/rails-postgres    "Rails + Postgres Guide"
+[4]: /compliant-cloud/articles/guides/python-postgres   "Python + Postgres Guide"

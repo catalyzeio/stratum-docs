@@ -1,16 +1,16 @@
 ---
 title: Custom Buildpacks
 category: buildpack
-summary: How can I modify the Stratum buildpack process?
+summary: How can I modify the Compliant Cloud buildpack process?
 ---
 
-# How can I modify the Stratum buildpack process?
+# How can I modify the Compliant Cloud buildpack process?
 
-Catalyze has created several ways that users can modify the standard buildpack process to help them meet their application needs.
+Datica has created several ways that users can modify the standard buildpack process to help them meet their application needs.
 
 ## Dependencies Outside The Buildpack
 
-Sometimes an application will have dependencies outside of the buildpack that cannot be retrieved by other means, such as Ruby gems. Catalyze provides the means to install software from the [apt repositories](https://en.wikipedia.org/wiki/Advanced_Packaging_Tool) for Ubuntu 14.04 on Pod02 and Ubuntu 12.04 on Pod01.
+Sometimes an application will have dependencies outside of the buildpack that cannot be retrieved by other means, such as Ruby gems. Datica provides the means to install software from the [apt repositories](https://en.wikipedia.org/wiki/Advanced_Packaging_Tool) for Ubuntu 14.04 on Pod02 and Ubuntu 12.04 on Pod01.
 
 In your application repository, create a file at the following path:
 
@@ -20,7 +20,7 @@ List the packages that you would like installed in your environment, one package
 
 ## Pre and Post Build Hooks
 
-On our Pod02 infrastructure, Catalyze has added the ability to run pre-build and post-build scripts during the application build process.
+On our Pod02 infrastructure, Datica has added the ability to run pre-build and post-build scripts during the application build process.
 
 These scripts have access to the dedicated, encrypted network of your environment, which means that they can talk to the existing services such as databases or message brokers.
 
@@ -46,4 +46,4 @@ This is a common location to place database migration commands so that the runni
 
 ### See also
 
-* [Using a Specific Buildpack Version](/stratum/articles/buildpacks-pinning)
+* [Using a Specific Buildpack Version](/compliant-cloud/articles/buildpacks-pinning)
