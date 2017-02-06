@@ -16,7 +16,7 @@ ELK stands for:
 
 ## Accessing the logging dashboard
 
-Go to the logging URL provided for you. `https://{catalyze provided domain}/logging/`. For example: `https://pod01163.datica.com/logging/`
+Go to the logging URL provided for you. `https://{catalyze provided domain}/logging/`. For example: `https://pod01163.catalyzeapps.com/logging/`
 
 Or you can log into the Datica dashboard and click the logging link under your deployed environment. Log in using your Datica credentials.
 
