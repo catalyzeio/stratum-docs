@@ -35,4 +35,4 @@ The build output will stream from Datica's servers to your terminal. If the buil
 ### See also
 
 * [Writing Your Application](/compliant-cloud/articles/writing-your-application)
-* [CLI Associate](/paas/paas-cli-reference#associate)
+* [CLI Associate](/compliant-cloud/cli-reference#associate)

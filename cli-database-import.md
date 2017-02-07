@@ -8,13 +8,13 @@ summary: Learn how to import your data into Compliant Cloud.
 
 Importing into a database is the process through which data is transferred from a local file into your Compliant Cloud database. This is a very powerful operation, and can potentially cause problems - read on in the sections for your database type below.
 
-The general form of the [command](/paas/paas-cli-reference#import):
+The general form of the [command](/compliant-cloud/cli-reference#import):
 
 ```
 catalyze -E "<your_env_alias>" db import <service name> <local file path>
 ```
 
-The [CLI](/paas/paas-cli-reference) will stream back to you any output from executing the import - any errors should be contained therein.
+The [CLI](/compliant-cloud/cli-reference) will stream back to you any output from executing the import - any errors should be contained therein.
 
 > ***Note:*** For all database types, no data will be deleted and no tables/database/schemas/collections will be dropped automatically.
 
@@ -35,7 +35,7 @@ INSERT INTO user_roles (id, val) VALUES ('1', 'admin');
 INSERT INTO user_roles (id, val) VALUES ('2', 'user');
 ```
 
-To run the import command, make sure you have [associated to an environment](/paas/paas-cli-reference#associate) and are in the directory of the associated git repo. Example command:
+To run the import command, make sure you have [associated to an environment](/compliant-cloud/cli-reference#associate) and are in the directory of the associated git repo. Example command:
 
 ```
 $ catalyze -E "<your_env_alias>" db import db01 /path/to/my/data.sql
@@ -43,7 +43,7 @@ $ catalyze -E "<your_env_alias>" db import db01 /path/to/my/data.sql
 
 For these databases, this script can contain any SQL you'd like - tables, databases, and users can be created, and data can be inserted. This goes both ways - databases and tables can be dropped, data can be truncated, and users can be removed. Be careful!
 
-> ***Note:*** The [CLI's `console`](/paas/paas-cli-reference#console) command depends on the `catalyze` user and database to exist for both MySQL and PostgreSQL databases. If your import removes either of these or changes the `catalyze` user's password, the `console` will cease to function and you will need to [contact Datica support](/compliant-cloud/articles/contact) to resolve the issue.
+> ***Note:*** The [CLI's `console`](/compliant-cloud/cli-reference#console) command depends on the `catalyze` user and database to exist for both MySQL and PostgreSQL databases. If your import removes either of these or changes the `catalyze` user's password, the `console` will cease to function and you will need to [contact Datica support](/compliant-cloud/articles/contact) to resolve the issue.
 
 ### MongoDB Imports
 
@@ -89,8 +89,8 @@ Mongo dumps only contain collections, so the CLI needs to be told what database 
 $ catalyze -E "<your_env_alias>" db import db01 mymongodump.tar.gz --mongo-database catalyze
 ```
 
-MongoDB imports can only **add** data, not remove or alter it. If you need to delete collections or otherwise edit your data, use the [console command](/paas/paas-cli-reference#console).
+MongoDB imports can only **add** data, not remove or alter it. If you need to delete collections or otherwise edit your data, use the [console command](/compliant-cloud/cli-reference#console).
 
 ### See also
 
-* [Console](/paas/paas-cli-reference#console)
+* [Console](/compliant-cloud/cli-reference#console)

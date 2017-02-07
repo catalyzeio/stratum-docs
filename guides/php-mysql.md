@@ -125,7 +125,7 @@ Using environment variables in PHP and Laravel is pretty straight forward. Just 
 ### Updating Environment Variables
 Use the [Compliant Cloud CLI](https://github.com/catalyzeio/cli) to update your environment variables.
 
-The [Datica CLI](https://github.com/catalyzeio/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Datica CLI](https://github.com/catalyzeio/cli), head over to the [documentation](/paas/paas-cli-reference#vars).
+The [Datica CLI](https://github.com/catalyzeio/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Datica CLI](https://github.com/catalyzeio/cli), head over to the [documentation](/compliant-cloud/cli-reference#vars).
 
 #### List all Variables
 `catalyze -E "<your_env_alias>" vars list <service_name>`

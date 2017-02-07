@@ -37,7 +37,7 @@ Filling out this form will send an email to the specified address, including ins
 
 After it is accepted, it will disappear from this table.
 
-> ***Note:*** The [CLI](/compliant-cloud/articles/cli-stratum) [invites send](/paas/paas-cli-reference/#invites-send) command can also be used to send an invite.
+> ***Note:*** The [CLI](/compliant-cloud/articles/cli-stratum) [invites send](/compliant-cloud/cli-reference#invites-send) command can also be used to send an invite.
 
 ## Removing Members, Changing Roles, and Granting Environment Access
 

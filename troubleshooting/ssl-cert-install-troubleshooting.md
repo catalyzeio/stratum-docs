@@ -10,21 +10,21 @@ category: troubleshooting
 
 **1.**  Obtain your updated SSL certificates from your SSL certificate provider
 
-**2.** [Update your certificates](https://resources.datica.com/compliant-cloud/articles/guides/self-service-SSL/) using the [certs update](https://resources.datica.com/paas/paas-cli-reference/certs/#certs-update) command in the Datica CLI.
+**2.** [Update your certificates](/compliant-cloud/articles/guides/self-service-SSL/) using the [certs update](/compliant-cloud/cli-reference#certs-update) command in the Datica CLI.
 
-**3.** Redeploy your service proxy for your certificate update to take effect. To [redeploy](/paas/paas-cli-reference#redeploy) your service proxy via the CLI use the command `catalyze redeploy service_proxy`.
+**3.** Redeploy your service proxy for your certificate update to take effect. To [redeploy](/compliant-cloud/cli-reference#redeploy) your service proxy via the CLI use the command `catalyze redeploy service_proxy`.
 
 ## Site and SSL Cert Change
 
 **I have a new domain and SSL certificate for my application**
 
-**1.** [Create a new site](https://resources.datica.com/paas/paas-cli-reference/#sites-create) for your applicaton using the CLI. 
+**1.** [Create a new site](/compliant-cloud/cli-reference#sites-create) for your applicaton using the CLI.
 
-**2.** [Create a new cert](https://resources.datica.com/paas/paas-cli-reference/#certs-create) for your application.
+**2.** [Create a new cert](/compliant-cloud/cli-reference#certs-create) for your application.
 
-**3.** Once you have created a new site and uploaded a new cert you must redeploy your service proxy. To [redeploy](/paas/paas-cli-reference#redeploy) your service proxy via the CLI use the command `catalyze redeploy service_proxy`.
+**3.** Once you have created a new site and uploaded a new cert you must redeploy your service proxy. To [redeploy](/compliant-cloud/cli-reference#redeploy) your service proxy via the CLI use the command `catalyze redeploy service_proxy`.
 
-**4.** Once you have verified that your new site and cert have been updated, you can remove the old site and cert using the [catalyze sites rm](https://resources.datica.com/paas/paas-cli-reference/#sites-rm) and [catalyze certs rm](https://resources.datica.com/paas/paas-cli-reference/#certs-rm) CLI commands.
+**4.** Once you have verified that your new site and cert have been updated, you can remove the old site and cert using the [catalyze sites rm](/compliant-cloud/cli-reference#sites-rm) and [catalyze certs rm](/compliant-cloud/cli-reference#certs-rm) CLI commands.
 
 - **Note:** Depending on what kind of environment you have, the ability to redeploy your service proxy may not be enabled. Contact us at [support@datica.com](mailto:support@datica.com). Or open a Zendesk ticket and Datica support will redeploy your service proxy and re-enable service proxy redeploys for your environment.
 

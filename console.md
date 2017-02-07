@@ -12,7 +12,7 @@ The **Secure Console** offers interactive command-line access to your [environme
 
 ## Opening a Secure Console
 
-Using the [CLI](/compliant-cloud/articles/cli-stratum)'s [console](/paas/paas-cli-reference#console) command and the name of the database service (found in the [Compliant Cloud dashboard](https://product.datica.com/compliant-cloud)):
+Using the [CLI](/compliant-cloud/articles/cli-stratum)'s [console](/compliant-cloud/cli-reference#console) command and the name of the database service (found in the [Compliant Cloud dashboard](https://product.datica.com/compliant-cloud)):
 
 ```
 catalyze -E "<your_env_alias>" console <database name>

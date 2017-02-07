@@ -22,7 +22,7 @@ summary: Learn what Jobs are on Compliant Cloud.
 
 ## Backup and Restore Jobs
 
-**Backup** and **restore** jobs correspond to the database backups and restore, initiated via either [CLI commands](/paas/paas-cli-reference#db) or automated  nightly database backups. When the requested task has been completed, the jobs will terminate.
+**Backup** and **restore** jobs correspond to the database backups and restore, initiated via either [CLI commands](/compliant-cloud/cli-reference#db) or automated  nightly database backups. When the requested task has been completed, the jobs will terminate.
 
 ## Console Jobs
 
