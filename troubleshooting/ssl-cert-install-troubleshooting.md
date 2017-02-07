@@ -10,7 +10,7 @@ category: troubleshooting
 
 **1.**  Obtain your updated SSL certificates from your SSL certificate provider
 
-**2.** [Update your certificates](https://resources.datica.com/compliant-cloud/articles/guides/self-service-SSL/) using the [certs update](/compliant-cloud/cli-reference#certs-update) command in the Datica CLI.
+**2.** [Update your certificates](/compliant-cloud/articles/guides/self-service-SSL/) using the [certs update](/compliant-cloud/cli-reference#certs-update) command in the Datica CLI.
 
 **3.** Redeploy your service proxy for your certificate update to take effect. To [redeploy](/compliant-cloud/cli-reference#redeploy) your service proxy via the CLI use the command `catalyze redeploy service_proxy`.
 

@@ -27,4 +27,4 @@ Supported Clients:
 
 # How do I setup my VPN client?
 
-Check out our guide [here](https://resources.datica.com/compliant-cloud/articles/guides/vpn-client-setup/)
+Check out our guide [here](/compliant-cloud/articles/guides/vpn-client-setup/)

@@ -10,7 +10,7 @@ category: troubleshooting
 **I ran the `catalyze worker deploy <svcName> <target>` command, but my worker is not running**
 
 - **Potential Issue:** The worker target may not be defined properly in your Procfile.
-- **Potential Solution:** Define a worker target in your application. Check out the [writing your application](https://resources.datica.com/compliant-cloud/articles/writing-your-application/) guide for more details.
+- **Potential Solution:** Define a worker target in your application. Check out the [writing your application](/compliant-cloud/articles/writing-your-application/) guide for more details.
 
 **fatal (3002) Worker Scale Exceeded: Cannot launch a worker job. Environment limit reached. Contact support@datica.com to increase limits**
 
