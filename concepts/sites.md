@@ -18,7 +18,7 @@ To create a new site entry, three pieces of information are needed.
 
 The hostname is up to you, and the certificate name is also decided by you when uploaded. The code service label is the name of the code service that you intend traffic for this hostname to go to. If you don't know what your code service's name is, you can find it in the [Compliant Cloud dashboard](https://product.datica.com/compliant-cloud).
 
-The [CLI](/compliant-cloud/articles/cli-stratum) [sites create](/paas/paas-cli-reference#sites-create) command is used to create the site, taking the form `catalyze -E "<your_env_alias>" sites create <hostname> <code service label> <certificate name>`. For example, to set up a site mapping `example.com` to a code service named `code-1` using an uploaded cert named `example`:
+The [CLI](/compliant-cloud/articles/cli-stratum) [sites create](/compliant-cloud/cli-reference#sites-create) command is used to create the site, taking the form `catalyze -E "<your_env_alias>" sites create <hostname> <code service label> <certificate name>`. For example, to set up a site mapping `example.com` to a code service named `code-1` using an uploaded cert named `example`:
 
 ```
 catalyze -E "<your_env_alias>" sites create .example.com code-1 example
@@ -42,9 +42,9 @@ catalyze -E "<your_env_alias>" redeploy service_proxy
 
 ## Listing Sites
 
-To list what sites your environment has configured, use the [sites list](/paas/paas-cli-reference#sites-list) command. For details about a specific site, use the [sites show](/paas/paas-cli-reference#sites-show) command.
+To list what sites your environment has configured, use the [sites list](/compliant-cloud/cli-reference#sites-list) command. For details about a specific site, use the [sites show](/compliant-cloud/cli-reference#sites-show) command.
 
-If a site needs to be removed, use the [sites rm](/paas/paas-cli-reference#sites-rm) command.
+If a site needs to be removed, use the [sites rm](/compliant-cloud/cli-reference#sites-rm) command.
 
 ### See also
 

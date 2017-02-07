@@ -77,7 +77,7 @@ $ catalyze -E "<your_env_alias>" rake <service_name> db:setup
 ```
 
 [1]: /compliant-cloud/getting-started 	"Getting Started Guide"
-[2]: /paas/paas-cli-reference 	"CLI Reference"
+[2]: /compliant-cloud/cli-reference 	"CLI Reference"
 [3]: https://github.com/catalyzeio/ruby-example-app 	"Ruby Example App"
 [4]: https://datica.com/signup 	"Free Trial"
 [5]: /compliant-cloud/articles/guides/application-logging/ "Logging"

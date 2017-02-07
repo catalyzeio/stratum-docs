@@ -46,13 +46,13 @@ Monitoring Services cannot be redeployed via the CLI.
 
 # Deploying
 
-When a service is **deployed**, a number of [deploy jobs](/compliant-cloud/articles/concepts/jobs#deploy-jobs) are started for it. The number of jobs is set by the `scale` attribute of the service. Database, cache, and automatically-included services (logging, monitoring, and service proxy) are all deployed by default, but code services are not deployed until the first [code push](/compliant-cloud/articles/code-deployment). For code services, [worker jobs](/compliant-cloud/articles/concepts/jobs#worker-jobs) aren't deployed until the [worker command](http://localhost:4567/paas/paas-cli-reference#worker) is run.
+When a service is **deployed**, a number of [deploy jobs](/compliant-cloud/articles/concepts/jobs#deploy-jobs) are started for it. The number of jobs is set by the `scale` attribute of the service. Database, cache, and automatically-included services (logging, monitoring, and service proxy) are all deployed by default, but code services are not deployed until the first [code push](/compliant-cloud/articles/code-deployment). For code services, [worker jobs](/compliant-cloud/articles/concepts/jobs#worker-jobs) aren't deployed until the [worker command](/compliant-cloud/cli-reference#worker) is run.
 
 # Redeploying
 
 **Redeploying** a service means to stop all existing deploy and worker jobs for it, and start new jobs based on its current spec. This is how updates to images,  [variables](/compliant-cloud/articles/environment-variables), [sites](/compliant-cloud/articles/concepts/sites), and other configurations take effect. A redeploy can happen in one of three ways:
 
-1. Manually, via the [redeploy command](/paas/paas-cli-reference#redeploy).
+1. Manually, via the [redeploy command](/compliant-cloud/cli-reference#redeploy).
 2. Automatically, when new code is pushed to a code service.
 3. Via a [support ticket](/compliant-cloud/articles/contact). This is only needed if that service has been marked as not redeployable, meaning that it has a customization applied to it that its [Pod](/compliant-cloud/articles/concepts/pods) cannot automatically regenerate.
 

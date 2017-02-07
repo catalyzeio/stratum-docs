@@ -22,7 +22,7 @@ category: troubleshooting
 **I triggered a build that is broken**
 
 - **Potential Issue:** The build may have completed successfully, but your application may be broken or not functioning properly.
-- **Potential Solution:** You can check your logging dashboard to view application logs which may be useful for debugging your application. You can use the [rollback](https://resources.datica.com/paas/paas-cli-reference/#rollback) command in the CLI to roll back your application to a previous working version while you are debugging your application.  If you continue having issues with your application you can contact [Datica support](https://resources.datica.com/compliant-cloud/articles/contact/).
+- **Potential Solution:** You can check your logging dashboard to view application logs which may be useful for debugging your application. You can use the [rollback](/compliant-cloud/cli-reference#rollback) command in the CLI to roll back your application to a previous working version while you are debugging your application.  If you continue having issues with your application you can contact [Datica support](https://resources.datica.com/compliant-cloud/articles/contact/).
 
 ## Zero Downtime Deployments
 
@@ -36,6 +36,6 @@ category: troubleshooting
 **I have deployed a build to a new code service but I can not see my application**
 
 - **Potential Issue:** Your service proxy has not been updated to expose your new code service 
-- **Potential Solution:** You need to [create a new site](https://resources.datica.com/paas/paas-cli-reference/#sites-create) that references your new code service.  If you want a more custom configuration for exposing your new code service, such as exposing it on a specific route, you may need to contact [Datica support](https://resources.datica.com/compliant-cloud/articles/contact/).
+- **Potential Solution:** You need to [create a new site](/compliant-cloud/cli-reference#sites-create) that references your new code service.  If you want a more custom configuration for exposing your new code service, such as exposing it on a specific route, you may need to contact [Datica support](https://resources.datica.com/compliant-cloud/articles/contact/).
 
 

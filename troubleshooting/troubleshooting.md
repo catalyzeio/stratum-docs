@@ -17,7 +17,7 @@ In order to help you resolve your issue, we first need to outline the components
 
 The Compliant Cloud dashboard is where users can check the status of their environment and related services, manage users, and navigate to logging and monitoring.
 
-The Datica CLI contains the bulk of platform functionality. For a comprehensive reference check out [this guide](/paas/paas-cli-reference/).
+The Datica CLI contains the bulk of platform functionality. For a comprehensive reference check out [this guide](/compliant-cloud/cli-reference).
 
 The Account Manager is where users can manage their authentication information, view and edit organization information, and find related Datica products.
 
@@ -31,6 +31,3 @@ Below we've listed common troubleshooting topics.
 - [Worker Troubleshooting](https://resources.datica.com/compliant-cloud/articles/troubleshooting/app-deployment-troubleshooting)
 - [Logging Troubleshooting](https://resources.datica.com/compliant-cloud/articles/troubleshooting/logging-troubleshooting)
 - [Monitoring Troubleshooting](https://resources.datica.com/compliant-cloud/articles/troubleshooting/monitoring-troubleshooting)
-
-
-

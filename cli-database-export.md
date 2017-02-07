@@ -8,7 +8,7 @@ summary: Learn how to export database data from the Compliant Cloud CLI.
 
 > ***Note:*** When downloading a database export, be aware that you may be downloading PHI. Proceed with caution and insure that the appropriate disk-level encryption and access controls have been established prior to downloading an export.
 
-The [`db export`](/paas/paas-cli-reference#db-export) command allows you to export and download the current users, ACLs, schema, and data from your running database. To use the `db export` command:
+The [`db export`](/compliant-cloud/cli-reference#db-export) command allows you to export and download the current users, ACLs, schema, and data from your running database. To use the `db export` command:
 
 ```
 $ catalyze -E "<your_env_alias>"  db export <service name> <local file path>

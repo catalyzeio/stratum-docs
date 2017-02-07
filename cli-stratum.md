@@ -12,4 +12,4 @@ The CLI is available for download from its [Github repository](https://github.co
 
 ### See also
 
-* [Compliant Cloud CLI Reference](/paas/paas-cli-reference/)
+* [Compliant Cloud CLI Reference](/compliant-cloud/cli-reference)

@@ -10,7 +10,7 @@ category: troubleshooting
 **I am getting a 503 when I try to view my logging page pod0XXX.catalyzeapps.com/logging**
 
 - **Potential Issue:** Your logging service may be down or may not have been deployed
-- **Potential Solution:** For some sandbox environments, logging services may not have been created. Contact [Datica support](https://resources.datica.com/compliant-cloud/articles/contact/) to create and deploy these services.  Otherwise you can trigger a [redeploy](https://resources.datica.com/paas/paas-cli-reference/redeploy/#redeploy) of your logging service by using the Datica CLI command `catalyze redeploy logging`.
+- **Potential Solution:** For some sandbox environments, logging services may not have been created. Contact [Datica support](https://resources.datica.com/compliant-cloud/articles/contact/) to create and deploy these services.  Otherwise you can trigger a [redeploy](/compliant-cloud/cli-reference#redeploy) of your logging service by using the Datica CLI command `catalyze redeploy logging`.
 
 **CircuitBreakerException: Data too large**
 

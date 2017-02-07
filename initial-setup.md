@@ -59,7 +59,7 @@ In order for the CLI to know which environment it should be interacting with (an
 
 The form of this command in the CLI is: `catalyze associate <environment name> <code service name>`. For the example from Step 1, that would be `catalyze associate MyEnvironment-production app01`.
 
-For options for the `associate` command, see the [CLI reference](/paas/paas-cli-reference#associate).
+For options for the `associate` command, see the [CLI reference](/compliant-cloud/cli-reference#associate).
 
 ## 5. Upload Your SSL Certificate
 
