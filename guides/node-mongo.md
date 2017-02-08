@@ -3,15 +3,15 @@ title: Node + MongoDB Guide
 category: guide
 ---
 
-# Deploying a Node+Mongo Application on Stratum
+# Deploying a Node+Mongo Application on Compliant Cloud
 
 In this guide we will cover how to deploy a simple [Node.js](https://nodejs.org/) application that stores data in a [MongoDB database](https://www.mongodb.com/).
 
 ## Pre-requisites
 
-Before getting started, make sure you created your Stratum account, have signed any [business associate agreements](https://catalyze.io/learn/business-associate-agreements) with Catalyze as necessary, and have successfully provisioned an environment with a code service and a MongoDB service. If you need help getting started, hop on over to the [PaaS Getting Started](/stratum/getting-started) guide available on our [resources site](https://resources.catalyze.io/).
+Before getting started, make sure you created your Compliant Cloud account, have signed any [business associate agreements](https://datica.com/learn/business-associate-agreements) with Datica as necessary, and have successfully provisioned an environment with a code service and a MongoDB service. If you need help getting started, hop on over to the [Compliant Cloud Getting Started](/compliant-cloud/getting-started) guide available on our [resources site](https://resources.datica.com/).
 
-You should also have Git, Node.js, NPM, Mongo, and the [Stratum CLI](https://github.com/catalyzeio/cli) installed and available on your system path.
+You should also have Git, Node.js, NPM, Mongo, and the [Compliant Cloud CLI](https://github.com/daticahealth/cli) installed and available on your system path.
 
 ## Local Node.js Application
 
@@ -22,7 +22,7 @@ To get started we will create a simple Node.js application using the [Express fr
    ```
    {
      "name": "catalyze-nodejs-mongo-demo",
-     "description": "Sample Node.js application for the Catalyze PaaS platform",
+     "description": "Sample Node.js application for the Datica Compliant Cloud",
      "version": "0.0.1",
      "main": "index.js",
      "scripts": {
@@ -64,7 +64,7 @@ To get started we will create a simple Node.js application using the [Express fr
    });
    ```
 
-   When your application runs on the PaaS platform, your application should bind to the port specified in the `PORT` environment variable. For local development you can leave this unset and provide a default value as in the example above.
+   When your application runs on Compliant Cloud, your application should bind to the port specified in the `PORT` environment variable. For local development you can leave this unset and provide a default value as in the example above.
 
 4. Run it, then point your browser to `http://127.0.0.1:8088` to see it working.
 
@@ -96,26 +96,26 @@ To get started we will create a simple Node.js application using the [Express fr
 
 ## Building and Deploying the Application
 
-To deploy the application, a Git remote must be set up using the [Stratum CLI](https://github.com/catalyzeio/cli).
+To deploy the application, a Git remote must be set up using the [Compliant Cloud CLI](https://github.com/daticahealth/cli).
 
 1. Associate the local project with your provisioned environment.
 
    ```
-   $ catalyze associate my-node-app app01
+   $ datica associate my-node-app app01
    ```
 
-   This will add a new git remote named `catalyze` to that local repo. It will ask for credentials - these are the username and password that you use in the dashboard.
+   This will add a new git remote named `datica` to that local repo. It will ask for credentials - these are the username and password that you use in the dashboard.
 
-2. Push master to catalyze to build your code.
+2. Push master to datica to build your code.
 
    ```
-   $ git push catalyze master
+   $ git push datica master
    ```
 
 3. You should see build output after you push. After pushing, you can check the environment status - the build status should now be finished.
 
    ```
-   $ catalyze -E "<your_env_alias>" status
+   $ datica -E "<your_env_alias>" status
    environment state: deployed
     app01 (size = c1, build status = finished, deploy status = None)
     mongo01 (size = c1, image = mongodb, status = running)
@@ -182,7 +182,7 @@ Next up we will configure the application to fetch and store data in a Mongo dat
    });
    ```
 
-   As with the `PORT` environment variable, you should pull your MongoDB connection information from the `DATABASE_URL` environment variable. If you have more than one database in your environment, use the [Stratum dashboard](https://product.catalyze.io/stratum/) to determine which environment variable to use.
+   As with the `PORT` environment variable, you should pull your MongoDB connection information from the `DATABASE_URL` environment variable. If you have more than one database in your environment, use the [Compliant Cloud dashboard](https://product.datica.com/compliant-cloud/) to determine which environment variable to use.
 
 3. Run your updated code, then point your browser to `http://127.0.0.1:8088` to see it working.
 
@@ -202,14 +202,14 @@ Next up we will configure the application to fetch and store data in a Mongo dat
 All that is required to rebuild a codebase with changes and redeploy is a single push.
 
 ```
-$ git push catalyze master
+$ git push datica master
 ```
 
-No need to talk to Catalyze - the redeploy will happen automatically if the build is successful.
+No need to talk to Datica - the redeploy will happen automatically if the build is successful.
 
 ## Working with Logs
 
-In the Catalyze dashboard, when you select your environment from the left sidebar, a button is available to access an exposed Kibana + ElasticSearch interface.
+In the Datica dashboard, when you select your environment from the left sidebar, a button is available to access an exposed Kibana + ElasticSearch interface.
 
 ![dashboard screenshot](http://cdn2.dropmark.com/45280/65a396d67787a5b0c9fcab9ae61b2687fb3d0d93/logging-button.png)
 
@@ -255,5 +255,5 @@ Anything your application writes to standard out or standard error will be captu
 Just another push to redeploy.
 
 ```
-$ git push catalyze master
+$ git push datica master
 ```

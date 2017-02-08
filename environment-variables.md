@@ -1,25 +1,25 @@
 ---
-title: Stratum Variables
+title: Compliant Cloud Variables
 category: manage
-summary: Learn about environment variables in Stratum.
+summary: Learn about environment variables in Compliant Cloud.
 ---
 
-# Stratum Variables
+# Compliant Cloud Variables
 
 ## How do Variables Work?
 
-Variables in Stratum are set or reset for a code service every time the service is ***built*** or ***redeployed***. These variables contain data that the code service can then consume as environment variables during operation. Variables are specific to a single code service.
+Variables in Compliant Cloud are set or reset for a code service every time the service is ***built*** or ***redeployed***. These variables contain data that the code service can then consume as environment variables during operation. Variables are specific to a single code service.
 
 ## Why Are Variables Important?
 
-Variables in Stratum allow an application to consume information that is not appropriate for storing in a code repository. That type of data could include:
+Variables in Compliant Cloud allow an application to consume information that is not appropriate for storing in a code repository. That type of data could include:
 
 * Third-Party Service Credentials
 * Dynamic Configuration Settings
 
 ## Pre-Defined Variables
 
-Each new code service comes with several pre-defined variables that contain important information for your application to function and vary depending on the services in your environment. You can view these in the [Stratum Dashboard][https://product.catalyze.io/stratum] on your code service as soon as your environment is created by Catalyze. Examples include:
+Each new code service comes with several pre-defined variables that contain important information for your application to function and vary depending on the services in your environment. You can view these in the [Compliant Cloud Dashboard][https://product.datica.com/compliant-cloud] on your code service as soon as your environment is created by Datica. Examples include:
 
 * DATABASE_URL
 * S3_BUCKET
@@ -37,4 +37,4 @@ The service's variables are located here:
 
 ## Setting Your Own Variables
 
-To set your own variables checkout our variable management guide located [here](/stratum/articles/environment-variables-manage/).
+To set your own variables checkout our variable management guide located [here](/compliant-cloud/articles/environment-variables-manage/).

@@ -1,38 +1,38 @@
 ---
-title: Deploying Your Application to Catalyze
+title: Deploying Your Application to Datica
 category: application
-summary: How do I deploy to my Catalyze environment?
+summary: How do I deploy to my Datica environment?
 ---
 
-# How do I deploy to my Catalyze environment?
+# How do I deploy to my Datica environment?
 
 ## First-Time Setup
 
-1. If you haven't already, install the [Stratum CLI](https://github.com/catalyzeio/cli).
+1. If you haven't already, install the [Compliant Cloud CLI](https://github.com/daticahealth/cli).
 2. Navigate to the root directory of your local repository (this is the directory that contains the `.git` directory).
-3. Run the `associate` command, replacing `MyEnvName` and `my-code-service` with your environment's name and your code service's name (both found in the [Stratum UI])[https://product.catalyze.io/stratum/):
+3. Run the `associate` command, replacing `MyEnvName` and `my-code-service` with your environment's name and your code service's name (both found in the [Compliant Cloud UI])[https://product.datica.com/compliant-cloud/):
 
    ```
-   catalyze associate MyEnvName my-code-service
+   datica associate MyEnvName my-code-service
    ```
 
 ## Deploying Code
 
-Push your local `master` branch to the `catalyze` remote (created when you ran `associate`):
+Push your local `master` branch to the `datica` remote (created when you ran `associate`):
 
 ```
-git push catalyze master
+git push datica master
 ```
 
 If the branch you want to push is not master, run this instead:
 
 ```
-git push catalyze my-branch-name:master
+git push datica my-branch-name:master
 ```
 
-The build output will stream from Catalyze's servers to your terminal. If the build is successful, your service will be redeployed.
+The build output will stream from Datica's servers to your terminal. If the build is successful, your service will be redeployed.
 
 ### See also
 
-* [Writing Your Application](/stratum/articles/writing-your-application)
-* [CLI Associate](/paas/paas-cli-reference#associate)
+* [Writing Your Application](/compliant-cloud/articles/writing-your-application)
+* [CLI Associate](/compliant-cloud/cli-reference#associate)

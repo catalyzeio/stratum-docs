@@ -3,10 +3,10 @@ title: PHP + MySQL Guide
 category: guide
 ---
 
-# Deploying a PHP+MySQL Application on Stratum
+# Deploying a PHP+MySQL Application on Compliant Cloud
 
 ## Introduction
-This guide will cover the basics of deploying a PHP app built using the [Laravel](https://laravel.com) framework that stores data in a MySQL database. We have already created an example application using these steps [here](https://github.com/catalyzeio/php-example-app). Feel free to follow this guide or fork and clone the example application to create your own working copy to deploy to Stratum.
+This guide will cover the basics of deploying a PHP app built using the [Laravel](https://laravel.com) framework that stores data in a MySQL database. We have already created an example application using these steps [here](https://github.com/catalyzeio/php-example-app). Feel free to follow this guide or fork and clone the example application to create your own working copy to deploy to Compliant Cloud.
 
 
 ## Prerequisites
@@ -16,15 +16,15 @@ There are a few things you need before we can get started deploying your applica
 We assume you have base knowledge of the following tools, and installed. If not, you can find information on each of the tools by visiting their link and following the directions there for installing them.
 
 - [git](https://git-scm.com/)
-- [Catalyze CLI](https://github.com/catalyzeio/cli)
+- [Datica CLI](https://github.com/daticahealth/cli)
 
-### Contract with Catalyze
-You need a signed contract with [Catalyze](https://catalyze.io/), and already have an environment provisioned for use. If you need to sign up for Catalyze you can [start here](https://catalyze.io/stratum).
+### Contract with Datica
+You need a signed contract with [Datica](https://datica.com/), and already have an environment provisioned for use. If you need to sign up for Datica you can [start here](https://datica.com/compliant-cloud).
 
 ### Terms to know
 Some basic terms that you should know:
 
-- Environment ID: a GUID assigned to your environment by Catalyze. Eg: `9cdde031-5342-4a0d-949c-31253227bd12`
+- Environment ID: a GUID assigned to your environment by Datica. Eg: `9cdde031-5342-4a0d-949c-31253227bd12`
 - Environment Label: a name YOU picked for your environment. Eg: `MyHealthApp-Production`
 
 
@@ -35,41 +35,41 @@ Lets get your php application setup for deployment. For this example we are usin
 To run the example application locally, you can use the Homestead vagrant image which is pretty easy to setup. You can find more information on [Homestead here](https://laravel.com/docs/5.0/homestead).
 
 ## Associate environment to application
-We need to associate your Catalyze environment to your Laravel application. To do this you need to use [git](https://git-scm.com/) and the [Stratum CLI](https://github.com/catalyzeio/catalyze-paas-cli).
+We need to associate your Datica environment to your Laravel application. To do this you need to use [git](https://git-scm.com/) and the [Compliant Cloud CLI](https://github.com/daticahealth/cli).
 
 Using a command line, navigate to a working copy of your application, or fork the [example php application](https://github.com/catalyzeio/php-example-app), and run the following commands:
 
 ```
-# catalyze associate MyHealthApp-Production app01
+# datica associate MyHealthApp-Production app01
 Username:
 Password:
-"catalyze" remote added.
+"datica" remote added.
 #
 ```
 
-The [Stratum CLI](https://github.com/catalyzeio/cli) added a git remote to your local repo so you can now push code to your environment on Catalyze.
+The [Compliant Cloud CLI](https://github.com/daticahealth/cli) added a git remote to your local repo so you can now push code to your environment on Datica.
 
 ```
 # git remote -v
-catalyze    ssh://git@git.sandbox.catalyzeapps.com:2222/csb0155-app01.git (fetch)
-catalyze    ssh://git@git.sandbox.catalyzeapps.com:2222/csb0155-app01.git (push)
+datica    ssh://git@git.sandbox.catalyzeapps.com:2222/csb0155-app01.git (fetch)
+datica    ssh://git@git.sandbox.catalyzeapps.com:2222/csb0155-app01.git (push)
 origin  https://github.com/catalyzeio/php-example-app.git (fetch)
 origin  https://github.com/catalyzeio/php-example-app.git (push)
 #
 ```
 
-Your remotes will be unique to your origin and enivornment on Catalyze.
+Your remotes will be unique to your origin and enivornment on Datica.
 
 ## Deploying your code
 
-So now that we have everything in order, lets deploy your application to Stratum.
+So now that we have everything in order, lets deploy your application to Compliant Cloud.
 
 *Note: Your application needs a [Procfile](https://github.com/catalyzeio/php-example-app/blob/master/Procfile) for deployment. If you are using the example application you do not need to worry about this as it is already done for you.*
 
-Run the command below from within your working copy. This will push  our code up to Stratum and start the build process.
+Run the command below from within your working copy. This will push  our code up to Compliant Cloud and start the build process.
 
 ```
-# git push catalyze master
+# git push datica master
 ... Lots of Build Output Here ...
 remote: ---> XXXXXXX
 remote: Finalizing Build (Note: This can take a few minutes to complete)....................................................
@@ -114,7 +114,7 @@ Then find the MySQL config options further down in database.php and edit the hos
 ]
 ```
 
-Now your database settings will be automatically picked up when deployed on Catalyze or read from the `.env` file when developing locally.
+Now your database settings will be automatically picked up when deployed on Datica or read from the `.env` file when developing locally.
 
 ## Using environment variables
 Using environment variables in PHP and Laravel is pretty straight forward. Just use the `getenv()` function any where you need to access an environment variable. You can find more documentation on the `getenv()` function [here](http://php.net/manual/en/function.getenv.php).
@@ -123,32 +123,32 @@ Using environment variables in PHP and Laravel is pretty straight forward. Just 
 `$databaseUrl = getenv("DATABASE_URL");`
 
 ### Updating Environment Variables
-Use the [Stratum CLI](https://github.com/catalyzeio/cli) to update your environment variables.
+Use the [Compliant Cloud CLI](https://github.com/daticahealth/cli) to update your environment variables.
 
-The [Catalyze CLI](https://github.com/catalyzeio/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Catalyze CLI](https://github.com/catalyzeio/cli), head over to the [documentation](/paas/paas-cli-reference#vars).
+The [Datica CLI](https://github.com/daticahealth/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Datica CLI](https://github.com/daticahealth/cli), head over to the [documentation](/compliant-cloud/cli-reference#vars).
 
 #### List all Variables
-`catalyze -E "<your_env_alias>" vars list <service_name>`
+`datica -E "<your_env_alias>" vars list <service_name>`
 
 #### Adding
-`catalyze -E "<your_env_alias>" vars set <service_name> -v A=B`
+`datica -E "<your_env_alias>" vars set <service_name> -v A=B`
 
 #### Removing
-`catalyze -E "<your_env_alias>" vars unset <service_name> A`
+`datica -E "<your_env_alias>" vars unset <service_name> A`
 
 ## Creating schema for database
-You can use the [Catalyze CLI](https://github.com/catalyzeio/cli) to run migrations on the MySQL database easily. Just run the following commands below to populate MySQL with the proper tables for the example application. If you are creating your own application, you can find more information [here](https://laravel.com/docs/5.0/migrations) on migrations with Laravel.
+You can use the [Datica CLI](https://github.com/daticahealth/cli) to run migrations on the MySQL database easily. Just run the following commands below to populate MySQL with the proper tables for the example application. If you are creating your own application, you can find more information [here](https://laravel.com/docs/5.0/migrations) on migrations with Laravel.
 
 ### Example
 First we need to find the label for the application service. The following will return a list of all services associated to your environment:
 
-`catalyze -E "<your_env_alias>" status`
+`datica -E "<your_env_alias>" status`
 
 You should see some output like:
 
 ```
-Overriding BaaS URL: https://api-staging.catalyze.io
-Overriding PaaS URL: https://api-sbox05.catalyzeapps.com:7443
+Overriding BaaS URL: https://api-staging.datica.com
+Overriding Compliant Cloud URL: https://api-sbox05.catalyzeapps.com:7443
 environment state: running
 	app01 (size = c0, build status = finished, deploy status = running)
 	db01 (size = c1, image = percona, status = running)
@@ -156,7 +156,7 @@ environment state: running
 
 The first item in the list is the application service `app01`. We will target `app01` and send a command to it so we can run the migration in the example app.
 
-`catalyze -E "<your_env_alias>" console app01 'php artisan migrate --force'`
+`datica -E "<your_env_alias>" console app01 'php artisan migrate --force'`
 
 That should give you a similar output as:
 
@@ -178,10 +178,10 @@ As you can see, the migrations have run, and the database is setup for the examp
 
 
 ## Redeploying
-After the initial deployment of the application on Catalyze, it's pretty easy to update your code. Just do another `git push`:
+After the initial deployment of the application on Datica, it's pretty easy to update your code. Just do another `git push`:
 
 ```
-# git push catalyze master
+# git push datica master
 ... Lots of Build Output Here ...
 remote: ---> XXXXXXX
 remote: Finalizing Build (Note: This can take a few minutes to complete)....................................................
@@ -190,7 +190,7 @@ remote: Complete. Built Successfully!
 ```
 
 ## Add logging to your php application
-Logging works easily right out of the box with Laravel. To Enable logging that works with Catalyze, you need to edit the `/config/app.php` config file.
+Logging works easily right out of the box with Laravel. To Enable logging that works with Datica, you need to edit the `/config/app.php` config file.
 
 Look for this in the app.php config file:
 
@@ -228,4 +228,4 @@ If you would like more information on logging and laravel you can go [here](http
 Additionally, for using php standalone with no framework, you can use the `syslog()` function. More information on that can be found [here](http://php.net/manual/en/function.syslog.php).
 
 ### Viewing Logs
-Once your application is logging, you can view those logs using the dashboard. Just sign into the [Stratum Dashboard](https://product.catalyze.io/stratum), navigate to the environments dashboard, and click on "Monitoring" or "Logging" on any environment within your dashboard.
+Once your application is logging, you can view those logs using the dashboard. Just sign into the [Compliant Cloud Dashboard](https://product.datica.com/compliant-cloud), navigate to the environments dashboard, and click on "Monitoring" or "Logging" on any environment within your dashboard.

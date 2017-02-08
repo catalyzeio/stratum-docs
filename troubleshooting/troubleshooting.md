@@ -1,36 +1,33 @@
 ---
-title: Stratum Troubleshooting Guide
+title: Compliant Cloud Troubleshooting Guide
 category: troubleshooting
 ---
 
-# Stratum Troubleshooting Guide
+# Compliant Cloud Troubleshooting Guide
 
-Welcome to the Stratum troubleshooting guide. In this guide we will give you an overview of common issues users may see when working the platform. Beyond that we'll walk you through common resolutions for these issues.
+Welcome to the Compliant Cloud troubleshooting guide. In this guide we will give you an overview of common issues users may see when working the platform. Beyond that we'll walk you through common resolutions for these issues.
 
 ## Components
 
-In order to help you resolve your issue, we first need to outline the components of Stratum. At a high level Stratum is comprised of:
+In order to help you resolve your issue, we first need to outline the components of Compliant Cloud. At a high level Compliant Cloud is comprised of:
 
-- [Stratum Dashboard](https://product.catalyze.io/stratum)
-- [Catalyze CLI](https://github.com/catalyzeio/cli)
-- [Account Manager](https://product.catalyze.io/account)
+- [Compliant Cloud Dashboard](https://product.datica.com/compliant-cloud)
+- [Datica CLI](https://github.com/daticahealth/cli)
+- [Account Manager](https://product.datica.com/account)
 
-The Stratum dashboard is where users can check the status of their environment and related services, manage users, and navigate to logging and monitoring.
+The Compliant Cloud dashboard is where users can check the status of their environment and related services, manage users, and navigate to logging and monitoring.
 
-The Catalyze CLI contains the bulk of platform functionality. For a comprehensive reference check out [this guide](/paas/paas-cli-reference/).
+The Datica CLI contains the bulk of platform functionality. For a comprehensive reference check out [this guide](/compliant-cloud/cli-reference).
 
-The Account Manager is where users can manage their authentication information, view and edit organization information, and find related Catalyze products.
+The Account Manager is where users can manage their authentication information, view and edit organization information, and find related Datica products.
 
 Below we've listed common troubleshooting topics.
 
-- [Catalyze CLI Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/cli-troubleshooting)
-- [Stratum Dashboard Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/stratum-dashboard-troubleshooting)
-- [Account Management Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/account-troubleshooting)
-- [Application Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/app-deployment-troubleshooting)
-- [SSL Certificate Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/ssl-cert-install-troubleshooting)
-- [Worker Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/app-deployment-troubleshooting)
-- [Logging Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/logging-troubleshooting)
-- [Monitoring Troubleshooting](https://resources.catalyze.io/stratum/articles/troubleshooting/monitoring-troubleshooting)
-
-
-
+- [Datica CLI Troubleshooting](/compliant-cloud/articles/troubleshooting/cli-troubleshooting)
+- [Compliant Cloud Dashboard Troubleshooting](/compliant-cloud/articles/troubleshooting/compliant-cloud-dashboard-troubleshooting)
+- [Account Management Troubleshooting](/compliant-cloud/articles/troubleshooting/account-troubleshooting)
+- [Application Troubleshooting](/compliant-cloud/articles/troubleshooting/app-deployment-troubleshooting)
+- [SSL Certificate Troubleshooting](/compliant-cloud/articles/troubleshooting/ssl-cert-install-troubleshooting)
+- [Worker Troubleshooting](/compliant-cloud/articles/troubleshooting/app-deployment-troubleshooting)
+- [Logging Troubleshooting](/compliant-cloud/articles/troubleshooting/logging-troubleshooting)
+- [Monitoring Troubleshooting](/compliant-cloud/articles/troubleshooting/monitoring-troubleshooting)

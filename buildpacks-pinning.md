@@ -1,12 +1,12 @@
 ---
 title: Using a Specific Buildpack Version
 category: buildpack
-summary: While Stratum can detect and apply a buildpack automatically, Catalyze recommends that Stratum users pin their buildpacks to a specific version.
+summary: While Compliant Cloud can detect and apply a buildpack automatically, Datica recommends that Compliant Cloud users pin their buildpacks to a specific version.
 ---
 
 # Using a Specific Buildpack Version
 
-While Stratum can detect and apply a buildpack automatically, Catalyze recommends that Stratum users pin their buildpacks to a specific version.
+While Compliant Cloud can detect and apply a buildpack automatically, Datica recommends that Compliant Cloud users pin their buildpacks to a specific version.
 
 If the buildpack is not pinned, users run the risk that a buildpack update unexpectedly breaks their code.
 
@@ -16,7 +16,7 @@ The below procedure outlines how to pin the buildpack version for your applicati
 
 ### 1. Set the BUILDPACK_URL environment variable
 
-The Stratum build procedure constructs the application based on automatically detecting the code type or reading in the `BUILDPACK_URL` environment variable.
+The Compliant Cloud build procedure constructs the application based on automatically detecting the code type or reading in the `BUILDPACK_URL` environment variable.
 
 Every buildpack release is tagged with a version number. You can view the releases on the Github page for each buildpacks. Below is the Python buildpack for example:
 
@@ -36,7 +36,7 @@ Ensure you have the correct environment and service association for the applicat
 
 Then set the URL. In this example, I've associated my app03 to the alias `MyProdEnv-app03`:
 
-`catalyze -E MyProdEnv-app03 vars set <service_name> -v BUILDPACK_URL="https://github.com/heroku/heroku-buildpack-python#v68"`
+`datica -E MyProdEnv-app03 vars set <service_name> -v BUILDPACK_URL="https://github.com/heroku/heroku-buildpack-python#v68"`
 
 ### 2. Rebuild Application
 
@@ -44,4 +44,4 @@ This change will only take effect on the next build of the application. Builds a
 
 ### See also
 
-* [Custom Buildpacks](/stratum/articles/buildpacks-custom)
+* [Custom Buildpacks](/compliant-cloud/articles/buildpacks-custom)

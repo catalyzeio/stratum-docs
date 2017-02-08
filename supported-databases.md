@@ -1,12 +1,12 @@
 ---
-title: Stratum Supported Databases
+title: Compliant Cloud Supported Databases
 category: database
-summary: Learn about the supported databases you can use on Stratum.
+summary: Learn about the supported databases you can use on Compliant Cloud.
 ---
 
-# Stratum Supported Databases
+# Compliant Cloud Supported Databases
 
-All databases supported by Stratum are available either in single node or highly available (HA) configurations.
+All databases supported by Compliant Cloud are available either in single node or highly available (HA) configurations.
 
 Databases supported in the single node deployment are:
 - Postgres
@@ -26,12 +26,12 @@ The currently supported databases are also available in HA mode which is describ
 Postgres HA is configured as follows:
 - A pair of Postgres containers deployed as master and slave respectively
 - Streaming replication is enabled between the master and slave
-- Promotion of slave to master manually triggered by Catalyze engineer
+- Promotion of slave to master manually triggered by Datica engineer
 
 ## MySQL (Percona) HA
 Percona MySQL HA is configured as follows:
 - A pair of Percona MySQL containers deployed as master and slave respectively
-- Promotion of slave to master manually triggered by Catalyze engineer
+- Promotion of slave to master manually triggered by Datica engineer
 
 ## MongoDB HA
 mongoDB HA is configured as follows:

@@ -1,32 +1,32 @@
 ---
 title: Jobs
 category: concepts
-summary: Learn what Jobs are on Stratum.
+summary: Learn what Jobs are on Compliant Cloud.
 ---
 
-**Jobs** on [Stratum](https://catalyze.io/stratum) are what actually run your applications, databases, caches, and everything else that makes up an [environment](/stratum/articles/concepts/environments). Jobs are a one-to-one mapping to [containers](/stratum/articles/concepts/containers) - every running job has exactly one container. What that job's container is running is defined by the [service](/stratum/articles/concepts/jobs). All jobs belong to a service, but a service can have more than one job running.
+**Jobs** on [Compliant Cloud](https://datica.com/compliant-cloud) are what actually run your applications, databases, caches, and everything else that makes up an [environment](/compliant-cloud/articles/concepts/environments). Jobs are a one-to-one mapping to [containers](/compliant-cloud/articles/concepts/containers) - every running job has exactly one container. What that job's container is running is defined by the [service](/compliant-cloud/articles/concepts/jobs). All jobs belong to a service, but a service can have more than one job running.
 
 # Types of Jobs
 
 ## Deploy Jobs
 
-**Deploy** jobs are the most common job type. These are the jobs that run a container indefinitely. See the list of [service types](/stratum/articles/concepts/services#types-of-services) for details on what each type's containers run.
+**Deploy** jobs are the most common job type. These are the jobs that run a container indefinitely. See the list of [service types](/compliant-cloud/articles/concepts/services#types-of-services) for details on what each type's containers run.
 
 ## Build Jobs
 
-**Build** jobs are the jobs that build the code you push, creating a new image and [redeploying the service](/stratum/articles/concepts/services#redeploying) if the build is successful.
+**Build** jobs are the jobs that build the code you push, creating a new image and [redeploying the service](/compliant-cloud/articles/concepts/services#redeploying) if the build is successful.
 
 ## Worker Jobs
 
-**Worker** jobs are a special job type that are unique to code services. Worker jobs are functionally similar to [deploy jobs](#deploy-jobs), but execute a different [procfile](/stratum/articles/writing-your-application#choosing-how-your-application-is-run) target. Read more in the [Workers](/stratum/articles/concepts/workers) article.
+**Worker** jobs are a special job type that are unique to code services. Worker jobs are functionally similar to [deploy jobs](#deploy-jobs), but execute a different [procfile](/compliant-cloud/articles/writing-your-application#choosing-how-your-application-is-run) target. Read more in the [Workers](/compliant-cloud/articles/concepts/workers) article.
 
 ## Backup and Restore Jobs
 
-**Backup** and **restore** jobs correspond to the database backups and restore, initiated via either [CLI commands](/paas/paas-cli-reference#db) or automated  nightly database backups. When the requested task has been completed, the jobs will terminate.
+**Backup** and **restore** jobs correspond to the database backups and restore, initiated via either [CLI commands](/compliant-cloud/cli-reference#db) or automated  nightly database backups. When the requested task has been completed, the jobs will terminate.
 
 ## Console Jobs
 
-**Console** jobs represent an open [secure console](/stratum/articles/console) session. In the event of an unclean exit, a console job will eventually get cleaned up and stopped.
+**Console** jobs represent an open [secure console](/compliant-cloud/articles/console) session. In the event of an unclean exit, a console job will eventually get cleaned up and stopped.
 
 ## Rake Jobs
 
@@ -42,5 +42,5 @@ The following are common job states that you might see.
 
 ### See also
 
-* [Services](/stratum/articles/concepts/services)
-* [Containers](/stratum/articles/concepts/containers)
+* [Services](/compliant-cloud/articles/concepts/services)
+* [Containers](/compliant-cloud/articles/concepts/containers)

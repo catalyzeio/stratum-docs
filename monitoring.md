@@ -1,16 +1,16 @@
 ---
-title: Stratum Environment Monitoring
+title: Compliant Cloud Environment Monitoring
 category: monitoring
-summary: Learn how to use Catalyze's monitoring service.
+summary: Learn how to use Datica's monitoring service.
 ---
 
-# Stratum Environment Monitoring
+# Compliant Cloud Environment Monitoring
 
-Every environment includes its own monitoring server that watches the services in the environment. Catalyze's monitoring solution is built on top of [Sensu](https://sensuapp.org/), and can be customized to fit specific customer needs.
+Every environment includes its own monitoring server that watches the services in the environment. Datica's monitoring solution is built on top of [Sensu](https://sensuapp.org/), and can be customized to fit specific customer needs.
 
 ## Accessing Monitoring
 
-You can access an environment's monitoring service via the Catalyze-provided management URL.
+You can access an environment's monitoring service via the Datica-provided management URL.
 
 `https://podxxxx.catalyzeapps.com/monitoring/`
 
@@ -18,7 +18,7 @@ You will see an authentication popup that looks like this:
 
 ![auth](images/auth_popup.png)
 
-Enter in the username and password for your Catalyze user account that has access to the specified environment.
+Enter in the username and password for your Datica user account that has access to the specified environment.
 
 Successful authentication will take you to an interface that looks like this:
 
