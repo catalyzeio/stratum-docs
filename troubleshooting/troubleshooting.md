@@ -12,7 +12,7 @@ Welcome to the Compliant Cloud troubleshooting guide. In this guide we will give
 In order to help you resolve your issue, we first need to outline the components of Compliant Cloud. At a high level Compliant Cloud is comprised of:
 
 - [Compliant Cloud Dashboard](https://product.datica.com/compliant-cloud)
-- [Datica CLI](https://github.com/catalyzeio/cli)
+- [Datica CLI](https://github.com/daticahealth/cli)
 - [Account Manager](https://product.datica.com/account)
 
 The Compliant Cloud dashboard is where users can check the status of their environment and related services, manage users, and navigate to logging and monitoring.

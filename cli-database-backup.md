@@ -15,7 +15,7 @@ All databases are backed up automatically nightly. If you need to create a manua
 Execute the following command to create a backup.
 
 ```
-$ catalyze -E "<your_env_alias>" db list <service name>
+$ datica -E "<your_env_alias>" db list <service name>
 ```
 
 List the backups for a database service. Take note that each of the backups has a corresponding ID that should be used in the case of restoring that specific backup. Also of note, if your database service is part of an HA configuration only the database identified as a primary (or master) node will be backed up nightly. Therefore when you display the backups for a secondary database node you will not see nightly backup entries but will on the primary node.
@@ -31,19 +31,19 @@ If you would like to download a backup, you can do so with the [`db download`](/
 Use the `db list` command to list the backups:
 
 ```
-$ catalyze -E "<your_env_alias>" db list <service name>
+$ datica -E "<your_env_alias>" db list <service name>
 ```
 
 Copy the ID of the backup you'd like to download, and run the download command:
 
 ```
-$ catalyze -E "<your_env_alias>" db download <service name> <backup ID> <local file path>
+$ datica -E "<your_env_alias>" db download <service name> <backup ID> <local file path>
 ```
 
 Example:
 
 ```
-$ catalyze -E "<your_env_alias>" db download db01 abcd1234-4321-4321-4321-123412341234 ./mydbdownload.sql
+$ datica -E "<your_env_alias>" db download db01 abcd1234-4321-4321-4321-123412341234 ./mydbdownload.sql
 ```
 
 To facilitate this download, the CLI creates a key pair as part of the request, and the export is encrypted server-side with that public key. The encrypted export is moved to cloud storage for a short window. The CLI downloads it, then decrypts it.

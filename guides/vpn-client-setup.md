@@ -269,7 +269,7 @@ In this example I will use **psql** to connect to my environment' database-2 ser
 
 First, I use the CLI to retrieve my database credentials:
 
-`catalyze -E my_stage_env_name vars list <service_name>`
+`datica -E my_stage_env_name vars list <service_name>`
 
 Next, I look for the database service that I want the credentials for:
 

@@ -58,7 +58,7 @@ Once Datica has provisioned your environment and you have made the appropriate c
 Once you have the Datica CLI installed, run the following command from within your application's directory, replacing YOUR_ENVIRONMENT_NAME with the name of your environment as displayed in the Compliant Cloud [Dashboard][9]. This adds a git remote to your local repository, which will allow you to push your code
 
 ```
-$ catalyze associate YOUR_ENVIRONMENT_NAME app01
+$ datica associate YOUR_ENVIRONMENT_NAME app01
 ```
 
 ## Pushing your application to Datica's Compliant Cloud
@@ -66,14 +66,14 @@ $ catalyze associate YOUR_ENVIRONMENT_NAME app01
 To push your code to Datica, run the command below from within your application's directory.
 
 ```
-$ git push catalyze master
+$ git push datica master
 ```
 
 ## Preparing PostgreSQL for your application
 While you are waiting for Datica to complete your initial deployment, you can set up your database and run appropriate migrations so that your application can connect to PostgreSQL. The [Datica Compliant Cloud CLI][8] can be used to connect to your database and run commands. Below is an example of how to run db:setup on PostgreSQL to create your database, tables, etc. Make sure you change the value of YOUR_DATABASE_NAME to the actual name of the database you want to connect to. Note: your database service may be named something other than "db01" if you changed it in the Datica Dashboard.
 
 ```
-$ catalyze -E "<your_env_alias>" rake <service_name> db:setup
+$ datica -E "<your_env_alias>" rake <service_name> db:setup
 ```
 
 [1]: /compliant-cloud/getting-started 	"Getting Started Guide"
@@ -83,5 +83,5 @@ $ catalyze -E "<your_env_alias>" rake <service_name> db:setup
 [5]: /compliant-cloud/articles/guides/application-logging/ "Logging"
 [6]: http://ruby-doc.org/stdlib-1.9.3/libdoc/logger/rdoc/Logger.html "Ruby Logger"
 [7]: http://guides.rubyonrails.org/getting_started.html "Ruby on Rails Getting Started"
-[8]: https://github.com/catalyzeio/cli "Datica Compliant Cloud CLI"
+[8]: https://github.com/daticahealth/cli "Datica Compliant Cloud CLI"
 [9]: https://product.datica.com/compliant-cloud "Datica Dashboard"

@@ -34,16 +34,16 @@ If you are not sure that your certificate is valid for your intended hostname, y
 
 ## Upload a Cert
 
-To upload the certificate to Compliant Cloud, the [certs create](/compliant-cloud/cli-reference#certs-create) command is used, taking the form `catalyze certs create <cert name> <path to crt file> <path to key file>`. For example:
+To upload the certificate to Compliant Cloud, the [certs create](/compliant-cloud/cli-reference#certs-create) command is used, taking the form `datica -E "<your_env_alias>" certs create <cert name> <path to crt file> <path to key file>`. For example:
 
 ```
-catalyze certs create example.com example.com.crt example.com.key
+datica -E "<your_env_alias>" certs create example.com example.com.crt example.com.key
 ```
 
 If that cert is self-signed, pass the `-s` option:
 
 ```
-catalyze certs create example.com example.com.crt example.com.key -s
+datica -E "<your_env_alias>" certs create example.com example.com.crt example.com.key -s
 ```
 
 > ***Note:*** Using a self-signed cert can be very useful for development or staging environments.
@@ -51,7 +51,7 @@ catalyze certs create example.com example.com.crt example.com.key -s
 For wildcard certs, the typical nomenclature is `*.domain.tld`:
 
 ```
-catalyze certs create *.example.com wildcard-example.com.crt wildcard-example.com.key
+datica -E "<your_env_alias>" certs create *.example.com wildcard-example.com.crt wildcard-example.com.key
 ```
 
 Before actually uploading the cert, the command will check several things. First, the certificate and private key are checked to make sure they match cryptographically. Next, the given hostname is checked against the Subject of the certificate. Lastly, the command checks if a chain from your certificate all the way to a root CA can be found. This ensures your certificate and private key will be trusted by web browsers. The last two checks will only pass if your certificate is not self signed. If you are uploading a self signed certificate, use the `-s` flag to tell the CLI to skip the hostname and root CA chain check.
@@ -65,7 +65,7 @@ Once all checks pass, the certificate and private key are uploaded to Compliant 
 To update a certificate (if it's expiring soon, or just needs to be replaced), the [certs update](/compliant-cloud/cli-reference#certs-update) command is used, uploading a new cert and key to replace the old.
 
 ```
-catalyze certs update *.example.com new-wildcard-example.com.crt new-wildcard-example.com.key
+datica -E "<your_env_alias>" certs update *.example.com new-wildcard-example.com.crt new-wildcard-example.com.key
 ```
 
 > ***Note:*** Cert updates will not take effect until the [Service Proxy](/compliant-cloud/articles/concepts/service-proxy) is [redeployed](/compliant-cloud/articles/concepts/services#redeploying).
@@ -75,7 +75,7 @@ catalyze certs update *.example.com new-wildcard-example.com.crt new-wildcard-ex
 Use the [certs list](/compliant-cloud/cli-reference#certs-list) command:
 
 ```
-catalyze certs list
+datica -E "<your_env_alias>" certs list
 ```
 
 ### See also

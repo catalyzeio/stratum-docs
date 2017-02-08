@@ -11,7 +11,7 @@ In this guide we will cover how to deploy a simple [Node.js](https://nodejs.org/
 
 Before getting started, make sure you created your Compliant Cloud account, have signed any [business associate agreements](https://datica.com/learn/business-associate-agreements) with Datica as necessary, and have successfully provisioned an environment with a code service and a MongoDB service. If you need help getting started, hop on over to the [Compliant Cloud Getting Started](/compliant-cloud/getting-started) guide available on our [resources site](https://resources.datica.com/).
 
-You should also have Git, Node.js, NPM, Mongo, and the [Compliant Cloud CLI](https://github.com/catalyzeio/cli) installed and available on your system path.
+You should also have Git, Node.js, NPM, Mongo, and the [Compliant Cloud CLI](https://github.com/daticahealth/cli) installed and available on your system path.
 
 ## Local Node.js Application
 
@@ -96,7 +96,7 @@ To get started we will create a simple Node.js application using the [Express fr
 
 ## Building and Deploying the Application
 
-To deploy the application, a Git remote must be set up using the [Compliant Cloud CLI](https://github.com/catalyzeio/cli).
+To deploy the application, a Git remote must be set up using the [Compliant Cloud CLI](https://github.com/daticahealth/cli).
 
 1. Associate the local project with your provisioned environment.
 
@@ -109,13 +109,13 @@ To deploy the application, a Git remote must be set up using the [Compliant Clou
 2. Push master to catalyze to build your code.
 
    ```
-   $ git push catalyze master
+   $ git push datica master
    ```
 
 3. You should see build output after you push. After pushing, you can check the environment status - the build status should now be finished.
 
    ```
-   $ catalyze -E "<your_env_alias>" status
+   $ datica -E "<your_env_alias>" status
    environment state: deployed
     app01 (size = c1, build status = finished, deploy status = None)
     mongo01 (size = c1, image = mongodb, status = running)
@@ -202,7 +202,7 @@ Next up we will configure the application to fetch and store data in a Mongo dat
 All that is required to rebuild a codebase with changes and redeploy is a single push.
 
 ```
-$ git push catalyze master
+$ git push datica master
 ```
 
 No need to talk to Datica - the redeploy will happen automatically if the build is successful.
@@ -255,5 +255,5 @@ Anything your application writes to standard out or standard error will be captu
 Just another push to redeploy.
 
 ```
-$ git push catalyze master
+$ git push datica master
 ```

@@ -53,9 +53,9 @@ Take note of its name - that's "My Shiny New Environment" in this case. Also tak
 
 ## 2. Install the Datica CLI
 
-The CLI can be found on Github: [https://github.com/catalyzeio/cli](https://github.com/catalyzeio/cli)
+The CLI can be found on Github: [https://github.com/daticahealth/cli](https://github.com/daticahealth/cli)
 
-Follow the instructions on the readme to install it. You'll know it's installed when you can open a terminal and run `catalyze --version`.
+Follow the instructions on the readme to install it. You'll know it's installed when you can open a terminal and run `datica --version`.
 
 ## 3. Associate Your Local Repo
 
@@ -63,19 +63,19 @@ To link up your local repo to your Compliant Cloud environment, open a terminal 
 
 ```
 $ cd my-repo
-$ catalyze associate "My Shiny New Environment" code-1
+$ datica associate "My Shiny New Environment" code-1
 Username or Email: demo-user@datica.com
 Password:
-Existing git remotes named "catalyze" will be overwritten
-"catalyze" remote added.
-Your git repository "catalyze" has been associated with code service "code-1" and environment "My Shiny New Environment"
+Existing git remotes named "datica" will be overwritten
+"datica" remote added.
+Your git repository "datica" has been associated with code service "code-1" and environment "My Shiny New Environment"
 ```
 
 The username and password here are the same credentials that you used to sign in to the Compliant Cloud dashboard.
 
 This command does two things:
 
-1. Adds the git remote `catalyze`
+1. Adds the git remote `datica`
 2. Tells the Datica CLI which code service you'd like to interact with by default.
 
 ## 4. Set Variables
@@ -91,7 +91,7 @@ MONGODB_URI:  mongodb://username123:password456@ds012345.mlab.com:23624/username
 Checking variables on Compliant Cloud:
 
 ```
-$ catalyze -E "<your_env_alias>" vars list <service_name>
+$ datica -E "<your_env_alias>" vars list <service_name>
 DATABASE_URL=mongodb://mongodb-12345.internal:27017/catalyze
 MONGO01_URL=mongodb://mongodb-12345.internal:27017/catalyze
 ```
@@ -99,9 +99,9 @@ MONGO01_URL=mongodb://mongodb-12345.internal:27017/catalyze
 As you can see, the connection string for the database is provided in a similar way, but the variable names don't match. You have two choices, here - either change your code to use a different name, or add a new variable to your code service to match its name from Heroku. To do the latter:
 
 ```
-$ catalyze -E "<your_env_alias>" vars set <service_name> -v MONGODB_URI=mongodb://mongodb-12345.internal:27017/catalyze
-Set. For these environment variables to take effect, you will need to redeploy your service with "catalyze redeploy"
-$ catalyze -E "<your_env_alias>" vars list <service_name>
+$ datica -E "<your_env_alias>" vars set <service_name> -v MONGODB_URI=mongodb://mongodb-12345.internal:27017/catalyze
+Set. For these environment variables to take effect, you will need to redeploy your service with "datica redeploy"
+$ datica -E "<your_env_alias>" vars list <service_name>
 DATABASE_URL=mongodb://mongodb-12345.internal:27017/catalyze
 MONGO01_URL=mongodb://mongodb-12345.internal:27017/catalyze
 MONGODB_URI=mongodb://mongodb-12345.internal:27017/catalyze
@@ -114,7 +114,7 @@ Note that warning. Environment variables are only picked up when a service is de
 Compliant Cloud uses public key auth to authenticate git pushes. To add a public key to your Datica account (you only need to do this once):
 
 ```
-$ catalyze keys add my-ssh-key ~/.ssh/my-ssh-key.pub
+$ datica -E "<your_env_alias>" keys add my-ssh-key ~/.ssh/my-ssh-key.pub
 ```
 
 For more details on SSH key usage and debugging, take a look at our [SSH Keys Guide](/compliant-cloud/articles/ssh-keys).
@@ -130,7 +130,7 @@ If you're migrating, you'd probably like to see your code working before cutting
 To add an SSL Cert you already have on hand, use the `certs create` command in the CLI:
 
 ```
-$ catalyze -E "<your_env_alias>" certs create my-ssl-cert ./my-cert.crt ./my-cert.key
+$ datica -E "<your_env_alias>" certs create my-ssl-cert ./my-cert.crt ./my-cert.key
 ```
 
 If you don't have a signed cert for the subdomain you intend to use, you can use a self-signed cert for testing.
@@ -142,7 +142,7 @@ For more help on adding and debugging certs, take a look at our [Self-Service SS
 Use the `sites create` command in the CLI:
 
 ```
-$ catalyze -E "<your_env_alias>" sites create staging.example.com code-1 my-ssl-cert
+$ datica -E "<your_env_alias>" sites create staging.example.com code-1 my-ssl-cert
 Created 'staging.example.com'
 ```
 
@@ -151,7 +151,7 @@ Created 'staging.example.com'
 You will need to add a CNAME record from the hostname you used above to the Datica public hostname for your environment. To find that hostname, use the `sites list` command:
 
 ```
-$ catalyze -E "<your_env_alias>" sites list
+$ datica -E "<your_env_alias>" sites list
   NAME                          CERT                          UPSTREAM SERVICE
   pod0012345.catalyzeapps.com   pod0012345.catalyzeapps.com
   staging.example.com         my-ssl-cert                   code-1
@@ -166,15 +166,15 @@ For more information on setting your DNS correctly, take a look at our [Setting 
 Each environment has a special service called the Service Proxy. The Service Proxy is responsible for routing traffic from the outside world into your environment. In order for it to pick up the new site you just added, the service proxy needs to be reloaded, and redeploying it is the way to do that.
 
 ```
-$ catalyze -E "<your_env_alias>" redeploy service_proxy
+$ datica -E "<your_env_alias>" redeploy service_proxy
 ```
 
 ## 7. Push Code
 
-Just like on Heroku, push to catalyze master:
+Just like on Heroku, push to datica master:
 
 ```
-$ git push catalyze master
+$ git push datica master
 Counting objects: 4, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (4/4), done.

@@ -34,7 +34,7 @@ Then, click the link in the email to accept the invitation.
 
 Copy and paste the CLI command from the e-mail into your terminal window:
 
-`catalyze invites accept your-invite-code-here`
+`datica invites accept your-invite-code-here`
 
 ### See also:
 

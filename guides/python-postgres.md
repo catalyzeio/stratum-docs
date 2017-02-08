@@ -40,11 +40,11 @@ $ git clone git@github.com:catalyzeio/python-sample-app.git
 $ cd python-sample-app
 
 # Associate the repo with your Datica Environment and push
-$ catalyze associate "Python Sample App" app01
-$ git push catalyze master
+$ datica associate "Python Sample App" app01
+$ git push datica master
 
 # After the application has been deployed, run migrations
-$ catalyze console app01 "python manage.py migrate"
+$ datica -E "<your_env_alias>" console app01 "python manage.py migrate"
 
 # Go checkout your live app!
 ```
@@ -105,16 +105,16 @@ Ok, so now you have an application that you can run locally, project dependencie
 
 ```
 $ cd /path/to/your/repo
-$ catalyze associate "Your Environment's Name" app01
-# Notice the git remote "catalyze" has been created
+$ datica associate "Your Environment's Name" app01
+# Notice the git remote "datica" has been created
 
-$ git push catalyze master
+$ git push datica master
 ```
 
 If you watch the terminal you will see the build output scroll by. Pay attention to this in order to see how your application is being built. You should see the application dependencies getting installed and any errors that may occur. You will know the build has completed when you see the following output:
 
 ```
-$ git push catalyze master
+$ git push datica master
 Counting objects: 31, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (23/23), done.
@@ -180,7 +180,7 @@ You can access your application through the Datica URL configured for your envir
 After the initial deployment we can checkout the app and notice if there are errors. We need to run database migrations before the application will run correctly. To do this we'll fire up the Datica Console:
 
 ```
-$ catalyze -E "<your_env_alias>" console app01 "python manage.py migrate"
+$ datica -E "<your_env_alias>" console app01 "python manage.py migrate"
 Opening console to service 'a2cb4141-0fb2-4ed5-8e7a-bb59b918dbfc'
 Waiting for the console to be ready... This might take a bit.
 ...................................................
@@ -205,17 +205,17 @@ After the database migrations have completed, we can check back on the applicati
 
 ```
 # Log into the Django shell
-$ catalyze -E "<your_env_alias>" console app01 "python manage.py shell"
+$ datica -E "<your_env_alias>" console app01 "python manage.py shell"
 
 # Log into the Postgres shell
-$ catalyze -E "<your_env_alias>" console db01
+$ datica -E "<your_env_alias>" console db01
 ```
 
 There are more console features on their way. If a command is not supported, open a ticket [here](https://product.datica.com/compliant-cloud) via the "Contact Support" button for your environment.
 
 ### Making updates to your application
 
-Now you may have noticed that you would like to change something about your application. You are all setup to modify code commit it to your repository and push to the `catalyze master` remote and branch just like we did in the beginning. You'll see all of the build output scroll past but what makes these rebuilds different is that your application will now automatically start to redeploy after the build completes successfully. After the build completes it may take up to a couple minutes for the redeploy to complete. If your app logs on startup you'll be able to see precisely when the application came back online. Likewise you can use the CLI to edit, add or remove environment variables for your application. After making a change to environment variables through the CLI or dashboard, remember you will need to manually redeploy (command available in the CLI only) in order for the variable changes to take effect.
+Now you may have noticed that you would like to change something about your application. You are all setup to modify code commit it to your repository and push to the `datica master` remote and branch just like we did in the beginning. You'll see all of the build output scroll past but what makes these rebuilds different is that your application will now automatically start to redeploy after the build completes successfully. After the build completes it may take up to a couple minutes for the redeploy to complete. If your app logs on startup you'll be able to see precisely when the application came back online. Likewise you can use the CLI to edit, add or remove environment variables for your application. After making a change to environment variables through the CLI or dashboard, remember you will need to manually redeploy (command available in the CLI only) in order for the variable changes to take effect.
 
 
 ## Tips and Tricks
@@ -224,11 +224,11 @@ Now you may have noticed that you would like to change something about your appl
 If you are working locally on a branch and want to deploy the branch to the platform you can push it to the Platform like:
 
 ```
-git push catalyze feature-branch:master
+git push datica feature-branch:master
 ```
 
 **Initiate rebuild**
 If, for any reason, you want to trigger a rebuild of your application a quick way to do so is push a new commit:
 ```
-git commit --allow-empty -m "trigger rebuild"; git push catalyze master
+git commit --allow-empty -m "trigger rebuild"; git push datica master
 ```

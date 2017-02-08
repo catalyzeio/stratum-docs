@@ -11,7 +11,7 @@ Importing into a database is the process through which data is transferred from 
 The general form of the [command](/compliant-cloud/cli-reference#import):
 
 ```
-catalyze -E "<your_env_alias>" db import <service name> <local file path>
+datica -E "<your_env_alias>" db import <service name> <local file path>
 ```
 
 The [CLI](/compliant-cloud/cli-reference) will stream back to you any output from executing the import - any errors should be contained therein.
@@ -38,7 +38,7 @@ INSERT INTO user_roles (id, val) VALUES ('2', 'user');
 To run the import command, make sure you have [associated to an environment](/compliant-cloud/cli-reference#associate) and are in the directory of the associated git repo. Example command:
 
 ```
-$ catalyze -E "<your_env_alias>" db import db01 /path/to/my/data.sql
+$ datica -E "<your_env_alias>" db import db01 /path/to/my/data.sql
 ```
 
 For these databases, this script can contain any SQL you'd like - tables, databases, and users can be created, and data can be inserted. This goes both ways - databases and tables can be dropped, data can be truncated, and users can be removed. Be careful!
@@ -86,7 +86,7 @@ dump/catalyze/user_roles.bson
 Mongo dumps only contain collections, so the CLI needs to be told what database the dumped collections should be imported into. To import, specifying the database:
 
 ```
-$ catalyze -E "<your_env_alias>" db import db01 mymongodump.tar.gz --mongo-database catalyze
+$ datica -E "<your_env_alias>" db import db01 mymongodump.tar.gz --mongo-database catalyze
 ```
 
 MongoDB imports can only **add** data, not remove or alter it. If you need to delete collections or otherwise edit your data, use the [console command](/compliant-cloud/cli-reference#console).
