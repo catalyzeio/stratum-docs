@@ -101,12 +101,12 @@ To deploy the application, a Git remote must be set up using the [Compliant Clou
 1. Associate the local project with your provisioned environment.
 
    ```
-   $ catalyze associate my-node-app app01
+   $ datica associate my-node-app app01
    ```
 
-   This will add a new git remote named `catalyze` to that local repo. It will ask for credentials - these are the username and password that you use in the dashboard.
+   This will add a new git remote named `datica` to that local repo. It will ask for credentials - these are the username and password that you use in the dashboard.
 
-2. Push master to catalyze to build your code.
+2. Push master to datica to build your code.
 
    ```
    $ git push datica master

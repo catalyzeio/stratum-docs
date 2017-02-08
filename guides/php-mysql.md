@@ -40,10 +40,10 @@ We need to associate your Datica environment to your Laravel application. To do 
 Using a command line, navigate to a working copy of your application, or fork the [example php application](https://github.com/catalyzeio/php-example-app), and run the following commands:
 
 ```
-# catalyze associate MyHealthApp-Production app01
+# datica associate MyHealthApp-Production app01
 Username:
 Password:
-"catalyze" remote added.
+"datica" remote added.
 #
 ```
 
@@ -51,8 +51,8 @@ The [Compliant Cloud CLI](https://github.com/daticahealth/cli) added a git remot
 
 ```
 # git remote -v
-catalyze    ssh://git@git.sandbox.catalyzeapps.com:2222/csb0155-app01.git (fetch)
-catalyze    ssh://git@git.sandbox.catalyzeapps.com:2222/csb0155-app01.git (push)
+datica    ssh://git@git.sandbox.catalyzeapps.com:2222/csb0155-app01.git (fetch)
+datica    ssh://git@git.sandbox.catalyzeapps.com:2222/csb0155-app01.git (push)
 origin  https://github.com/catalyzeio/php-example-app.git (fetch)
 origin  https://github.com/catalyzeio/php-example-app.git (push)
 #
