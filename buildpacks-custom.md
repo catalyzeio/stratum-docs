@@ -14,7 +14,7 @@ Sometimes an application will have dependencies outside of the buildpack that ca
 
 In your application repository, create a file at the following path:
 
-`/your_git_repository_root/.catalyze/packages`
+`/your_git_repository_root/.datica/packages`
 
 List the packages that you would like installed in your environment, one package per line, in the `packages` file. Keep in mind that these packages must be available in the base Ubuntu repositories. The standard location of binaries installed via this method is `/usr/bin`.
 
@@ -34,13 +34,13 @@ Build executions have a time limit of 30 minutes, so be careful not to do anythi
 
 ### Pre-Build Hooks
 
-The pre-build script should be located at `/your_git_repository_root/.catalyze/pre-build`. The file ***must be executable*** to run during the build process.
+The pre-build script should be located at `/your_git_repository_root/.datica/pre-build`. The file ***must be executable*** to run during the build process.
 
 Keep in mind that the pre-build script runs before the buildpack, so most utilities (rake, npm, etc.) will not be available.
 
 ### Post-Build Hooks
 
-The pre-build script should be located at `/your_git_repository_root/.catalyze/post-build`. The file ***must be executable*** to run during the build process.
+The pre-build script should be located at `/your_git_repository_root/.datica/post-build`. The file ***must be executable*** to run during the build process.
 
 This is a common location to place database migration commands so that the running database is prepared prior to the new code base deployment.
 
