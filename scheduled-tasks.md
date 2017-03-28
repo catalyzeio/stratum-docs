@@ -55,6 +55,8 @@ web: bundle exec rails server -p $PORT
 cron: ./cron.sh
 ```
 
+- [Push the code changes to your service.](https://resources.datica.com/compliant-cloud/articles/code-deployment/)
+
 - Start your cron worker via the CLI and specify your `cron` Procfile target.
 
 ```
