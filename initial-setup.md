@@ -40,13 +40,13 @@ In order to push code, Datica needs to have a public key attached to your accoun
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
-To add your key to your account, use the `keys add` command, which has the form `datica -E "<your_env_alias>" keys add <key name> <path to key>`. For example, if you want to call your key "my-datica-key" and the path to it is `~/.ssh/id_rsa.pub`, the command you would run would be:
+To add your key to your account, use the `keys add` command, which has the form `datica keys add <key name> <path to key>`. For example, if you want to call your key "my-datica-key" and the path to it is `~/.ssh/id_rsa.pub`, the command you would run would be:
 
 ```
 datica keys add my-datica-key ~/.ssh/id_rsa.pub
 ```
 
-This will prompt you to sign in with your Datica account. You can then validate that the key was added using `datica -E "<your_env_alias>" keys list`.
+This will prompt you to sign in with your Datica account. You can then validate that the key was added using `datica keys list`.
 
 ## 4. Associate to Your Environment
 
