@@ -20,7 +20,7 @@ Logging is an essential part of HIPAA compliance, and the following sections of 
 * Section 164.308(a)(1)(ii)(D) “Information System Activity Review” prescribes review of various records of IT activities such as logs, systems utilization reports,  incident reports and other indications of security relevant activities.
 
 ## Pre-requisites
-You have a Compliant Cloud account with Datica. If you don't, you can sign up for an account and contacting Sales for a 30-day trial [here](https://product.datica.com/compliant-cloud/register).
+You have a Compliant Cloud account with Datica.
 
 You have a provisioned environment with a deployed application.
 
