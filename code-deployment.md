@@ -10,7 +10,7 @@ summary: How do I deploy to my Datica environment?
 
 1. If you haven't already, install the [Compliant Cloud CLI](https://github.com/daticahealth/cli).
 2. Navigate to the root directory of your local repository (this is the directory that contains the `.git` directory).
-3. Run the `associate` command, replacing `MyEnvName` and `my-code-service` with your environment's name and your code service's name (both found in the [Compliant Cloud UI](https://product.datica.com/compliant-cloud/):
+3. Run the `associate` command, replacing `MyEnvName` and `my-code-service` with your environment's name and your code service's name both found in the [Compliant Cloud UI](https://product.datica.com/compliant-cloud/):
 
    ```
    datica associate MyEnvName my-code-service
