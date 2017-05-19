@@ -31,7 +31,7 @@ corl () {
         ARG2=$3
         ARG3=$4
 
-        export RESPONSE=$(corl https://auth.datica.com/auth/signin -XPOST -d '{"identifier": "bob@datica.com", "password": "test123456"}')
+        export RESPONSE=$(corl https://auth.catalyzeio.io/auth/signin -XPOST -d '{"identifier": "bob@datica.com", "password": "test123456"}')
 	      ENCODEDTOKEN=$(python -c "import urllib; import os; import json; print urllib.quote(json.loads(os.environ['RESPONSE'])['sessionToken'])")
 
         corl -H "Cookie: sessionToken=${ENCODEDTOKEN}" ${URL} ${ARG1} ${ARG2} ${ARG3}
