@@ -1,6 +1,6 @@
 ---
 title: VPN User Management
-category: vpn,organization
+category: vpn
 summary: How can I manage VPN users?
 ---
 
