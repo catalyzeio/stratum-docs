@@ -1,6 +1,6 @@
 ---
 title: ACL Groups
-category: acls, groups
+category: organization
 summary: What is an ACL, what is a group?
 alias: ["compliant-cloud/articles/organization-access-controls/"]
 ---

@@ -15,7 +15,7 @@ Every user in an organization belongs to at least one "group" ([more on "groups"
 
 ## ACLs
 
-Groups are [composed of ACLs](/compliant-cloud/articles/concepts/acl-groups)\, currently Datica supports two ACLs, though more are coming:
+Groups are [composed of ACLs](/compliant-cloud/articles/concepts/acl-groups), currently Datica supports two ACLs, though more are coming:
 
 * **Base** Can interact and control any component and product of your environment(s), except they do not have VPN access, and the cannot manage users.
 * **VPN Access** Can directly interact with your Datica network, runnings jobs, and services (**Note**: this is only relevant to organizations and environments that have a running VPN).
