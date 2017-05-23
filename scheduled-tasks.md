@@ -37,6 +37,9 @@ If adding a scheduling framework isn't an option, then `cron` may work to period
 LOGFILE=/app/cron.log
 touch ${LOGFILE}
 
+mkdir -p /app/.profile.d/
+printenv | awk -F= '{ print "export " $1 "=" "\"" $2 "\"" }' > /app/.profile.d/app_env.sh
+
 crontab my-crontab
 
 while true; do
