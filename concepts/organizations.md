@@ -11,7 +11,7 @@ In [Compliant Cloud](https://datica.com/compliant-cloud), each [environment](/co
 
 ## Groups
 
-Every user in an organization belongs to at least one "group" ([more on "groups" and how to manage them](/compliant-cloud/articles/concepts/acl-groups)). Groups manage who in your organization has access to any given Datica resource or product. You can create and delete groups as you see fit, but you only start out with one, **Admins**, which is a group you may not delete or modify as it is the group that administrates user privileges (though you may revoke access to the group). Typically, an organization only has a few **Admins**. When a new organization is created for you, the first user invited becomes the first **Admin**.
+Every user in an organization can belong to any number of groups ([more on "groups" and how to manage them](/compliant-cloud/articles/concepts/acl-groups)). Groups, via ACLs, allow their members to access Datica resources and products. You can create and delete groups as you see fit. When a new organization is created an **Admins** group will be created automatically. Typically, an organization only has a few **Admins**.
 
 ## ACLs
 
@@ -40,16 +40,18 @@ After it is accepted, it will disappear from this table.
 
 > ***Note:*** The [CLI](/compliant-cloud/articles/cli-stratum) [invites send](/compliant-cloud/cli-reference#invites-send) command can also be used to send an invite.
 
-## Creating and Deleting  Groups
-If you want to create a new group that has a [different set of ACLs](/compliant-cloud/articles/concepts/acl-groups) than your other groups, simply click the `Add Group` button.
+## Creating and Deleting Groups
+If you want to create a new group that has a [different set of ACLs](/compliant-cloud/articles/concepts/acl-groups) click the `Add Group` button. If you want to create a group that has access to everything, you check the "Full Access" checkbox. Note: groups with "Full Access" are implictly granted access to manage users in your organization.
 
 ![add_group](/compliant-cloud/articles/images/add_group.png)
 
-Name the group, and select the various ACLs you want the group to have.
+Name the group, and select the ACLs you want the group to have.
 
 ![make_group](/compliant-cloud/articles/images/make_group.png)
 
 ## Removing Members, Changing Groups, and Granting Environment Access
+
+This view is visible to all members of groups that have "Full Access".
 
 In the management tools, there is a list of all members of the organization.
 
