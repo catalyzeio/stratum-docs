@@ -2,22 +2,23 @@
 title: Organizations
 category: organization
 summary: What is a Datica Organization?
-alias: ["compliant-cloud/articles/organization-access-controls/", "compliant-cloud/articles/organization-addremove-users/"]
+alias: ["compliant-cloud/articles/organization-addremove-users/"]
 ---
 
 An **Organization** is a group of user accounts, usable across all Datica products. Typically, an organization maps to (and is named after) your company. Organizations are created for you during the provisioning process. It is possible to be a member of multiple organizations.
 
 In [Compliant Cloud](https://datica.com/compliant-cloud), each [environment](/compliant-cloud/articles/concepts/environments) belongs to a single organization.
 
-## Roles
+## Groups
 
-Every user in an organization has a role.
+Every user in an organization can belong to any number of groups ([more on "groups" and how to manage them](/compliant-cloud/articles/concepts/acl-groups)). Groups, via ACLs, allow their members to access Datica resources and products. You can create and delete groups as you see fit. When a new organization is created an **Admins** group will be created automatically. Typically, an organization only has a few **Admins**.
 
-* **Members** can see the environments that belong to the organization, but can only view the details of and interact with environments that they have been specifically been granted permission on.
-* **Admins** can view the details of any of the organization's environments, grant **Members** permission to do the same, and invite new **Members** to the organization.
-* **Owners** can do anything an **Admin** can, as well as promote/demote other members of the organization to new roles.
+## ACLs
 
-Typically, an organization only has one **Owner**. When a new organization is created for you, the first user invited becomes the first **Owner**.
+Groups are [composed of ACLs](/compliant-cloud/articles/concepts/acl-groups), currently Datica supports two ACLs, though more are coming:
+
+* **Base** Can interact and control any component and product of your environment(s), except they do not have VPN access, and the cannot manage users.
+* **VPN Access** Can directly interact with your Datica network, runnings jobs, and services (**Note**: this is only relevant to organizations and environments that have a running VPN).
 
 ## Managing Your Organization
 
@@ -39,7 +40,18 @@ After it is accepted, it will disappear from this table.
 
 > ***Note:*** The [CLI](/compliant-cloud/articles/cli-stratum) [invites send](/compliant-cloud/cli-reference#invites-send) command can also be used to send an invite.
 
-## Removing Members, Changing Roles, and Granting Environment Access
+## Creating and Deleting Groups
+If you want to create a new group that has a [different set of ACLs](/compliant-cloud/articles/concepts/acl-groups) click the `Add Group` button. If you want to create a group that has access to everything, you check the "Full Access" checkbox. Note: groups with "Full Access" are implictly granted access to manage users in your organization.
+
+![add_group](/compliant-cloud/articles/images/add_group.png)
+
+Name the group, and select the ACLs you want the group to have.
+
+![make_group](/compliant-cloud/articles/images/make_group.png)
+
+## Removing Members, Changing Groups, and Granting Environment Access
+
+This view is visible to all members of groups that have "Full Access".
 
 In the management tools, there is a list of all members of the organization.
 
@@ -49,20 +61,8 @@ Click on the Edit button to enter the details view for a member.
 
 ![org_member_details](/compliant-cloud/articles/images/organization_member_details.png)
 
-To change that member's role, select the new role from the dropdown and click Save.
+To remove a user from a group, click the `X` button by the group name.
 
-To remove the member from the organization, click the `X` button under "Remove User."
+To add a user to a group, select the group from the dropdown and click Save.
 
-To grant a **Member** access to specific environments (or revoke previously-granted access), adjust the radio controls as desired. Changes will be saved automatically.
-
-> ***Note:*** These screenshots are how an **Owner** sees the management tools. Lower roles have a simplified view.
-
-## Notes on Specific Environment Access
-
-If a member does not have granted access and their role is not admin or higher, they will not be able to interact with the environment in any way, beyond seeing that it exists. This includes but is not limited to:
-
-* Pushing code
-* Accessing logging
-* Accessing monitoring
-* Opening consoles
-* Associating to it
+To remove the member from the organization, click the `Remove User from Organization` button.
