@@ -1,9 +1,12 @@
 ---
-title: Compliant Cloud VPN Client Setup Guide
+title: Legacy Compliant Cloud VPN Client Setup Guide
 category: vpn
 ---
+# Legacy Notice
 
-# Supported Clients
+Datica is replacing legacy Strongswan IPSEC VPNs with OpenVPN TLS VPNs. All new client VPNs use OpenVPN. Older VPNs are being converted as necessary. Please contact Datica with any questions. If you are not using an OpenVPN client, you are still on a legacy VPN.
+
+# Recommended Clients
 
 **OSX 10.9+**
   * Native VPN Client
@@ -263,15 +266,15 @@ The VPN connection allows you to connect directly to many of the resources in yo
 
 ## Example Postgres Service Connection
 
-In this example I will use **psql** to connect to my environment' database-2 server running Postgresql. This example assumes I have a VPN connection up and running.
+In this example we will use **psql** to connect to our environment' database-2 server running Postgresql. This example assumes we have a VPN connection up and running.
 
 **Example Service Map:** Postgresql on database-2: 10.255.0.1:5433
 
-First, I use the CLI to retrieve my database credentials:
+First, we use the CLI to retrieve our database credentials:
 
 `datica -E my_stage_env_name vars list <service_name>`
 
-Next, I look for the database service that I want the credentials for:
+Next, we look for the database service that we want the credentials for:
 
 `DATABASE_2_URL=postgres://catalyze:abcdefghijklmnopqrstuvwxyz@postgresql-1234567890.internal:5432/catalyzeDB`
 
