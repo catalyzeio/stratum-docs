@@ -2,6 +2,9 @@
 title: Legacy Compliant Cloud VPN Client Setup Guide
 category: vpn
 ---
+# Legacy Notice
+
+Datica is replacing legacy Strongswan IPSEC VPNs with OpenVPN TLS VPNs. All new client VPNs use OpenVPN. Older VPNs are being converted as necessary. Please contact Datica with any questions. If you are not using an OpenVPN client, you are still on a legacy VPN.
 
 # Recommended Clients
 
