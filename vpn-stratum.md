@@ -14,7 +14,7 @@ The VPN provides direct access to the internal network. For example, this access
 
 # How does the VPN work?
 
-If a client purchases the VPN appliance for an environment, Datica will provide them with the unique configuration file for their VPN. Once the VPN is connected, interaction with the services will take place over a private IP address. 
+If a client purchases the VPN appliance for an environment, Datica will provide them with the unique configuration file for their VPN. Once the VPN is connected, interaction with the services will take place over a private IP address.
 
 # What VPN clients are supported?
 
@@ -29,4 +29,6 @@ Recommended Clients:
 
 # How do I setup my VPN client?
 
-Check out our guide [here](/compliant-cloud/articles/guides/vpn-client-setup/)
+Check out our guide [here](/compliant-cloud/articles/guides/openvpn-client-setup/) for OpenVPN.
+
+Legacy Stronsgwan IPSEC VPNs should follow the instructions [here](/compliant-cloud/articles/guides/vpn-client-setup/)

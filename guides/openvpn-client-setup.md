@@ -20,7 +20,7 @@ Communications between your client computer and the Compliant Cloud environment 
 
 # OS X OpenVPN Client
 
-Datica recommends using the Tunnelblick client located [here](https://tunnelblick.net/downloads.html).
+Datica recommends using the Tunnelblick client located [here](https://tunnelblick.net/downloads.html). After installation, you should be able to double-click the configuration file provided by Datica to open the tunnel with Tunnelblick.
 
 # Linux OpenVPN Client
 
@@ -34,15 +34,23 @@ On Linux, Datica recommends using the OpenVPN package provided by your official 
 
 `yum install openvpn`
 
+## Client Usage
+
+To use the VPN on Linux, execute the following command from the terminal:
+
+`sudo openvpn --config <path to the config file>`
+
 # Windows OpenVPN Clients
 
 Datica recommends using the OpenVPN GUI bundled with the Windows OpenVPN installer. You can donwload it [here](https://openvpn.net/index.php/open-source/downloads.html).
 
-The README for the OpenVPN GUI is located [here](https://github.com/OpenVPN/openvpn-gui/).
+The README for the OpenVPN GUI is located [here](https://github.com/OpenVPN/openvpn-gui/). Follow the instruction in the README to add the Datica provided configuration file to the appropriate folder.
 
 # Using the VPN
 
 Datica will provide a unique configuration file for each VPN connection. That file contains all of the information to connect to your VPN for each Compliant Cloud environment. Add or open that configuration file with your preferred client and enter your Datica credentials to connect.
+
+If your account has two factor auth enabled, you will have to append your temporary authorization code to your password each time you login to the VPN. For example, if your password is "P@ssw0rd" and your temporary authorization code is "123456", you will enter "P@ssw0rd123456" as the full password when authenticating with your VPN appliance.
 
 The VPN connection allows you to connect directly to many of the resources in your environment. Datica will provide you with a service map to use for your environment. If you are attempting to connect a database server, you will need to retrieve the connection credentials from your environment variables.
 

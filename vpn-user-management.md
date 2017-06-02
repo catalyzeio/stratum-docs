@@ -10,4 +10,4 @@ Datica offers a VPN appliance that is fully integrated with our user authenticat
 
 When Datica creates your VPN we will provide you with a generic configuration that all users can use, adjusting for your own credentials.
 
-[See the vpn guide](/compliant-cloud/articles/guides/vpn-client-setup/) for more information on how to set up a VPN client connection with Datica.
+[See the vpn guide](/compliant-cloud/articles/guides/openvpn-client-setup/) for more information on how to set up a VPN client connection with Datica.
