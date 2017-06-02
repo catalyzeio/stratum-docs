@@ -1,9 +1,9 @@
 ---
-title: Compliant Cloud VPN Client Setup Guide
+title: Legacy Compliant Cloud VPN Client Setup Guide
 category: vpn
 ---
 
-# Supported Clients
+# Recommended Clients
 
 **OSX 10.9+**
   * Native VPN Client
