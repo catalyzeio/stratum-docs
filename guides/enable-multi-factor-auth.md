@@ -37,7 +37,7 @@ Enter your OTP and click `Submit`. You've now successfully logged in with MFA en
 Since version 3.6.0, the [CLI](https://github.com/daticahealth/cli) fully supports MFA enabled accounts. The CLI will prompt you for your credentials every time your session token expires. When this occurs, you will be prompted for your username and password as well as an OTP if MFA is enabled. You'll just need to enter the OTP received through email or generated through an authenticator app to complete the signin process.
 
 ```
-$ datica environments
+$ datica environments list
 Username or Email: example@datica.com
 Password:
 This account has two-factor authentication enabled.

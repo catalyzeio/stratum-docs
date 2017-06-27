@@ -23,14 +23,15 @@ category: troubleshooting
 **fatal (0) Pod ID Not Found: Invalid Pod ID specified in X-Pod-ID header**
 
 - **Potential Issue:** The Datica CLI references a configuration file `~/.datica` to cache configuration data.  This configuration file may contain old configuration information that may need to be updated.
-- **Potential Solution:** To erase all or some cached configuration data you can use the [datica clear](/compliant-cloud/cli-reference#clear) command.
+- **Potential Solution (cli verions less than 4.0:** To erase all or some cached configuration data you can use the [datica clear](/compliant-cloud/cli-reference#clear) command.
+- **Potential Solution (cli versions 4.0 or greater):** Delete your `~/.datica` file (`rm ~/.datica`) and run the `datica init` command again on a code service repository.
 
 ## Console
 
 **fatal (92005) Console Setup Error: {"code":500,"error":"Internal Error"}**
 
 - **Potential Issue:** You are trying to connect and run a console command on a job that is not running or a code service that has failed to build and deploy.
-- **Potential Solution:** Ensure that the service you are trying to run a console command for has jobs that are running. You can [check the status of your services](/compliant-cloud/cli-reference#status) by using the Datica CLI command `datica -E "<your_env_alias>" status`.  If you have ensured that your service is running and you are still receiving this error, contact [Datica support](/compliant-cloud/articles/contact/).
+- **Potential Solution:** Ensure that the service you are trying to run a console command for has jobs that are running. You can [check the status of your services](/compliant-cloud/cli-reference#status) by using the Datica CLI command `datica -E "<your_env_name>" status`.  If you have ensured that your service is running and you are still receiving this error, contact [Datica support](/compliant-cloud/articles/contact/).
 
 **(0) Command Not Authorized: The command supplied is not a whitelisted command**
 

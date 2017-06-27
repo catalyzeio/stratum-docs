@@ -19,7 +19,7 @@ We assume you have base knowledge of the following tools, and installed. If not,
 - [Datica CLI](https://github.com/daticahealth/cli)
 
 ### Contract with Datica
-You need a signed contract with [Datica](https://datica.com/), and already have an environment provisioned for use. If you need to sign up for Datica you can [start here](https://datica.com/compliant-cloud).
+You need a signed contract with [Datica](https://datica.com/), and already have an environment provisioned for use. If you need to register for Datica you can [start here](https://datica.com/compliant-cloud).
 
 ### Terms to know
 Some basic terms that you should know:
@@ -34,17 +34,22 @@ Lets get your php application setup for deployment. For this example we are usin
 ### Developing locally
 To run the example application locally, you can use the Homestead vagrant image which is pretty easy to setup. You can find more information on [Homestead here](https://laravel.com/docs/5.0/homestead).
 
-## Associate environment to application
-We need to associate your Datica environment to your Laravel application. To do this you need to use [git](https://git-scm.com/) and the [Compliant Cloud CLI](https://github.com/daticahealth/cli).
+## Initialize your repository to your code service
+We need to initialize your Datica code service to your Laravel application. To do this you need to use [git](https://git-scm.com/) and the [Compliant Cloud CLI](https://github.com/daticahealth/cli).
 
 Using a command line, navigate to a working copy of your application, or fork the [example php application](https://github.com/catalyzeio/php-example-app), and run the following commands:
 
 ```
-# datica associate MyHealthApp-Production app01
+# If you have not signed in with the cli yet
+$ datica init
 Username:
 Password:
+# will prompt you to pick an environment and code service you have access to
 "datica" remote added.
-#
+
+# If you have signed in already:
+$ datica -E MyHealthApp-Production git-remote add app01
+"datica" remote added.
 ```
 
 The [Compliant Cloud CLI](https://github.com/daticahealth/cli) added a git remote to your local repo so you can now push code to your environment on Datica.
@@ -128,21 +133,21 @@ Use the [Compliant Cloud CLI](https://github.com/daticahealth/cli) to update you
 The [Datica CLI](https://github.com/daticahealth/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Datica CLI](https://github.com/daticahealth/cli), head over to the [documentation](/compliant-cloud/cli-reference#vars).
 
 #### List all Variables
-`datica -E "<your_env_alias>" vars list <service_name>`
+`datica -E "<your_env_name>" vars list <service_name>`
 
 #### Adding
-`datica -E "<your_env_alias>" vars set <service_name> -v A=B`
+`datica -E "<your_env_name>" vars set <service_name> -v A=B`
 
 #### Removing
-`datica -E "<your_env_alias>" vars unset <service_name> A`
+`datica -E "<your_env_name>" vars unset <service_name> A`
 
 ## Creating schema for database
 You can use the [Datica CLI](https://github.com/daticahealth/cli) to run migrations on the MySQL database easily. Just run the following commands below to populate MySQL with the proper tables for the example application. If you are creating your own application, you can find more information [here](https://laravel.com/docs/5.0/migrations) on migrations with Laravel.
 
 ### Example
-First we need to find the label for the application service. The following will return a list of all services associated to your environment:
+First we need to find the label for the application service. The following will return a list of all services that belong to your environment:
 
-`datica -E "<your_env_alias>" status`
+`datica -E "<your_env_name>" status`
 
 You should see some output like:
 
@@ -156,7 +161,7 @@ environment state: running
 
 The first item in the list is the application service `app01`. We will target `app01` and send a command to it so we can run the migration in the example app.
 
-`datica -E "<your_env_alias>" console app01 'php artisan migrate --force'`
+`datica -E "<your_env_name>" console app01 'php artisan migrate --force'`
 
 That should give you a similar output as:
 

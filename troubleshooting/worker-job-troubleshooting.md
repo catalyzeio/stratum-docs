@@ -7,7 +7,7 @@ category: troubleshooting
 
 ## Worker is not running
 
-**I ran the `datica -E "<your_env_alias>" worker deploy <svcName> <target>` command, but my worker is not running**
+**I ran the `datica -E "<your_env_name>" worker deploy <svcName> <target>` command, but my worker is not running**
 
 - **Potential Issue:** The worker target may not be defined properly in your Procfile.
 - **Potential Solution:** Define a worker target in your application. Check out the [writing your application](/compliant-cloud/articles/writing-your-application/) guide for more details.

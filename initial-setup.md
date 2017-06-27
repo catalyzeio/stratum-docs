@@ -40,26 +40,25 @@ In order to push code, Datica needs to have a public key attached to your accoun
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
-To add your key to your account, use the `keys add` command, which has the form `datica keys add <key name> <path to key>`. For example, if you want to call your key "my-datica-key" and the path to it is `~/.ssh/id_rsa.pub`, the command you would run would be:
+To add your key to your account, use the `keys add` command, which has the form `datica -E "<your_env_name>" keys add <key name> <path to key>`. For example, if you want to call your key "my-datica-key" and the path to it is `~/.ssh/id_rsa.pub`, the command you would run would be:
 
 ```
-datica keys add my-datica-key ~/.ssh/id_rsa.pub
+datica -E "<your_env_name>" keys add my-datica-key ~/.ssh/id_rsa.pub
 ```
 
-This will prompt you to sign in with your Datica account. You can then validate that the key was added using `datica keys list`.
+This will prompt you to sign in with your Datica account. You can then validate that the key was added using `datica -E "<your_env_name>" keys list`.
 
-## 4. Associate to Your Environment
+## 4. Initialize Your Code
 
-> ***Note:*** If your environment has more than one code service, this step and all steps after will need to be repeated for each one.
+> ***Note:*** If your environment has more than one code service, you will have to use this command or [`datica git-remote add`](/compliant-cloud/cli-reference#git-remote-add) for for each one.
 
-In order for the CLI to know which environment it should be interacting with (and, coincidentally, who you are), you first need to **associate** your local code repo to your new environment. "Associating" does the following:
+The `init` command does the following:
 
-1. Find the internal identifiers for your environment and code service, and cache those locally.
-2. Set the `datica` [Git remote](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes).
+1. Signs you into the Datica Compliant Cloud platform.
+2. Sets the `datica` [Git remote](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) of your code service, so that you can push to it.
 
-The form of this command in the CLI is: `datica associate <environment name> <code service name>`. For the example from Step 1, that would be `datica associate MyEnvironment-production app01`.
+The form of this command in the CLI is: `datica init`. The init command will find all the environments you have access to and give you a prompt to "pick" one that it will use to find a code service to initialize a git remote for you.
 
-For options for the `associate` command, see the [CLI reference](/compliant-cloud/cli-reference#associate).
 
 ## 5. Upload Your SSL Certificate
 
@@ -67,16 +66,16 @@ Acquiring SSL certs is a very complex topic - if you'd like to read more informa
 
 > ***Note:*** This can be a wildcard cert. Wildcard certs can be reused.
 
-The CLI command to upload a cert is `certs create`, taking the form `datica -E "<your_env_alias>" certs create <cert name> <path to crt file> <path to key file>`. For example:
+The CLI command to upload a cert is `certs create`, taking the form `datica -E "<your_env_name>" certs create <cert name> <path to crt file> <path to key file>`. For example:
 
 ```
-datica -E "<your_env_alias>" certs create example.com example.com.crt example.com.key
+datica -E "<your_env_name>" certs create example.com example.com.crt example.com.key
 ```
 
 If that cert is self-signed, pass the `-s` option:
 
 ```
-datica -E "<your_env_alias>" certs create example.com example.com.crt example.com.key -s
+datica -E "<your_env_name>" certs create example.com example.com.crt example.com.key -s
 ```
 
 > ***Note:*** Using a self-signed cert can be very useful for development or staging environments.
@@ -84,7 +83,7 @@ datica -E "<your_env_alias>" certs create example.com example.com.crt example.co
 For wildcard certs, the typical nomenclature is `*.domain.tld`:
 
 ```
-datica -E "<your_env_alias>" certs create *.example.com wildcard-example.com.crt wildcard-example.com.key
+datica -E "<your_env_name>" certs create *.example.com wildcard-example.com.crt wildcard-example.com.key
 ```
 
 ## 6. Set Your DNS
@@ -109,10 +108,10 @@ api.example.com canonical name = pod0A1B2C3.catalyzeapps.com.
 
 Compliant Cloud uses what we call **[Sites](/compliant-cloud/articles/concepts/sites)** to map code services to hostnames, using the cert that was uploaded in step 5.
 
-The CLI command to create a cert is `sites create`, taking the form `datica -E "<your_env_alias>" sites create <hostname> <code service name> <cert name>`. For example, using the hostname from step 6, the wildcard cert name from step 5, and the code service name noted in step 1:
+The CLI command to create a cert is `sites create`, taking the form `datica -E "<your_env_name>" sites create <hostname> <code service name> <cert name>`. For example, using the hostname from step 6, the wildcard cert name from step 5, and the code service name noted in step 1:
 
 ```
-datica -E "<your_env_alias>" sites create api.example.com app01 *.example.com
+datica -E "<your_env_name>" sites create api.example.com app01 *.example.com
 ```
 
 This will generate a new nginx configuration file for the new site.
@@ -122,7 +121,7 @@ This will generate a new nginx configuration file for the new site.
 In order to pick up on the new site file, your environment's [Service Proxy](/compliant-cloud/articles/concepts/service-proxy) needs be redeployed. This is done via the `redeploy` command:
 
 ```
-datica -E "<your_env_alias>" redeploy service_proxy
+datica -E "<your_env_name>" redeploy service_proxy
 ```
 
 After a short period of downtime (usually 20-40 seconds), your service proxy will be responding again. If your site, certs, and DNS are set up correctly, navigating to the hostname in the site you just configured (`api.example.com` in the example above) should result in a 503 error.
@@ -156,7 +155,7 @@ After your build succeeds, a [deploy job](/compliant-cloud/articles/concepts/job
 If your application includes [workers](/compliant-cloud/articles/concepts/workers), use the `worker` command to start them (you only need to do this the first time):
 
 ```
-datica -E "<your_env_alias>" worker deploy <service_name> <target>
+datica -E "<your_env_name>" worker deploy <service_name> <target>
 ```
 
 Where `target` is the name of the Procfile target to be run (typically "worker").

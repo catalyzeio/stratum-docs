@@ -17,7 +17,7 @@ This guide is supplemental to the Django tutorials but will emphasize the key pa
 
 ***You have a Platform account with Datica***
 
-If you don't, you can sign up for a 30-day trial and try building this out on our Sandbox. This provides you with the easiest path to being ready for HIPAA compliance with one more simple deploy. Contact sales@datica.com to find out more.
+If you don't, you can register for a free trial and try building this out on our Sandbox. This provides you with the easiest path to being ready for HIPAA compliance with one more simple deploy. Contact sales@datica.com to find out more.
 
 ***You have an existing Python project, with requirements using pip and setup tools***
 
@@ -39,12 +39,17 @@ Once you have a Datica Environment and an application all it takes is a few step
 $ git clone git@github.com:catalyzeio/python-sample-app.git
 $ cd python-sample-app
 
-# Associate the repo with your Datica Environment and push
-$ datica associate "Python Sample App" app01
+# Initialize the repo with your Datica code Service
+# If you have not signed in with the cli yet
+$ datica init
+# OR if you have
+$ datica -E "<your_env_name>" git-remote add app01
+
+# Push your code to Datica
 $ git push datica master
 
 # After the application has been deployed, run migrations
-$ datica -E "<your_env_alias>" console app01 "python manage.py migrate"
+$ datica -E "<your_env_name>" console app01 "python manage.py migrate"
 
 # Go checkout your live app!
 ```
@@ -105,7 +110,10 @@ Ok, so now you have an application that you can run locally, project dependencie
 
 ```
 $ cd /path/to/your/repo
-$ datica associate "Your Environment's Name" app01
+# If you have not signed in with the cli yet
+$ datica init
+# OR if you have
+$ datica -E "<your_env_name>" git-remote add app01
 # Notice the git remote "datica" has been created
 
 $ git push datica master
@@ -173,14 +181,14 @@ CSRF_COOKIE_SECURE = True
 It is recommended you review Django's documentation on [Settings](https://docs.djangoproject.com/en/1.9/ref/settings/) and [Security](https://docs.djangoproject.com/en/1.9/topics/security/).
 
 ## Now What?
-Now that your application has been deployed a good place to start is by checking out the application logs. You can log onto the logging server by pointing your browser at the `/logging/` endpoint from your environment's Datica domain name (remember to include the trailing slash, its important). You will be prompted to log in, the credentials are the same as logging into the Datica Dashboard. Each user who has access to view the Environment on the Dashboard will also be able to access the logging server. You can add additional users to the environment via the CLI. Through the interface you can view and filter logs from the various sources throughout your environment be it the database, cache, or application. The logging server is built atop the ELK (Elasticsearch, Logstash, and Kibana) stack and incorporates many powerful features. Checkout out our guide on managing logs in your environment.
+Now that your application has been deployed a good place to start is by checking out the application logs. You can sign onto the logging server by pointing your browser at the `/logging/` endpoint from your environment's Datica domain name (remember to include the trailing slash, its important). You will be prompted to sign in, the credentials are the same as logging into the Datica Dashboard. Each user who has access to view the Environment on the Dashboard will also be able to access the logging server. You can add additional users to the environment via the CLI. Through the interface you can view and filter logs from the various sources throughout your environment be it the database, cache, or application. The logging server is built atop the ELK (Elasticsearch, Logstash, and Kibana) stack and incorporates many powerful features. Checkout out our guide on managing logs in your environment.
 
 You can access your application through the Datica URL configured for your environment or you can create a record for your domain name with your DNS provider.
 
 After the initial deployment we can checkout the app and notice if there are errors. We need to run database migrations before the application will run correctly. To do this we'll fire up the Datica Console:
 
 ```
-$ datica -E "<your_env_alias>" console app01 "python manage.py migrate"
+$ datica -E "<your_env_name>" console app01 "python manage.py migrate"
 Opening console to service 'a2cb4141-0fb2-4ed5-8e7a-bb59b918dbfc'
 Waiting for the console to be ready... This might take a bit.
 ...................................................
@@ -205,10 +213,10 @@ After the database migrations have completed, we can check back on the applicati
 
 ```
 # Log into the Django shell
-$ datica -E "<your_env_alias>" console app01 "python manage.py shell"
+$ datica -E "<your_env_name>" console app01 "python manage.py shell"
 
 # Log into the Postgres shell
-$ datica -E "<your_env_alias>" console db01
+$ datica -E "<your_env_name>" console db01
 ```
 
 There are more console features on their way. If a command is not supported, open a ticket [here](https://product.datica.com/compliant-cloud) via the "Contact Support" button for your environment.

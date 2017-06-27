@@ -10,9 +10,9 @@ Compliant Cloud allows you to define as many variables as you want for each diff
 
 ## Setup the Datica CLI for Managing Variables
 
-If you have not already done this, [install](https://github.com/daticahealth/cli) the Datica CLI and [associate](/compliant-cloud/cli-reference#associate) to the environment and service that you wish to manage.
+If you have not already done this, [install](https://github.com/daticahealth/cli) the Datica CLI and [init](/compliant-cloud/cli-reference#init) a code service to a git repository.
 
-`datica associate MyProdEnvironmentName app01 -a Prod-app01`
+`datica init`
 
 ## List variables via the CLI
 
