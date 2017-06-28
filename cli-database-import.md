@@ -35,6 +35,8 @@ INSERT INTO user_roles (id, val) VALUES ('1', 'admin');
 INSERT INTO user_roles (id, val) VALUES ('2', 'user');
 ```
 
+Example command:
+
 ```
 $ datica -E "<your_env_name>" db import db01 /path/to/my/data.sql
 ```

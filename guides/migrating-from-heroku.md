@@ -59,29 +59,18 @@ Follow the instructions on the readme to install it. You'll know it's installed 
 
 ## 3. Initialize Your Local Repo
 
-To link up your local repo to your Compliant Cloud environment, open a terminal to its root directory and run the `datica init` command (it will sign you in) or `datica -E <your_env_name> git-remote add <service_name>` command.
+To link up your local repo to your Compliant Cloud environment, open a terminal to its root directory and run the `datica init` command (it will sign you in).
 
 ```
 $ cd my-repo
-
-# If you have not signed in with the cli yet
 $ datica init
 Username or Email: demo-user@datica.com
 Password:
 # Will prompt you to pick an environment and code service you have access to
 "datica" remote added.
-
-# If you have signed in already
-$ datica -E "My Shiny New Environment" git-remote add code-1
-"datica" remote added.
 ```
 
 The username and password here are the same credentials that you used to sign in to the Compliant Cloud dashboard.
-
-This command does two things:
-
-1. Signs your cli into the Datica Compliant Cloud platform
-2. Adds the git remote `datica`
 
 ## 4. Set Variables
 

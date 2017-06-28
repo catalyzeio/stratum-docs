@@ -81,12 +81,9 @@ datica -E oldEnvironment deploy-keys list
 datica -E oldEnvironment deploy-keys rm {keyName} {svc}
 ```
 
-Next, initialize your code repository to your datica code service
+Next, run datica init.
 
 ```
-# This command will sign you into the Datica Complian Cloud platform
-# and give you a list of environments and code service you have access to
-# to assign a git remote to
 datica init
 ```
 

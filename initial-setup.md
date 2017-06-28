@@ -32,35 +32,20 @@ Datica provides a CLI (command-line interface) tool to facilitate interaction wi
 
 To install the CLI, follow the instructions in its [Github repository](https://github.com/daticahealth/cli).
 
-## 3. Add Your Public Key
-
-In order to push code, Datica needs to have a public key attached to your account. If you don't have one yet, you can create one via the following on OSX/Linux:
-
-```
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-```
-
-To add your key to your account, use the `keys add` command, which has the form `datica -E "<your_env_name>" keys add <key name> <path to key>`. For example, if you want to call your key "my-datica-key" and the path to it is `~/.ssh/id_rsa.pub`, the command you would run would be:
-
-```
-datica -E "<your_env_name>" keys add my-datica-key ~/.ssh/id_rsa.pub
-```
-
-This will prompt you to sign in with your Datica account. You can then validate that the key was added using `datica -E "<your_env_name>" keys list`.
-
-## 4. Initialize Your Code
+## 3. Initialize Your Code
 
 > ***Note:*** If your environment has more than one code service, you will have to use this command or [`datica git-remote add`](/compliant-cloud/cli-reference#git-remote-add) for for each one.
 
 The `init` command does the following:
 
 1. Signs you into the Datica Compliant Cloud platform.
-2. Sets the `datica` [Git remote](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) of your code service, so that you can push to it.
+2. Ensures you have an ssh-key associated to your account.
+3. Sets the `datica` [Git remote](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) of your code service, so that you can push to it.
 
 The form of this command in the CLI is: `datica init`. The init command will find all the environments you have access to and give you a prompt to "pick" one that it will use to find a code service to initialize a git remote for you.
 
 
-## 5. Upload Your SSL Certificate
+## 4. Upload Your SSL Certificate
 
 Acquiring SSL certs is a very complex topic - if you'd like to read more information than what is outlined below, please see the [SSL Certificates](/compliant-cloud/articles/guides/self-service-SSL/) article. The certificate and private key must be unencrypted and in PEM format.
 
@@ -86,7 +71,7 @@ For wildcard certs, the typical nomenclature is `*.domain.tld`:
 datica -E "<your_env_name>" certs create *.example.com wildcard-example.com.crt wildcard-example.com.key
 ```
 
-## 6. Set Your DNS
+## 5. Set Your DNS
 
 Because an environment can have any number of code services, the public hostname for the environment does not point to any of them. What this means is that, in order to access each code service in your application, you will need to set up DNS that will forward to it. This step is executed entirely outside of Compliant Cloud - Datica cannot do any step of this for you. Datica is not a DNS provider.
 
@@ -104,7 +89,7 @@ api.example.com canonical name = pod0A1B2C3.catalyzeapps.com.
 
 > ***Note:*** Some DNS providers may not allow `CNAME` _or_ `ALIAS` records for apex domains. If you discover that your host has this limitation and using a subdomain is not an option, we recommend transferring your domain over to [Cloudflare](https://www.cloudflare.com/).
 
-## 7. Set Up a Site
+## 6. Set Up a Site
 
 Compliant Cloud uses what we call **[Sites](/compliant-cloud/articles/concepts/sites)** to map code services to hostnames, using the cert that was uploaded in step 5.
 
@@ -116,7 +101,7 @@ datica -E "<your_env_name>" sites create api.example.com app01 *.example.com
 
 This will generate a new nginx configuration file for the new site.
 
-## 8. Redeploy the Service Proxy
+## 7. Redeploy the Service Proxy
 
 In order to pick up on the new site file, your environment's [Service Proxy](/compliant-cloud/articles/concepts/service-proxy) needs be redeployed. This is done via the `redeploy` command:
 
@@ -132,7 +117,7 @@ You can verify that your certificate is correctly being used with `openssl`:
 
 `openssl s_client -connect api.example.com:443`
 
-## 9. Push Code
+## 8. Push Code
 
 In order to build an image for your code service's [container](/compliant-cloud/articles/concepts/containers) to run, you do a `git push` to the `datica` remote, pushing the `master` branch:
 

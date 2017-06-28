@@ -23,8 +23,7 @@ category: troubleshooting
 **fatal (0) Pod ID Not Found: Invalid Pod ID specified in X-Pod-ID header**
 
 - **Potential Issue:** The Datica CLI references a configuration file `~/.datica` to cache configuration data.  This configuration file may contain old configuration information that may need to be updated.
-- **Potential Solution (cli verions less than 4.0:** To erase all or some cached configuration data you can use the [datica clear](/compliant-cloud/cli-reference#clear) command.
-- **Potential Solution (cli versions 4.0 or greater):** Delete your `~/.datica` file (`rm ~/.datica`) and run the `datica init` command again on a code service repository.
+- **Potential Solution:** To erase all or some cached configuration data you can use the [datica clear](/compliant-cloud/cli-reference#clear) command.
 
 ## Console
 

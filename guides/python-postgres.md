@@ -40,9 +40,7 @@ $ git clone git@github.com:catalyzeio/python-sample-app.git
 $ cd python-sample-app
 
 # Initialize the repo with your Datica code Service
-# If you have not signed in with the cli yet
 $ datica init
-# OR if you have
 $ datica -E "<your_env_name>" git-remote add app01
 
 # Push your code to Datica
@@ -110,12 +108,8 @@ Ok, so now you have an application that you can run locally, project dependencie
 
 ```
 $ cd /path/to/your/repo
-# If you have not signed in with the cli yet
 $ datica init
-# OR if you have
-$ datica -E "<your_env_name>" git-remote add app01
 # Notice the git remote "datica" has been created
-
 $ git push datica master
 ```
 
@@ -181,7 +175,7 @@ CSRF_COOKIE_SECURE = True
 It is recommended you review Django's documentation on [Settings](https://docs.djangoproject.com/en/1.9/ref/settings/) and [Security](https://docs.djangoproject.com/en/1.9/topics/security/).
 
 ## Now What?
-Now that your application has been deployed a good place to start is by checking out the application logs. You can sign onto the logging server by pointing your browser at the `/logging/` endpoint from your environment's Datica domain name (remember to include the trailing slash, its important). You will be prompted to sign in, the credentials are the same as logging into the Datica Dashboard. Each user who has access to view the Environment on the Dashboard will also be able to access the logging server. You can add additional users to the environment via the CLI. Through the interface you can view and filter logs from the various sources throughout your environment be it the database, cache, or application. The logging server is built atop the ELK (Elasticsearch, Logstash, and Kibana) stack and incorporates many powerful features. Checkout out our guide on managing logs in your environment.
+Now that your application has been deployed a good place to start is by checking out the application logs. You can sign onto the logging server by pointing your browser at the `/logging/` endpoint from your environment's Datica domain name (remember to include the trailing slash). You will be prompted to sign in, the credentials are the same as logging into the Datica Dashboard. Each user who has access to view the Environment on the Dashboard will also be able to access the logging server. You can add additional users to the environment via the CLI. Through the interface you can view and filter logs from the various sources throughout your environment be it the database, cache, or application. The logging server is built atop the ELK (Elasticsearch, Logstash, and Kibana) stack and incorporates many powerful features. Checkout out our guide on managing logs in your environment.
 
 You can access your application through the Datica URL configured for your environment or you can create a record for your domain name with your DNS provider.
 

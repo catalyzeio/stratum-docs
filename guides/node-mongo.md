@@ -101,9 +101,7 @@ To deploy the application, a Git remote must be set up using the [Compliant Clou
 1. Set the git remote of the local project with your provisioned environment's code service.
 
    ```
-   # If you have not signed in with the cli yet
    $ datica init
-   # If you have
    $ datica -E my-node-app git-remote add app01
    ```
 

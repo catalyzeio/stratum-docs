@@ -40,15 +40,10 @@ We need to initialize your Datica code service to your Laravel application. To d
 Using a command line, navigate to a working copy of your application, or fork the [example php application](https://github.com/catalyzeio/php-example-app), and run the following commands:
 
 ```
-# If you have not signed in with the cli yet
 $ datica init
 Username:
 Password:
 # will prompt you to pick an environment and code service you have access to
-"datica" remote added.
-
-# If you have signed in already:
-$ datica -E MyHealthApp-Production git-remote add app01
 "datica" remote added.
 ```
 
