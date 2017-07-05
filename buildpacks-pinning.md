@@ -32,11 +32,9 @@ Choose the release you want to pin. In our example, we'll choose `v68`. The buil
 
 `https://github.com/heroku/heroku-buildpack-python#v68`
 
-Ensure you have the correct environment and service association for the application you want to modify. Remember, you can only have one code service associated with each environment alias!
+Then set the URL. In this example, my environment name is `ProdEnv`:
 
-Then set the URL. In this example, I've associated my app03 to the alias `MyProdEnv-app03`:
-
-`datica -E MyProdEnv-app03 vars set <service_name> -v BUILDPACK_URL="https://github.com/heroku/heroku-buildpack-python#v68"`
+`datica -E MyProdEnv vars set <service_name> -v BUILDPACK_URL="https://github.com/heroku/heroku-buildpack-python#v68"`
 
 ### 2. Rebuild Application
 

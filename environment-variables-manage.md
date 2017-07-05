@@ -8,12 +8,6 @@ summary: Learn how to manage your variables on Compliant Cloud.
 
 Compliant Cloud allows you to define as many variables as you want for each different code service. You can manage variables through the Datica CLI.
 
-## Setup the Datica CLI for Managing Variables
-
-If you have not already done this, [install](https://github.com/daticahealth/cli) the Datica CLI and [associate](/compliant-cloud/cli-reference#associate) to the environment and service that you wish to manage.
-
-`datica associate MyProdEnvironmentName app01 -a Prod-app01`
-
 ## List variables via the CLI
 
 Below is an example command and the type of output you can expect to see:

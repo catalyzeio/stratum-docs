@@ -12,7 +12,7 @@ category: troubleshooting
 
 **2.** [Update your certificates](/compliant-cloud/articles/guides/self-service-SSL/) using the [certs update](/compliant-cloud/cli-reference#certs-update) command in the Datica CLI.
 
-**3.** Redeploy your service proxy for your certificate update to take effect. To [redeploy](/compliant-cloud/cli-reference#redeploy) your service proxy via the CLI use the command `datica -E "<your_env_alias>" redeploy service_proxy`.
+**3.** Redeploy your service proxy for your certificate update to take effect. To [redeploy](/compliant-cloud/cli-reference#redeploy) your service proxy via the CLI use the command `datica -E "<your_env_name>" redeploy service_proxy`.
 
 ## Site and SSL Cert Change
 
@@ -22,9 +22,9 @@ category: troubleshooting
 
 **2.** [Create a new cert](/compliant-cloud/cli-reference#certs-create) for your application.
 
-**3.** Once you have created a new site and uploaded a new cert you must redeploy your service proxy. To [redeploy](/compliant-cloud/cli-reference#redeploy) your service proxy via the CLI use the command `datica -E "<your_env_alias>" redeploy service_proxy`.
+**3.** Once you have created a new site and uploaded a new cert you must redeploy your service proxy. To [redeploy](/compliant-cloud/cli-reference#redeploy) your service proxy via the CLI use the command `datica -E "<your_env_name>" redeploy service_proxy`.
 
-**4.** Once you have verified that your new site and cert have been updated, you can remove the old site and cert using the [datica -E "<your_env_alias>" sites rm](/compliant-cloud/cli-reference#sites-rm) and [datica -E "<your_env_alias>" certs rm](/compliant-cloud/cli-reference#certs-rm) CLI commands.
+**4.** Once you have verified that your new site and cert have been updated, you can remove the old site and cert using the [datica -E "<your_env_name>" sites rm](/compliant-cloud/cli-reference#sites-rm) and [datica -E "<your_env_name>" certs rm](/compliant-cloud/cli-reference#certs-rm) CLI commands.
 
 - **Note:** Depending on what kind of environment you have, the ability to redeploy your service proxy may not be enabled. Contact us at [support@datica.com](mailto:support@datica.com). Or open a Zendesk ticket and Datica support will redeploy your service proxy and re-enable service proxy redeploys for your environment.
 

@@ -16,7 +16,7 @@ We perform automated backups each night. Access to the backups is provided via t
 
 ## How do I connect to my database?
 
-The endpoint connection information for the resources your application will consume is available in the environment variables for your environment.  You can view your environment variables in the Datica Dashboard or with the Datica CLI client program with the command:  `datica -E "<your_env_alias>" vars list <service_name>`
+The endpoint connection information for the resources your application will consume is available in the environment variables for your environment.  You can view your environment variables in the Datica Dashboard or with the Datica CLI client program with the command:  `datica -E "<your_env_name>" vars list <service_name>`
 
 You can download the CLI here - https://github.com/daticahealth/cli. All  install instructions are also available in the readme.
 

@@ -11,13 +11,13 @@ summary: Learn how to export database data from the Compliant Cloud CLI.
 The [`db export`](/compliant-cloud/cli-reference#db-export) command allows you to export and download the current users, ACLs, schema, and data from your running database. To use the `db export` command:
 
 ```
-$ datica -E "<your_env_alias>"  db export <service name> <local file path>
+$ datica -E "<your_env_name>"  db export <service name> <local file path>
 ```
 
 The filename should be a path to a file (which will be created if it does not exist), not a directory. Example:
 
 ```
-$ datica -E "<your_env_alias>"  db export db01 ./mydbdownload.sql
+$ datica -E "<your_env_name>"  db export db01 ./mydbdownload.sql
 ```
 
 For Postgres and MySQL databases, the download will be an SQL file, and for MongoDB, the download will be a gzipped tarball (.tar.gz).
