@@ -9,7 +9,7 @@ The release of version 4.0.0 of the Compliant Cloud CLI brings major changes to 
 
 ## Upgrading to version 4
 
-Upgrading to CLI version 4 does not happen automatically or by running the `datica update` command. Please visit the [releases page](https://github.com/daticahealth/cli/releases) to download the latest version of the CLI. Unzip the package and replace your old CLI binary with the new one. You can find the location of your existing CLI binary by running `which datica`. After upgrading, running `datica --version` should reflect the version downloaded.
+Upgrading to CLI version 4 does not happen automatically or by running the `datica update` command. Please visit the [releases page](https://github.com/daticahealth/cli/releases) to download the latest version of the CLI. Unzip the package and replace your old CLI binary with the new one. You can find the location of your existing CLI binary by running `which datica`. After upgrading, running `datica --version` should reflect the version downloaded. Automatic updates will begin working after this one time manual upgrade.
 
 ## The removal of associate
 
