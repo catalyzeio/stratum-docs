@@ -42,7 +42,7 @@ To use the VPN on Linux, execute the following command from the terminal:
 
 # Windows OpenVPN Clients
 
-Datica recommends using the OpenVPN GUI bundled with the Windows OpenVPN installer. You can donwload it [here](https://openvpn.net/index.php/open-source/downloads.html).
+Datica recommends using the OpenVPN GUI bundled with the Windows OpenVPN installer. You can download it [here](https://openvpn.net/index.php/open-source/downloads.html).
 
 The README for the OpenVPN GUI is located [here](https://github.com/OpenVPN/openvpn-gui/). Follow the instruction in the README to add the Datica provided configuration file to the appropriate folder.
 
