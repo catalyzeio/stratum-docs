@@ -27,7 +27,7 @@ Datica provides emergency off-hours support for Severity 1 issues as outlined [h
 1. Submit a ticket through the [Compliant Cloud Dashboard](https://product.datica.com/compliant-cloud/) with priority "Urgent"
 1. Call (888) 377-3184 and leave a message with contact information
 
-Either of these methods will page our on-call engineer, who will respond within 30 minutes to take action to resolve the issue. If necessary, the engineer will initiate a call with the customer to assist with the resolution of the problem.
+Either of these methods will page our on-call engineer, who will respond in under an hour to begin to resolve an issue. If necessary, the engineer will initiate a call with the customer to assist with the resolution of the problem.
 
 ## Billing Changes or Questions
 
