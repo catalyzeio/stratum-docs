@@ -98,10 +98,11 @@ To get started we will create a simple Node.js application using the [Express fr
 
 To deploy the application, a Git remote must be set up using the [Compliant Cloud CLI](https://github.com/daticahealth/cli).
 
-1. Associate the local project with your provisioned environment.
+1. Set the git remote of the local project with your provisioned environment's code service.
 
    ```
-   $ datica associate my-node-app app01
+   $ datica init
+   $ datica -E my-node-app git-remote add app01
    ```
 
    This will add a new git remote named `datica` to that local repo. It will ask for credentials - these are the username and password that you use in the dashboard.
@@ -115,7 +116,7 @@ To deploy the application, a Git remote must be set up using the [Compliant Clou
 3. You should see build output after you push. After pushing, you can check the environment status - the build status should now be finished.
 
    ```
-   $ datica -E "<your_env_alias>" status
+   $ datica -E "<your_env_name>" status
    environment state: deployed
     app01 (size = c1, build status = finished, deploy status = None)
     mongo01 (size = c1, image = mongodb, status = running)

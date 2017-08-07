@@ -15,13 +15,13 @@ The **Secure Console** offers interactive command-line access to your [environme
 Using the [CLI](/compliant-cloud/articles/cli-stratum)'s [console](/compliant-cloud/cli-reference#console) command and the name of the database service (found in the [Compliant Cloud dashboard](https://product.datica.com/compliant-cloud)):
 
 ```
-datica -E "<your_env_alias>" console <database name>
+datica -E "<your_env_name>" console <database name>
 ```
 
 For example, for a database named `db01`:
 
 ```
-datica -E "<your_env_alias>" console db01
+datica -E "<your_env_name>" console db01
 ```
 
 ## Using the Console With Code Services
@@ -29,7 +29,7 @@ datica -E "<your_env_alias>" console db01
 The console can also be used with code services, but a command needs to be specified. For example, to run `rake mytask` on a code service named `app01`:
 
 ```
-datica -E "<your_env_alias>" console app01 'rake mytask'
+datica -E "<your_env_name>" console app01 'rake mytask'
 ```
 
 You may see an error message about the command you are trying to run not being **whitelisted**. This means we have not yet approved its compatibility with the console, or it's custom tooling in a pattern that we haven't yet whitelisted. For most cases, we can resolve it quickly via [Support Ticket](/compliant-cloud/articles/contact).

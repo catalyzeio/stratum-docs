@@ -37,13 +37,13 @@ Do not use shared public keys for access to your Datica account. Your SSH keys s
 Below, I add a new SSH key that I made for a Datica environment
 
 ```
-datica -E "<your_env_alias>" keys add my_prod_key ~/.ssh/prod_rsa.pub
+datica -E "<your_env_name>" keys add my_prod_key ~/.ssh/prod_rsa.pub
 ```
 
 Once that is done, you can list your public keys and see the key you just added
 
 ```
-datica -E "<your_env_alias>" keys list
+datica -E "<your_env_name>" keys list
 ```
 
 # How can I use an SSH key for authentication in the CLI?
@@ -51,7 +51,7 @@ datica -E "<your_env_alias>" keys list
 To use an SSH key for authentication in the CLI, it must be added as a user key. After adding a user key as outlined in the previous section, set that key as the authentication key with the CLI. Be sure to specify the private key path when using the `keys set` command.
 
 ```
-datica -E "<your_env_alias>" keys set ~/.ssh/prod_rsa
+datica -E "<your_env_name>" keys set ~/.ssh/prod_rsa
 ```
 
 You can now execute CLI commands without using a username/password!
@@ -61,7 +61,7 @@ You can now execute CLI commands without using a username/password!
 Before adding a deploy key, please make sure to read the sections above on the specifics of [user keys](#user-keys) vs [deploy keys](#deploy-keys). To add a deploy key, you'll need the CLI. Now run the `deploy-keys` command
 
 ```
-datica -E "<your_env_alias>" deploy-keys add codeship_key ~/.ssh/codeship_rsa.pub app01
+datica -E "<your_env_name>" deploy-keys add codeship_key ~/.ssh/codeship_rsa.pub app01
 ```
 
 You can now use the codeship_rsa key pair with your CI/CD server to push code to Datica!
@@ -81,10 +81,10 @@ datica -E oldEnvironment deploy-keys list
 datica -E oldEnvironment deploy-keys rm {keyName} {svc}
 ```
 
-Next, **associate** to your new environment
+Next, run datica init.
 
 ```
-datica associate newEnvironment app01
+datica init
 ```
 
 Lastly, **add** the recently removed deploy key as a user key and push code.

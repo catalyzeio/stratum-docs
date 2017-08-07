@@ -31,4 +31,4 @@ When choosing the authenticator mode for MFA, your device and the Datica servers
 
 # Still Having Issues?
 
-If you're unable to login to your Datica account and you have reviewed the steps above, please contact Datica Support via [Zendesk](https://catalyzeio.zendesk.com/hc/en-us/requests/new)
+If you're unable to login to your Datica account and you have reviewed the steps above, please contact Datica Support via [Zendesk](https://datica.zendesk.com/hc/en-us/requests/new)

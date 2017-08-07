@@ -50,14 +50,12 @@ LOGGING = {
 
 #### Logging Directly to Logstash
 
-Please send in a support ticket and we will enable direct to socket JSON logging in your environment as well as create an environment variable with the socket endpoint address.
-
-Here's an example from the python-logstash module. The values for the 'host' and 'port' should be pulled from the LOGGING_SERVER environment variable.
+Direct to socket JSON logging in your environment is enabled by default.  You can use it by logging to host logging.internal port 1515.
 
 ```
 #settings.py
-HOST = os.environ['LOGGING_SERVER'].split(":")[0]
-PORT = os.environ['LOGGING_SERVER'].split(":")[1]
+HOST = 'logging.internal'
+PORT = '1515'
 
 LOGGING = {
     'version': 1,
@@ -95,9 +93,7 @@ In Kibana, the contents of your logged message will be stored in the "message" f
 
 #### Logging Directly to Logstash
 
-Please send in a support ticket and we will enable direct to socket JSON logging in your environment as well as create an environment variable with the socket endpoint address.
-
-Here is an example using the winston package. The values of ***port*** and ***host*** should be derived from the LOGGING_SERVER environment variable.
+Direct to socket JSON logging in your environment is enabled by default.  You can use it by logging to host logging.internal port 1515.
 
 ```
 var winston = require('winston');
@@ -107,7 +103,7 @@ var logger = new (winston.Logger)({
   transports: [
        new (winston.transports.Logstash)({
            port: 1515,
-           host: '127.0.0.5',
+           host: 'logging.internal',
            max_connect_retries: 1,
            node_name: 'test',
        })
@@ -177,15 +173,15 @@ In Kibana, the contents of your logged message will be stored in the "message" f
 
 #### Logging Directly to Logstash
 
-Please send in a support ticket and we will enable direct to socket JSON logging in your environment as well as create an environment variable with the socket endpoint address.
+Direct to socket JSON logging in your environment is enabled by default.  You can use it by logging to host logging.internal port 1515.
 
 Here is an example of how you can implement this with Ruby on Rails via the ![logstash-logger]['https://github.com/dwbutler/logstash-logger'] gem:
 
 ```
 require 'logstash-logger'
 
-## Create logger using environment variables supplied by Datica
-logger = LogStashLogger.new(type: :tcp, uri: ENV['LOGGING_SERVER'])
+## Create logger
+logger = LogStashLogger.new(type: :tcp, host: 'logging.internal', port: 1515 )
 
 ## Send messages
 logger.error '{"message": "error"}'
