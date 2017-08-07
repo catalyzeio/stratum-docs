@@ -14,11 +14,11 @@ Databases supported in the single node deployment are:
 - mongoDB
 
 Support is planned for the following shortly (again to be prioritized based on customer demand)
-- Couchdb - [Request Support](https://catalyzeio.zendesk.com/hc/en-us/requests/new)
-- SQLite - [Request Support](https://catalyzeio.zendesk.com/hc/en-us/requests/new)
-- Cassandra - [Request Support](https://catalyzeio.zendesk.com/hc/en-us/requests/new)
-- HBase - [Request Support](https://catalyzeio.zendesk.com/hc/en-us/requests/new)
-- Other - [Request Support](https://catalyzeio.zendesk.com/hc/en-us/requests/new)
+- Couchdb - [Request Support](https://datica.zendesk.com/hc/en-us/requests/new)
+- SQLite - [Request Support](https://datica.zendesk.com/hc/en-us/requests/new)
+- Cassandra - [Request Support](https://datica.zendesk.com/hc/en-us/requests/new)
+- HBase - [Request Support](https://datica.zendesk.com/hc/en-us/requests/new)
+- Other - [Request Support](https://datica.zendesk.com/hc/en-us/requests/new)
 
 The currently supported databases are also available in HA mode which is described more below.
 
