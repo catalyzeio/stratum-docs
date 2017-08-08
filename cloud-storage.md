@@ -14,4 +14,4 @@ Every service in your environment has a fixed amount of storage available to it,
 
 Datica can set up an S3 bucket for you, covered under our BAA. Data in S3 is unaffected by redeploys, making it an ideal location to store files or large amounts of data. Read more about how S3 buckets are set up on Compliant Cloud [here](/compliant-cloud/articles/s3-bucket-access).
 
-If you're interested in adding an S3 bucket to your environment or have questions, [contact us](https://datica.zendesk.com/hc/en-us/requests/new).
+If you're interested in adding an S3 bucket to your environment or have questions, [contact us](https://datica.com/support).

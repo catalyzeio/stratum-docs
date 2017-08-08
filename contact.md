@@ -14,7 +14,7 @@ Existing customers should contact Datica Support by logging into the [Compliant 
 
 ![register](/compliant-cloud/articles/images/contact_support.png)
 
-Tickets can also be made via this [form](https://datica.zendesk.com/hc/en-us/requests/new) if you do not have a Compliant Cloud login or are otherwise having issues with the Compliant Cloud portal.
+Tickets can also be made via this [form](https://datica.com/support) if you do not have a Compliant Cloud login or are otherwise having issues with the Compliant Cloud portal.
 
 In addition, please review the support sections of our Service Level Agreement [here](https://legal.datica.com/#service-level-and-support-agreement).
 
