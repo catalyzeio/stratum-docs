@@ -9,16 +9,9 @@ summary: Learn about the supported databases you can use on Compliant Cloud.
 All databases supported by Compliant Cloud are available either in single node or highly available (HA) configurations.
 
 Databases supported in the single node deployment are:
-- Postgres
-- MySQL (Percona)
-- mongoDB
-
-Support is planned for the following shortly (again to be prioritized based on customer demand)
-- Couchdb - [Request Support](https://datica.com/support)
-- SQLite - [Request Support](https://datica.com/support)
-- Cassandra - [Request Support](https://datica.com/support)
-- HBase - [Request Support](https://datica.com/support)
-- Other - [Request Support](https://datica.com/support)
+- Postgres 9.6
+- MySQL (Percona) 5.7
+- mongoDB 3.2
 
 The currently supported databases are also available in HA mode which is described more below.
 
