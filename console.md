@@ -1,7 +1,7 @@
 ---
 title: Secure Console
 category: manage
-summary: Using the Secure Console on Compliant Cloud.
+summary: Using the Secure Console on The Platform.
 ---
 
 The **Secure Console** offers interactive command-line access to your [environment](/compliant-cloud/articles/concepts/environments)'s [database services](/compliant-cloud/articles/concepts/services#database-services), using the corresponding shell. These map out as follows:
@@ -12,7 +12,7 @@ The **Secure Console** offers interactive command-line access to your [environme
 
 ## Opening a Secure Console
 
-Using the [CLI](/compliant-cloud/articles/cli-stratum)'s [console](/compliant-cloud/cli-reference#console) command and the name of the database service (found in the [Compliant Cloud dashboard](https://product.datica.com/compliant-cloud)):
+Using the [CLI](/compliant-cloud/articles/cli-stratum)'s [console](/compliant-cloud/cli-reference#console) command and the name of the database service (found in the [The Platform dashboard](https://product.datica.com/compliant-cloud)):
 
 ```
 datica -E "<your_env_name>" console <database name>

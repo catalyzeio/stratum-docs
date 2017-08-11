@@ -1,7 +1,7 @@
 ---
 title: Database Export
 category: database
-summary: Learn how to export database data from the Compliant Cloud CLI.
+summary: Learn how to export database data from the The Platform CLI.
 ---
 
 ## Export
@@ -28,5 +28,5 @@ Exporting a database is like making and downloading an immediate [backup](/compl
 
 ### See also
 
-* [The Compliant Cloud CLI](/compliant-cloud/articles/cli-stratum)
+* [The The Platform CLI](/compliant-cloud/articles/cli-stratum)
 * [Database Export](/compliant-cloud/articles/cli-database-backup)

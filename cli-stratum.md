@@ -1,10 +1,10 @@
 ---
-title: The Compliant Cloud CLI
+title: The The Platform CLI
 category: getting-started
 summary: Download the Datica CLI.
 ---
 
-Datica provides a CLI (command-line interface) tool to facilitate interaction with your Compliant Cloud environment, supporting Windows, macOS, and Linux.
+Datica provides a CLI (command-line interface) tool to facilitate interaction with your The Platform environment, supporting Windows, macOS, and Linux.
 
 ## Installation
 
@@ -12,4 +12,4 @@ The CLI is available for download from its [Github repository](https://github.co
 
 ### See also
 
-* [Compliant Cloud CLI Reference](/compliant-cloud/cli-reference)
+* [The Platform CLI Reference](/compliant-cloud/cli-reference)

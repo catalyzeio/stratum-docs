@@ -1,7 +1,7 @@
 ---
 title: Supported Utilities and Add-ons
 category: getting-started
-summary: Learn about supported utilities and add-ons for your Compliant Cloud environment.
+summary: Learn about supported utilities and add-ons for your The Platform environment.
 ---
 
 # Supported Utilities and Add-ons

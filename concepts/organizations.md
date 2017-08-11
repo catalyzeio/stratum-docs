@@ -7,7 +7,7 @@ alias: ["compliant-cloud/articles/organization-addremove-users/"]
 
 An **Organization** is a group of user accounts, usable across all Datica products. Typically, an organization maps to (and is named after) your company. Organizations are created for you during the provisioning process. It is possible to be a member of multiple organizations.
 
-In [Compliant Cloud](https://datica.com/compliant-cloud), each [environment](/compliant-cloud/articles/concepts/environments) belongs to a single organization.
+In [The Platform](https://datica.com/compliant-cloud), each [environment](/compliant-cloud/articles/concepts/environments) belongs to a single organization.
 
 ## Groups
 
@@ -22,7 +22,7 @@ Groups are [composed of ACLs](/compliant-cloud/articles/concepts/acl-groups), cu
 
 ## Managing Your Organization
 
-Organization management tools are located in the [Compliant Cloud Dashboard](https://product.datica.com/compliant-cloud) - click on your organization's name in the dropdown.
+Organization management tools are located in the [The Platform Dashboard](https://product.datica.com/compliant-cloud) - click on your organization's name in the dropdown.
 
 ![org_dropdown](/compliant-cloud/articles/images/organization_dropdown.png)
 

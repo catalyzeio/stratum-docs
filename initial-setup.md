@@ -1,18 +1,18 @@
 ---
-title: Compliant Cloud Initial Setup
+title: The Platform Initial Setup
 category: getting-started
-Summary: Brand new to Compliant Cloud? Start here!
+Summary: Brand new to The Platform? Start here!
 ---
 
-This article is intended to get you up and running on your new [Compliant Cloud](https://datica.com/compliant-cloud) [environment](/compliant-cloud/articles/concepts/environments). If you'd like to read more, please look through the rest of the [Getting Started guides](/compliant-cloud/getting-started/).
+This article is intended to get you up and running on your new [The Platform](https://datica.com/compliant-cloud) [environment](/compliant-cloud/articles/concepts/environments). If you'd like to read more, please look through the rest of the [Getting Started guides](/compliant-cloud/getting-started/).
 
-If you don't yet have an environment, or you have questions on Compliant Cloud's capabilities and offerings, [please get in touch](/compliant-cloud/articles/contact).
+If you don't yet have an environment, or you have questions on The Platform's capabilities and offerings, [please get in touch](/compliant-cloud/articles/contact).
 
 ## 1. Access
 
-Once your new environment has been provisioned and is ready to use, you will receive two emails. The first is simply a notification that it's ready, which you will receive for every environment. This contains your environment's **public hostname** - take note of this for later. The second is an invitation to join the new **organization** that has been created for you - this will only be sent for the very first environment that we provision for you. The invitation email contains a link to the [Compliant Cloud dashboard](https://product.datica.com/compliant-cloud) - click it!
+Once your new environment has been provisioned and is ready to use, you will receive two emails. The first is simply a notification that it's ready, which you will receive for every environment. This contains your environment's **public hostname** - take note of this for later. The second is an invitation to join the new **organization** that has been created for you - this will only be sent for the very first environment that we provision for you. The invitation email contains a link to the [The Platform dashboard](https://product.datica.com/compliant-cloud) - click it!
 
-The Compliant Cloud dashboard will prompt you to sign in with your Datica account - if you don't have one already, you can also create one at this point - just follow the instructions on the page. After signing in (or creating a new account, verifying your email address, then signing in), click the "Compliant Cloud" link from the product list. You should see your organization in the upper-right corner:
+The The Platform dashboard will prompt you to sign in with your Datica account - if you don't have one already, you can also create one at this point - just follow the instructions on the page. After signing in (or creating a new account, verifying your email address, then signing in), click the "The Platform" link from the product list. You should see your organization in the upper-right corner:
 
 <center>![org corner](/compliant-cloud/articles/images/org_corner.png)</center>
 
@@ -20,7 +20,7 @@ For more on managing organizations, including how to add additional members and 
 
 > ***Note:*** Occasionally, if interrupted while creating an account, you might find that your invite did not get accepted, and you are not a member of your organization yet. If this happens, just click the link in your email again.
 
-Once you've confirmed that you're a member of your organization, you should also see your environment's summary listed in the Compliant Cloud dashboard, looking something like this:
+Once you've confirmed that you're a member of your organization, you should also see your environment's summary listed in the The Platform dashboard, looking something like this:
 
 <center>![org summary](/compliant-cloud/articles/images/env_summary.png)</center>
 
@@ -28,7 +28,7 @@ From the summary, note your environment's name and your code service's name - in
 
 ## 2. Install the Datica CLI
 
-Datica provides a CLI (command-line interface) tool to facilitate interaction with your Compliant Cloud environment, supporting Windows, OSX, and Linux.
+Datica provides a CLI (command-line interface) tool to facilitate interaction with your The Platform environment, supporting Windows, OSX, and Linux.
 
 To install the CLI, follow the instructions in its [Github repository](https://github.com/daticahealth/cli).
 
@@ -38,7 +38,7 @@ To install the CLI, follow the instructions in its [Github repository](https://g
 
 The `init` command does the following:
 
-1. Signs you into the Datica Compliant Cloud platform.
+1. Signs you into the Datica The Platform platform.
 2. Ensures you have an ssh-key associated to your account.
 3. Sets the `datica` [Git remote](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) of your code service, so that you can push to it.
 
@@ -73,7 +73,7 @@ datica -E "<your_env_name>" certs create *.example.com wildcard-example.com.crt 
 
 ## 5. Set Your DNS
 
-Because an environment can have any number of code services, the public hostname for the environment does not point to any of them. What this means is that, in order to access each code service in your application, you will need to set up DNS that will forward to it. This step is executed entirely outside of Compliant Cloud - Datica cannot do any step of this for you. Datica is not a DNS provider.
+Because an environment can have any number of code services, the public hostname for the environment does not point to any of them. What this means is that, in order to access each code service in your application, you will need to set up DNS that will forward to it. This step is executed entirely outside of The Platform - Datica cannot do any step of this for you. Datica is not a DNS provider.
 
 First, choose the hostname you would like to use for the code service - this can be either an apex domain (such as `example.com`) or a subdomain (such as `api.example.com`).
 
@@ -91,7 +91,7 @@ api.example.com canonical name = pod0A1B2C3.catalyzeapps.com.
 
 ## 6. Set Up a Site
 
-Compliant Cloud uses what we call **[Sites](/compliant-cloud/articles/concepts/sites)** to map code services to hostnames, using the cert that was uploaded in step 5.
+The Platform uses what we call **[Sites](/compliant-cloud/articles/concepts/sites)** to map code services to hostnames, using the cert that was uploaded in step 5.
 
 The CLI command to create a cert is `sites create`, taking the form `datica -E "<your_env_name>" sites create <hostname> <code service name> <cert name>`. For example, using the hostname from step 6, the wildcard cert name from step 5, and the code service name noted in step 1:
 
@@ -135,7 +135,7 @@ After your push, you will see build output stream to your terminal window. Any b
 
 After your build succeeds, a [deploy job](/compliant-cloud/articles/concepts/jobs#deploy-jobs) will be started for it. Shortly after (20-40 seconds, plus however long it takes your application to start up and respond). After that, your application should be available at the hostname you configured in the site. Congratulations!
 
-> ***Note:*** If your application builds successfully but is not behaving as expected, read through the [Writing Your Application to Work With Compliant Cloud](/compliant-cloud/articles/writing-your-application) article.
+> ***Note:*** If your application builds successfully but is not behaving as expected, read through the [Writing Your Application to Work With The Platform](/compliant-cloud/articles/writing-your-application) article.
 
 If your application includes [workers](/compliant-cloud/articles/concepts/workers), use the `worker` command to start them (you only need to do this the first time):
 

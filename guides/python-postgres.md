@@ -3,15 +3,15 @@ title: Python + Postgres Guide
 category: guide
 ---
 
-# Getting started with Python, Django and PostgreSQL on Compliant Cloud
+# Getting started with Python, Django and PostgreSQL on The Platform
 
 Welcome! We've written this guide to help you get started with Python on Datica. You can be up and running with a HIPAA-compliant instance running Django.
 
 ----------
 
-If you're used to other Platform as a Service offerings (Heroku, Google App Engine), you'll notice some similarities to Datica's Compliant Cloud. Our intent in design was to speed up deployment while abstracting away some of the difficulties of HIPAA-compliant setup. If you're more familiar with deploying your code directly onto a server, there will be some new concepts here to learn. It's worth noting this is *not* Heroku: we'll try to call out divergence in code when possible, but you'll want to follow the guide closely even if a lot of this is already old hat to you.
+If you're used to other Platform as a Service offerings (Heroku, Google App Engine), you'll notice some similarities to Datica's The Platform. Our intent in design was to speed up deployment while abstracting away some of the difficulties of HIPAA-compliant setup. If you're more familiar with deploying your code directly onto a server, there will be some new concepts here to learn. It's worth noting this is *not* Heroku: we'll try to call out divergence in code when possible, but you'll want to follow the guide closely even if a lot of this is already old hat to you.
 
-This guide is supplemental to the Django tutorials but will emphasize the key parts to get your app running on Datica's Compliant Cloud. We have developed a sample application that you can also reference throughout the guide and as we walkthrough deploying an application. You can find the [Python Sample App on GitHub](https://github.com/catalyzeio/python-sample-app).
+This guide is supplemental to the Django tutorials but will emphasize the key parts to get your app running on Datica's The Platform. We have developed a sample application that you can also reference throughout the guide and as we walkthrough deploying an application. You can find the [Python Sample App on GitHub](https://github.com/catalyzeio/python-sample-app).
 
 ## Pre-requisites
 
@@ -56,7 +56,7 @@ $ datica -E "<your_env_name>" console app01 "python manage.py migrate"
 Alright, lets backup a little bit. If you don't already have an environment, you can get setup with one through the Datica Dashboard. Check out the [Getting Started docs](/compliant-cloud/getting-started). The following sections will highlight several important parts about setting up your Django project in order to have a successful deployment on the Platform.
 
 ### Project Requirements
-Datica's Compliant Cloud leverages buildpacks to bundle up your application and all of its dependencies. This bundle is built into a Docker container that will be shipped into production. The Python buildpack is employed when the build process detects the `requirements.txt` file in the root level of your project's repository. The requirements file declares the project dependencies your application requires in order to run. To make your life easier, definitely install the "django-toolbelt" first, it installs everything you need to get started with Django.
+Datica's The Platform leverages buildpacks to bundle up your application and all of its dependencies. This bundle is built into a Docker container that will be shipped into production. The Python buildpack is employed when the build process detects the `requirements.txt` file in the root level of your project's repository. The requirements file declares the project dependencies your application requires in order to run. To make your life easier, definitely install the "django-toolbelt" first, it installs everything you need to get started with Django.
 
 ```
 pip install django-toolbelt

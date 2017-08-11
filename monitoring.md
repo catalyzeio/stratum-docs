@@ -1,10 +1,10 @@
 ---
-title: Compliant Cloud Environment Monitoring
+title: The Platform Environment Monitoring
 category: monitoring
 summary: Learn how to use Datica's monitoring service.
 ---
 
-# Compliant Cloud Environment Monitoring
+# The Platform Environment Monitoring
 
 Every environment includes its own monitoring server that watches the services in the environment. Datica's monitoring solution is built on top of [Sensu](https://sensuapp.org/), and can be customized to fit specific customer needs.
 

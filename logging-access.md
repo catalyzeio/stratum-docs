@@ -1,12 +1,12 @@
 ---
-title: Compliant Cloud Environment Logging
+title: The Platform Environment Logging
 category: logging
-summary: Learn how logging works in Compliant Cloud.
+summary: Learn how logging works in The Platform.
 ---
 
-# Compliant Cloud Environment Logging
+# The Platform Environment Logging
 
-Datica has implemented a complete ELK stack for Compliant Cloud to manage acquiring and storing log data.
+Datica has implemented a complete ELK stack for The Platform to manage acquiring and storing log data.
 
 ELK stands for:
 

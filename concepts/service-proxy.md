@@ -1,7 +1,7 @@
 ---
 title: Service Proxy
 category: concepts
-summary: What is a Service Proxy on Compliant Cloud?
+summary: What is a Service Proxy on The Platform?
 ---
 
 The **Service Proxy** is a special [service](/compliant-cloud/articles/concepts/services) in each [environment](/compliant-cloud/articles/concepts/environments) that is responsible for routing traffic from the outside world into your environment's network, to specific code services. This is configured using [sites](/compliant-cloud/articles/concepts/sites). The service proxy is the _only_ service exposed outside of your environment's network - all external (non-[console](/compliant-cloud/articles/console), non-[VPN](/compliant-cloud/articles/vpn-stratum)) traffic goes through it and is proxied to other services.

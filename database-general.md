@@ -1,7 +1,7 @@
 ---
 title: Database General Information
 category: database
-summary: Learn about databases on Compliant Cloud.
+summary: Learn about databases on The Platform.
 ---
 
 ## What versions of the [supported databases](/compliant-cloud/articles/supported-databases/) does Datica use?
@@ -12,7 +12,7 @@ summary: Learn about databases on Compliant Cloud.
 
 ### How do database backups work?
 
-We perform automated backups each night. Access to the backups is provided via the Compliant Cloud CLI. You can read about how to interact with backups [here](../cli-database-backup).
+We perform automated backups each night. Access to the backups is provided via the The Platform CLI. You can read about how to interact with backups [here](../cli-database-backup).
 
 ## How do I connect to my database?
 

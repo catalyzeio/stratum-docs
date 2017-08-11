@@ -50,5 +50,5 @@ To facilitate this download, the CLI creates a key pair as part of the request, 
 
 ### See also
 
-* [The Compliant Cloud CLI](/compliant-cloud/articles/cli-stratum)
+* [The The Platform CLI](/compliant-cloud/articles/cli-stratum)
 * [Database Export](/compliant-cloud/articles/cli-database-backup)

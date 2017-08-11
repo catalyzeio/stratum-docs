@@ -1,12 +1,12 @@
 ---
 title: Database Import
 category: database
-summary: Learn how to import your data into Compliant Cloud.
+summary: Learn how to import your data into The Platform.
 ---
 
 ## Basics
 
-Importing into a database is the process through which data is transferred from a local file into your Compliant Cloud database. This is a very powerful operation, and can potentially cause problems - read on in the sections for your database type below.
+Importing into a database is the process through which data is transferred from a local file into your The Platform database. This is a very powerful operation, and can potentially cause problems - read on in the sections for your database type below.
 
 The general form of the [command](/compliant-cloud/cli-reference#import):
 

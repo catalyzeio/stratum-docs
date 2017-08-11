@@ -1,10 +1,10 @@
 ---
-title: Scheduled Tasks in Compliant Cloud
+title: Scheduled Tasks in The Platform
 category: manage
-summary: Learn about scheduled tasks in Compliant Cloud.
+summary: Learn about scheduled tasks in The Platform.
 ---
 
-# Scheduled Tasks in Compliant Cloud
+# Scheduled Tasks in The Platform
 
 Periodic or triggered task scheduling is a common need for many applications. Historically, `cron` has been a system utility widely used for this task.  For an alternative to `cron`, newer applications can take advantage of scheduling frameworks that can provide additional scalability and reliability.
 
@@ -16,7 +16,7 @@ Most widely used languages have some kind of scheduling framework available to e
 
 Some of our recommended task scheduling frameworks include Sidekiq for Ruby and Celery for Python. These scheduling frameworks are generally backed by a message broker such as Redis or an AMQP-based alternative like Rabbitmq which helps guarantee message delivery. If your scheduling framework requires a message broker, we have both Redis and Rabbitmq available as environment add-ons.
 
-Take a look at our article on [Compliant Cloud Background Workers](/compliant-cloud/articles/worker-general/) for more information on using workers with scheduled tasks in Compliant Cloud.
+Take a look at our article on [The Platform Background Workers](/compliant-cloud/articles/worker-general/) for more information on using workers with scheduled tasks in The Platform.
 
 
 ## Cron Containers

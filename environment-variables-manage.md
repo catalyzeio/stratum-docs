@@ -1,12 +1,12 @@
 ---
 title: Managing variables
 category: manage
-summary: Learn how to manage your variables on Compliant Cloud.
+summary: Learn how to manage your variables on The Platform.
 ---
 
 # Managing Variables
 
-Compliant Cloud allows you to define as many variables as you want for each different code service. You can manage variables through the Datica CLI.
+The Platform allows you to define as many variables as you want for each different code service. You can manage variables through the Datica CLI.
 
 ## List variables via the CLI
 

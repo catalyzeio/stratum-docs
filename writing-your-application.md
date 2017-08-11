@@ -1,18 +1,18 @@
 ---
 title: Writing Your Application
 category: application
-summary: Writing your application to work with Compliant Cloud.
+summary: Writing your application to work with The Platform.
 ---
 
 ## Choosing how your code is built
 
-All builds on [Compliant Cloud](https://datica.com/compliant-cloud) are done using [Buildpacks](/compliant-cloud/articles/buildpacks). Each buildpack has its own conditions for autodetection - make sure that your application's file structure allows this to happen.
+All builds on [The Platform](https://datica.com/compliant-cloud) are done using [Buildpacks](/compliant-cloud/articles/buildpacks). Each buildpack has its own conditions for autodetection - make sure that your application's file structure allows this to happen.
 
 Sometimes, the wrong buildpack can be chosen if multiple buildpacks' conditions are met. For example, having both a `package.json` and a `requirements.txt` in the root of your repository would match both the [Node.js](https://github.com/heroku/heroku-buildpack-nodejs) and [python](https://github.com/heroku/heroku-buildpack-python) buildpacks, and the result might not be the correct one. If this occurs, you can [pin the correct buildpack](/compliant-cloud/articles/buildpacks-pinning). Note, also, that you can create a [custom buildpack](/compliant-cloud/articles/buildpacks-custom) if needed.
 
 ## Choosing how your application is run
 
-Compliant Cloud uses a special file named `Procfile` (no extension) to designate what commands to run to start your application. A Procfile consists of one or more lines, structured like this:
+The Platform uses a special file named `Procfile` (no extension) to designate what commands to run to start your application. A Procfile consists of one or more lines, structured like this:
 
 ```
 <target>: <command>

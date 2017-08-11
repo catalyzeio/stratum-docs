@@ -1,10 +1,10 @@
 ---
 title: Highly-Available Services
 category: application
-summary: How can Compliant Cloud Ensure High Application Ability?
+summary: How can The Platform Ensure High Application Ability?
 ---
 
-**Highly-Available** (HA) [services](/compliant-cloud/articles/concepts/services) are services deployed in configurations that allow them to better deal with unexpected stability issues. A service can go down for a number of reasons - application fault, memory issues, deadlocks, or host failures (Compliant Cloud does [pretty well](http://status.datica.com/), but no hardware is immune to failure).
+**Highly-Available** (HA) [services](/compliant-cloud/articles/concepts/services) are services deployed in configurations that allow them to better deal with unexpected stability issues. A service can go down for a number of reasons - application fault, memory issues, deadlocks, or host failures (The Platform does [pretty well](http://status.datica.com/), but no hardware is immune to failure).
 
 At a high level, making a service HA means to scale it up - that is, to set the number of [deploy jobs](/compliant-cloud/articles/concepts/jobs#deploy-jobs). For specific service types, it gets more complex.
 

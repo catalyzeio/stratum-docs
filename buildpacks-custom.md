@@ -1,10 +1,10 @@
 ---
 title: Custom Buildpacks
 category: buildpack
-summary: How can I modify the Compliant Cloud buildpack process?
+summary: How can I modify the The Platform buildpack process?
 ---
 
-# How can I modify the Compliant Cloud buildpack process?
+# How can I modify the The Platform buildpack process?
 
 Datica has created several ways that users can modify the standard buildpack process to help them meet their application needs.
 

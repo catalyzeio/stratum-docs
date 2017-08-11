@@ -1,11 +1,11 @@
 ---
 title: Environments
 category: concepts
-summary: Learn what Environments are on Compliant Cloud.
+summary: Learn what Environments are on The Platform.
 alias: "compliant-cloud/articles/environment-defining/"
 ---
 
-**Environments** are the highest-level object that a user can interact with on [Compliant Cloud](https://datica.com/compliant-cloud). An Environment represents your entire hosted application or product - runtimes, databases, caches, queues, tools, and all.
+**Environments** are the highest-level object that a user can interact with on [The Platform](https://datica.com/compliant-cloud). An Environment represents your entire hosted application or product - runtimes, databases, caches, queues, tools, and all.
 
 An Environment consists primarily of a set of [Services](/compliant-cloud/articles/concepts/services). At a minimum, an Environment has:
 
@@ -21,4 +21,4 @@ An Environment can expand to have any number of services - as many as you need. 
 
 ### See also
 
-* [The Compliant Cloud CLI](/compliant-cloud/articles/cli-stratum)
+* [The The Platform CLI](/compliant-cloud/articles/cli-stratum)

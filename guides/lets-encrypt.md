@@ -5,17 +5,17 @@ category: guide
 
 # Let's Encrypt Certificates
 
-With the release of version 3.0, Compliant Cloud supports Let's Encrypt certificates. Let's Encrypt certificates allow you to create free SSL certificates that automatically renew before expiring. When Let's Encrypt certificates renew, the updated certificate will be placed in your service proxy **without** needing a redeploy. Let's Encrypt certificates are available to all Compliant Cloud customers.
+With the release of version 3.0, The Platform supports Let's Encrypt certificates. Let's Encrypt certificates allow you to create free SSL certificates that automatically renew before expiring. When Let's Encrypt certificates renew, the updated certificate will be placed in your service proxy **without** needing a redeploy. Let's Encrypt certificates are available to all The Platform customers.
 
 ## Setting up DNS
 
-Before creating a Let's Encrypt certificate, you must setup a CNAME DNS record pointing to your environment's default domain. You can find out your environment's default domain by running the `domain` command with the Compliant Cloud CLI:
+Before creating a Let's Encrypt certificate, you must setup a CNAME DNS record pointing to your environment's default domain. You can find out your environment's default domain by running the `domain` command with the The Platform CLI:
 
 ```
 datica -E "<your_env_name> domain"
 ```
 
-A CNAME DNS record is required due to the way domain verification is done through Let's Encrypt. A `GET` request will be made to a URL of the requested domain. You don't need to worry about responding to the `GET` request in your application, this is automatically handled by Compliant Cloud. You can read more about Let's Encrypt domain validation [here](https://letsencrypt.org/how-it-works/).
+A CNAME DNS record is required due to the way domain verification is done through Let's Encrypt. A `GET` request will be made to a URL of the requested domain. You don't need to worry about responding to the `GET` request in your application, this is automatically handled by The Platform. You can read more about Let's Encrypt domain validation [here](https://letsencrypt.org/how-it-works/).
 
 ## Creating a Let's Encrypt certificate
 

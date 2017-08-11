@@ -1,5 +1,5 @@
 ---
-title: Legacy Compliant Cloud VPN Client Setup Guide
+title: Legacy The Platform VPN Client Setup Guide
 category: vpn
 ---
 # Legacy Notice
@@ -18,7 +18,7 @@ Datica is replacing legacy Strongswan IPSEC VPNs with OpenVPN TLS VPNs. All new 
 
 # VPN Security
 
-Communications between your client computer and the Compliant Cloud environment over the VPN are encrypted and secure. However, your VPN credentials provide access into this protected environment and should be safeguarded very securely. Please make sure that you are following all applicable information security policies, including what we provide at [https://policy.datica.com](https://policy.datica.com) and [https://hipaa.datica.com](https://hipaa.datica.com).
+Communications between your client computer and the The Platform environment over the VPN are encrypted and secure. However, your VPN credentials provide access into this protected environment and should be safeguarded very securely. Please make sure that you are following all applicable information security policies, including what we provide at [https://policy.datica.com](https://policy.datica.com) and [https://hipaa.datica.com](https://hipaa.datica.com).
 
 # OS X 10.10 and below IKEv1 Native Client Setup
 

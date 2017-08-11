@@ -1,20 +1,20 @@
 ---
-title: Compliant Cloud SSH Keys
+title: The Platform SSH Keys
 category: manage
-summary: Learn how to manage your SSH keys in Compliant Cloud.
+summary: Learn how to manage your SSH keys in The Platform.
 ---
 
-# Compliant Cloud SSH Keys
+# The Platform SSH Keys
 
-There are two types of SSH keys that you can setup in Compliant Cloud: user keys and deploy keys. These two types, the differences between the two, and in what situations you would choose deploy over user are described below.
+There are two types of SSH keys that you can setup in The Platform: user keys and deploy keys. These two types, the differences between the two, and in what situations you would choose deploy over user are described below.
 
-It is important to note that before Compliant Cloud was launched, Datica only allowed one type of SSH key. Those keys were generically named `keys`. With the launch of Compliant Cloud, these keys were automatically converted to a deploy key. If you're looking to switch to user keys, check out the [Make the Switch](#make-the-switch) section on how to do that and troubleshoot any issues you may run into.
+It is important to note that before The Platform was launched, Datica only allowed one type of SSH key. Those keys were generically named `keys`. With the launch of The Platform, these keys were automatically converted to a deploy key. If you're looking to switch to user keys, check out the [Make the Switch](#make-the-switch) section on how to do that and troubleshoot any issues you may run into.
 
 # User Keys
 
 User keys are the preferred type of keys for the majority of Datica users. User keys allow you to access any Datica git repo that belongs to a service within an environment that you have access to. For example, let's say Alice is a Datica user with two environments: `production` and `development` and each environment has two services named `app01` and `app02`. A user key will grant Alice access to all services in both environments. Alice can access `app01` in production and development as well as `app02` in production and development with nothing more than a single user key.
 
-User keys are intended to be private and not shared with anyone. These keys are tied to your Datica user account and can be used for authentication with the Datica APIs or as a method of pushing code to the Compliant Cloud platform.
+User keys are intended to be private and not shared with anyone. These keys are tied to your Datica user account and can be used for authentication with the Datica APIs or as a method of pushing code to the The Platform platform.
 
 # Deploy Keys
 
@@ -26,9 +26,9 @@ There are few situations in which deploy keys are better suited than user keys. 
 
 To execute the commands below, you'll need to specify your Datica username and password, so be sure to have them available.
 
-## Download the Compliant Cloud CLI
+## Download the The Platform CLI
 
-All SSH key management will be carried out through the Compliant Cloud CLI. Get it [here](https://github.com/daticahealth/cli).
+All SSH key management will be carried out through the The Platform CLI. Get it [here](https://github.com/daticahealth/cli).
 
 ## Add a Non-Shared Public Key to Your account
 
@@ -74,7 +74,7 @@ Similar tools are available for Windows (Pageant) and Linux (keychain) workstati
 
 # Make the switch
 
-After the launch of Compliant Cloud or when migrating to a newer environment, you'll need to switch from using deploy keys to user keys. There's a few steps required in order to use an existing deploy key as a user key. First, be sure to **remove** all existing deploy keys
+After the launch of The Platform or when migrating to a newer environment, you'll need to switch from using deploy keys to user keys. There's a few steps required in order to use an existing deploy key as a user key. First, be sure to **remove** all existing deploy keys
 
 ```
 datica -E oldEnvironment deploy-keys list

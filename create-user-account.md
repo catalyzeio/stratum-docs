@@ -1,12 +1,12 @@
 ---
 title: Creating a User Account
 category: getting-started
-summary: How do I get access to a Compliant Cloud organization or environment?
+summary: How do I get access to a The Platform organization or environment?
 ---
 
-# Create a Datica Account via the Compliant Cloud Dashboard
+# Create a Datica Account via the The Platform Dashboard
 
-Before you can accept an invitation to an organization and gain access to any environments, you need to create a [Compliant Cloud Dashboard](https://product.datica.com/compliant-cloud) account!
+Before you can accept an invitation to an organization and gain access to any environments, you need to create a [The Platform Dashboard](https://product.datica.com/compliant-cloud) account!
 
 ![register](images/account_register.png)
 
@@ -26,7 +26,7 @@ The email contains two options for accepting the invitation:
 
 ## Option 1: Sign In to Dashboard and Click Link
 
-Navigate to the [Compliant Cloud Dashboard](https://product.datica.com/compliant-cloud) and sign in.
+Navigate to the [The Platform Dashboard](https://product.datica.com/compliant-cloud) and sign in.
 
 Then, click the link in the email to accept the invitation.
 

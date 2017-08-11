@@ -1,10 +1,10 @@
 ---
 title: Cloud Storage
 category: storage
-summary: Learn about using Cloud Storage with your Datica Compliant Cloud account.
+summary: Learn about using Cloud Storage with your Datica The Platform account.
 ---
 
-# Compliant Cloud Cloud Storage
+# The Platform Cloud Storage
 
 ## Temporary In-Container Storage
 
@@ -12,6 +12,6 @@ Every service in your environment has a fixed amount of storage available to it,
 
 ## HIPAA-Compliant S3 Buckets
 
-Datica can set up an S3 bucket for you, covered under our BAA. Data in S3 is unaffected by redeploys, making it an ideal location to store files or large amounts of data. Read more about how S3 buckets are set up on Compliant Cloud [here](/compliant-cloud/articles/s3-bucket-access).
+Datica can set up an S3 bucket for you, covered under our BAA. Data in S3 is unaffected by redeploys, making it an ideal location to store files or large amounts of data. Read more about how S3 buckets are set up on The Platform [here](/compliant-cloud/articles/s3-bucket-access).
 
 If you're interested in adding an S3 bucket to your environment or have questions, [contact us](https://datica.com/support).

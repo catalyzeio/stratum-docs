@@ -6,7 +6,7 @@ summary: How do I setup Codeship to deploy to Datica?
 
 # How do I setup Codeship to deploy to Datica?
 
-When thinking about the best tools for continuous integration Codeship is always near the top of the list. In fact we even use it here at Datica for many of our web properties. If you're a Compliant Cloud user we've made it very simple to use Codeship with your environments. The first thing you'll want to do is to make sure you have the latest version of our CLI [here](https://github.com/daticahealth/cli). Once that's installed, you can follow these three steps:
+When thinking about the best tools for continuous integration Codeship is always near the top of the list. In fact we even use it here at Datica for many of our web properties. If you're a The Platform user we've made it very simple to use Codeship with your environments. The first thing you'll want to do is to make sure you have the latest version of our CLI [here](https://github.com/daticahealth/cli). Once that's installed, you can follow these three steps:
 
 - 1. Head over to your project settings in Codeship and find the SSH public key that was setup for your Codeship project. This is under project settings -> general.
 - 2. Save that SSH public key to a file and add it as a `deploy key` with the `datica -E "<your_env_name>" deploy-keys add` command in the CLI. Deploy keys are intended to be used for CI purposes and shared among teams. These are very much like a Github deploy key. Deploy keys have access to one code service only.

@@ -1,9 +1,9 @@
 ---
-title: Migrating to Compliant Cloud from Heroku
+title: Migrating to The Platform from Heroku
 category: guide
 ---
 
-This guide covers the migration of an application that was developed for Heroku to [Compliant Cloud](https://datica.com/compliant-cloud).
+This guide covers the migration of an application that was developed for Heroku to [The Platform](https://datica.com/compliant-cloud).
 
 ## Prerequisites
 
@@ -13,31 +13,31 @@ The other prerequisite is that you've already talked with our Sales team and wor
 
 ## Terminology, Similarities, and Differences
 
-Many concepts translate between Compliant Cloud and Heroku. Some are a little different, and some have a different name.
+Many concepts translate between The Platform and Heroku. Some are a little different, and some have a different name.
 
 * Your code is built using [buildpacks](/compliant-cloud/articles/buildpacks), the same way as on Heroku.
 
-* To deploy on Compliant Cloud, you push using [git](https://git-scm.com/).
+* To deploy on The Platform, you push using [git](https://git-scm.com/).
 
-* Heroku **Application** = Compliant Cloud **Environment**
+* Heroku **Application** = The Platform **Environment**
 
-  On Heroku, you have one repository with one or more Procfile targets. On Compliant Cloud, you have one or more **Code Services**, each instance of which is equivalent to a **Dyno** on Heroku. What this means is that working with multiple codebases that use different buildpacks is easier, and only one Code Service needs to be updated at a time.
+  On Heroku, you have one repository with one or more Procfile targets. On The Platform, you have one or more **Code Services**, each instance of which is equivalent to a **Dyno** on Heroku. What this means is that working with multiple codebases that use different buildpacks is easier, and only one Code Service needs to be updated at a time.
 
 * **Workers**
 
-  Compliant Cloud supports workers the same way Heroku does - they're invoked out of a Procfile target of your choosing. Because there can be more than one code service, however, you choose which code service to launch the worker process out of.
+  The Platform supports workers the same way Heroku does - they're invoked out of a Procfile target of your choosing. Because there can be more than one code service, however, you choose which code service to launch the worker process out of.
 
-* Heroku **Addon** = Compliant Cloud **Service**
+* Heroku **Addon** = The Platform **Service**
 
-  On Compliant Cloud, your databases and caches are dedicated instances called **database services** and **cache services**, running in their own containers within your environment, in the configuration of your choice (either highly-available or single-instance).
+  On The Platform, your databases and caches are dedicated instances called **database services** and **cache services**, running in their own containers within your environment, in the configuration of your choice (either highly-available or single-instance).
 
-* Heroku **Config Variables** = Compliant Cloud **Environment Variables**
+* Heroku **Config Variables** = The Platform **Environment Variables**
 
   Same concept, different name. Environment Variables can vary between code services.
 
-* Heroku **Organization Account** = Compliant Cloud **Organization**
+* Heroku **Organization Account** = The Platform **Organization**
 
-  On Compliant Cloud, each environment belongs to an Organization. When Datica provisions an environment for a new customer, we also create an Organization for you, and assign your new environment to that Organization.
+  On The Platform, each environment belongs to an Organization. When Datica provisions an environment for a new customer, we also create an Organization for you, and assign your new environment to that Organization.
 
 ## 1. Gain Access to your Environment
 
@@ -45,7 +45,7 @@ When your first environment is provisioned, you'll receive two emails from us. T
 
 The second will be an invitation to join your newly-created organization. Follow the instructions in that email, and register a new account if you don't already have one.
 
-After you've joined your organization, navigate to the [Compliant Cloud dashboard](https://product.datica.com/compliant-cloud). You should see your environment listed there.
+After you've joined your organization, navigate to the [The Platform dashboard](https://product.datica.com/compliant-cloud). You should see your environment listed there.
 
 ![environment summary](../images/migrate_envsummary.png)
 
@@ -59,7 +59,7 @@ Follow the instructions on the readme to install it. You'll know it's installed 
 
 ## 3. Initialize Your Local Repo
 
-To link up your local repo to your Compliant Cloud environment, open a terminal to its root directory and run the `datica init` command (it will sign you in).
+To link up your local repo to your The Platform environment, open a terminal to its root directory and run the `datica init` command (it will sign you in).
 
 ```
 $ cd my-repo
@@ -70,7 +70,7 @@ Password:
 "datica" remote added.
 ```
 
-The username and password here are the same credentials that you used to sign in to the Compliant Cloud dashboard.
+The username and password here are the same credentials that you used to sign in to the The Platform dashboard.
 
 ## 4. Set Variables
 
@@ -82,7 +82,7 @@ $ heroku config
 MONGODB_URI:  mongodb://username123:password456@ds012345.mlab.com:23624/username123
 ```
 
-Checking variables on Compliant Cloud:
+Checking variables on The Platform:
 
 ```
 $ datica -E "<your_env_name>" vars list <service_name>
@@ -105,7 +105,7 @@ Note that warning. Environment variables are only picked up when a service is de
 
 ## 5. Add an SSH Public Key
 
-Compliant Cloud uses public key auth to authenticate git pushes. To add a public key to your Datica account (you only need to do this once):
+The Platform uses public key auth to authenticate git pushes. To add a public key to your Datica account (you only need to do this once):
 
 ```
 $ datica -E "<your_env_name>" keys add my-ssh-key ~/.ssh/my-ssh-key.pub
@@ -115,9 +115,9 @@ For more details on SSH key usage and debugging, take a look at our [SSH Keys Gu
 
 ## 6. Add a Site (and Cert)
 
-So that Compliant Cloud knows what hostnames to accept traffic on and what services to route that traffic to, we need to set up a Site.
+So that The Platform knows what hostnames to accept traffic on and what services to route that traffic to, we need to set up a Site.
 
-If you're migrating, you'd probably like to see your code working before cutting over fully to Compliant Cloud. You can use a different domain or subdomain for now (`staging.example.com`, for example) - another site can always be added later.
+If you're migrating, you'd probably like to see your code working before cutting over fully to The Platform. You can use a different domain or subdomain for now (`staging.example.com`, for example) - another site can always be added later.
 
 ### Adding an SSL Cert
 
@@ -195,7 +195,7 @@ Navigate to the hostname you configured above, with https (https://staging.examp
 
 Note that it may take a few minutes for your application to show up - several factors can cause delay in this (DNS propagation, AWS load balancers taking effect, or slow-starting applications are the most common causes).
 
-If you think you've waited too long and your application still hasn't started, check your logs. Your logs can be accessed via the `logs` command in your CLI, or at `https://your-env's-public-hostname/logging/` - there is also a link to view logs in the Compliant Cloud dashboard.
+If you think you've waited too long and your application still hasn't started, check your logs. Your logs can be accessed via the `logs` command in your CLI, or at `https://your-env's-public-hostname/logging/` - there is also a link to view logs in the The Platform dashboard.
 
 ## Further Help
 

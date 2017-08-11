@@ -1,10 +1,10 @@
 ---
-title: Compliant Cloud Supported Languages and Frameworks
+title: The Platform Supported Languages and Frameworks
 category: application
 summary: Learn about the support programming languages and frameworks on Datica.
 ---
 
-# Compliant Cloud Supported Languages and Frameworks
+# The Platform Supported Languages and Frameworks
 
 The general rule of thumb to follow is that if it is supported by Heroku, it is supportable by Datica. The listing of languages / frameworks supported by Heroku is listed [here](https://devcenter.heroku.com/categories/language-support). In summary, here is the listing:
 
@@ -24,4 +24,4 @@ The general rule of thumb to follow is that if it is supported by Heroku, it is 
 
 There are many third-party buildpacks available for use. Some of these buildpacks tweak existing language packs, others carry out a specific function that other buildpacks cannot do.
 
-While Datica does not officially support non-Heroku buildpacks, many of them will work on the Compliant Cloud platform.
+While Datica does not officially support non-Heroku buildpacks, many of them will work on the The Platform platform.
