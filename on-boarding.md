@@ -15,7 +15,7 @@ First you'll need to register for a Datica Platform account in order to build a 
 
 ## Signing in
 Now that you have an account and have confirmed your email you can sign in. Once you're signed in you should see an empty dashboard similar to the image below.
-![Empty Dashboard](images/buildpack_release_frontpage.png).
+![Empty Dashboard](images/env_summary.png).
 
 ## Onboarding - Introduction
 Next you should click on the button in the welcome message that says "Create an environment". Once you click that you'll be taken to on-boarding. Th
