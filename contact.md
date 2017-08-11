@@ -4,15 +4,13 @@ category: troubleshooting
 summary: Need to contact Datica? We're always here to help!
 ---
 
-## Questions about Products and Pricing
-
-Ask our sales team: [sales@datica.com](mailto:sales@datica.com)
+## Questions about Pricing
+Datica now provides public pricing on our [pricing page](https://datica.com/pricing). If you have any additional questions about pricing please reach out to our sales team: [sales@datica.com](mailto:sales@datica.com).
 
 ## The Platform Support
-
 Existing customers should contact Datica Support by logging into the [The Platform dashboard](https://product.datica.com/compliant-cloud) and clicking on "Contact Support" for the environment with which they need support.
 
-![register](/compliant-cloud/articles/images/contact_support.png)
+![Contact Support](/compliant-cloud/articles/images/contact_support.png)
 
 Tickets can also be made via this [form](https://datica.com/support) if you do not have a The Platform login or are otherwise having issues with the The Platform portal.
 
