@@ -9,5 +9,4 @@ Summary: How does The Platform manage HA PostgreSQL?
 Currently, there is no automated failover. Promotion to primary is manually managed by Datica support. If you observe a failure and have not already been notified of support activity, [contact Datica support](/compliant-cloud/articles/contact) immediately.
 
 ### See also
-
 * [Python + PostgreSQL Example Application](/compliant-cloud/articles/guides/python-postgres)

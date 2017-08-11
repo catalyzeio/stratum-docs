@@ -3,8 +3,10 @@ title: The Platform Environment Metrics
 category: manage
 summary: See what metrics are available in The Platform.
 ---
+# Platform Metrics
+We currently have The Platform metrics feature turned off. We're working hard to get this turned back on for all customers. We're targeting the end of August for an official re-release. In the meantime please use the `metrics` CLI command.
 
-# The Platform Environment Metrics
+<!-- # The Platform Environment Metrics
 the Platform Dashboard includes comprehensive metrics for your environment's services.
 
 ## Viewing Metrics in the Platform Dashboard
@@ -41,4 +43,4 @@ The minimum, maximum, and average memory use is also displayed.
 
 Network usage is tracked by total packets and total bandwidth, for both inbound and outbound traffic.
 
-![network](images/metrics_network.png)
+![network](images/metrics_network.png) -->

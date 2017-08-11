@@ -21,6 +21,5 @@ You will need to write your application using a client that supports replica set
 To test your application locally using a replica set, we recommend that you follow the instructions in [this blog post](https://blog.ajduke.in/2013/05/31/setup-mongodb-replica-set-in-4-steps/). This will give you a local testing environment that is configured very similarly to your HA MongoDB on The Platform.
 
 ### See also
-
 * [Local Testing](/compliant-cloud/articles/guides/local-testing)
 * [Node + MongoDB Example Application](/compliant-cloud/articles/guides/node-mongo)
