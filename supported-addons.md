@@ -10,6 +10,8 @@ summary: Learn about supported utilities and add-ons for your Compliant Cloud en
 
 ### Redis
 
+The default version of Redis is 3.0.x.
+
 Redis instances can be added to any environment. Both single node and HA Redis instances are available.
 
 ### Memcached
