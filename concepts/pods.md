@@ -4,7 +4,7 @@ category: concepts
 summary: Learn what Pods are to The Platform.
 ---
 
-[The Platform](https://datica.com/compliant-cloud) places each environment in what we call a **Pod**. A Pod consists of the runtimes, hosts, and internal applications needed to deploy, control, and monitor the environments they contain. Between pods, features can vary (in some cases, we roll new features out to sandbox pods before others, and in other cases, older pods cannot support some features), but the [environment](/compliant-cloud/articles/concepts/environments) model is the same.
+[The Platform](https://datica.com/platform) places each environment in what we call a **Pod**. A Pod consists of the runtimes, hosts, and internal applications needed to deploy, control, and monitor the environments they contain. Between pods, features can vary (in some cases, we roll new features out to sandbox pods before others, and in other cases, older pods cannot support some features), but the [environment](/compliant-cloud/articles/concepts/environments) model is the same.
 
 Typically, users will not need to worry about which pod their environment is on, and will never need to interact with it directly. Occasionally, maintenance will affect only environments in a specific pod - when this happens, that pod will be called out. To determine which pod your environment is in, look in the public hostname. As an example:
 

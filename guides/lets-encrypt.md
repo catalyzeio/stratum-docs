@@ -9,7 +9,7 @@ With the release of version 3.0, The Platform supports Let's Encrypt certificate
 
 ## Setting up DNS
 
-Before creating a Let's Encrypt certificate, you must setup a CNAME DNS record pointing to your environment's default domain. You can find out your environment's default domain by running the `domain` command with the The Platform CLI:
+Before creating a Let's Encrypt certificate, you must setup a CNAME DNS record pointing to your environment's default domain. You can find out your environment's default domain by running the `domain` command with The Platform CLI:
 
 ```
 datica -E "<your_env_name> domain"

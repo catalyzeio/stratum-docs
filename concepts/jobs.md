@@ -4,7 +4,7 @@ category: concepts
 summary: Learn what Jobs are on The Platform.
 ---
 
-**Jobs** on [The Platform](https://datica.com/compliant-cloud) are what actually run your applications, databases, caches, and everything else that makes up an [environment](/compliant-cloud/articles/concepts/environments). Jobs are a one-to-one mapping to [containers](/compliant-cloud/articles/concepts/containers) - every running job has exactly one container. What that job's container is running is defined by the [service](/compliant-cloud/articles/concepts/jobs). All jobs belong to a service, but a service can have more than one job running.
+**Jobs** on [The Platform](https://datica.com/platform) are what actually run your applications, databases, caches, and everything else that makes up an [environment](/compliant-cloud/articles/concepts/environments). Jobs are a one-to-one mapping to [containers](/compliant-cloud/articles/concepts/containers) - every running job has exactly one container. What that job's container is running is defined by the [service](/compliant-cloud/articles/concepts/jobs). All jobs belong to a service, but a service can have more than one job running.
 
 # Types of Jobs
 

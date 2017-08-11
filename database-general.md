@@ -12,7 +12,7 @@ summary: Learn about databases on The Platform.
 
 ### How do database backups work?
 
-We perform automated backups each night. Access to the backups is provided via the The Platform CLI. You can read about how to interact with backups [here](../cli-database-backup).
+We perform automated backups each night. Access to the backups is provided via The Platform CLI. You can read about how to interact with backups [here](../cli-database-backup).
 
 ## How do I connect to my database?
 

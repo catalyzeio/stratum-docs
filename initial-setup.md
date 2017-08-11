@@ -4,7 +4,7 @@ category: getting-started
 Summary: Brand new to The Platform? Start here!
 ---
 
-This article is intended to get you up and running on your new [The Platform](https://datica.com/compliant-cloud) [environment](/compliant-cloud/articles/concepts/environments). If you'd like to read more, please look through the rest of the [Getting Started guides](/compliant-cloud/getting-started/).
+This article is intended to get you up and running on your new [The Platform](https://datica.com/platform) [environment](/compliant-cloud/articles/concepts/environments). If you'd like to read more, please look through the rest of the [Getting Started guides](/compliant-cloud/getting-started/).
 
 If you don't yet have an environment, or you have questions on The Platform's capabilities and offerings, [please get in touch](/compliant-cloud/articles/contact).
 

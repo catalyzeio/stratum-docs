@@ -3,7 +3,7 @@ title: Migrating to The Platform from Heroku
 category: guide
 ---
 
-This guide covers the migration of an application that was developed for Heroku to [The Platform](https://datica.com/compliant-cloud).
+This guide covers the migration of an application that was developed for Heroku to [The Platform](https://datica.com/platform).
 
 ## Prerequisites
 

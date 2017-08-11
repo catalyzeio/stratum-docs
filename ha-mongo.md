@@ -4,7 +4,7 @@ category: database
 summary: How does The Platform manage HA Mongo?
 ---
 
-**[HA](/compliant-cloud/articles/ha-application) MongoDB** [services](/compliant-cloud/articles/concepts/services) on [The Platform](https://datica.com/compliant-cloud) use [Replica Sets](https://docs.mongodb.com/manual/replication/) to provide automated failover in the event of a MongoDB node failure. The Platform handles the replica set configuration within your environment, and expose a single connection URI in an environment variable, `DATABASE_URL`.
+**[HA](/compliant-cloud/articles/ha-application) MongoDB** [services](/compliant-cloud/articles/concepts/services) on [The Platform](https://datica.com/platform) use [Replica Sets](https://docs.mongodb.com/manual/replication/) to provide automated failover in the event of a MongoDB node failure. The Platform handles the replica set configuration within your environment, and expose a single connection URI in an environment variable, `DATABASE_URL`.
 
 > ***Note:*** The variable may not always be named `DATABASE_URL` if the environment also contains more than one database service. There will always also be another variable named after the service, such as `MONGO01_URL` or `DB01_URL`.
 

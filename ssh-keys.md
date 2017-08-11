@@ -26,9 +26,9 @@ There are few situations in which deploy keys are better suited than user keys. 
 
 To execute the commands below, you'll need to specify your Datica username and password, so be sure to have them available.
 
-## Download the The Platform CLI
+## Download The Platform CLI
 
-All SSH key management will be carried out through the The Platform CLI. Get it [here](https://github.com/daticahealth/cli).
+All SSH key management will be carried out through The Platform CLI. Get it [here](https://github.com/daticahealth/cli).
 
 ## Add a Non-Shared Public Key to Your account
 

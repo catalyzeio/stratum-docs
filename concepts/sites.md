@@ -4,7 +4,7 @@ category: concepts
 summary: Mapping hostnames to certificates and services on The Platform.
 ---
 
-The [The Platform](https://datica.com/compliant-cloud) concept of a **Site** represents the mapping of a hostname to a [code service](/compliant-cloud/articles/concepts/services#code-services). An [environment](/compliant-cloud/articles/concepts/environments) can have more than one code service, so its [service proxy](/compliant-cloud/articles/concepts/service-proxy) needs to know how to route requests.
+The [The Platform](https://datica.com/platform) concept of a **Site** represents the mapping of a hostname to a [code service](/compliant-cloud/articles/concepts/services#code-services). An [environment](/compliant-cloud/articles/concepts/environments) can have more than one code service, so its [service proxy](/compliant-cloud/articles/concepts/service-proxy) needs to know how to route requests.
 
 ## Creating a New Site
 

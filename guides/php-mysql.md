@@ -19,7 +19,7 @@ We assume you have base knowledge of the following tools, and installed. If not,
 - [Datica CLI](https://github.com/daticahealth/cli)
 
 ### Contract with Datica
-You need a signed contract with [Datica](https://datica.com/), and already have an environment provisioned for use. If you need to register for Datica you can [start here](https://datica.com/compliant-cloud).
+You need a signed contract with [Datica](https://datica.com/), and already have an environment provisioned for use. If you need to register for Datica you can [start here](https://datica.com/platform).
 
 ### Terms to know
 Some basic terms that you should know:

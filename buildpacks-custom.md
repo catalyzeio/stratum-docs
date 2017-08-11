@@ -5,11 +5,9 @@ summary: How can I modify the The Platform buildpack process?
 ---
 
 # How can I modify the The Platform buildpack process?
-
 Datica has created several ways that users can modify the standard buildpack process to help them meet their application needs.
 
 ## Dependencies Outside The Buildpack
-
 Sometimes an application will have dependencies outside of the buildpack that cannot be retrieved by other means, such as Ruby gems. Datica provides the means to install software from the [apt repositories](https://en.wikipedia.org/wiki/Advanced_Packaging_Tool) for Ubuntu 14.04 on Pod02 and Ubuntu 12.04 on Pod01.
 
 In your application repository, create a file at the following path:
@@ -19,7 +17,6 @@ In your application repository, create a file at the following path:
 List the packages that you would like installed in your environment, one package per line, in the `packages` file. Keep in mind that these packages must be available in the base Ubuntu repositories. The standard location of binaries installed via this method is `/usr/bin`.
 
 ## Pre and Post Build Hooks
-
 On our Pod02 infrastructure, Datica has added the ability to run pre-build and post-build scripts during the application build process.
 
 These scripts have access to the dedicated, encrypted network of your environment, which means that they can talk to the existing services such as databases or message brokers.
@@ -33,17 +30,14 @@ Build hook failures should be indicated in the usual non-zero exit code manner. 
 Build executions have a time limit of 30 minutes, so be careful not to do anything overly lengthy with these scripts.
 
 ### Pre-Build Hooks
-
 The pre-build script should be located at `/your_git_repository_root/.datica/pre-build`. The file ***must be executable*** to run during the build process.
 
 Keep in mind that the pre-build script runs before the buildpack, so most utilities (rake, npm, etc.) will not be available.
 
 ### Post-Build Hooks
-
 The pre-build script should be located at `/your_git_repository_root/.datica/post-build`. The file ***must be executable*** to run during the build process.
 
 This is a common location to place database migration commands so that the running database is prepared prior to the new code base deployment.
 
 ### See also
-
 * [Using a Specific Buildpack Version](/compliant-cloud/articles/buildpacks-pinning)

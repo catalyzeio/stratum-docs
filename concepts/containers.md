@@ -4,7 +4,7 @@ category: concepts
 summary: Learn what Containers are and how The Platform uses them.
 ---
 
-On [The Platform](https://datica.com/compliant-cloud), your application is contained within an [Environment](/compliant-cloud/articles/concepts/environments), which contains a number of [Services](/compliant-cloud/articles/concepts/services), which each contain a number of [Jobs](/compliant-cloud/articles/concepts/jobs). Each of those jobs is mapped to a **Container** - specifically, a [Docker](https://www.docker.com/) container. Each container is started from a Docker image, which comes from either Datica's own set of images (for [databases](/compliant-cloud/articles/concepts/services#database-services), [caches](/compliant-cloud/articles/concepts/services#caches-services), and automatically-added services) or from images built from your [code pushes](/compliant-cloud/articles/concepts/services#code-services).
+On [The Platform](https://datica.com/platform), your application is contained within an [Environment](/compliant-cloud/articles/concepts/environments), which contains a number of [Services](/compliant-cloud/articles/concepts/services), which each contain a number of [Jobs](/compliant-cloud/articles/concepts/jobs). Each of those jobs is mapped to a **Container** - specifically, a [Docker](https://www.docker.com/) container. Each container is started from a Docker image, which comes from either Datica's own set of images (for [databases](/compliant-cloud/articles/concepts/services#database-services), [caches](/compliant-cloud/articles/concepts/services#caches-services), and automatically-added services) or from images built from your [code pushes](/compliant-cloud/articles/concepts/services#code-services).
 
 # Why Containers?
 

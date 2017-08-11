@@ -15,7 +15,7 @@ For production usage of The Platform, your certificate must:
 2. Be unencrypted (no password).
 3. Be in PEM format.
 
-or you can create a [Let's Encrypt](https://letsencrypt.org) certificate using the The Platform CLI. If you are using a Let's Encrypt certificate, you do not need to generate a CSR. For more information on The Platform Let's Encrypt certificates, check out our [Let's Encrypt Guide](//compliant-cloud/articles/guides/lets-encrypt/).
+or you can create a [Let's Encrypt](https://letsencrypt.org) certificate using The Platform CLI. If you are using a Let's Encrypt certificate, you do not need to generate a CSR. For more information on The Platform Let's Encrypt certificates, check out our [Let's Encrypt Guide](//compliant-cloud/articles/guides/lets-encrypt/).
 
 For development/staging purposes, a self-signed certificate can be used. To generate one locally, `openssl` can be used:
 

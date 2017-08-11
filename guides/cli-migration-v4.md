@@ -5,7 +5,7 @@ category: guide
 
 # The Platform CLI Version 4
 
-The release of version 4.0.0 of the The Platform CLI brings major changes to existing commands as well as changes in CLI workflows. This guide will walk through upgrading to version 4 and explain the changes that it brings.
+The release of version 4.0.0 of The Platform CLI brings major changes to existing commands as well as changes in CLI workflows. This guide will walk through upgrading to version 4 and explain the changes that it brings.
 
 ## Upgrading to version 4
 
@@ -13,7 +13,7 @@ Upgrading to CLI version 4 does not happen automatically or by running the `dati
 
 ## The removal of associate
 
-Prior to version 4, the `associate` command was the primary entry point for getting started with the The Platform CLI. `associate` performed two functions:
+Prior to version 4, the `associate` command was the primary entry point for getting started with The Platform CLI. `associate` performed two functions:
 
 1. Added the specified environment to the local cache
 1. Set up a git remote in the current directory
