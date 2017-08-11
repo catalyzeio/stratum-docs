@@ -1,7 +1,7 @@
 ---
 title: Cloud Storage
 category: storage
-summary: Learn about using Cloud Storage with your Datica The Platform account.
+summary: Learn about using Cloud Storage with your Datica Platform account.
 ---
 
 # The Platform Cloud Storage

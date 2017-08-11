@@ -7,7 +7,7 @@ category: troubleshooting
 
 ## Environment Access
 
-**I can see my new environment but I can't view details in the The Platform dashboard**
+**I can see my new environment but I can't view details in the Platform dashboard**
 
 - **Potential Issue** You may not have permission to access the environment.
 - **Potential Solution** The admin or owner of your [organization](/compliant-cloud/articles/concepts/organizations/) must grant you permission to access the environment.

@@ -14,7 +14,7 @@ It is important to note that before The Platform was launched, Datica only allow
 
 User keys are the preferred type of keys for the majority of Datica users. User keys allow you to access any Datica git repo that belongs to a service within an environment that you have access to. For example, let's say Alice is a Datica user with two environments: `production` and `development` and each environment has two services named `app01` and `app02`. A user key will grant Alice access to all services in both environments. Alice can access `app01` in production and development as well as `app02` in production and development with nothing more than a single user key.
 
-User keys are intended to be private and not shared with anyone. These keys are tied to your Datica user account and can be used for authentication with the Datica APIs or as a method of pushing code to the The Platform platform.
+User keys are intended to be private and not shared with anyone. These keys are tied to your Datica user account and can be used for authentication with the Datica APIs or as a method of pushing code to the Platform platform.
 
 # Deploy Keys
 

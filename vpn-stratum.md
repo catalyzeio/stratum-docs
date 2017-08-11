@@ -8,7 +8,7 @@ summary: Can I access my The Platform environment via VPN?
 
 Yes! Datica offers a VPN appliance that can be added to your environment that provides direct access to your environment's internal network. VPN access is provided through OpenVPN.
 
-# What can I access through the The Platform VPN?
+# What can I access through the Platform VPN?
 
 The VPN provides direct access to the internal network. For example, this access allows users to hook up database visualization software or directly connect to the Redis CLI by talking to the exposed ports on the containers that are on the network.
 

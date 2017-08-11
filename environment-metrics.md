@@ -5,18 +5,18 @@ summary: See what metrics are available in The Platform.
 ---
 
 # The Platform Environment Metrics
-The The Platform Dashboard includes comprehensive metrics for your environment's services.
+the Platform Dashboard includes comprehensive metrics for your environment's services.
 
-## Viewing Metrics in the The Platform Dashboard
+## Viewing Metrics in the Platform Dashboard
 
-Each service in the The Platform Dashboard contains individual graphs of metrics.
+Each service in the Platform Dashboard contains individual graphs of metrics.
 
 Click on the "Details" button for a service to examine them.
 
 ![view](images/view_details.png)
 
 ### Duration and Refresh
-By default, the The Platform Dashboard shows the last hour of metrics for the selected service. You can change the display window by selecting a different option from the dropdown located immediately above the metric graphs.
+By default, the Platform Dashboard shows the last hour of metrics for the selected service. You can change the display window by selecting a different option from the dropdown located immediately above the metric graphs.
 
 ![duration](images/metrics_duration.png)
 

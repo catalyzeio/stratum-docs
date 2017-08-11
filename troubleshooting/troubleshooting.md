@@ -5,7 +5,7 @@ category: troubleshooting
 
 # The Platform Troubleshooting Guide
 
-Welcome to the The Platform troubleshooting guide. In this guide we will give you an overview of common issues users may see when working the platform. Beyond that we'll walk you through common resolutions for these issues.
+Welcome to the Platform troubleshooting guide. In this guide we will give you an overview of common issues users may see when working the platform. Beyond that we'll walk you through common resolutions for these issues.
 
 ## Components
 
@@ -15,7 +15,7 @@ In order to help you resolve your issue, we first need to outline the components
 - [Datica CLI](https://github.com/daticahealth/cli)
 - [Account Manager](https://product.datica.com/account)
 
-The The Platform dashboard is where users can check the status of their environment and related services, manage users, and navigate to logging and monitoring.
+the Platform dashboard is where users can check the status of their environment and related services, manage users, and navigate to logging and monitoring.
 
 The Datica CLI contains the bulk of platform functionality. For a comprehensive reference check out [this guide](/compliant-cloud/cli-reference).
 

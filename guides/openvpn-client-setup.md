@@ -16,7 +16,7 @@ category: vpn
 
 # VPN Security
 
-Communications between your client computer and the The Platform environment over the VPN are encrypted and secure. However, your Datica credentials provide access into this protected environment and should be safeguarded very securely. Please make sure that you are following all applicable information security policies, including what we provide at [https://policy.datica.com](https://policy.datica.com) and [https://hipaa.datica.com](https://hipaa.datica.com).
+Communications between your client computer and the Platform environment over the VPN are encrypted and secure. However, your Datica credentials provide access into this protected environment and should be safeguarded very securely. Please make sure that you are following all applicable information security policies, including what we provide at [https://policy.datica.com](https://policy.datica.com) and [https://hipaa.datica.com](https://hipaa.datica.com).
 
 # OS X OpenVPN Client
 

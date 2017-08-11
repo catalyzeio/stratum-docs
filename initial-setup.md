@@ -12,7 +12,7 @@ If you don't yet have an environment, or you have questions on The Platform's ca
 
 Once your new environment has been provisioned and is ready to use, you will receive two emails. The first is simply a notification that it's ready, which you will receive for every environment. This contains your environment's **public hostname** - take note of this for later. The second is an invitation to join the new **organization** that has been created for you - this will only be sent for the very first environment that we provision for you. The invitation email contains a link to the [The Platform dashboard](https://product.datica.com/compliant-cloud) - click it!
 
-The The Platform dashboard will prompt you to sign in with your Datica account - if you don't have one already, you can also create one at this point - just follow the instructions on the page. After signing in (or creating a new account, verifying your email address, then signing in), click the "The Platform" link from the product list. You should see your organization in the upper-right corner:
+the Platform dashboard will prompt you to sign in with your Datica account - if you don't have one already, you can also create one at this point - just follow the instructions on the page. After signing in (or creating a new account, verifying your email address, then signing in), click the "The Platform" link from the product list. You should see your organization in the upper-right corner:
 
 <center>![org corner](/compliant-cloud/articles/images/org_corner.png)</center>
 
@@ -20,7 +20,7 @@ For more on managing organizations, including how to add additional members and 
 
 > ***Note:*** Occasionally, if interrupted while creating an account, you might find that your invite did not get accepted, and you are not a member of your organization yet. If this happens, just click the link in your email again.
 
-Once you've confirmed that you're a member of your organization, you should also see your environment's summary listed in the The Platform dashboard, looking something like this:
+Once you've confirmed that you're a member of your organization, you should also see your environment's summary listed in the Platform dashboard, looking something like this:
 
 <center>![org summary](/compliant-cloud/articles/images/env_summary.png)</center>
 
@@ -38,7 +38,7 @@ To install the CLI, follow the instructions in its [Github repository](https://g
 
 The `init` command does the following:
 
-1. Signs you into the Datica The Platform platform.
+1. Signs you into the Datica Platform platform.
 2. Ensures you have an ssh-key associated to your account.
 3. Sets the `datica` [Git remote](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) of your code service, so that you can push to it.
 

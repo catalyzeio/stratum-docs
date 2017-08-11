@@ -22,7 +22,7 @@ To get started we will create a simple Node.js application using the [Express fr
    ```
    {
      "name": "catalyze-nodejs-mongo-demo",
-     "description": "Sample Node.js application for the Datica The Platform",
+     "description": "Sample Node.js application for the Datica Platform",
      "version": "0.0.1",
      "main": "index.js",
      "scripts": {

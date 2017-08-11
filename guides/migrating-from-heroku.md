@@ -70,7 +70,7 @@ Password:
 "datica" remote added.
 ```
 
-The username and password here are the same credentials that you used to sign in to the The Platform dashboard.
+The username and password here are the same credentials that you used to sign in to the Platform dashboard.
 
 ## 4. Set Variables
 
@@ -195,7 +195,7 @@ Navigate to the hostname you configured above, with https (https://staging.examp
 
 Note that it may take a few minutes for your application to show up - several factors can cause delay in this (DNS propagation, AWS load balancers taking effect, or slow-starting applications are the most common causes).
 
-If you think you've waited too long and your application still hasn't started, check your logs. Your logs can be accessed via the `logs` command in your CLI, or at `https://your-env's-public-hostname/logging/` - there is also a link to view logs in the The Platform dashboard.
+If you think you've waited too long and your application still hasn't started, check your logs. Your logs can be accessed via the `logs` command in your CLI, or at `https://your-env's-public-hostname/logging/` - there is also a link to view logs in the Platform dashboard.
 
 ## Further Help
 

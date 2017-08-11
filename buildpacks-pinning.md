@@ -13,7 +13,7 @@ If the buildpack is not pinned, users run the risk that a buildpack update unexp
 The below procedure outlines how to pin the buildpack version for your application.
 
 ### 1. Set the BUILDPACK_URL environment variable
-The The Platform build procedure constructs the application based on automatically detecting the code type or reading in the `BUILDPACK_URL` environment variable.
+the Platform build procedure constructs the application based on automatically detecting the code type or reading in the `BUILDPACK_URL` environment variable.
 
 Every buildpack release is tagged with a version number. You can view the releases on the Github page for each buildpacks. Below is the Python buildpack for example:
 

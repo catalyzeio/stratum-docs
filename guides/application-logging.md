@@ -7,7 +7,7 @@ category: logging
 
 ## Synopsis
 
-The The Platform platform's logging flexibility makes it easy for you to log data from any software framework that can write to standard out or send JSON messages to a socket.
+the Platform platform's logging flexibility makes it easy for you to log data from any software framework that can write to standard out or send JSON messages to a socket.
 This guide contains examples for Python + PostgresSQL, Node + MongoDB, PHP + MySQL, and  Ruby + PostgresSQL frameworks.
 
 It is important not only to store logs but to understand how to effectively filter and extract metrics from your logs.  Datica uses ELK (Elasticsearch, Logstash and Kibana) to capture and visualize both application and database logs. More information can be found [here](https://www.elastic.co/).
@@ -20,7 +20,7 @@ Logging is an essential part of HIPAA compliance, and the following sections of 
 * Section 164.308(a)(1)(ii)(D) “Information System Activity Review” prescribes review of various records of IT activities such as logs, systems utilization reports,  incident reports and other indications of security relevant activities.
 
 ## Pre-requisites
-You have a The Platform account with Datica.
+You have a Platform account with Datica.
 
 You have a provisioned environment with a deployed application.
 

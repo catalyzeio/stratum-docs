@@ -1,10 +1,10 @@
 ---
 title: Creating a User Account
 category: getting-started
-summary: How do I get access to a The Platform organization or environment?
+summary: How do I get access to a Platform organization or environment?
 ---
 
-# Create a Datica Account via the The Platform Dashboard
+# Create a Datica Account via the Platform Dashboard
 
 Before you can accept an invitation to an organization and gain access to any environments, you need to create a [The Platform Dashboard](https://product.datica.com/compliant-cloud) account!
 
