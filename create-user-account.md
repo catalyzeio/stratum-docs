@@ -1,12 +1,13 @@
 ---
-title: Creating a User Account
+title: Creating an Account
 category: getting-started
 summary: How do I get access to a Platform organization or environment?
 ---
 
-# Create a Datica Account via the Platform Dashboard
+# Registering for a Platform Account
+Registering for an account is always done through the [platform registration page](https://product.datica.com/compliant-cloud/register). User's that have been invited to an existing organization must have a Platform account **before** accepting an invitation. Registering for an account is completely free, so we always suggest doing that right away.
 
-Before you can accept an invitation to an organization and gain access to any environments, you need to create a [The Platform Dashboard](https://product.datica.com/compliant-cloud) account!
+Additionally, new customers looking to create a free trial or self-service sign up should register before on-boarding.
 
 ![register](images/account_register.png)
 
@@ -39,3 +40,4 @@ Copy and paste the CLI command from the e-mail into your terminal window:
 ### See also:
 
 * [Organizations](/compliant-cloud/articles/concepts/organizations)
+
