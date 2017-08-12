@@ -15,7 +15,9 @@ First you'll need to register for a Datica Platform account in order to build a 
 
 ## Signing in
 Now that you have an account and have confirmed your email you can sign in. Once you're signed in you should see an empty dashboard similar to the image below.
-![Empty Dashboard](images/env_summary.png).
+
+![Empty Dashboard](images/empty_dashboard.png)
 
 ## Onboarding - Introduction
-Next you should click on the button in the welcome message that says "Create an environment". Once you click that you'll be taken to on-boarding. Th
+Next you should click on the button in the welcome message that says "Create an environment". Once you click that you'll be taken to on-boarding. The first step of new customer on-boarding is to explain exactly what we're going to do. From a high level here are the steps:
+
