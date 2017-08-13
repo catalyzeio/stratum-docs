@@ -38,4 +38,13 @@ After you've typed out the name of your organization the next step is to choose 
 
 Once a plan is selected you'll have access to input your billing details in the form of a credit card. **Note:** We will never charge you without clearly indicating that we are doing so. We require a credit card up front to spec out an environment, however we will not charge you until that environment is provisioned. The one exception to that rule is when a customer's environment qualifies for a 14-day free trial, for which we will not charge you until the free trial is over.
 
+## Onboarding - Environment Creation
+Now we're cooking! So you've created a new organization, have input your billing details, and now you're ready to create a new environment.
 
+**The first step is to name your environment.** This name should semantic and concise.
+
+Once you have your name picked out **the next thing you'll want to do is select the services you need**. Datica's Platform abstracts away many of infrastructure complexities that you'd otherwise have to deal. What this means is that you'll get things like Load Balancing, Logging, Monitoring, Intrusion Detection, Backups, Disaster Recovery, and much more all out of the box. There is no additional configuration need on Datica to make these things work.
+
+As such, the only thing you need to do during this step is simply select the building blocks required to make your application run. See the image below as an example:
+
+![On-boarding - Environment Creation](images/onboarding_env_creation.png)
