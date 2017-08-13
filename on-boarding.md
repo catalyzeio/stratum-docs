@@ -51,9 +51,9 @@ As such, the only thing you need to do during this step is simply select the bui
 
 We call these building blocks services. Each environment comes with the following services automatically:
 
-- Logging: This service is required for full HIPAA and HITRUST compliance. Datica utilizes an open source tool called Kibana to provide a logging dashboard for our customers.
-- Monitoring: Another service required for full HIPAA and HITRUST compliance, monitoring is provided via an open source dashboard for Sensu called uchiwa.
-- Service proxy: The Service Proxy is a special service in each environment that is responsible for routing traffic from the outside world into your environment’s network, to specific code services. This is configured using sites. The service proxy is the only service exposed outside of your environment’s network - all external (non-console, non-VPN) traffic goes through it and is proxied to other services.
+- **Logging:** This service is required for full HIPAA and HITRUST compliance. Datica utilizes an open source tool called Kibana to provide a logging dashboard for our customers.
+- **Monitoring:** Another service required for full HIPAA and HITRUST compliance, monitoring is provided via an open source dashboard for Sensu called uchiwa.
+- **Service proxy:** The Service Proxy is a special service in each environment that is responsible for routing traffic from the outside world into your environment’s network, to specific code services. This is configured using sites. The service proxy is the only service exposed outside of your environment’s network - all external (non-console, non-VPN) traffic goes through it and is proxied to other services.
 
 **Note:** For your first Datica environment these services are covered under the base fee. For each additional environment they are billed at our standard services size fee ($100/month per 1GB of Ram).
 
@@ -62,8 +62,29 @@ Outside of our built-in utility services each customer has the opportunity to ad
 - PostgreSQL
 - code
 
+(See currently supported database versions [here](/compliant-cloud/articles/database-general/#sts=What versions of the supported databases does Datica use?).)
+
 Both of these services are scaled to a size of 2. This is highly recommended. This will ensure your application is highly available.
 
 You'll also notice that the size of these services is set to 1. This means that each service will have a dedicated 1GB of Ram. Let's look at the math on that…
 
-A free trial comes with 6GB of Ram. In the example above there are two services. Each with a scale of 2 and a size of 1. That means we've used a total of 4GB out of our allotted 6. For quick reference see the environment creation sidebar. At the top you'll see your bucket of available ram. Now to be clear, you can add additional ram, however anything outside for the allotted 6GB will void the free trial.
+A free trial comes with 6GB of Ram. In the example above there are two services. Each with a scale of 2 and a size of 1. That means we've used a total of 4GB out of our allotted 6. For quick reference see the environment creation sidebar. At the top you'll see your bucket of available ram. Now to be clear, you can add additional ram, however anything outside of the allotted 6GB will void the free trial.
+
+**Code Services**
+In the example above you'll see that we chose PostgreSQL for our database. This is an explicit selection that needs to be made given how the platform works. As far as code services are concerned you can ship any supported language with your application and The Platform will automatically detect the language and install the necessary dependencies. The Datica Platform supports the following languages:
+
+- clojure
+- erlang
+- go
+- gradle
+- grails
+- java
+- multi
+- nodejs
+- php
+- play
+- python
+- ruby
+- scala
+
+Alternatively users can create their own buildpacks and deploy them onto the platform. However, we cannot provide official support for such buildpacks. To learn more about custom buildpacks see [this article](/compliant-cloud/articles/buildpacks-custom/).
