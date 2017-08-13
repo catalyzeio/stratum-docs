@@ -5,5 +5,19 @@ summary: How can I scale with Datica and The Platform?
 ---
 
 # How can I scale with Datica and The Platform?
+As of August 15th, 2017 Datica provides new customers on the Developer and Growth plans the ability to scale services at will. To scale a services, navigate to your Platform dashboard. In the environments listing find the environment that contains the service you're looking to scale. From there click the "Edit" button next to the environment name. This will take you to the environment details view. Here you will see an "Edit" button along side the services that you're able to scale. See the image below for an example:
 
-Code scaling is increasing a system's ability to handle a growing work load. As the work of a system increases a system with a scaling method should be able to grow to handle the load. Code scaling often means adding additional application servers to a service to handle increased demand. This feature is built right into Datica's The Platform feature set, contact your account manager or open a ticket [here](https://product.datica.com/compliant-cloud) via the "Contact Support" button for your environment.
+![Scale Services](images/scale_services.png)
+
+When you find the service you want to scale click the aforementioned "Edit" button. You should see a modal like this:
+
+![Scale Services Modal](images/scale_services_modal.png)
+
+Inside of this modal you'll have several options. You can...
+
+- Rename the service
+- Scale the service up and down
+- Add workers (for code services)
+- Resize the ram
+
+At this time we do not offere Database service scaling, however we are working on providing this funtionality. In the meantime please reach out to Datica support.

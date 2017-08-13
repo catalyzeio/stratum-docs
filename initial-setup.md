@@ -12,9 +12,9 @@ This article is intended to get you up and running with your new application on 
 
 This article is a journey, and this journey has two paths.
  
-**1.)** The first path is intended for customers signing up through the Datica.com website on either the Developer or Growth tier plans as outlined on our [pricing page](https://datica.com/pricing). If you've signed up for Datica via this method after August 16th, 2017 then [visit the updated on-boarding guide](/compliant-cloud/articles/on-boarding).
+**1.)** The first path is intended for customers signing up through the Datica.com website on either the Developer or Growth tier plans as outlined on our [pricing page](https://datica.com/pricing). If you've signed up for Datica via this method after August 15th, 2017 then [visit the updated on-boarding guide](/compliant-cloud/articles/on-boarding).
 
-**2.)** The second path is intended for existing Datica customers, or users that are being invited to an environment that is not self-service, or was created previous to August 16th, 2017. For those customers please keep reading below.
+**2.)** The second path is intended for existing Datica customers, or users that are being invited to an environment that is not self-service, or was created previous to August 15th, 2017. For those customers please keep reading below.
 
 ## 1. Gaining Access
 Once your new environment has been provisioned and is ready to use, you will receive two emails:
