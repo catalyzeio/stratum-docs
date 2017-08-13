@@ -47,7 +47,7 @@ Once you have your name picked out **the next thing you'll want to do is select 
 
 As such, the only thing you need to do during this step is simply select the building blocks required to make your application run. See the image below as an example:
 
-![On-boarding - Environment Creation](images/onboarding_env_creation.png)
+![On-boarding - Environment Creation](images/onboarding_environment_spec.png)
 
 We call these building blocks services. Each environment comes with the following services automatically:
 
