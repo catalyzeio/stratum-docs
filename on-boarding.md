@@ -110,6 +110,47 @@ The end is in sight! Now that our environment has been spec'd out we need to rev
 After reviewing the information you can go ahead and click "Deploy". If you qualify for a free trial you will not be charged. If you've gone outside of the 6GB limit for the Developer plan or have chosen the Growth plan you will be charged right away.
 
 ## Onboarding - Provisioning Progress
-Now that you've clicked deploy you should see a progress bar. This means that the Platform is putting together your application's environment. This is a very quick process and shouldn't take more than 30 seconds (it will likely take less than 10 seconds). Once the provisioning process has completed you should see an on-screen success message like the image below:
+Now that you've clicked "Deploy" you should see a progress bar. This means that the Platform is putting together your application's environment. This is a very quick process and shouldn't take more than 30 seconds (it will likely take less than 10 seconds). Once the provisioning process has completed you should see an on-screen success message like the image below:
 
 ![On-boarding - Provisioning Success](images/onboarding_provision_success.png)
+
+## Onboarding - Deployment
+Now for the moment of truth. Let's recap what you've completed so far:
+
+- Created an organization
+- Input your billing details
+- Spec'd out your application environment
+- Reviewed your environment
+- Agreed to the contract
+- Provisioned your environment
+
+The very last step is to deploy your code! So let's do exactly that.
+
+The very first thing you need to do is install the latest version of the Datica Platform CLI. Head over to our [downloads page](https://github.com/daticahealth/cli/releases) to find the associated binary for your system.
+
+Once you have the CLI installed you'll need to add your SSH keys in order to deploy code. Run the following command to add your SSH keys to Datica.
+
+`$ datica keys add my-datica-key ~/.ssh/id_rsa.pub`
+
+Now that Datica has your keys we can initialize your environment. Follow the instructions below:
+
+```bash
+$ cd YOUR_PROJECT_PATH
+$ datica init
+```
+
+Great! Now it's time to deploy your application. Follow these commands if you don't already have a git repository associated with your application
+
+```bash
+$ git init
+$ git add .
+$ git commit -m "deploying to datica"
+$ git push datica master
+```
+
+If you're using git already follow below:
+
+```bash
+$ git commit -m "deploying to datica"
+$ git push datica master
+```
