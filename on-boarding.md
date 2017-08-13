@@ -6,7 +6,7 @@ Summary: This article is intended to walk new users through self-service on-boar
 
 # On-boarding
 
-As of August 16th 2017, Datica now offers customers the ability to completely on-board themselves with no support intervention. That means new customers can register for an account, input their billing details, spec out their application environment, provision, and deploy. We're even giving our Developer tier customers a 14-day free trial!
+As of August 15th 2017, Datica now offers customers the ability to completely on-board themselves with no support intervention. That means new customers can register for an account, input their billing details, spec out their application environment, provision, and deploy. We're even giving our Developer tier customers a 14-day free trial!
 
 **Let's get started**
 
@@ -43,7 +43,7 @@ Now we're cookin'! So you've created a new organization, have input your billing
 
 **The first step is to name your environment.** This name should be semantic and concise.
 
-Once you have your name picked out **the next thing you'll want to do is select the services you need**. Datica's Platform abstracts away many of infrastructure complexities that you'd otherwise have to deal. What this means is that you'll get things like Load Balancing, Logging, Monitoring, Intrusion Detection, Backups, Disaster Recovery, and much more all out of the box. There is no additional configuration need on Datica to make these things work.
+Once you have your name picked out **the next thing you'll want to do is select the services you need**. Datica's Platform abstracts away many of infrastructure complexities that you'd otherwise have to deal. What this means is that you'll get things like Load Balancing, Logging, Monitoring, Intrusion Detection, Backups, Disaster Recovery, and much more all out of the box. There is no additional configuration needed on Datica to make these features work.
 
 As such, the only thing you need to do during this step is simply select the building blocks required to make your application run. See the image below as an example:
 
@@ -88,3 +88,28 @@ In the example above you'll see that we chose PostgreSQL for our database. This 
 - scala
 
 Alternatively users can create their own buildpacks and deploy them onto the platform. However, we cannot provide official support for such buildpacks. To learn more about custom buildpacks see [this article](/compliant-cloud/articles/buildpacks-custom/).
+
+**Workers**
+Customers also have the option to add workers to their code services. Workers are applications that are run in their own container, but do not bind to a port. Workers are typically used for asynchronous background processing and are sized just like other code services. To learn more about workers see [this article](/compliant-cloud/articles/concepts/workers/).
+
+**Database Storage**
+Each database comes preconfigured with 20GB of EBS volume. Customers have the option to scale this beyond 20 as they see fit. Additionally, Datica also provides compliant object storage. For more information on object storage see [this article](/compliant-cloud/articles/cloud-storage/) (we do not currently offer object storage configuration during on-boarding).
+
+### Recapping Environment Creation
+- Choose a semantic name for your environment (you'll be using it frequently in the CLI)
+- Select the required services to run your application (likely some combination of code services and a database(s))
+- Ensure your services have been scaled to 2 for high availability
+- Add any required workers to your code services
+- Add any additional capacity to your database storage
+
+## Onboarding - Environment Creation Review
+The end is in sight! Now that our environment has been spec'd out we need to review it. If everything looks good, go ahead and proceed to accepting the contract (we recommend you read the contract first as it contains our BAA) and clicking deploy. After doing that you should see a modal similar to the image below:
+
+![On-boarding - Review Modal](images/onboarding_review_modal.png)
+
+After reviewing the information you can go ahead and click "Deploy". If you qualify for a free trial you will not be charged. If you've gone outside of the 6GB limit for the Developer plan or have chosen the Growth plan you will be charged right away.
+
+## Onboarding - Provisioning Progress
+Now that you've clicked deploy you should see a progress bar. This means that the Platform is putting together your application's environment. This is a very quick process and shouldn't take more than 30 seconds (it will likely take less than 10 seconds). Once the provisioning process has completed you should see an on-screen success message like the image below:
+
+![On-boarding - Provisioning Success](images/onboarding_provision_success.png)
