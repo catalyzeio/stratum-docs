@@ -9,9 +9,9 @@ In this guide we will cover how to deploy a simple [Node.js](https://nodejs.org/
 
 ## Pre-requisites
 
-Before getting started, make sure you created your The Platform account, have signed any [business associate agreements](https://datica.com/learn/business-associate-agreements) with Datica as necessary, and have successfully provisioned an environment with a code service and a MongoDB service. If you need help getting started, hop on over to the [The Platform Getting Started](/compliant-cloud/getting-started) guide available on our [resources site](https://resources.datica.com/).
+Before getting started, make sure you created your Platform account, have signed any [business associate agreements](https://datica.com/learn/business-associate-agreements) with Datica as necessary, and have successfully provisioned an environment with a code service and a MongoDB service. If you need help getting started, hop on over to [The Platform Getting Started](/compliant-cloud/getting-started) section available right here on [resources site](https://resources.datica.com/).
 
-You should also have Git, Node.js, NPM, Mongo, and the [The Platform CLI](https://github.com/daticahealth/cli) installed and available on your system path.
+You should also have Git, Node.js, NPM, Mongo, and [The Platform CLI](https://github.com/daticahealth/cli) installed and available on your system path.
 
 ## Local Node.js Application
 
@@ -96,7 +96,7 @@ To get started we will create a simple Node.js application using the [Express fr
 
 ## Building and Deploying the Application
 
-To deploy the application, a Git remote must be set up using the [The Platform CLI](https://github.com/daticahealth/cli).
+To deploy the application, a Git remote must be set up using [The Platform CLI](https://github.com/daticahealth/cli).
 
 1. Set the git remote of the local project with your provisioned environment's code service.
 
@@ -105,7 +105,7 @@ To deploy the application, a Git remote must be set up using the [The Platform C
    $ datica -E my-node-app git-remote add app01
    ```
 
-   This will add a new git remote named `datica` to that local repo. It will ask for credentials - these are the username and password that you use in the dashboard.
+   This will add a new git remote named `datica` to that local repo. It will ask for credentials - these are the email and password that you use in the dashboard.
 
 2. Push master to datica to build your code.
 
@@ -183,7 +183,7 @@ Next up we will configure the application to fetch and store data in a Mongo dat
    });
    ```
 
-   As with the `PORT` environment variable, you should pull your MongoDB connection information from the `DATABASE_URL` environment variable. If you have more than one database in your environment, use the [The Platform dashboard](https://product.datica.com/compliant-cloud/) to determine which environment variable to use.
+   As with the `PORT` environment variable, you should pull your MongoDB connection information from the `DATABASE_URL` environment variable. If you have more than one database in your environment, use the [dashboard](https://product.datica.com/environments/) to determine which environment variable to use.
 
 3. Run your updated code, then point your browser to `http://127.0.0.1:8088` to see it working.
 

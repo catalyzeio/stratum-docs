@@ -5,7 +5,6 @@ summary: What is an ACL, what is a group?
 alias: ["compliant-cloud/articles/organization-access-controls/"]
 ---
 # Groups & ACLs on The Platform
-
 Access to your products, services, and environments is managed via ACLs (Access Control Lists). Datica allows you to manage organization access by creating Groups, which are composed of various ACL rules, and adding individual users within your organization to these groups.
 
 As a rule, you may not assign individual ACLs to a specific individual - they must belong to a group. You can create and delete groups as you see fit. There is one important exception and that is the **Admins** group. You can revoke and grant access to this group, but you may not delete it or modify it.
@@ -24,31 +23,31 @@ Can directly interact with your Datica network, running jobs, and services (**No
 
 **Organization ACLs**
 ### View Billing
-This gives users the ability to view organization billing details, including the last 4 digits of a credit card number, the invoice history as well as executed contracts.
+This gives users the ability to view organization billing details, including the list of payment methods and invoice history.
 
 ### Modify Billing
-This gives users the ability to update payment information.
+This gives users the ability to update payment information, including changing the default payment method.
 
 ### Create Groups
 This ACL gives users the ability to create new groups.
 
 ### Update Groups
-This ACL gives users the ability to update a given groups ACLs.
+This ACL gives users the ability to update a given group's ACLs.
 
 ### Delete Groups
 This ACL gives users the ability to remove groups entirely.
 
 ### Manage Group Membership
-This ACL gives users the ability to edit the members of a group.
+This ACL gives users the ability to add members to and remove members from a group.
 
 ### View Invites
-This ACL gives users the ability to view invited users and their associated email.
+This ACL gives users the ability to view the list of invited users.
 
 ### Send Invites
 This ACL gives users the ability to send out invitations to other users to join that organization.
 
 ### Revoke Invites
-This ACL gives users the ability to remove invites that have been sent, but not activated.
+This ACL gives users the ability to remove invites that have been sent, but not accepted.
 
 ### Update Organization Information
 This ACL gives users the ability to update organization information, such as the organization name.

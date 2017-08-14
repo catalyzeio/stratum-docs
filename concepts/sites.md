@@ -4,7 +4,7 @@ category: concepts
 summary: Mapping hostnames to certificates and services on The Platform.
 ---
 
-The [The Platform](https://datica.com/platform) concept of a **Site** represents the mapping of a hostname to a [code service](/compliant-cloud/articles/concepts/services#code-services). An [environment](/compliant-cloud/articles/concepts/environments) can have more than one code service, so its [service proxy](/compliant-cloud/articles/concepts/service-proxy) needs to know how to route requests.
+[The Platform](https://datica.com/platform) concept of a **Site** represents the mapping of a hostname to a [code service](/compliant-cloud/articles/concepts/services#code-services). An [environment](/compliant-cloud/articles/concepts/environments) can have more than one code service, so its [service proxy](/compliant-cloud/articles/concepts/service-proxy) needs to know how to route requests.
 
 ## Creating a New Site
 
@@ -16,7 +16,7 @@ To create a new site entry, three pieces of information are needed.
 2. Certificate name
 3. Code service label
 
-The hostname is up to you, and the certificate name is also decided by you when uploaded. The code service label is the name of the code service that you intend traffic for this hostname to go to. If you don't know what your code service's name is, you can find it in the [The Platform dashboard](https://product.datica.com/compliant-cloud).
+The hostname is up to you, and the certificate name is also decided by you when uploaded. The code service label is the name of the code service that you intend traffic for this hostname to go to. If you don't know what your code service's name is, you can find it in [The Platform dashboard](https://product.datica.com/environments).
 
 The [CLI](/compliant-cloud/articles/cli-stratum) [sites create](/compliant-cloud/cli-reference#sites-create) command is used to create the site, taking the form `datica -E "<your_env_name>" sites create <hostname> <code service label> <certificate name>`. For example, to set up a site mapping `example.com` to a code service named `code-1` using an uploaded cert named `example`:
 

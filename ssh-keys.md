@@ -7,12 +7,12 @@ summary: Learn how to manage your SSH keys in The Platform.
 # The Platform SSH Keys
 There are two types of SSH keys that you can setup in The Platform: user keys and deploy keys. These two types, the differences between the two, and in what situations you would choose deploy over user are described below.
 
-It is important to note that before The Platform was launched, Datica only allowed one type of SSH key. Those keys were generically named `keys`. With the launch of The Platform, these keys were automatically converted to a deploy key. If you're looking to switch to user keys, check out the [Make the Switch](#make-the-switch) section on how to do that and troubleshoot any issues you may run into.
+It is important to note that in older releases of the Platform, Datica only allowed one type of SSH key. Those keys were generically named `keys`. With the launch of The Platform, these keys were automatically converted to a deploy key. If you're looking to switch to user keys, check out the [Make the Switch](#make-the-switch) section on how to do that and troubleshoot any issues you may run into.
 
 # User Keys
 User keys are the preferred type of keys for the majority of Datica users. User keys allow you to access any Datica git repo that belongs to a service within an environment that you have access to. For example, let's say Alice is a Datica user with two environments: `production` and `development` and each environment has two services named `app01` and `app02`. A user key will grant Alice access to all services in both environments. Alice can access `app01` in production and development as well as `app02` in production and development with nothing more than a single user key.
 
-User keys are intended to be private and not shared with anyone. These keys are tied to your Datica user account and can be used for authentication with the Datica APIs or as a method of pushing code to the Platform platform.
+User keys are intended to be private and not shared with anyone. These keys are tied to your Datica user account and can be used for authentication with the Datica APIs or as a method of pushing code to the Platform.
 
 # Deploy Keys
 Deploy keys are much more restrictive than user keys. Deploy keys give an entity access to a single service in a single environment. Deploy keys are **not** tied to a user account, but tied to a service instead. The primary use for a deploy key is with a CI/CD server. Deploy keys are intended to be used by automated components of your infrastructure with a single purpose of pushing code to one repository.
@@ -20,7 +20,7 @@ Deploy keys are much more restrictive than user keys. Deploy keys give an entity
 There are few situations in which deploy keys are better suited than user keys. Primarily they are used with a CI/CD server such as Codeship, Jenkins, or TeamCity. It is important to note that deploy keys **must** be globally unique. It is also required that all deploy keys be different than your user keys.
 
 # How can I setup user keys on my account?
-To execute the commands below, you'll need to specify your Datica username and password, so be sure to have them available.
+To execute the commands below, you'll need to specify your Datica email and password, so be sure to have them available.
 
 ## Download The Platform CLI
 All SSH key management will be carried out through The Platform CLI. Get it [here](https://github.com/daticahealth/cli).
@@ -47,7 +47,7 @@ To use an SSH key for authentication in the CLI, it must be added as a user key.
 datica -E "<your_env_name>" keys set ~/.ssh/prod_rsa
 ```
 
-You can now execute CLI commands without using a username/password!
+You can now execute CLI commands without using an email/password!
 
 # How do I add a deploy key?
 Before adding a deploy key, please make sure to read the sections above on the specifics of [user keys](#user-keys) vs [deploy keys](#deploy-keys). To add a deploy key, you'll need the CLI. Now run the `deploy-keys` command

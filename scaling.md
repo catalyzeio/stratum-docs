@@ -18,7 +18,7 @@ Inside of this modal you'll have several options. You can...
 - Rename the service
 - Scale the service up and down
 - Add workers (for code services)
-- Resize the ram
+- Resize the RAM
 
 At this time we do not offer Database service scaling, however we are working on providing this functionality. In the meantime please reach out to Datica support.
 

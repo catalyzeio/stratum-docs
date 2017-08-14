@@ -5,7 +5,7 @@ alias: ["compliant-cloud/articles/guides/self-service-SSL/", "compliant-cloud/ar
 summary: Uploading and updating SSL certificates on The Platform.
 ---
 
-The [The Platform CLI](/compliant-cloud/articles/cli-stratum) allows complete self-management of SSL Certificates. The [certs](/compliant-cloud/cli-reference#certs) command group in the CLI has several subcommands to manage your SSL certificates - the usage of each is described below.
+[The Platform CLI](/compliant-cloud/articles/cli-stratum) allows complete self-management of SSL Certificates. The [certs](/compliant-cloud/cli-reference#certs) command group in the CLI has several subcommands to manage your SSL certificates - the usage of each is described below.
 
 ## Obtaining a Certificate
 For production usage of The Platform, your certificate must:
@@ -14,7 +14,7 @@ For production usage of The Platform, your certificate must:
 2. Be unencrypted (no password).
 3. Be in PEM format.
 
-or you can create a [Let's Encrypt](https://letsencrypt.org) certificate using The Platform CLI. If you are using a Let's Encrypt certificate, you do not need to generate a CSR. For more information on The Platform Let's Encrypt certificates, check out our [Let's Encrypt Guide](//compliant-cloud/articles/guides/lets-encrypt/).
+or you can create a [Let's Encrypt](https://letsencrypt.org) certificate using The Platform CLI. If you are using a Let's Encrypt certificate, you do not need to generate a CSR. For more information on Let's Encrypt certificates, check out our [Let's Encrypt Guide](//compliant-cloud/articles/guides/lets-encrypt/).
 
 For development/staging purposes, a self-signed certificate can be used. To generate one locally, `openssl` can be used:
 

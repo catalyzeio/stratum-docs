@@ -7,7 +7,7 @@ alias: ["compliant-cloud/articles/organization-addremove-users/"]
 
 An **Organization** is a group of user accounts, usable across all Datica products. Typically, an organization maps to (and is named after) your company. Organizations are created for you during the provisioning process. It is possible to be a member of multiple organizations.
 
-In [The Platform](https://datica.com/platform), each [environment](/compliant-cloud/articles/concepts/environments) belongs to a single organization.
+On [The Platform](https://datica.com/platform), each [environment](/compliant-cloud/articles/concepts/environments) belongs to a single organization.
 
 ## Groups
 Every user in an organization can belong to any number of groups ([more on "groups" and how to manage them](/compliant-cloud/articles/concepts/acl-groups)). Groups, via ACLs, allow their members to access Datica resources and products. You can create and delete groups as you see fit. When a new organization is created an **Admins** group will be created automatically. Typically, an organization only has a few **Admins**.
@@ -19,7 +19,7 @@ Groups are [composed of ACLs](/compliant-cloud/articles/concepts/acl-groups), cu
 * **VPN Access** Can directly interact with your Datica network, runnings jobs, and services (**Note**: this is only relevant to organizations and environments that have a running VPN).
 
 ## Managing Your Organization
-Organization management tools are located in the [The Platform Dashboard](https://product.datica.com/compliant-cloud)—find your organization under the "Organizations" section in the main nav on the left hand side of the dashboard.
+Organization management tools are located in [The Platform Dashboard](https://product.datica.com/environments)—find your organization under the "Organizations" section in the main nav on the left hand side of the dashboard.
 
 ## Adding Members to Your Organization
 New members are added to your organization by sending them an invite, from the management tools. Filling out this form will send an email to the specified address, including instructions on how to join the organization. After the invite is sent, it can be revoked at any time until it is accepted. After it is accepted, it will disappear from this table.

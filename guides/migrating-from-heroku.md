@@ -37,7 +37,7 @@ Many concepts translate between The Platform and Heroku. Some are a little diffe
 
 * Heroku **Organization Account** = The Platform **Organization**
 
-  On The Platform, each environment belongs to an Organization. When Datica provisions an environment for a new customer, we also create an Organization for you, and assign your new environment to that Organization.
+  On The Platform, each environment belongs to an Organization. When a Datica environment is provisioned, an Organization is also created to which your new environment is assigned.
 
 ## 1. Gain Access to your Environment
 
@@ -45,7 +45,7 @@ When your first environment is provisioned, you'll receive two emails from us. T
 
 The second will be an invitation to join your newly-created organization. Follow the instructions in that email, and register a new account if you don't already have one.
 
-After you've joined your organization, navigate to the [The Platform dashboard](https://product.datica.com/compliant-cloud). You should see your environment listed there.
+After you've joined your organization, navigate to [The Platform dashboard](https://product.datica.com/environments). You should see your environment listed there.
 
 ![environment summary](../images/migrate_envsummary.png)
 
@@ -59,7 +59,7 @@ Follow the instructions on the readme to install it. You'll know it's installed 
 
 ## 3. Initialize Your Local Repo
 
-To link up your local repo to your The Platform environment, open a terminal to its root directory and run the `datica init` command (it will sign you in).
+To link up your local repo to your Platform environment, open a terminal to its root directory and run the `datica init` command (it will sign you in).
 
 ```
 $ cd my-repo
@@ -70,7 +70,7 @@ Password:
 "datica" remote added.
 ```
 
-The username and password here are the same credentials that you used to sign in to the Platform dashboard.
+The email and password here are the same credentials that you used to sign in to the Platform dashboard.
 
 ## 4. Set Variables
 

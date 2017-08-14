@@ -1,10 +1,10 @@
 ---
 title: VPN Access
 category: vpn
-summary: Can I access my The Platform environment via VPN?
+summary: Can I access my Platform environment via VPN?
 ---
 
-# Can I access my The Platform environment via VPN?
+# Can I access my Platform environment via VPN?
 Yes! Datica offers a VPN appliance that can be added to your environment that provides direct access to your environment's internal network. VPN access is provided through OpenVPN.
 
 # What can I access through the Platform VPN?

@@ -21,7 +21,7 @@ Once your new environment has been provisioned and is ready to use, you will rec
 
 **The first** is simply a notification that it's ready, which you will receive for every environment. This contains your environment's **public hostname** - take note of this for later. (once you have access to your account you can find your hostname on the `service_proxy` details view).
 
-**The second** is an invitation to join the new **organization** that has been created for you - this will only be sent for the very first environment that we provision for you. The invitation email contains a link to the [The Platform dashboard](https://product.datica.com/compliant-cloud) - click it!
+**The second** is an invitation to join the new [**organization**](/compliant-cloud/articles/concepts/organizations/) that has been created for you - this will only be sent for the very first environment that we provision for you. The invitation email contains a link to [The Platform dashboard](https://product.datica.com/environments) - click it!
  
 The Platform dashboard will prompt you to sign in with your Datica account - if you don't have one already, you can also create one at this point - just follow the instructions on the page. After signing in (or creating a new account, verifying your email address, then signing in) you should see your organization under the “Organization” section in the left hand navigation bar.
  
@@ -47,7 +47,7 @@ To install the CLI, follow the instructions here on [Github](https://github.com/
  
 The `init` command does the following:
  
-1. Signs you into the Datica Platform platform.
+1. Signs you into the Datica Platform.
 2. Ensures you have an ssh-key associated to your account.
 3. Sets the `datica` [Git remote](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes) of your code service, so that you can push to it.
  
@@ -58,8 +58,7 @@ The form of this command in the CLI is: `datica init`. The init command will fin
 Datica provides two methods for installing SSL certificates. The first one is via our Let’s Encrypt feature. This new feature allows customers to easily install Let’s Encrypt SSL certificates with a few commands. The second method is the “bring your own SSL certificate” method.
 
 **The Let’s Encrypt method**
-TBD
-
+We have an entire guide dedicated to Let's Encrypt. [Have a look](/compliant-cloud/guides/lets-encrypt).
 
 **Bring your own SSL certificate method**
 Acquiring SSL certs is a very complex topic - if you'd like to read more information than what is outlined below, please see the [SSL Certificates](/compliant-cloud/articles/guides/self-service-SSL/) article. The certificate and private key must be unencrypted and in PEM format.

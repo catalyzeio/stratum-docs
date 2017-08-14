@@ -4,7 +4,7 @@ category: manage
 summary: See what metrics are available in The Platform.
 ---
 # Platform Metrics
-We currently have The Platform metrics feature turned off. We're working hard to get this turned back on for all customers. We're targeting the end of August for an official re-release. In the meantime please use the `metrics` CLI command.
+Metrics are currently unavailable in the dashboard. We're working hard to get this fixed for all customers. We're targeting the end of August for an official re-release. In the meantime please use the `metrics` CLI command.
 
 <!-- # The Platform Environment Metrics
 the Platform Dashboard includes comprehensive metrics for your environment's services.

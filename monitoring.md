@@ -18,7 +18,7 @@ You will see an authentication popup that looks like this:
 
 ![auth](images/auth_popup.png)
 
-Enter in the username and password for your Datica user account that has access to the specified environment.
+Enter in the email and password for your Datica user account that has access to the specified environment.
 
 Successful authentication will take you to an interface that looks like this:
 

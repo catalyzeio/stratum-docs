@@ -1,5 +1,5 @@
 ---
-title: Managing variables
+title: Managing Environment Variables
 category: manage
 summary: Learn how to manage your variables on The Platform.
 ---

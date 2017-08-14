@@ -48,7 +48,7 @@ The README for the OpenVPN GUI is located [here](https://github.com/OpenVPN/open
 
 # Using the VPN
 
-Datica will provide a unique configuration file for each VPN connection. That file contains all of the information to connect to your VPN for each The Platform environment. Add or open that configuration file with your preferred client and enter your Datica credentials to connect.
+Datica will provide a unique configuration file for each VPN connection. That file contains all of the information to connect to your VPN for each environment. Add or open that configuration file with your preferred client and enter your Datica credentials to connect.
 
 If your account has two factor auth enabled, you will have to append your temporary authorization code to your password each time you login to the VPN. For example, if your password is "P@ssw0rd" and your temporary authorization code is "123456", you will enter "P@ssw0rd123456" as the full password when authenticating with your VPN appliance.
 

@@ -6,8 +6,8 @@ category: logging
 # The Platform Application Logging Guide
 
 ## Synopsis
+The Platform's logging flexibility makes it easy for you to log data from any software framework that can write to standard out or send JSON messages to a socket.
 
-the Platform platform's logging flexibility makes it easy for you to log data from any software framework that can write to standard out or send JSON messages to a socket.
 This guide contains examples for Python + PostgresSQL, Node + MongoDB, PHP + MySQL, and  Ruby + PostgresSQL frameworks.
 
 It is important not only to store logs but to understand how to effectively filter and extract metrics from your logs.  Datica uses ELK (Elasticsearch, Logstash and Kibana) to capture and visualize both application and database logs. More information can be found [here](https://www.elastic.co/).

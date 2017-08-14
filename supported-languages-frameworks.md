@@ -22,4 +22,4 @@ The general rule of thumb to follow is that if it is supported by Heroku, it is 
 ## Third-Party Buildpacks
 There are many third-party buildpacks available for use. Some of these buildpacks tweak existing language packs, others carry out a specific function that other buildpacks cannot do.
 
-While Datica does not officially support non-Heroku buildpacks, many of them will work on the Platform platform.
+While Datica does not officially support non-Heroku buildpacks, many of them will work on the Platform.

@@ -35,7 +35,7 @@ Lets get your php application setup for deployment. For this example we are usin
 To run the example application locally, you can use the Homestead vagrant image which is pretty easy to setup. You can find more information on [Homestead here](https://laravel.com/docs/5.0/homestead).
 
 ## Initialize your repository to your code service
-We need to initialize your Datica code service to your Laravel application. To do this you need to use [git](https://git-scm.com/) and the [The Platform CLI](https://github.com/daticahealth/cli).
+We need to initialize your Datica code service to your Laravel application. To do this you need to use [git](https://git-scm.com/) and [The Platform CLI](https://github.com/daticahealth/cli).
 
 Using a command line, navigate to a working copy of your application, or fork the [example php application](https://github.com/catalyzeio/php-example-app), and run the following commands:
 
@@ -47,7 +47,7 @@ Password:
 "datica" remote added.
 ```
 
-The [The Platform CLI](https://github.com/daticahealth/cli) added a git remote to your local repo so you can now push code to your environment on Datica.
+[The Platform CLI](https://github.com/daticahealth/cli) added a git remote to your local repo so you can now push code to your environment on Datica.
 
 ```
 # git remote -v
@@ -123,7 +123,7 @@ Using environment variables in PHP and Laravel is pretty straight forward. Just 
 `$databaseUrl = getenv("DATABASE_URL");`
 
 ### Updating Environment Variables
-Use the [The Platform CLI](https://github.com/daticahealth/cli) to update your environment variables.
+Use [The Platform CLI](https://github.com/daticahealth/cli) to update your environment variables.
 
 The [Datica CLI](https://github.com/daticahealth/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Datica CLI](https://github.com/daticahealth/cli), head over to the [documentation](/compliant-cloud/cli-reference#vars).
 
@@ -228,4 +228,4 @@ If you would like more information on logging and laravel you can go [here](http
 Additionally, for using php standalone with no framework, you can use the `syslog()` function. More information on that can be found [here](http://php.net/manual/en/function.syslog.php).
 
 ### Viewing Logs
-Once your application is logging, you can view those logs using the dashboard. Just sign into the [The Platform Dashboard](https://product.datica.com/compliant-cloud), navigate to the environments dashboard, and click on "Monitoring" or "Logging" on any environment within your dashboard.
+Once your application is logging, you can view those logs using the dashboard. Just sign into [The Platform Dashboard](https://product.datica.com/environments), navigate to the environments dashboard, and click on "Monitoring" or "Logging" on any environment within your dashboard.

@@ -14,7 +14,7 @@ Quoting [Docker's documentation](https://docs.docker.com/engine/understanding-do
 What this means is that every time a new job for a service is started, it's a fresh setup - no need to worry about temporary files, environment variables, or stuck processes. What this means for The Platform, more importantly, is that there is a uniform way to start, stop, and connect to each piece of an environment, giving an incredible amount of power and options.
 
 # Multiple Hosts
-Each The Platform [Pod](/compliant-cloud/articles/concepts/pods) has its own set of Docker Hosts, each of which is capable of running a number of containers. When a job is deployed, its container is started on the host best-suited for it - typically the one with the lightest load. Datica watches all hosts constantly, adding more to the pod as needed. What this means, however, is that it's very likely that a given environment's containers are spread out among a number of hosts.
+Each [Pod](/compliant-cloud/articles/concepts/pods) has its own set of Docker Hosts, each of which is capable of running a number of containers. When a job is deployed, its container is started on the host best-suited for it - typically the one with the lightest load. Datica watches all hosts constantly, adding more to the pod as needed. What this means, however, is that it's very likely that a given environment's containers are spread out among a number of hosts.
 
 # Lifecycle
 Once a container is started, it will not be stopped unless it is killed - which will typically only happen when it the service that owns its job is [redeployed](/compliant-cloud/articles/concepts/services#redeploying).

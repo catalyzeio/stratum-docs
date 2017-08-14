@@ -6,7 +6,7 @@ category: guide
 # Datica Rails - PostgreSQL Guide
 
 ## Introduction
-This guide will walk you through an end-to-end roll-out of a Ruby on Rails app with logging, environment variables and connection to a PostgreSQL database hosted on Datica's The Platform. We assume that you already have a contract in place with us as well as a signed BAA. Please contact us if you need help or register for a [Free Trial][4].
+This guide will walk you through an end-to-end roll-out of a Ruby on Rails app with logging, environment variables and connection to a PostgreSQL database hosted on Datica's Platform. We assume that you already have a contract in place with us as well as a signed BAA. Please contact us if you need help or register for a [Free Trial][4].
 
 You will start by creating your environment and linking your local app to our internal git repositories as outlined in our [Onboarding Guide][1]. Then you will add logging, environment variables and a PostgreSQL database to your app. Lastly you will commit your changes and push your app to the secure Datica platform.
 
@@ -24,7 +24,7 @@ Feel free to use this example application as a base for your own, or just as a r
 ## Adding logging to your Rails app
 The Datica logging service keeps track of everything that is sent to STDOUT and STDERR, so the easiest way to add messages to your logs are to create loggers using [standard Ruby Logger][6] practices: `Logger.new(STDOUT)` or `Logger.new(STDERR)`. More information on how logging works in Datica environments is located [here][5].
 
-## Onboarding and SSL/SSH setup
+## On-boarding and SSL/SSH setup
 Once your local Rails application is up and running, you will need to complete the [Datica onboarding process][1] for your environment. The steps include setting up SSL Certificates, SSH Keys, and environment variables to ensure your environment can be built appropriately.
 
 ## Readying your application for deployment on Datica
@@ -52,16 +52,16 @@ $ git add .
 $ git commit -m "Initial commit"
 ```
 
-## Using the Datica Platform CLI to connect your app to The Platform
+## Using the Datica CLI to connect your app to The Platform
 Once Datica has provisioned your environment and you have made the appropriate changes to your application, you can initialize your local git repository to your Datica code service, which will enable you to push your application to Datica. There is a [Datica Platform CLI][8] available which makes interacting with your environment quite easy.
 
-Once you have the Datica CLI installed, run the following command from within your application's directory. This signs you into the Datica Platform platform and adds a git remote to your local repository, which will allow you to push your code
+Once you have the Datica CLI installed, run the following command from within your application's directory. This signs you into the Datica Platform and adds a git remote to your local repository, which will allow you to push your code
 
 ```
 $ datica init
 ```
 
-## Pushing your application to Datica's The Platform
+## Pushing your application to Datica's Platform
 
 To push your code to Datica, run the command below from within your application's directory.
 
