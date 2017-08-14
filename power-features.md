@@ -10,8 +10,10 @@ Datica is dedicated to providing our customers with the tools they need to addre
 - VPNs
 - Windows Support
 - [GoAnyWhere SFTP](https://www.goanywhere.com/solutions/secure-ftp)
-- Increased Backup Scheduling
+- Custom Backup Scheduling
 - [Redash](http://redash.io)
 - Data Lake Services
 - [Parse Server](https://github.com/parse-community/parse-server)
 - [Mirth Connect](https://www.mirth.com/)
+
+These features are available for purchase to all customers on all tiers. To purchase any of the features above, simply create a support ticket in the dashboard noting which feature you'd like. A support agent will respond accordingly. If you have any other questions please don't hesitate to contact us.
