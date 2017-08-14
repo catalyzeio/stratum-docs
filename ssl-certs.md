@@ -8,7 +8,6 @@ summary: Uploading and updating SSL certificates on The Platform.
 The [The Platform CLI](/compliant-cloud/articles/cli-stratum) allows complete self-management of SSL Certificates. The [certs](/compliant-cloud/cli-reference#certs) command group in the CLI has several subcommands to manage your SSL certificates - the usage of each is described below.
 
 ## Obtaining a Certificate
-
 For production usage of The Platform, your certificate must:
 
 1. Be signed by a Certificate Authority.
@@ -35,7 +34,6 @@ For production-ready (CA-Signed) certificates, if you do not already have one, w
 If you are not sure that your certificate is valid for your intended hostname, you can use the [ssl verify](/compliant-cloud/cli-reference#ssl-verify) CLI command to check it.
 
 ## Upload a Cert
-
 To upload the certificate to The Platform, the [certs create](/compliant-cloud/cli-reference#certs-create) command is used, taking the form `datica -E "<your_env_name>" certs create <cert name> <path to crt file> <path to key file>`. For example:
 
 ```
@@ -63,7 +61,6 @@ If a chain from your certificate to a root CA cannot be found, the CLI will atte
 Once all checks pass, the certificate and private key are uploaded to The Platform. It is important to note, however, that the cert is not yet in use. For a cert to be used, it must be applied to one or more [sites](/compliant-cloud/articles/concepts/sites).
 
 ## Update a Cert
-
 To update a certificate (if it's expiring soon, or just needs to be replaced), the [certs update](/compliant-cloud/cli-reference#certs-update) command is used, uploading a new cert and key to replace the old.
 
 ```
@@ -73,7 +70,6 @@ datica -E "<your_env_name>" certs update *.example.com new-wildcard-example.com.
 > ***Note:*** Cert updates will not take effect until the [Service Proxy](/compliant-cloud/articles/concepts/service-proxy) is [redeployed](/compliant-cloud/articles/concepts/services#redeploying).
 
 ## Listing your Uploaded Certs
-
 Use the [certs list](/compliant-cloud/cli-reference#certs-list) command:
 
 ```
@@ -81,7 +77,6 @@ datica -E "<your_env_name>" certs list
 ```
 
 ### See also
-
 * [Initial Setup](/compliant-cloud/articles/initial-setup)
 * [Sites](/compliant-cloud/articles/concepts/sites)
 * [Service Proxy](/compliant-cloud/articles/concepts/service-proxy)

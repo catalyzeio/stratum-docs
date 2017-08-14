@@ -20,5 +20,4 @@ Each environment has its own isolated network, allowing those containers to find
 An Environment can expand to have any number of services - as many as you need. An Environment does not have any [containers](/compliant-cloud/articles/concepts/containers) of its own - only those of its services.
 
 ### See also
-
 * [The Platform CLI](/compliant-cloud/articles/cli-stratum)

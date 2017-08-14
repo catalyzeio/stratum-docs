@@ -5,7 +5,6 @@ summary: Learn about the supported databases you can use on The Platform.
 ---
 
 # The Platform Supported Databases
-
 All databases supported by The Platform are available either in single node or highly available (HA) configurations.
 
 Databases supported in the single node deployment are:

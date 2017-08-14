@@ -20,6 +20,7 @@ Inside of this modal you'll have several options. You can...
 - Add workers (for code services)
 - Resize the ram
 
-At this time we do not offere Database service scaling, however we are working on providing this funtionality. In the meantime please reach out to Datica support.
+At this time we do not offer Database service scaling, however we are working on providing this functionality. In the meantime please reach out to Datica support.
 
 **Note for customers on contracts created before August 15th 2017:** If you're a customer on an older Datica contract you may not have access to these self-service scaling features. To update your contract please contact [upgrade@datica.com](mailto:upgrade@datica.com). Thanks!
+
