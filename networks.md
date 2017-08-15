@@ -11,7 +11,7 @@ Below is a list of network gateway addresses used by the Datica Platform for out
 | Pod Name | IP Addresses |
 |-------|--------|
 | Pod02 | 52.0.115.155, 34.192.37.216, 34.193.214.115, 34.192.82.29, 34.193.211.191 |
-| CSB01 | 54.67.9.105 |
+| Pod03 | 34.200.190.93, 34.200.26.18, 34.203.187.168, 34.202.232.33 |
 | Pod04 | 52.55.98.148, 34.193.129.177, 34.193.178.153, 34.193.158.67, 34.193.37.175 |
 
 ### How do I choose which IP addresses to whitelist?
