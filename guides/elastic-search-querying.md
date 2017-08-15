@@ -1,5 +1,5 @@
 ---
-title: Compliant Cloud Elasticsearch Direct Queries
+title: The Platform Elasticsearch Direct Queries
 category: logging
 ---
 
@@ -15,7 +15,7 @@ Elasticsearch can be queried directly by making a request to `https://podhostnam
 
 The Logging dashboard requires authentication to access.  
 
-After the release of Compliant Cloud 2.1 on July 21, the only way to get access to your logging dashboard is via a session token from the Datica authentication server. Below is a sample script that will automatically generate a session token and then allow you to supply an Elasticsearch URL as a query:
+After the release of The Platform 2.1 on July 21, the only way to get access to your logging dashboard is via a session token from the Datica authentication server. Below is a sample script that will automatically generate a session token and then allow you to supply an Elasticsearch URL as a query:
 
 ```
 #!/bin/bash

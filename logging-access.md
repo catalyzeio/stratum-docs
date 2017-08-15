@@ -1,12 +1,12 @@
 ---
-title: Compliant Cloud Environment Logging
+title: The Platform Environment Logging
 category: logging
-summary: Learn how logging works in Compliant Cloud.
+summary: Learn how logging works in The Platform.
 ---
 
-# Compliant Cloud Environment Logging
+# The Platform Environment Logging
 
-Datica has implemented a complete ELK stack for Compliant Cloud to manage acquiring and storing log data.
+Datica has implemented a complete ELK stack for The Platform to manage acquiring and storing log data.
 
 ELK stands for:
 
@@ -18,9 +18,9 @@ ELK stands for:
 
 Go to the logging URL provided for you. `https://{datica provided domain}/logging/`. For example: `https://pod01163.catalyzeapps.com/logging/`
 
-Or you can log into the Datica dashboard and click the logging link under your deployed environment. Log in using your Datica credentials.
+Or you can sign into the Datica dashboard and click the logging link under your deployed environment. Sign in using your Datica credentials.
 
-![Logging login prompt](https://catalyze.box.com/shared/static/21gxyjjf8n3v4bo59vbctv17b0ze0nkn.png)
+![Logging sign in prompt](https://catalyze.box.com/shared/static/21gxyjjf8n3v4bo59vbctv17b0ze0nkn.png)
 
 **Your dashboard will look something like this.**
 

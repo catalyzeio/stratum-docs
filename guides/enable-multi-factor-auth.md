@@ -8,7 +8,7 @@ summary: How to secure your Datica account with multi-factor authentication.
 
 Enabling multi-factor authentication (MFA) is a straightforward process that adds another layer of security to your Datica account. To start, head to [https://product.datica.com/account/mfa/activate](https://product.datica.com/account/mfa/activate).
 
-Here you'll be prompted for your username and password as well as which type of MFA you would like to enable. Datica currently supports two modes for generating One-Time Passwords (OTP): email and authenticator apps such as Google Authenticator. Type in your credentials and choose `Email`.
+Here you'll be prompted for your email and password as well as which type of MFA you would like to enable. Datica currently supports two modes for generating One-Time Passwords (OTP): email and authenticator apps such as Google Authenticator. Type in your credentials and choose `Email`.
 
 ![email_mfa](../images/email_mfa.png)
 
@@ -34,10 +34,10 @@ Enter your OTP and click `Submit`. You've now successfully logged in with MFA en
 
 # The CLI and MFA
 
-Since version 3.6.0, the [CLI](https://github.com/daticahealth/cli) fully supports MFA enabled accounts. The CLI will prompt you for your credentials every time your session token expires. When this occurs, you will be prompted for your username and password as well as an OTP if MFA is enabled. You'll just need to enter the OTP received through email or generated through an authenticator app to complete the signin process.
+Since version 3.6.0, the [CLI](https://github.com/daticahealth/cli) fully supports MFA enabled accounts. The CLI will prompt you for your credentials every time your session token expires. When this occurs, you will be prompted for your email and password as well as an OTP if MFA is enabled. You'll just need to enter the OTP received through email or generated through an authenticator app to complete the signin process.
 
 ```
-$ datica environments
+$ datica environments list
 Username or Email: example@datica.com
 Password:
 This account has two-factor authentication enabled.

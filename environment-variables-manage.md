@@ -1,21 +1,14 @@
 ---
-title: Managing variables
+title: Managing Environment Variables
 category: manage
-summary: Learn how to manage your variables on Compliant Cloud.
+summary: Learn how to manage your variables on The Platform.
 ---
 
 # Managing Variables
 
-Compliant Cloud allows you to define as many variables as you want for each different code service. You can manage variables through the Datica CLI.
-
-## Setup the Datica CLI for Managing Variables
-
-If you have not already done this, [install](https://github.com/daticahealth/cli) the Datica CLI and [associate](/compliant-cloud/cli-reference#associate) to the environment and service that you wish to manage.
-
-`datica associate MyProdEnvironmentName app01 -a Prod-app01`
+The Platform allows you to define as many variables as you want for each different code service. You can manage variables through the Datica CLI.
 
 ## List variables via the CLI
-
 Below is an example command and the type of output you can expect to see:
 
 `datica -E Prod-app01 vars list app01`
@@ -30,7 +23,6 @@ REDIS_URL=redis://cache01.internal:6379
 ```
 
 ## Set variables via the CLI
-
 Below is an example command:
 
 `datica -E Prod-app01 vars set app01 -v ENV_VAR1="MYVALUE1" -v ENV_VAR2="MYVALUE2"`
@@ -40,7 +32,6 @@ For the new variable settings to take effect, you will need to redeploy your ser
 `datica -E Prod-app01 redeploy app01`
 
 ## Unset variables via the CLI
-
 Below is an example command and the type of output you can expect to see:
 
 `datica -E Prod-app01 vars unset app01 -v ENV_VAR1`

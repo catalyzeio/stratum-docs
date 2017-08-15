@@ -1,24 +1,16 @@
 ---
-title: Compliant Cloud Supported Databases
+title: The Platform Supported Databases
 category: database
-summary: Learn about the supported databases you can use on Compliant Cloud.
+summary: Learn about the supported databases you can use on The Platform.
 ---
 
-# Compliant Cloud Supported Databases
-
-All databases supported by Compliant Cloud are available either in single node or highly available (HA) configurations.
+# The Platform Supported Databases
+All databases supported by The Platform are available either in single node or highly available (HA) configurations.
 
 Databases supported in the single node deployment are:
-- Postgres
-- MySQL (Percona)
-- mongoDB
-
-Support is planned for the following shortly (again to be prioritized based on customer demand)
-- Couchdb - [Request Support](https://catalyzeio.zendesk.com/hc/en-us/requests/new)
-- SQLite - [Request Support](https://catalyzeio.zendesk.com/hc/en-us/requests/new)
-- Cassandra - [Request Support](https://catalyzeio.zendesk.com/hc/en-us/requests/new)
-- HBase - [Request Support](https://catalyzeio.zendesk.com/hc/en-us/requests/new)
-- Other - [Request Support](https://catalyzeio.zendesk.com/hc/en-us/requests/new)
+- Postgres 9.6
+- MySQL (Percona) 5.7
+- mongoDB 3.2
 
 The currently supported databases are also available in HA mode which is described more below.
 

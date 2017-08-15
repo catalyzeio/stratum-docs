@@ -1,22 +1,24 @@
 ---
-title: Compliant Cloud Environment Metrics
+title: The Platform Environment Metrics
 category: manage
-summary: See what metrics are available in Compliant Cloud.
+summary: See what metrics are available in The Platform.
 ---
+# Platform Metrics
+Metrics are currently unavailable in the dashboard. We're working hard to get this fixed for all customers. We're targeting the end of August for an official re-release. In the meantime please use the `metrics` CLI command.
 
-# Compliant Cloud Environment Metrics
-The Compliant Cloud Dashboard includes comprehensive metrics for your environment's services.
+<!-- # The Platform Environment Metrics
+the Platform Dashboard includes comprehensive metrics for your environment's services.
 
-## Viewing Metrics in the Compliant Cloud Dashboard
+## Viewing Metrics in the Platform Dashboard
 
-Each service in the Compliant Cloud Dashboard contains individual graphs of metrics.
+Each service in the Platform Dashboard contains individual graphs of metrics.
 
 Click on the "Details" button for a service to examine them.
 
 ![view](images/view_details.png)
 
 ### Duration and Refresh
-By default, the Compliant Cloud Dashboard shows the last hour of metrics for the selected service. You can change the display window by selecting a different option from the dropdown located immediately above the metric graphs.
+By default, the Platform Dashboard shows the last hour of metrics for the selected service. You can change the display window by selecting a different option from the dropdown located immediately above the metric graphs.
 
 ![duration](images/metrics_duration.png)
 
@@ -41,4 +43,4 @@ The minimum, maximum, and average memory use is also displayed.
 
 Network usage is tracked by total packets and total bandwidth, for both inbound and outbound traffic.
 
-![network](images/metrics_network.png)
+![network](images/metrics_network.png) -->

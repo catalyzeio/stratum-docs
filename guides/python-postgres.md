@@ -3,21 +3,21 @@ title: Python + Postgres Guide
 category: guide
 ---
 
-# Getting started with Python, Django and PostgreSQL on Compliant Cloud
+# Getting started with Python, Django and PostgreSQL on The Platform
 
 Welcome! We've written this guide to help you get started with Python on Datica. You can be up and running with a HIPAA-compliant instance running Django.
 
 ----------
 
-If you're used to other Platform as a Service offerings (Heroku, Google App Engine), you'll notice some similarities to Datica's Compliant Cloud. Our intent in design was to speed up deployment while abstracting away some of the difficulties of HIPAA-compliant setup. If you're more familiar with deploying your code directly onto a server, there will be some new concepts here to learn. It's worth noting this is *not* Heroku: we'll try to call out divergence in code when possible, but you'll want to follow the guide closely even if a lot of this is already old hat to you.
+If you're used to other Platform as a Service offerings (Heroku, Google App Engine), you'll notice some similarities to Datica's Platform. Our intent in design was to speed up deployment while abstracting away some of the difficulties of HIPAA-compliant setup. If you're more familiar with deploying your code directly onto a server, there will be some new concepts here to learn. It's worth noting this is *not* Heroku: we'll try to call out divergence in code when possible, but you'll want to follow the guide closely even if a lot of this is already old hat to you.
 
-This guide is supplemental to the Django tutorials but will emphasize the key parts to get your app running on Datica's Compliant Cloud. We have developed a sample application that you can also reference throughout the guide and as we walkthrough deploying an application. You can find the [Python Sample App on GitHub](https://github.com/catalyzeio/python-sample-app).
+This guide is supplemental to the Django tutorials but will emphasize the key parts to get your app running on Datica's Platform. We have developed a sample application that you can also reference throughout the guide and as we walkthrough deploying an application. You can find the [Python Sample App on GitHub](https://github.com/catalyzeio/python-sample-app).
 
 ## Pre-requisites
 
 ***You have a Platform account with Datica***
 
-If you don't, you can sign up for a 30-day trial and try building this out on our Sandbox. This provides you with the easiest path to being ready for HIPAA compliance with one more simple deploy. Contact sales@datica.com to find out more.
+If you don't, you can register for a free trial and try building this out on our Sandbox. This provides you with the easiest path to being ready for HIPAA compliance with one more simple deploy. Contact sales@datica.com to find out more.
 
 ***You have an existing Python project, with requirements using pip and setup tools***
 
@@ -39,12 +39,15 @@ Once you have a Datica Environment and an application all it takes is a few step
 $ git clone git@github.com:catalyzeio/python-sample-app.git
 $ cd python-sample-app
 
-# Associate the repo with your Datica Environment and push
-$ datica associate "Python Sample App" app01
+# Initialize the repo with your Datica code Service
+$ datica init
+$ datica -E "<your_env_name>" git-remote add app01
+
+# Push your code to Datica
 $ git push datica master
 
 # After the application has been deployed, run migrations
-$ datica -E "<your_env_alias>" console app01 "python manage.py migrate"
+$ datica -E "<your_env_name>" console app01 "python manage.py migrate"
 
 # Go checkout your live app!
 ```
@@ -53,7 +56,7 @@ $ datica -E "<your_env_alias>" console app01 "python manage.py migrate"
 Alright, lets backup a little bit. If you don't already have an environment, you can get setup with one through the Datica Dashboard. Check out the [Getting Started docs](/compliant-cloud/getting-started). The following sections will highlight several important parts about setting up your Django project in order to have a successful deployment on the Platform.
 
 ### Project Requirements
-Datica's Compliant Cloud leverages buildpacks to bundle up your application and all of its dependencies. This bundle is built into a Docker container that will be shipped into production. The Python buildpack is employed when the build process detects the `requirements.txt` file in the root level of your project's repository. The requirements file declares the project dependencies your application requires in order to run. To make your life easier, definitely install the "django-toolbelt" first, it installs everything you need to get started with Django.
+Datica's Platform leverages buildpacks to bundle up your application and all of its dependencies. This bundle is built into a Docker container that will be shipped into production. The Python buildpack is employed when the build process detects the `requirements.txt` file in the root level of your project's repository. The requirements file declares the project dependencies your application requires in order to run. To make your life easier, definitely install the "django-toolbelt" first, it installs everything you need to get started with Django.
 
 ```
 pip install django-toolbelt
@@ -105,9 +108,8 @@ Ok, so now you have an application that you can run locally, project dependencie
 
 ```
 $ cd /path/to/your/repo
-$ datica associate "Your Environment's Name" app01
+$ datica init
 # Notice the git remote "datica" has been created
-
 $ git push datica master
 ```
 
@@ -139,7 +141,7 @@ remote: Finalizing Build (Note: This can take a few minutes to complete)........
 remote: Complete. Built Successfully!
 ```
 
-Alright, after your build is successful your application is ready to be deployed. Follow up with the Datica support team to get the app launched. The first time the application is launched is a manual step, after the initial deployment subsequent Git pushes will automatically redeploy the application. You will receive additional info during the onboarding process that is not covered here. For an overview of the onboarding process check out the docs [here](/compliant-cloud/getting-started).
+Alright, after your build is successful your application is ready to be deployed. Follow up with the Datica support team to get the app launched. The first time the application is launched is a manual step, after the initial deployment subsequent Git pushes will automatically redeploy the application. You will receive additional info during the on-boarding process that is not covered here. For an overview of the on-boarding process check out the docs [here](/compliant-cloud/getting-started).
 
 > **A note on build failures:**
 Dealing with build failures in the buildpack system can be a little tricky, but with a little patience you'll quickly be able to spot and resolve issues as they arise. When an error occurs in the build process you will often encounter a lengthy stack trace. Glance through the stack trace and look for clues about what went wrong. Oftentimes a dependency fails to build because of an incompatibility with the runtime or the provider where the dependency is hosted is down. If your build process attempts to connect to the database your build may fail. During the build process your application will not have access to the network where the database is running. In rare cases you may need to dig inside the buildpack source to really understand what is happening behind the scenes. Here is a short list of the most common build issues:
@@ -150,7 +152,7 @@ Dealing with build failures in the buildpack system can be a little tricky, but 
 
 ## Security & SSL
 
-The [`ALLOWED_HOSTS`](https://docs.djangoproject.com/en/1.9/ref/settings/#allowed-hosts) settings indicates which hostnames Django is allowed to serve. You should list the domain(s) your application runs on, as well as the the hostname of your Datica proxy:
+The [`ALLOWED_HOSTS`](https://docs.djangoproject.com/en/1.9/ref/settings/#allowed-hosts) settings indicates which hostnames Django is allowed to serve. You should list the domain(s) your application runs on, as well as the hostname of your Datica proxy:
 
 ```python
 ALLOWED_HOSTS = [
@@ -173,14 +175,14 @@ CSRF_COOKIE_SECURE = True
 It is recommended you review Django's documentation on [Settings](https://docs.djangoproject.com/en/1.9/ref/settings/) and [Security](https://docs.djangoproject.com/en/1.9/topics/security/).
 
 ## Now What?
-Now that your application has been deployed a good place to start is by checking out the application logs. You can log onto the logging server by pointing your browser at the `/logging/` endpoint from your environment's Datica domain name (remember to include the trailing slash, its important). You will be prompted to log in, the credentials are the same as logging into the Datica Dashboard. Each user who has access to view the Environment on the Dashboard will also be able to access the logging server. You can add additional users to the environment via the CLI. Through the interface you can view and filter logs from the various sources throughout your environment be it the database, cache, or application. The logging server is built atop the ELK (Elasticsearch, Logstash, and Kibana) stack and incorporates many powerful features. Checkout out our guide on managing logs in your environment.
+Now that your application has been deployed a good place to start is by checking out the application logs. You can sign onto the logging server by pointing your browser at the `/logging/` endpoint from your environment's Datica domain name (remember to include the trailing slash). You will be prompted to sign in, the credentials are the same as logging into the Datica Dashboard. Each user who has access to view the Environment on the Dashboard will also be able to access the logging server. You can add additional users to the environment via the CLI. Through the interface you can view and filter logs from the various sources throughout your environment be it the database, cache, or application. The logging server is built atop the ELK (Elasticsearch, Logstash, and Kibana) stack and incorporates many powerful features. Checkout out our guide on managing logs in your environment.
 
 You can access your application through the Datica URL configured for your environment or you can create a record for your domain name with your DNS provider.
 
 After the initial deployment we can checkout the app and notice if there are errors. We need to run database migrations before the application will run correctly. To do this we'll fire up the Datica Console:
 
 ```
-$ datica -E "<your_env_alias>" console app01 "python manage.py migrate"
+$ datica -E "<your_env_name>" console app01 "python manage.py migrate"
 Opening console to service 'a2cb4141-0fb2-4ed5-8e7a-bb59b918dbfc'
 Waiting for the console to be ready... This might take a bit.
 ...................................................
@@ -205,13 +207,13 @@ After the database migrations have completed, we can check back on the applicati
 
 ```
 # Log into the Django shell
-$ datica -E "<your_env_alias>" console app01 "python manage.py shell"
+$ datica -E "<your_env_name>" console app01 "python manage.py shell"
 
 # Log into the Postgres shell
-$ datica -E "<your_env_alias>" console db01
+$ datica -E "<your_env_name>" console db01
 ```
 
-There are more console features on their way. If a command is not supported, open a ticket [here](https://product.datica.com/compliant-cloud) via the "Contact Support" button for your environment.
+There are more console features on their way. If a command is not supported, open a ticket [here](https://product.datica.com/environments) via the "Contact Support" button for your environment.
 
 ### Making updates to your application
 

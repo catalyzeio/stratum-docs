@@ -6,7 +6,7 @@ summary: How can I access my Datica S3 Bucket?
 
 # How can I access my Datica S3 Bucket?
 
-When Datica creates S3 Buckets for Compliant Cloud environments, we place three environment variables in your environment:
+When Datica creates S3 Buckets for The Platform environments, we place three environment variables in your environment:
 
 - `S3_BUCKET`
 - `S3_ACCESS_KEY_ID`

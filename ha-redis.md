@@ -1,12 +1,11 @@
 ---
 title: HA Redis
 category: cache
-summary: How does Compliant Cloud manage HA Redis?
+summary: How does The Platform manage HA Redis?
 ---
 
-# How does Compliant Cloud manage HA Redis?
-
-The Compliant Cloud Redis HA solution leverages Redis Sentinel to check the health of master and slave nodes. Sentinel provides automatic failover functionality in the event one of the nodes goes down. You can read more about Redis Sentinel here: [Sentinel docs](http://redis.io/topics/sentinel). To leverage this HA solution your client application code will have to connect and talk to the Sentinels to determine which node is the master node. The following will outline to do so.
+# How does The Platform manage HA Redis?
+The Platform Redis HA solution leverages Redis Sentinel to check the health of master and slave nodes. Sentinel provides automatic failover functionality in the event one of the nodes goes down. You can read more about Redis Sentinel here: [Sentinel docs](http://redis.io/topics/sentinel). To leverage this HA solution your client application code will have to connect and talk to the Sentinels to determine which node is the master node. The following will outline to do so.
 
 ## Applicable Environment Variables
 The following environment variables will be available to your application:

@@ -1,22 +1,19 @@
 ---
 title: Using a Specific Buildpack Version
 category: buildpack
-summary: While Compliant Cloud can detect and apply a buildpack automatically, Datica recommends that Compliant Cloud users pin their buildpacks to a specific version.
+summary: While The Platform can detect and apply a buildpack automatically, Datica recommends that The Platform users pin their buildpacks to a specific version.
 ---
 
 # Using a Specific Buildpack Version
-
-While Compliant Cloud can detect and apply a buildpack automatically, Datica recommends that Compliant Cloud users pin their buildpacks to a specific version.
+While The Platform can detect and apply a buildpack automatically, Datica recommends that The Platform users pin their buildpacks to a specific version.
 
 If the buildpack is not pinned, users run the risk that a buildpack update unexpectedly breaks their code.
 
 ## How do I pin the buildpack version?
-
 The below procedure outlines how to pin the buildpack version for your application.
 
 ### 1. Set the BUILDPACK_URL environment variable
-
-The Compliant Cloud build procedure constructs the application based on automatically detecting the code type or reading in the `BUILDPACK_URL` environment variable.
+The Platform selects a buildpack using the `BUILDPACK_URL` environment variable. When this variable is not set, the Platform attempts to detect the needed buildpack automatically.
 
 Every buildpack release is tagged with a version number. You can view the releases on the Github page for each buildpacks. Below is the Python buildpack for example:
 
@@ -32,16 +29,12 @@ Choose the release you want to pin. In our example, we'll choose `v68`. The buil
 
 `https://github.com/heroku/heroku-buildpack-python#v68`
 
-Ensure you have the correct environment and service association for the application you want to modify. Remember, you can only have one code service associated with each environment alias!
+Then set the URL. In this example, my environment name is `ProdEnv`:
 
-Then set the URL. In this example, I've associated my app03 to the alias `MyProdEnv-app03`:
-
-`datica -E MyProdEnv-app03 vars set <service_name> -v BUILDPACK_URL="https://github.com/heroku/heroku-buildpack-python#v68"`
+`datica -E MyProdEnv vars set <service_name> -v BUILDPACK_URL="https://github.com/heroku/heroku-buildpack-python#v68"`
 
 ### 2. Rebuild Application
-
 This change will only take effect on the next build of the application. Builds are triggered by commits to the code service.
 
 ### See also
-
 * [Custom Buildpacks](/compliant-cloud/articles/buildpacks-custom)

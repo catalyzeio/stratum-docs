@@ -1,9 +1,9 @@
 ---
-title: Compliant Cloud Dashboard Troubleshooting
+title: The Platform Dashboard Troubleshooting
 category: troubleshooting
 ---
 
-# Compliant Cloud Dashboard Troubleshooting
+# The Platform Dashboard Troubleshooting
 
 ## Sign in
 **400: Account not found for given credentials.**

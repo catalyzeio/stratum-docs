@@ -1,10 +1,10 @@
 ---
 title: Services
 category: concepts
-summary: Learn what Services are on Compliant Cloud.
+summary: Learn what Services are on The Platform.
 ---
 
-**Services** on Compliant Cloud are the pieces of an [Environment](/compliant-cloud/articles/concepts/environments) that define the work to be done. Specifically, a service defines how [Jobs](/compliant-cloud/articles/concepts/jobs) should be started out of them. This includes:
+**Services** on The Platform are the pieces of an [Environment](/compliant-cloud/articles/concepts/environments) that define the work to be done. Specifically, a service defines how [Jobs](/compliant-cloud/articles/concepts/jobs) should be started out of them. This includes:
 
 * The image and size of the [containers](/compliant-cloud/articles/concepts/containers) that `deploy` and `worker` jobs run.
 * [Variables](/compliant-cloud/articles/environment-variables), both automatic and user-set.

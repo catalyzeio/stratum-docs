@@ -3,10 +3,10 @@ title: PHP + MySQL Guide
 category: guide
 ---
 
-# Deploying a PHP+MySQL Application on Compliant Cloud
+# Deploying a PHP+MySQL Application on The Platform
 
 ## Introduction
-This guide will cover the basics of deploying a PHP app built using the [Laravel](https://laravel.com) framework that stores data in a MySQL database. We have already created an example application using these steps [here](https://github.com/catalyzeio/php-example-app). Feel free to follow this guide or fork and clone the example application to create your own working copy to deploy to Compliant Cloud.
+This guide will cover the basics of deploying a PHP app built using the [Laravel](https://laravel.com) framework that stores data in a MySQL database. We have already created an example application using these steps [here](https://github.com/catalyzeio/php-example-app). Feel free to follow this guide or fork and clone the example application to create your own working copy to deploy to The Platform.
 
 
 ## Prerequisites
@@ -19,7 +19,7 @@ We assume you have base knowledge of the following tools, and installed. If not,
 - [Datica CLI](https://github.com/daticahealth/cli)
 
 ### Contract with Datica
-You need a signed contract with [Datica](https://datica.com/), and already have an environment provisioned for use. If you need to sign up for Datica you can [start here](https://datica.com/compliant-cloud).
+You need a signed contract with [Datica](https://datica.com/), and already have an environment provisioned for use. If you need to register for Datica you can [start here](https://datica.com/platform).
 
 ### Terms to know
 Some basic terms that you should know:
@@ -34,20 +34,20 @@ Lets get your php application setup for deployment. For this example we are usin
 ### Developing locally
 To run the example application locally, you can use the Homestead vagrant image which is pretty easy to setup. You can find more information on [Homestead here](https://laravel.com/docs/5.0/homestead).
 
-## Associate environment to application
-We need to associate your Datica environment to your Laravel application. To do this you need to use [git](https://git-scm.com/) and the [Compliant Cloud CLI](https://github.com/daticahealth/cli).
+## Initialize your repository to your code service
+We need to initialize your Datica code service to your Laravel application. To do this you need to use [git](https://git-scm.com/) and [The Platform CLI](https://github.com/daticahealth/cli).
 
 Using a command line, navigate to a working copy of your application, or fork the [example php application](https://github.com/catalyzeio/php-example-app), and run the following commands:
 
 ```
-# datica associate MyHealthApp-Production app01
+$ datica init
 Username:
 Password:
+# will prompt you to pick an environment and code service you have access to
 "datica" remote added.
-#
 ```
 
-The [Compliant Cloud CLI](https://github.com/daticahealth/cli) added a git remote to your local repo so you can now push code to your environment on Datica.
+[The Platform CLI](https://github.com/daticahealth/cli) added a git remote to your local repo so you can now push code to your environment on Datica.
 
 ```
 # git remote -v
@@ -62,11 +62,11 @@ Your remotes will be unique to your origin and enivornment on Datica.
 
 ## Deploying your code
 
-So now that we have everything in order, lets deploy your application to Compliant Cloud.
+So now that we have everything in order, lets deploy your application to The Platform.
 
 *Note: Your application needs a [Procfile](https://github.com/catalyzeio/php-example-app/blob/master/Procfile) for deployment. If you are using the example application you do not need to worry about this as it is already done for you.*
 
-Run the command below from within your working copy. This will push  our code up to Compliant Cloud and start the build process.
+Run the command below from within your working copy. This will push  our code up to The Platform and start the build process.
 
 ```
 # git push datica master
@@ -123,32 +123,32 @@ Using environment variables in PHP and Laravel is pretty straight forward. Just 
 `$databaseUrl = getenv("DATABASE_URL");`
 
 ### Updating Environment Variables
-Use the [Compliant Cloud CLI](https://github.com/daticahealth/cli) to update your environment variables.
+Use [The Platform CLI](https://github.com/daticahealth/cli) to update your environment variables.
 
 The [Datica CLI](https://github.com/daticahealth/cli) makes it pretty straight forward for updating environment variables. Just change into the local directory of your project and use the following commands. For more information on using the [Datica CLI](https://github.com/daticahealth/cli), head over to the [documentation](/compliant-cloud/cli-reference#vars).
 
 #### List all Variables
-`datica -E "<your_env_alias>" vars list <service_name>`
+`datica -E "<your_env_name>" vars list <service_name>`
 
 #### Adding
-`datica -E "<your_env_alias>" vars set <service_name> -v A=B`
+`datica -E "<your_env_name>" vars set <service_name> -v A=B`
 
 #### Removing
-`datica -E "<your_env_alias>" vars unset <service_name> A`
+`datica -E "<your_env_name>" vars unset <service_name> A`
 
 ## Creating schema for database
 You can use the [Datica CLI](https://github.com/daticahealth/cli) to run migrations on the MySQL database easily. Just run the following commands below to populate MySQL with the proper tables for the example application. If you are creating your own application, you can find more information [here](https://laravel.com/docs/5.0/migrations) on migrations with Laravel.
 
 ### Example
-First we need to find the label for the application service. The following will return a list of all services associated to your environment:
+First we need to find the label for the application service. The following will return a list of all services that belong to your environment:
 
-`datica -E "<your_env_alias>" status`
+`datica -E "<your_env_name>" status`
 
 You should see some output like:
 
 ```
 Overriding BaaS URL: https://api-staging.datica.com
-Overriding Compliant Cloud URL: https://api-sbox05.catalyzeapps.com:7443
+Overriding The Platform URL: https://api-sbox05.catalyzeapps.com:7443
 environment state: running
 	app01 (size = c0, build status = finished, deploy status = running)
 	db01 (size = c1, image = percona, status = running)
@@ -156,7 +156,7 @@ environment state: running
 
 The first item in the list is the application service `app01`. We will target `app01` and send a command to it so we can run the migration in the example app.
 
-`datica -E "<your_env_alias>" console app01 'php artisan migrate --force'`
+`datica -E "<your_env_name>" console app01 'php artisan migrate --force'`
 
 That should give you a similar output as:
 
@@ -228,4 +228,4 @@ If you would like more information on logging and laravel you can go [here](http
 Additionally, for using php standalone with no framework, you can use the `syslog()` function. More information on that can be found [here](http://php.net/manual/en/function.syslog.php).
 
 ### Viewing Logs
-Once your application is logging, you can view those logs using the dashboard. Just sign into the [Compliant Cloud Dashboard](https://product.datica.com/compliant-cloud), navigate to the environments dashboard, and click on "Monitoring" or "Logging" on any environment within your dashboard.
+Once your application is logging, you can view those logs using the dashboard. Just sign into [The Platform Dashboard](https://product.datica.com/environments), navigate to the environments dashboard, and click on "Monitoring" or "Logging" on any environment within your dashboard.

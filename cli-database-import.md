@@ -1,17 +1,16 @@
 ---
 title: Database Import
 category: database
-summary: Learn how to import your data into Compliant Cloud.
+summary: Learn how to import your data into The Platform.
 ---
 
 ## Basics
-
-Importing into a database is the process through which data is transferred from a local file into your Compliant Cloud database. This is a very powerful operation, and can potentially cause problems - read on in the sections for your database type below.
+Importing into a database is the process through which data is transferred from a local file into your database. This is a very powerful operation, and can potentially cause problems - read on in the sections for your database type below.
 
 The general form of the [command](/compliant-cloud/cli-reference#import):
 
 ```
-datica -E "<your_env_alias>" db import <service name> <local file path>
+datica -E "<your_env_name>" db import <service name> <local file path>
 ```
 
 The [CLI](/compliant-cloud/cli-reference) will stream back to you any output from executing the import - any errors should be contained therein.
@@ -21,7 +20,6 @@ The [CLI](/compliant-cloud/cli-reference) will stream back to you any output fro
 
 
 ### MySQL and PostgreSQL
-
 Both MySQL and PostgreSQL databases' imports are expected to be in `sql` file format. An example file:
 
 ```
@@ -35,10 +33,10 @@ INSERT INTO user_roles (id, val) VALUES ('1', 'admin');
 INSERT INTO user_roles (id, val) VALUES ('2', 'user');
 ```
 
-To run the import command, make sure you have [associated to an environment](/compliant-cloud/cli-reference#associate) and are in the directory of the associated git repo. Example command:
+Example command:
 
 ```
-$ datica -E "<your_env_alias>" db import db01 /path/to/my/data.sql
+$ datica -E "<your_env_name>" db import db01 /path/to/my/data.sql
 ```
 
 For these databases, this script can contain any SQL you'd like - tables, databases, and users can be created, and data can be inserted. This goes both ways - databases and tables can be dropped, data can be truncated, and users can be removed. Be careful!
@@ -46,7 +44,6 @@ For these databases, this script can contain any SQL you'd like - tables, databa
 > ***Note:*** The [CLI's `console`](/compliant-cloud/cli-reference#console) command depends on the `catalyze` user and database to exist for both MySQL and PostgreSQL databases. If your import removes either of these or changes the `catalyze` user's password, the `console` will cease to function and you will need to [contact Datica support](/compliant-cloud/articles/contact) to resolve the issue.
 
 ### MongoDB Imports
-
 MongoDB imports are expected to be gzipped+tar-compressed (.tar.gz) mongodumps. To create one of these from a local database, you'll need to use the `mongodump` and `tar` commands.
 
 Creating an example database and collection with data:
@@ -86,11 +83,10 @@ dump/catalyze/user_roles.bson
 Mongo dumps only contain collections, so the CLI needs to be told what database the dumped collections should be imported into. To import, specifying the database:
 
 ```
-$ datica -E "<your_env_alias>" db import db01 mymongodump.tar.gz --mongo-database catalyze
+$ datica -E "<your_env_name>" db import db01 mymongodump.tar.gz --mongo-database catalyze
 ```
 
 MongoDB imports can only **add** data, not remove or alter it. If you need to delete collections or otherwise edit your data, use the [console command](/compliant-cloud/cli-reference#console).
 
 ### See also
-
 * [Console](/compliant-cloud/cli-reference#console)

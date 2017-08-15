@@ -1,13 +1,13 @@
 ---
-title: Compliant Cloud Application Logging Guide
+title: The Platform Application Logging Guide
 category: logging
 ---
 
-# Compliant Cloud Application Logging Guide
+# The Platform Application Logging Guide
 
 ## Synopsis
+The Platform's logging flexibility makes it easy for you to log data from any software framework that can write to standard out or send JSON messages to a socket.
 
-The Compliant Cloud platform's logging flexibility makes it easy for you to log data from any software framework that can write to standard out or send JSON messages to a socket.
 This guide contains examples for Python + PostgresSQL, Node + MongoDB, PHP + MySQL, and  Ruby + PostgresSQL frameworks.
 
 It is important not only to store logs but to understand how to effectively filter and extract metrics from your logs.  Datica uses ELK (Elasticsearch, Logstash and Kibana) to capture and visualize both application and database logs. More information can be found [here](https://www.elastic.co/).
@@ -20,7 +20,7 @@ Logging is an essential part of HIPAA compliance, and the following sections of 
 * Section 164.308(a)(1)(ii)(D) “Information System Activity Review” prescribes review of various records of IT activities such as logs, systems utilization reports,  incident reports and other indications of security relevant activities.
 
 ## Pre-requisites
-You have a Compliant Cloud account with Datica.
+You have a Platform account with Datica.
 
 You have a provisioned environment with a deployed application.
 
@@ -50,14 +50,12 @@ LOGGING = {
 
 #### Logging Directly to Logstash
 
-Please send in a support ticket and we will enable direct to socket JSON logging in your environment as well as create an environment variable with the socket endpoint address.
-
-Here's an example from the python-logstash module. The values for the 'host' and 'port' should be pulled from the LOGGING_SERVER environment variable.
+Direct to socket JSON logging in your environment is enabled by default.  You can use it by logging to host logging.internal port 1515.
 
 ```
 #settings.py
-HOST = os.environ['LOGGING_SERVER'].split(":")[0]
-PORT = os.environ['LOGGING_SERVER'].split(":")[1]
+HOST = 'logging.internal'
+PORT = '1515'
 
 LOGGING = {
     'version': 1,
@@ -95,9 +93,7 @@ In Kibana, the contents of your logged message will be stored in the "message" f
 
 #### Logging Directly to Logstash
 
-Please send in a support ticket and we will enable direct to socket JSON logging in your environment as well as create an environment variable with the socket endpoint address.
-
-Here is an example using the winston package. The values of ***port*** and ***host*** should be derived from the LOGGING_SERVER environment variable.
+Direct to socket JSON logging in your environment is enabled by default.  You can use it by logging to host logging.internal port 1515.
 
 ```
 var winston = require('winston');
@@ -107,7 +103,7 @@ var logger = new (winston.Logger)({
   transports: [
        new (winston.transports.Logstash)({
            port: 1515,
-           host: '127.0.0.5',
+           host: 'logging.internal',
            max_connect_retries: 1,
            node_name: 'test',
        })
@@ -177,15 +173,15 @@ In Kibana, the contents of your logged message will be stored in the "message" f
 
 #### Logging Directly to Logstash
 
-Please send in a support ticket and we will enable direct to socket JSON logging in your environment as well as create an environment variable with the socket endpoint address.
+Direct to socket JSON logging in your environment is enabled by default.  You can use it by logging to host logging.internal port 1515.
 
 Here is an example of how you can implement this with Ruby on Rails via the ![logstash-logger]['https://github.com/dwbutler/logstash-logger'] gem:
 
 ```
 require 'logstash-logger'
 
-## Create logger using environment variables supplied by Datica
-logger = LogStashLogger.new(type: :tcp, uri: ENV['LOGGING_SERVER'])
+## Create logger
+logger = LogStashLogger.new(type: :tcp, host: 'logging.internal', port: 1515 )
 
 ## Send messages
 logger.error '{"message": "error"}'
