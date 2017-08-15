@@ -1,12 +1,11 @@
 ---
-title: Compliant Cloud Supported Databases
+title: The Platform Supported Databases
 category: database
-summary: Learn about the supported databases you can use on Compliant Cloud.
+summary: Learn about the supported databases you can use on The Platform.
 ---
 
-# Compliant Cloud Supported Databases
-
-All databases supported by Compliant Cloud are available either in single node or highly available (HA) configurations.
+# The Platform Supported Databases
+All databases supported by The Platform are available either in single node or highly available (HA) configurations.
 
 Databases supported in the single node deployment are:
 - Postgres 9.6

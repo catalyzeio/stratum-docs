@@ -15,7 +15,7 @@ If you use the Google Authenticator app for multi-factor authentication, losing 
 3. Check your email for a one time password (OTP).
 4. Enter your one time use code.
 5. Login to your account from the [dashboard](https://product.datica.com/account).
-6. Open your account settings by clicking your username in the top right. Or navigate to [https://product.datica.com/account/view](https://product.datica.com/account/view).
+6. Open your account settings by clicking your email in the top right. Or navigate to [https://product.datica.com/account/view](https://product.datica.com/account/view).
 7. Expand the `MFA` section.
 8. Click `Disable` next to the authenticator mode.
 

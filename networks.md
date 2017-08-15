@@ -4,9 +4,9 @@ category: security
 summary: List of Datica Networks
 ---
 
-## Datica Compliant Cloud Platform IP Addresses
+## Datica Platform IP Addresses
 
-Below is a list of network gateway addresses used by the Datica Compliant Cloud Platform for outgoing communications. If you need to have traffic whitelisted by a partner or customer for you to send traffic to them, these are the appropriate IPs to give.
+Below is a list of network gateway addresses used by the Datica Platform for outgoing communications. If you need to have traffic whitelisted by a partner or customer for you to send traffic to them, these are the appropriate IPs to give.
 
 | Pod Name | IP Addresses |
 |-------|--------|

@@ -5,9 +5,9 @@ category: application
 
 # Local Testing
 
-## How can I test locally before pushing to Compliant Cloud?
+## How can I test locally before pushing to The Platform?
 
-While we do not provide a local development environment with the full capabilities of the Compliant Cloud platform, you can use the following to test that your application builds and will run.
+While we do not provide a local development environment with the full capabilities of the Platform, you can use the following to test that your application builds and will run.
 
 In order to run this you will need to install [Docker Toolbox](https://www.docker.com/products/docker-toolbox). Alternatively, you may just install the [docker-machine](https://docs.docker.com/machine/install-machine/) directly.
 
