@@ -58,7 +58,7 @@ The form of this command in the CLI is: `datica init`. The init command will fin
 Datica provides two methods for installing SSL certificates. The first one is via our Let’s Encrypt feature. This new feature allows customers to easily install Let’s Encrypt SSL certificates with a few commands. The second method is the “bring your own SSL certificate” method.
 
 **The Let’s Encrypt method**
-We have an entire guide dedicated to Let's Encrypt. [Have a look](/compliant-cloud/guides/lets-encrypt).
+We have an entire guide dedicated to Let's Encrypt. [Have a look](/compliant-cloud/articles/guides/lets-encrypt).
 
 **Bring your own SSL certificate method**
 Acquiring SSL certs is a very complex topic - if you'd like to read more information than what is outlined below, please see the [SSL Certificates](/compliant-cloud/articles/guides/self-service-SSL/) article. The certificate and private key must be unencrypted and in PEM format.
