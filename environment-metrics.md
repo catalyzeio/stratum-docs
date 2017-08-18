@@ -4,9 +4,7 @@ category: manage
 summary: See what metrics are available in The Platform.
 ---
 # Platform Metrics
-Metrics are currently unavailable in the dashboard. We're working hard to get this fixed for all customers. We're targeting the end of August for an official re-release. In the meantime please use the `metrics` CLI command.
-
-<!-- # The Platform Environment Metrics
+# The Platform Environment Metrics
 the Platform Dashboard includes comprehensive metrics for your environment's services.
 
 ## Viewing Metrics in the Platform Dashboard
@@ -15,12 +13,12 @@ Each service in the Platform Dashboard contains individual graphs of metrics.
 
 Click on the "Details" button for a service to examine them.
 
-![view](images/view_details.png)
+![view](images/view_details.jpg)
 
 ### Duration and Refresh
 By default, the Platform Dashboard shows the last hour of metrics for the selected service. You can change the display window by selecting a different option from the dropdown located immediately above the metric graphs.
 
-![duration](images/metrics_duration.png)
+![duration](images/metrics_duration.jpg)
 
 You can also refresh the existing time intervals by clicking the "Refresh" button.
 
@@ -30,12 +28,12 @@ Below are brief explanations of the metrics collected.
 ### CPU Usage
 CPU Usage is tracked as a percentage of the amount of CPU the service has been allotted.
 
-![cpu](images/metrics_cpu.png)
+![cpu](images/metrics_cpu.jpg)
 
 ### Memory
 Memory usage is tracked in terms of the number of megabytes of RAM used by the container. The memory limit of the container is clearly displayed by a red line across the top of the graph should your container approach that limit.
 
-![memory](images/metrics_memory.png)
+![memory](images/metrics_memory.jpg)
 
 The minimum, maximum, and average memory use is also displayed.
 
@@ -43,4 +41,4 @@ The minimum, maximum, and average memory use is also displayed.
 
 Network usage is tracked by total packets and total bandwidth, for both inbound and outbound traffic.
 
-![network](images/metrics_network.png) -->
+![network](images/metrics_network.jpg)
