@@ -3,9 +3,8 @@ title: The Platform Environment Metrics
 category: manage
 summary: See what metrics are available in The Platform.
 ---
-# Platform Metrics
-# The Platform Environment Metrics
-the Platform Dashboard includes comprehensive metrics for your environment's services.
+# Environment Metrics
+The Dashboard includes comprehensive metrics for your environment's services.
 
 ## Viewing Metrics in the Platform Dashboard
 
