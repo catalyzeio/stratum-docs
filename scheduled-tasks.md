@@ -25,6 +25,8 @@ If adding a scheduling framework isn't an option, then `cron` may work to period
 - Create a `crontab` formatted file named `my-crontab` in your application directory that has your commands and schedules.
 - In the my-crontab file.  For each entry, redirect standard error and standard output to the `/app/cron.log` file:
 ```
+SHELL=/bin/bash
+
 */15 * * * * echo "executing task ";/app/sorting_frams  >> /app/cron.log 2>&1 
 ```
 - Create a `cron.sh` file in your application directory that looks like:
