@@ -23,4 +23,4 @@ category: troubleshooting
 **I have been locked out of my Datica account**
 
 - **Potential Issue** You may have exceeded the number of allowed incorrect password attempts or suspicious behavior has been detected for your account.
-- **Potential Solution** Contact [Datica support](/compliant-cloud/articles/contact/) to unlock your account.
+- **Potential Solution** Check your email for a link to unlock your account. Be sure to check your spam folder. If no email can be found, have an admin of your Organization contact [Datica support](/compliant-cloud/articles/contact/) via the dashboard to unlock your account.
