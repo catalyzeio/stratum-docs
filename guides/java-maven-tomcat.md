@@ -107,4 +107,4 @@ git push datica master
 
 ## Example Application
 
-_TODO: public repo link_
+[https://github.com/daticahealth/java-tomcat-maven-example](https://github.com/daticahealth/java-tomcat-maven-example)
