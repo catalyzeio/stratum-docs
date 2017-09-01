@@ -15,7 +15,7 @@ Another popular choice is [Gradle](https://gradle.org/).
 
 ## Buildpack Choice
 
-If your repository contains a `pom.xml` (Maven configuration) file at its root, [Heroku's Java + Maven buildpack](https://github.com/heroku/heroku-buildpack-java) will be used (for Gradle, [Heroku's Java + Gradle buildpack](https://github.com/heroku/heroku-buildpack-gradle) is used). The buildpack's repository includes advanced configuration options - these won't be needed right now, but likely will be needed to tune a production application, so they're worth a look.
+All builds on the Platform are done using [buildpacks](../buildpacks). If your repository contains a `pom.xml` (Maven configuration) file at its root, [Heroku's Java + Maven buildpack](https://github.com/heroku/heroku-buildpack-java) will be used (for Gradle, [Heroku's Java + Gradle buildpack](https://github.com/heroku/heroku-buildpack-gradle) is used). The buildpack's repository includes advanced configuration options - these won't be needed right now, but likely will be needed to tune a production application, so they're worth a look.
 
 If your application doesn't have either a `pom.xml` or a `build.gradle`, you can use the [Maven CLI](http://maven.apache.org/install.html) to generate a sample application from an archetype:
 
