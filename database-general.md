@@ -4,11 +4,9 @@ category: database
 summary: Learn about databases on The Platform.
 ---
 
-## What versions of the [supported databases](/compliant-cloud/articles/supported-databases/) does Datica use?
+## What versions does Datica use for new database services?
 
-- Percona 5.6
-- PostgreSQL 9.4
-- MongoDB 2.6
+See the [Supported Databases](/compliant-cloud/articles/supported-databases/) article.
 
 ### How do database backups work?
 We perform automated backups each night. Access to the backups is provided via The Platform CLI. You can read about how to interact with backups [here](../cli-database-backup).
