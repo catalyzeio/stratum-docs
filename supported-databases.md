@@ -10,7 +10,7 @@ All databases supported by The Platform are available either in single node or h
 Databases supported in the single node deployment are:
 - Postgres 9.6
 - MySQL (Percona) 5.7
-- mongoDB 3.2
+- mongoDB 3.4
 
 The currently supported databases are also available in HA mode which is described more below.
 

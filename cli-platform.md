@@ -2,6 +2,7 @@
 title: The Platform CLI
 category: getting-started
 summary: Download the Datica CLI.
+alias: ["compliant-cloud/articles/cli-stratum"]
 ---
 
 # How to download the CLI
