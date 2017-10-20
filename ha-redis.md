@@ -11,15 +11,15 @@ The Platform Redis HA solution leverages Redis Sentinel to check the health of m
 The following environment variables will be available to your application:
 
 ```
-REDIS_SENTINEL_URL="redis-sentinel://127.0.0.14:26379"
-REDIS_SENTINEL_LIST="127.0.0.14:26379,127.0.0.15:26379,127.0.0.16:26379"
-REDIS_SENTINEL_MASTER="redis01"
+CACHE_1_URL="redis-sentinel://127.0.0.14:26379"
+CACHE_1_SENTINEL_LIST="127.0.0.14:26379,127.0.0.15:26379,127.0.0.16:26379"
+CACHE_1_SENTINEL_MASTER="redis01"
 ```
 
-The `REDIS_SENTINEL_LIST` variable is really the key variable. Depending on the redis client, you can pass the list of sentinels to the client and then it automatically determines which instance is the master and that commands get sent to.
+The `CACHE_1_SENTINEL_LIST` variable is really the key variable. Depending on the redis client, you can pass the list of sentinels to the client and then it automatically determines which instance is the master and that commands get sent to.
 
 For the connection, if needed/accepted by the client, the name of the master is the name, or label,
-of the first redis service ("redis_01", for example) also specified in the `REDIS_SENTINEL_MASTER`
+of the first redis service ("redis_01", for example) also specified in the `CACHE_1_SENTINEL_MASTER`
 environment variable.
 
 ## Connection Examples
@@ -33,7 +33,7 @@ Node packages available to connect to redis sentinels:
     ```
     var Redis = require('ioredis');
 
-    var addresses = process.env.REDIS_SENTINEL_LIST.split(',');
+    var addresses = process.env.CACHE_1_SENTINEL_LIST.split(',');
     var endpoints = new Array(addresses.length)
     addresses.forEach(function(element, index, array) {
         addr = element.split(':');
@@ -42,7 +42,7 @@ Node packages available to connect to redis sentinels:
 
     var redisClient = new Redis({
         sentinels: endpoints,
-        name: process.env.REDIS_SENTINEL_MASTER
+        name: process.env.CACHE_1_SENTINEL_MASTER
     });
     ```
 
@@ -51,14 +51,14 @@ Node packages available to connect to redis sentinels:
     ```
     var sentinel = require('redis-sentinel');
 
-    var addresses = process.env.REDIS_SENTINEL_LIST.split(',');
+    var addresses = process.env.CACHE_1_SENTINEL_LIST.split(',');
     var endpoints = new Array(addresses.length)
     addresses.forEach(function(element, index, array) {
         addr = element.split(':');
         endpoints[index] = {host: addr[0], port: addr[1]};
     });
 
-    var redisClient = sentinel.createClient(endpoints, process.env.REDIS_SENTINEL_MASTER);
+    var redisClient = sentinel.createClient(endpoints, process.env.CACHE_1_SENTINEL_MASTER);
     ```
 
 ### Ruby
@@ -69,8 +69,8 @@ Ruby packages available to connect to redis sentinels:
     ```
     require "redis"
 
-    sentinel_master = ENV['REDIS_SENTINEL_MASTER']
-    addresses = ENV['REDIS_SENTINEL_LIST'].split(',')
+    sentinel_master = ENV['CACHE_1_SENTINEL_MASTER']
+    addresses = ENV['CACHE_1_SENTINEL_LIST'].split(',')
     endpoints = Array.new(addresses.length)
     addresses.each_with_index { |addr, index| a = addr.split(':'); endpoints[index] = {:host => a[0], :port => a[1]} }
 
@@ -86,7 +86,7 @@ Python packages available to connect to redis sentinels:
     import os
     from redis.sentinel import Sentinel
 
-    sentinel_master = os.environ['REDIS_SENTINEL_MASTER']
-    sentinel_address_list = os.environ['REDIS_SENTINEL_LIST']
+    sentinel_master = os.environ['CACHE_1_SENTINEL_MASTER']
+    sentinel_address_list = os.environ['CACHE_1_SENTINEL_LIST']
     sentinel = Sentinel([tuple(address.split(':')) for address in sentinel_address_list.split(',')])
     master = sentinel.master_for(sentinel_master)
