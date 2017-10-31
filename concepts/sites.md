@@ -18,7 +18,7 @@ To create a new site entry, three pieces of information are needed.
 
 The hostname is up to you, and the certificate name is also decided by you when uploaded. The code service label is the name of the code service that you intend traffic for this hostname to go to. If you don't know what your code service's name is, you can find it in [The Platform dashboard](https://product.datica.com/environments).
 
-The [CLI](/compliant-cloud/articles/cli-stratum) [sites create](/compliant-cloud/cli-reference#sites-create) command is used to create the site, taking the form `datica -E "<your_env_name>" sites create <hostname> <code service label> <certificate name>`. For example, to set up a site mapping `example.com` to a code service named `code-1` using an uploaded cert named `example`:
+The [CLI](/compliant-cloud/articles/cli-platform) [sites create](/compliant-cloud/cli-reference#sites-create) command is used to create the site, taking the form `datica -E "<your_env_name>" sites create <hostname> <code service label> <certificate name>`. For example, to set up a site mapping `example.com` to a code service named `code-1` using an uploaded cert named `example`:
 
 ```
 datica -E "<your_env_name>" sites create .example.com code-1 example

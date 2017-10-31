@@ -5,7 +5,7 @@ alias: ["compliant-cloud/articles/guides/self-service-SSL/", "compliant-cloud/ar
 summary: Uploading and updating SSL certificates on The Platform.
 ---
 
-[The Platform CLI](/compliant-cloud/articles/cli-stratum) allows complete self-management of SSL Certificates. The [certs](/compliant-cloud/cli-reference#certs) command group in the CLI has several subcommands to manage your SSL certificates - the usage of each is described below.
+[The Platform CLI](/compliant-cloud/articles/cli-platform) allows complete self-management of SSL Certificates. The [certs](/compliant-cloud/cli-reference#certs) command group in the CLI has several subcommands to manage your SSL certificates - the usage of each is described below.
 
 ## Obtaining a Certificate
 For production usage of The Platform, your certificate must:
