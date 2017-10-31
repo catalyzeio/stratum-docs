@@ -12,7 +12,7 @@ The **Secure Console** offers interactive command-line access to your [environme
 * MongoDO: `mongo`
 
 ## Opening a Secure Console
-Using the [CLI](/compliant-cloud/articles/cli-stratum)'s [console](/compliant-cloud/cli-reference#console) command and the name of the database service (found in [The Platform dashboard](https://product.datica.com/environments)):
+Using the [CLI](/compliant-cloud/articles/cli-platform)'s [console](/compliant-cloud/cli-reference#console) command and the name of the database service (found in [The Platform dashboard](https://product.datica.com/environments)):
 
 ```
 datica -E "<your_env_name>" console <database name>

@@ -12,7 +12,7 @@ Because the traffic is proxied to your code service, the client IP is not direct
 
 ## Viewing/Downloading Configurations
 
-Internally, each service proxy uses [NGINX](https://www.nginx.com/), with a configuration file generated for each site. To list these files, use the [CLI](/compliant-cloud/articles/cli-stratum)'s [files list](/compliant-cloud/cli-reference#files-list) command.
+Internally, each service proxy uses [NGINX](https://www.nginx.com/), with a configuration file generated for each site. To list these files, use the [CLI](/compliant-cloud/articles/cli-platform)'s [files list](/compliant-cloud/cli-reference#files-list) command.
 
 ```
 datica -E "<your_env_name>" files list

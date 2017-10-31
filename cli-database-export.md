@@ -26,5 +26,5 @@ For Postgres and MySQL databases, the download will be an SQL file, and for Mong
 Exporting a database is like making and downloading an immediate [backup](/compliant-cloud/articles/cli-database-backup), and follows the same process listed there.
 
 ### See also
-* [The Platform CLI](/compliant-cloud/articles/cli-stratum)
+* [The Platform CLI](/compliant-cloud/articles/cli-platform)
 * [Database Export](/compliant-cloud/articles/cli-database-backup)
