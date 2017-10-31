@@ -24,7 +24,7 @@ Organization management tools are located in [The Platform Dashboard](https://pr
 ## Adding Members to Your Organization
 New members are added to your organization by sending them an invite, from the management tools. Filling out this form will send an email to the specified address, including instructions on how to join the organization. After the invite is sent, it can be revoked at any time until it is accepted. After it is accepted, it will disappear from this table.
 
-> ***Note:*** The [CLI](/compliant-cloud/articles/cli-stratum) [invites send](/compliant-cloud/cli-reference#invites-send) command can also be used to send an invite.
+> ***Note:*** The [CLI](/compliant-cloud/articles/cli-platform) [invites send](/compliant-cloud/cli-reference#invites-send) command can also be used to send an invite.
 
 ## Creating and Deleting Groups
 If you want to create a new group that has a [different set of ACLs](/compliant-cloud/articles/concepts/acl-groups) click the `Add Group` button. If you want to create a group that has access to everything, you check the "Full Access" checkbox. Note: groups with "Full Access" are implictly granted access to manage users in your organization.

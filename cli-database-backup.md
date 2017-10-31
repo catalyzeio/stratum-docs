@@ -46,5 +46,5 @@ $ datica -E "<your_env_name>" db download db01 abcd1234-4321-4321-4321-123412341
 To facilitate this download, the CLI creates a key pair as part of the request, and the export is encrypted server-side with that public key. The encrypted export is moved to cloud storage for a short window. The CLI downloads it, then decrypts it.
 
 ### See also
-* [The Platform CLI](/compliant-cloud/articles/cli-stratum)
+* [The Platform CLI](/compliant-cloud/articles/cli-platform)
 * [Database Export](/compliant-cloud/articles/cli-database-backup)
