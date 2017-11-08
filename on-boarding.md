@@ -124,7 +124,7 @@ Now for the moment of truth. Let's recap what you've completed so far:
 - Agreed to the contract
 - Provisioned your environment
 
-The very last step is to deploy your code! So let's do exactly that.
+The next step is to deploy your code! So let's do exactly that.
 
 The very first thing you need to do is install the latest version of the Datica Platform CLI. Head over to our [downloads page](https://github.com/daticahealth/cli/releases) to find the associated binary for your system.
 
@@ -154,3 +154,80 @@ If you're using git already follow below:
 $ git commit -m "deploying to datica"
 $ git push datica master
 ```
+
+## On-boarding - Set up SSL
+Great! Now that your code is running, we need to make sure it is accessible via SSL. Datica provides two methods for installing SSL certificates. The first one is via our Let’s Encrypt feature. This new feature allows customers to easily install Let’s Encrypt SSL certificates with a few commands. The second method is the “bring your own SSL certificate” method.
+
+**The Let’s Encrypt method**
+We have an entire guide dedicated to Let's Encrypt. [Have a look](/compliant-cloud/articles/guides/lets-encrypt).
+
+**Bring your own SSL certificate method**
+Acquiring SSL certs is a very complex topic - if you'd like to read more information than what is outlined below, please see the [SSL Certificates](/compliant-cloud/articles/guides/self-service-SSL/) article. The certificate and private key must be unencrypted and in PEM format.
+ 
+> ***Note:*** This can be a wildcard cert. Wildcard certs can be reused.
+ 
+The CLI command to upload a cert is `certs create`, taking the form `datica -E "<your_env_name>" certs create <cert name> <path to crt file> <path to key file>`. For example:
+ 
+```
+datica -E "<your_env_name>" certs create example.com example.com.crt example.com.key
+```
+ 
+If that cert is self-signed, pass the `-s` option:
+ 
+```
+datica -E "<your_env_name>" certs create example.com example.com.crt example.com.key -s
+```
+ 
+> ***Note:*** Using a self-signed cert can be very useful for development or staging environments.
+ 
+For wildcard certs, the typical nomenclature is `*.domain.tld`:
+ 
+```
+datica -E "<your_env_name>" certs create *.example.com wildcard-example.com.crt wildcard-example.com.key
+```
+ 
+## On-boarding - Set Your DNS 
+Because an environment can have any number of code services, the public hostname for the environment does not point to any of them. What this means is that, in order to access each code service in your application, you will need to set up DNS that will forward to it. This step is executed entirely outside of The Platform - Datica cannot do any of this for you. Datica is not a DNS provider.
+ 
+First, choose the hostname you would like to use for the code service - this can be either an apex domain (such as `example.com`) or a subdomain (such as `api.example.com`).
+ 
+Then, in your DNS provider's control panel, set up a `CNAME` from that hostname to your environment's public hostname (`ALIAS` can be used if `CNAME` is not supported by your provider). We recommend setting a TTL of 300s.
+ 
+To verify that your DNS change has propagated (which typically takes a few minutes), use `nslookup`:
+ 
+```
+$ nslookup api.example.com
+Non-authoritative answer:
+api.example.com canonical name = pod0A1B2C3.catalyzeapps.com.
+```
+ 
+> ***Note:*** Some DNS providers may not allow `CNAME` _or_ `ALIAS` records for apex domains. If you discover that your host has this limitation and using a subdomain is not an option, we recommend transferring your domain over to [Cloudflare](https://www.cloudflare.com/).
+ 
+## On-boarding - Set Up a Site
+The Platform uses what we call **[Sites](/compliant-cloud/articles/concepts/sites)** to map code services to hostnames, using the cert that was uploaded in step 5.
+ 
+The CLI command to create a cert is `sites create`, taking the form `datica -E "<your_env_name>" sites create <hostname> <code service name> <cert name>`. For example, using the hostname from step 6, the wildcard cert name from step 5, and the code service name noted in step 1:
+ 
+```
+datica -E "<your_env_name>" sites create api.example.com app01 *.example.com
+```
+ 
+This will generate a new nginx configuration file for the new site.
+ 
+## On-boarding - Redeploy the Service Proxy
+In order to pick up on the new site file, your environment's [Service Proxy](/compliant-cloud/articles/concepts/service-proxy) needs be redeployed. This is done via the `redeploy` command:
+ 
+```
+datica -E "<your_env_name>" redeploy service_proxy
+```
+ 
+After a short period of downtime (usually 20-40 seconds), your service proxy will be responding again. If your site, certs, and DNS are set up correctly, navigating to the hostname in the site you just configured (`api.example.com` in the example above) should result in a 503 error.
+ 
+Once you have an SSL certificate added to an environment and the DNS name you want to resolve pointed at your POD URL, you'll need to create a site for the environment that uses the certificate and listens for that DNS name. Until you create a site, you will **not** be able to route traffic to your application.
+ 
+You can verify that your certificate is correctly being used with `openssl`:
+ 
+`openssl s_client -connect api.example.com:443`
+
+### See also
+* [Getting Started Guides](/compliant-cloud/getting-started/)
